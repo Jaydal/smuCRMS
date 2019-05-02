@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mysqlCon>
+  <constring>
+    <server>
+      localhost
+    </server>
+    <username>
+      clinicDB
+    </username>
+    <password>
+      smuclinic2018
+    </password>
+  </constring>
+</mysqlCon>
