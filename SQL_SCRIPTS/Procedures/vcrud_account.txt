@@ -1,0 +1,36 @@
+DELIMITER $$
+
+USE `_clinic`$$
+
+DROP PROCEDURE IF EXISTS `vcrud_account`$$
+
+CREATE DEFINER=`root`@`%` PROCEDURE `vcrud_account`(
+    IN activity VARCHAR(10),
+    IN account_id VARCHAR(255),
+    IN username VARCHAR(30),
+    IN _password VARCHAR(255),
+    IN _name VARCHAR(50),
+    IN role VARCHAR(15))
+BEGIN
+	DECLARE counter INT;
+		IF activity="CREATE" THEN
+			INSERT INTO account 
+				VALUES(MD5(username),username,MD5(_password),_name,role);
+		ELSEIF activity="UPDATE" THEN
+			UPDATE account
+				SET account.`account_id`=MD5(username),
+					account.`username`=username,
+						account.`password`=MD5(_password),
+							account.`Name`=_name,
+								account.`Role`=role
+									WHERE account.`account_id`=account_id;
+		ELSEIF activity="DELETE" THEN
+			DELETE FROM account
+				WHERE account.`account_id`=MD5(username);
+		ELSEIF activity="VIEW" THEN		
+			SELECT * FROM account
+				WHERE account.`account_id`=MD5(username);
+		END IF;
+	END$$
+
+DELIMITER ;
