@@ -1,0 +1,45 @@
+DELIMITER $$
+CREATE
+    PROCEDURE `_clinic`.`vcrud_treatment`(
+    IN activity VARCHAR(10),
+    IN treatment_id VARCHAR(10),
+    IN uid VARCHAR(15),    
+    IN treatmentdate DATETIME,
+    IN chiefcomplaints VARCHAR(255),
+    IN diagnosis VARCHAR(255),
+    IN bp VARCHAR(15),
+    IN pr VARCHAR(15),
+    IN rr VARCHAR(15),
+    IN temp FLOAT,
+    IN spo FLOAT,
+    IN doctorincharge VARCHAR(50),
+    IN referral VARCHAR(50))
+	BEGIN
+		IF activity="CREATE" THEN
+			INSERT INTO treatment
+				VALUES(treatment_id,uid,treatmentdate,chiefcomplaints,diagnosis,bp,pr,rr,temp,spo,doctorincharge,referral);
+		ELSEIF activity="UPDATE" THEN
+			UPDATE treatment
+				SET treatment.`treatment_id`=treatment_id,
+				treatment.`uid`=uid,
+				treatment.`TreatmentDate`=treatmentdate,
+				treatment.`ChiefComplaints`=chiefcomplaints,
+				treatment.`Diagnosis`=diagnosis,
+				treatment.`BP`=bp,
+				treatment.`PR`=pr,
+				treatment.`RR`=rr,
+				treatment.`Temp`=temp,
+				treatment.`SPO2`=spo2,
+				treatment.`DoctorInCharge`=doctorincharge,
+				treatment.`Referral`=referral
+				WHERE treatment.`treatment_id`=treatment_id;
+		ELSEIF activity="DELETE" THEN
+			DELETE FROM treatment
+				WHERE treatment.`treatment_id`=treatment_id;
+		ELSEIF activity="VIEW" THEN		
+			SELECT * FROM treatment
+				WHERE treatment.`treatment_id`=treatment_id;
+		END IF;
+	END$$
+
+DELIMITER ;
