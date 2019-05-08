@@ -1,6 +1,16 @@
 DELIMITER $$
-CREATE
-    PROCEDURE `_clinic`.`vcrud_treatment`(
+
+USE `_clinic`$$
+
+DROP PROCEDURE IF EXISTS `vcrud_department`$$
+
+DELIMITER $$
+
+USE `_clinic`$$
+
+DROP PROCEDURE IF EXISTS `vcrud_treatment`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `vcrud_treatment`(
     IN activity VARCHAR(10),
     IN treatment_id VARCHAR(10),
     IN uid VARCHAR(15),    
@@ -14,7 +24,7 @@ CREATE
     IN spo FLOAT,
     IN doctorincharge VARCHAR(50),
     IN referral VARCHAR(50))
-	BEGIN
+BEGIN
 		IF activity="CREATE" THEN
 			INSERT INTO treatment
 				VALUES(treatment_id,uid,treatmentdate,chiefcomplaints,diagnosis,bp,pr,rr,temp,spo,doctorincharge,referral);
