@@ -1,5 +1,10 @@
 DELIMITER $$
 
+USE `_clinic`$$
+
+DROP PROCEDURE IF EXISTS `vcrud_course`$$
+
+DELIMITER $$
 CREATE
     PROCEDURE `_clinic`.`vcrud_course`(
      IN activity VARCHAR(10),
