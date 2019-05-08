@@ -30,6 +30,10 @@ BEGIN
 		ELSEIF activity="VIEW" THEN		
 			SELECT * FROM account
 				WHERE account.`account_id`=MD5(username);
+		ELSEIF activity="VERIFY" THEN		
+			SELECT COUNT(*) FROM account
+				WHERE account.`account_id`=MD5(username)
+					AND account.`password`=MD5(_password);
 		END IF;
 	END$$
 
