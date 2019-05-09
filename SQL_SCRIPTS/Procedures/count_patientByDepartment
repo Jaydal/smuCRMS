@@ -1,0 +1,11 @@
+DELIMITER $$
+DROP PROCEDURE if exists count_patientByDepartment;
+CREATE procedure _clinic.count_patientByDepartment()
+BEGIN
+	SELECT COUNT(P.ID) AS "Number of Patients per Department"
+    FROM patient AS P
+    group by P.Department_id;
+END$$
+DELIMITER ;
+
+CALL count_patientByDepartment();
