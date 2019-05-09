@@ -1,0 +1,81 @@
+DELIMITER $$
+
+CREATE
+    PROCEDURE `_clinic`.`vcrud_patient`(
+	IN activity VARCHAR(15),
+    IN uid VARCHAR(7),
+    IN id VARCHAR(15),
+    IN Lastname VARCHAR(30),
+    IN FirstName VARCHAR(30),
+    IN MiddleName VARCHAR(30),
+    IN Department_id VARCHAR(7),
+    IN Course_id VARCHAR(7),
+    IN _Level VARCHAR(7),
+    IN Birthday datetime,
+    IN Age tinyint(3),
+    IN Sex VARCHAR(10),
+    IN CivilStatus VARCHAR(15),
+    IN Nationality VARCHAR(30),
+    IN HomeAddress VARCHAR(255),
+    IN BoardingAddress VARCHAR(255),
+    IN FathersName VARCHAR(50),
+    IN FathersOccupation VARCHAR(30),
+    IN FathersNumber VARCHAR(15),
+    IN MothersName VARCHAR(50),
+    IN MothersOccupation VARCHAR(30),
+    IN MothersNumber VARCHAR(15),
+    IN LandLadyName VARCHAR(50),
+    IN LandLadyNumber VARCHAR(15),
+    IN EmergencyCallName VARCHAR(50),
+    IN EmergencyRelation VARCHAR(30),
+    IN EmergencyNumber VARCHAR(15),
+    IN FirstMenstruation datetime,
+    IN LastMenstruation datetime,
+    IN Photo mediumblob,
+    IN Signature mediumblob)
+	BEGIN
+		IF activity="CREATE" THEN
+			INSERT INTO patient
+				VALUES(uid,id,LastName,MiddleName,Department_id,course_id,_Level,BirthDay,Age,Sex,CivilStatus,Nationality,HomeAddress,BoardingAddress,FathersName,FathersOccupation,FathersNumber,MothersName,MothersOccupation,MothersNumber,LandLadyName,LandLadyNumber,EmergencyCallName,EmergencyRelation,EmergencyNumber,FirstMenstruation,LastMenstruation,Photo,Signature);
+		ELSEIF activity="UPDATE" THEN
+			UPDATE patient
+				SET patient.uid=uid,
+				patient.id=id,
+				patient.LastName=LastName,
+				patient.MiddleName=MiddleName,
+				patient.Department_id=Department_id,
+				patient.course_id=Course_id,
+				patient.Level=_Level,
+				patient.BirthDay=Birthday,
+				patient.Age=Age,
+				patient.Sex=Sex,
+				patient.CivilStatus=CivilStatus,
+				patient.Nationality=Nationality,
+				patient.HomeAddress=HomeAddress,
+				patient.BoardingAddress=BoardingAddress,
+				patient.FathersName=FathersName,
+				patient.FathersOccupation=FathersOccupation,
+				patient.FathersNumber=FathersnNumber,
+				patient.MothersName=MothersName,
+				patient.MothersOccupation=MothersOccupation,
+				patient.MothersNumber=MothersNumber,
+				patient.LandLadyName=LandLadyName,
+				patient.LandLadyNumber=LandLadyNumber,
+				patient.EmergencyCallName=EmergencyCallName,
+				patient.EmergencyRelation=EmergencyRelation,
+				patient.EmergencyNumber=EmergencyNumber,
+				patient.FirstMenstruation=FirstMenstruation,
+				patient.LastMenstruation=LastMenstruation,
+				patient.Photo=Photo,
+				patient.Signature=Signature
+				WHERE patient.id=id;
+		ELSEIF activity="DELETE" THEN
+			DELETE FROM patient
+				WHERE patient.`id`=id;
+		ELSEIF activity="VIEW" THEN		
+			SELECT * FROM patient
+				WHERE patient.`id`=id;
+		END IF;
+	END$$
+
+DELIMITER ;
