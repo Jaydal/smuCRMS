@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.txtUsername = new MetroFramework.Controls.MetroTextBox();
             this.pnlLog = new MetroFramework.Controls.MetroPanel();
+            this.cmbHost = new System.Windows.Forms.ComboBox();
+            this.lnkHost = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -43,8 +45,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lnkHost = new System.Windows.Forms.LinkLabel();
-            this.cmbHost = new System.Windows.Forms.ComboBox();
             this.pnlLog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.metroPanel2.SuspendLayout();
@@ -91,7 +91,7 @@
             // 
             // pnlLog
             // 
-            this.pnlLog.BackColor = System.Drawing.Color.Crimson;
+            this.pnlLog.BackColor = System.Drawing.Color.MidnightBlue;
             this.pnlLog.Controls.Add(this.cmbHost);
             this.pnlLog.Controls.Add(this.lnkHost);
             this.pnlLog.Controls.Add(this.pictureBox2);
@@ -116,6 +116,33 @@
             this.pnlLog.VerticalScrollbarHighlightOnWheel = false;
             this.pnlLog.VerticalScrollbarSize = 10;
             // 
+            // cmbHost
+            // 
+            this.cmbHost.Enabled = false;
+            this.cmbHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbHost.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbHost.FormattingEnabled = true;
+            this.cmbHost.Items.AddRange(new object[] {
+            "localhost"});
+            this.cmbHost.Location = new System.Drawing.Point(76, 346);
+            this.cmbHost.Name = "cmbHost";
+            this.cmbHost.Size = new System.Drawing.Size(172, 27);
+            this.cmbHost.TabIndex = 4;
+            this.cmbHost.Visible = false;
+            // 
+            // lnkHost
+            // 
+            this.lnkHost.AutoSize = true;
+            this.lnkHost.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkHost.LinkColor = System.Drawing.Color.White;
+            this.lnkHost.Location = new System.Drawing.Point(3, 419);
+            this.lnkHost.Name = "lnkHost";
+            this.lnkHost.Size = new System.Drawing.Size(21, 15);
+            this.lnkHost.TabIndex = 8;
+            this.lnkHost.TabStop = true;
+            this.lnkHost.Text = ">>";
+            this.lnkHost.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkHost_LinkClicked);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -135,7 +162,7 @@
             this.label1.Location = new System.Drawing.Point(11, 161);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(302, 21);
+            this.label1.Size = new System.Drawing.Size(246, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "Enter Connection ID and Password";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -148,7 +175,7 @@
             this.metroLabel4.Location = new System.Drawing.Point(120, 318);
             this.metroLabel4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(85, 25);
+            this.metroLabel4.Size = new System.Drawing.Size(82, 25);
             this.metroLabel4.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroLabel4.TabIndex = 5;
             this.metroLabel4.Text = "Password";
@@ -164,7 +191,7 @@
             this.metroLabel3.Location = new System.Drawing.Point(148, 242);
             this.metroLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(29, 25);
+            this.metroLabel3.Size = new System.Drawing.Size(28, 25);
             this.metroLabel3.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroLabel3.TabIndex = 4;
             this.metroLabel3.Text = "ID";
@@ -269,7 +296,7 @@
             this.metroLabel5.Location = new System.Drawing.Point(53, 363);
             this.metroLabel5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(214, 25);
+            this.metroLabel5.Size = new System.Drawing.Size(202, 25);
             this.metroLabel5.Style = MetroFramework.MetroColorStyle.White;
             this.metroLabel5.TabIndex = 5;
             this.metroLabel5.Text = "MANAGEMENT SYSTEM";
@@ -287,7 +314,7 @@
             this.metroLabel2.Location = new System.Drawing.Point(93, 309);
             this.metroLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(134, 25);
+            this.metroLabel2.Size = new System.Drawing.Size(130, 25);
             this.metroLabel2.Style = MetroFramework.MetroColorStyle.White;
             this.metroLabel2.TabIndex = 4;
             this.metroLabel2.Text = "WELCOME TO";
@@ -305,7 +332,7 @@
             this.metroLabel1.Location = new System.Drawing.Point(63, 334);
             this.metroLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(194, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(187, 25);
             this.metroLabel1.Style = MetroFramework.MetroColorStyle.White;
             this.metroLabel1.TabIndex = 3;
             this.metroLabel1.Text = "SMU CLINIC RECORD ";
@@ -322,33 +349,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(641, 21);
             this.panel1.TabIndex = 8;
-            // 
-            // lnkHost
-            // 
-            this.lnkHost.AutoSize = true;
-            this.lnkHost.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkHost.LinkColor = System.Drawing.Color.White;
-            this.lnkHost.Location = new System.Drawing.Point(3, 419);
-            this.lnkHost.Name = "lnkHost";
-            this.lnkHost.Size = new System.Drawing.Size(24, 17);
-            this.lnkHost.TabIndex = 8;
-            this.lnkHost.TabStop = true;
-            this.lnkHost.Text = ">>";
-            this.lnkHost.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkHost_LinkClicked);
-            // 
-            // cmbHost
-            // 
-            this.cmbHost.Enabled = false;
-            this.cmbHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbHost.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbHost.FormattingEnabled = true;
-            this.cmbHost.Items.AddRange(new object[] {
-            "localhost"});
-            this.cmbHost.Location = new System.Drawing.Point(76, 346);
-            this.cmbHost.Name = "cmbHost";
-            this.cmbHost.Size = new System.Drawing.Size(172, 29);
-            this.cmbHost.TabIndex = 4;
-            this.cmbHost.Visible = false;
             // 
             // frmLogin
             // 
@@ -369,7 +369,7 @@
             this.Padding = new System.Windows.Forms.Padding(30, 88, 30, 29);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
-            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.TransparencyKey = System.Drawing.Color.Red;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
