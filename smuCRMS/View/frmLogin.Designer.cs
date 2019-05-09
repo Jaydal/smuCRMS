@@ -91,7 +91,7 @@
             // 
             // pnlLog
             // 
-            this.pnlLog.BackColor = System.Drawing.Color.Crimson;
+            this.pnlLog.BackColor = System.Drawing.Color.MidnightBlue;
             this.pnlLog.Controls.Add(this.cmbHost);
             this.pnlLog.Controls.Add(this.lnkHost);
             this.pnlLog.Controls.Add(this.pictureBox2);
@@ -369,7 +369,7 @@
             this.Padding = new System.Windows.Forms.Padding(30, 88, 30, 29);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
-            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.TransparencyKey = System.Drawing.Color.Red;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);

@@ -53,10 +53,10 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(415, 170);
+            this.pictureBox2.Location = new System.Drawing.Point(332, 136);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(336, 113);
+            this.pictureBox2.Size = new System.Drawing.Size(269, 91);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 40;
             this.pictureBox2.TabStop = false;
@@ -72,7 +72,7 @@
             this.txtLbl.Margin = new System.Windows.Forms.Padding(2);
             this.txtLbl.Multiline = true;
             this.txtLbl.Name = "txtLbl";
-            this.txtLbl.Size = new System.Drawing.Size(336, 98);
+            this.txtLbl.Size = new System.Drawing.Size(269, 78);
             this.txtLbl.TabIndex = 2;
             this.txtLbl.Text = "Tap Patient\'s SMU ID Card for Data Retrieval";
             this.txtLbl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -83,25 +83,25 @@
             this.metroPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.metroPanel4.HorizontalScrollbarBarColor = true;
             this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.HorizontalScrollbarSize = 10;
-            this.metroPanel4.Location = new System.Drawing.Point(415, 283);
+            this.metroPanel4.HorizontalScrollbarSize = 8;
+            this.metroPanel4.Location = new System.Drawing.Point(332, 227);
             this.metroPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel4.Name = "metroPanel4";
-            this.metroPanel4.Size = new System.Drawing.Size(336, 378);
+            this.metroPanel4.Size = new System.Drawing.Size(269, 302);
             this.metroPanel4.TabIndex = 38;
             this.metroPanel4.VerticalScrollbarBarColor = true;
             this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.VerticalScrollbarSize = 10;
+            this.metroPanel4.VerticalScrollbarSize = 8;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(0, 461);
+            this.label2.Location = new System.Drawing.Point(0, 371);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 30);
+            this.label2.Size = new System.Drawing.Size(65, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             this.label2.TextChanged += new System.EventHandler(this.label2_TextChanged);
@@ -112,16 +112,16 @@
             this.metroPanel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(0, 170);
+            this.metroPanel3.HorizontalScrollbarSize = 8;
+            this.metroPanel3.Location = new System.Drawing.Point(0, 136);
             this.metroPanel3.Margin = new System.Windows.Forms.Padding(2);
-            this.metroPanel3.MaximumSize = new System.Drawing.Size(415, 589);
+            this.metroPanel3.MaximumSize = new System.Drawing.Size(332, 471);
             this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(415, 491);
+            this.metroPanel3.Size = new System.Drawing.Size(332, 393);
             this.metroPanel3.TabIndex = 37;
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel3.VerticalScrollbarSize = 10;
+            this.metroPanel3.VerticalScrollbarSize = 8;
             // 
             // label1
             // 
@@ -133,7 +133,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1437, 142);
+            this.label1.Size = new System.Drawing.Size(1152, 115);
             this.label1.TabIndex = 2;
             this.label1.Text = "Welcome to SMU-CRMS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,39 +144,39 @@
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.HorizontalScrollbarSize = 8;
             this.metroPanel1.Location = new System.Drawing.Point(0, 0);
             this.metroPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1166, 170);
+            this.metroPanel1.Size = new System.Drawing.Size(933, 136);
             this.metroPanel1.TabIndex = 0;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.VerticalScrollbarSize = 8;
             // 
             // metroPanel2
             // 
             this.metroPanel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(751, 170);
+            this.metroPanel2.HorizontalScrollbarSize = 8;
+            this.metroPanel2.Location = new System.Drawing.Point(601, 136);
             this.metroPanel2.Margin = new System.Windows.Forms.Padding(2);
-            this.metroPanel2.MaximumSize = new System.Drawing.Size(415, 589);
+            this.metroPanel2.MaximumSize = new System.Drawing.Size(332, 471);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(415, 491);
+            this.metroPanel2.Size = new System.Drawing.Size(332, 393);
             this.metroPanel2.TabIndex = 36;
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
+            this.metroPanel2.VerticalScrollbarSize = 8;
             // 
             // frmRFID
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1166, 661);
+            this.ClientSize = new System.Drawing.Size(933, 529);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.metroPanel4);
@@ -185,7 +185,7 @@
             this.Controls.Add(this.metroPanel1);
             this.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRFID";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

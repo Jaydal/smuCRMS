@@ -121,8 +121,6 @@ namespace smuCRMS.View
                 Directory.CreateDirectory(dir);
             }
         
-     
-           
             string[] files = Directory.GetFiles(dir);
             string _dir = dir + Cipher.Encipher("smucrms" + DateTime.Now.Year + DateTime.Now.Month + DateTime.Now.Day,3 );
             Connection.Backup(_dir, "backup",host);

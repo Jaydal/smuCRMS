@@ -47,9 +47,9 @@
             this.lblProg.AutoSize = true;
             this.lblProg.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblProg.ForeColor = System.Drawing.Color.White;
-            this.lblProg.Location = new System.Drawing.Point(20, 255);
+            this.lblProg.Location = new System.Drawing.Point(20, 257);
             this.lblProg.Name = "lblProg";
-            this.lblProg.Size = new System.Drawing.Size(131, 23);
+            this.lblProg.Size = new System.Drawing.Size(106, 21);
             this.lblProg.TabIndex = 4;
             this.lblProg.Text = "Processing....";
             // 
@@ -66,7 +66,7 @@
             // pBar
             // 
             this.pBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pBar.Location = new System.Drawing.Point(20, 232);
+            this.pBar.Location = new System.Drawing.Point(20, 234);
             this.pBar.Name = "pBar";
             this.pBar.Size = new System.Drawing.Size(367, 23);
             this.pBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
@@ -88,16 +88,16 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(367, 172);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(367, 174);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // metroTile4
             // 
             this.metroTile4.ActiveControl = null;
             this.metroTile4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile4.Location = new System.Drawing.Point(186, 89);
+            this.metroTile4.Location = new System.Drawing.Point(186, 90);
             this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(178, 80);
+            this.metroTile4.Size = new System.Drawing.Size(178, 81);
             this.metroTile4.Style = MetroFramework.MetroColorStyle.Red;
             this.metroTile4.TabIndex = 4;
             this.metroTile4.TabStop = false;
@@ -115,9 +115,9 @@
             // 
             this.metroTile3.ActiveControl = null;
             this.metroTile3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile3.Location = new System.Drawing.Point(3, 89);
+            this.metroTile3.Location = new System.Drawing.Point(3, 90);
             this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(177, 80);
+            this.metroTile3.Size = new System.Drawing.Size(177, 81);
             this.metroTile3.Style = MetroFramework.MetroColorStyle.Green;
             this.metroTile3.TabIndex = 3;
             this.metroTile3.TabStop = false;
@@ -137,7 +137,7 @@
             this.metroTile2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTile2.Location = new System.Drawing.Point(186, 3);
             this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(178, 80);
+            this.metroTile2.Size = new System.Drawing.Size(178, 81);
             this.metroTile2.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroTile2.TabIndex = 2;
             this.metroTile2.TabStop = false;
@@ -157,7 +157,7 @@
             this.tileBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tileBack.Location = new System.Drawing.Point(3, 3);
             this.tileBack.Name = "tileBack";
-            this.tileBack.Size = new System.Drawing.Size(177, 80);
+            this.tileBack.Size = new System.Drawing.Size(177, 81);
             this.tileBack.Style = MetroFramework.MetroColorStyle.Blue;
             this.tileBack.TabIndex = 1;
             this.tileBack.TabStop = false;
@@ -173,7 +173,7 @@
             // 
             // frmOpt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(407, 298);
             this.Controls.Add(this.tableLayoutPanel1);
