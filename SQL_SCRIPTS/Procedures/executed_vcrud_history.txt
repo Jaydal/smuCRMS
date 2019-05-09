@@ -1,0 +1,30 @@
+DELIMITER $$
+
+CREATE
+    PROCEDURE `_clinic`.`vcrud_history`(
+	IN activity VARCHAR(10),
+    IN history_id VARCHAR(7),
+    IN history VARCHAR(30),
+    IN history_description VARCHAR(30),
+    IN uid VARCHAR(6))
+	BEGIN
+		IF activity="CREATE" THEN
+			INSERT INTO history
+				VALUES(history_id,history,history_description,uid);
+		ELSEIF activity="UPDATE" THEN
+			UPDATE history
+				SET history.`History_id`=history_id,
+				history.`History`=history,
+                history_description.`History_description`=history_description,
+				history.`uid`=uid
+				WHERE history.`History_id`=history_id;
+		ELSEIF activity="DELETE" THEN
+			DELETE FROM history
+				WHERE history.`History_id`=history_id;
+		ELSEIF activity="VIEW" THEN		
+			SELECT * FROM history
+				WHERE history.`History_id`=history_id;
+		END IF;
+	END$$
+
+DELIMITER ;
