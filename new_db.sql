@@ -144,6 +144,7 @@ CREATE TABLE `patient` (
   `uid` varchar(15) NOT NULL,
   `id` varchar(15) NOT NULL,
   `LastName` varchar(30) DEFAULT NULL,
+  `FirstName` varchar(30) DEFAULT NULL,
   `MiddleName` varchar(30) DEFAULT NULL,
   `Department_id` varchar(7) DEFAULT NULL,
   `Course_id` varchar(7) DEFAULT NULL,
@@ -181,8 +182,8 @@ CREATE TABLE `patient` (
 
 /*Data for the table `patient` */
 
-insert  into `patient`(`uid`,`id`,`LastName`,`MiddleName`,`Department_id`,`Course_id`,`Level`,`Birthday`,`Age`,`Sex`,`CivilStatus`,`Nationality`,`HomeAddress`,`BoardingAddress`,`FathersName`,`FathersOccupation`,`FathersNumber`,`MothersName`,`MothersOccupation`,`MothersNumber`,`LandLadyName`,`LandLadyNumber`,`EmergencyCallName`,`EmergencyRelation`,`EmergencyNumber`,`FirstMenstruation`,`LastMenstruation`,`Photo`,`Signature`) values 
-('12345','29695150','Labitori','Agoot','SEAIT','BSIT','C1','2019-05-08 14:39:34',64,'Male','Single','Filipino','Salvacion',NULL,'Rodel','Rodel','123','Marivel','Marivel','123',NULL,NULL,'Marivel','Mother','123',NULL,NULL,NULL,NULL);
+insert  into `patient`(`uid`,`id`,`LastName`,`FirstName`,`MiddleName`,`Department_id`,`Course_id`,`Level`,`Birthday`,`Age`,`Sex`,`CivilStatus`,`Nationality`,`HomeAddress`,`BoardingAddress`,`FathersName`,`FathersOccupation`,`FathersNumber`,`MothersName`,`MothersOccupation`,`MothersNumber`,`LandLadyName`,`LandLadyNumber`,`EmergencyCallName`,`EmergencyRelation`,`EmergencyNumber`,`FirstMenstruation`,`LastMenstruation`,`Photo`,`Signature`) values 
+('12345','29695150','Labitori','June Delmar','Agoot','SEAIT','BSIT','C1','2019-05-08 14:39:34',64,'Male','Single','Filipino','Salvacion',NULL,'Rodel','Rodel','123','Marivel','Marivel','123',NULL,NULL,'Marivel','Mother','123',NULL,NULL,NULL,NULL);
 
 /*Table structure for table `remark` */
 
