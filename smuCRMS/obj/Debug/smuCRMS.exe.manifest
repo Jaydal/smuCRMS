@@ -516,14 +516,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="smuCRMS.exe" size="1138112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="smuCRMS.exe" size="1116672">
       <assemblyIdentity name="smuCRMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lcTVSTdzJxK3GFeW/x9pa20mBLV/7y668DqEB+kSHUA=</dsig:DigestValue>
+        <dsig:DigestValue>WEoRW4zrnOnvy+GGdH2T6uCFfFyIlnoPXkL+RlaUObM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -566,13 +566,13 @@
       <dsig:DigestValue>1fkapnZEURlceCFdiqlCjvWbCgbDVXPq5EJh7vij0U0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="smuCRMS.exe.config" size="603">
+  <file name="smuCRMS.exe.config" size="630">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>XnuTDdHBPMSk8ZSA1j+0Z90y5CrC9e9YTg8gpBcPrhI=</dsig:DigestValue>
+      <dsig:DigestValue>mhMvJ0HqmnEWillcUdFgGjsLOQEM2TVPnAW/jK7EeaY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

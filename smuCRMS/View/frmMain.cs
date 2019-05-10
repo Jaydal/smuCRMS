@@ -109,7 +109,7 @@ namespace smuCRMS.View
         public void autoback()
         {
             string host = Cipher.Encipher("localhost",3);
-            string h = frmConnect.read(hpath);
+            string h = frmConnect.read(hpath)[0];
             if (h != "" || h != null)
             {
                 host = h;

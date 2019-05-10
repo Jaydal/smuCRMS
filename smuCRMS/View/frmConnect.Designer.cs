@@ -90,11 +90,11 @@
             this.cmbHost.Location = new System.Drawing.Point(153, 118);
             this.cmbHost.Name = "cmbHost";
             this.cmbHost.Size = new System.Drawing.Size(275, 27);
-            this.cmbHost.TabIndex = 4;
+            this.cmbHost.TabIndex = 1;
             // 
             // pnlLog
             // 
-            this.pnlLog.BackColor = System.Drawing.Color.White;
+            this.pnlLog.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlLog.Controls.Add(this.btnConnect);
             this.pnlLog.Controls.Add(this.txtPassword);
             this.pnlLog.Controls.Add(this.txtUsername);
@@ -121,8 +121,10 @@
             // 
             this.btnConnect.AutoSize = true;
             this.btnConnect.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnConnect.BackColor = System.Drawing.Color.DimGray;
             this.btnConnect.Depth = 0;
             this.btnConnect.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnConnect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnConnect.Icon = null;
             this.btnConnect.Location = new System.Drawing.Point(0, 327);
             this.btnConnect.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -130,7 +132,7 @@
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Primary = false;
             this.btnConnect.Size = new System.Drawing.Size(580, 36);
-            this.btnConnect.TabIndex = 11;
+            this.btnConnect.TabIndex = 4;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
@@ -149,9 +151,11 @@
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.Size = new System.Drawing.Size(275, 23);
-            this.txtPassword.TabIndex = 10;
+            this.txtPassword.TabIndex = 3;
             this.txtPassword.TabStop = false;
+            this.txtPassword.Text = "smuclinic2018";
             this.txtPassword.UseSystemPasswordChar = false;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // txtUsername
             // 
@@ -167,11 +171,13 @@
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.Size = new System.Drawing.Size(275, 23);
-            this.txtUsername.TabIndex = 9;
+            this.txtUsername.TabIndex = 2;
             this.txtUsername.TabStop = false;
+            this.txtUsername.Text = "smuclinic";
             this.txtUsername.UseSystemPasswordChar = false;
+            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
-            // frmLogin
+            // frmConnect
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
@@ -185,12 +191,11 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(640, 480);
             this.MinimumSize = new System.Drawing.Size(640, 480);
-            this.Name = "frmLogin";
+            this.Name = "frmConnect";
             this.Padding = new System.Windows.Forms.Padding(30, 88, 30, 29);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.White;
-            this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.TransparencyKey = System.Drawing.Color.Red;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
             this.Load += new System.EventHandler(this.frmLogin_Load);
