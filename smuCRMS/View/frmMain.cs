@@ -109,7 +109,7 @@ namespace smuCRMS.View
         public void autoback()
         {
             string host = Cipher.Encipher("localhost",3);
-            string h = frmLogin.read(hpath);
+            string h = frmConnect.read(hpath);
             if (h != "" || h != null)
             {
                 host = h;
@@ -330,7 +330,7 @@ namespace smuCRMS.View
         private void logoutToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             //ac.logOut();
-            frmLogin lg = new frmLogin();
+            frmConnect lg = new frmConnect();
             this.Dispose();
             lg.Show();
 

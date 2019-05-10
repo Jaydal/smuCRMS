@@ -1571,3 +1571,4 @@ C:\Users\ASUS\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.application
 C:\Users\ASUS\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.csproj.CopyComplete
 C:\Users\ASUS\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.exe
 C:\Users\ASUS\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.pdb
+C:\Users\ASUS\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.View.Login.resources

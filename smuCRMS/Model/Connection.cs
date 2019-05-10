@@ -20,7 +20,7 @@ namespace smuCRMS.Model
         string path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\CRMShost";
         public void ConnectToDB()
         {
-            string h = frmLogin.read(path);
+            string h = frmConnect.read(path);
             Cipher.Encipher(host,3);
             if (h != "" || h != null)
             {

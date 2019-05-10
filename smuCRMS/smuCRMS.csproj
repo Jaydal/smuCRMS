@@ -206,11 +206,11 @@
     <Compile Include="View\frmImmun.Designer.cs">
       <DependentUpon>frmImmun.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmLogin.cs">
+    <Compile Include="View\frmConnect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="View\frmConnect.Designer.cs">
+      <DependentUpon>frmConnect.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmMain.cs">
       <SubType>Form</SubType>
@@ -301,8 +301,8 @@
     <EmbeddedResource Include="View\frmImmun.resx">
       <DependentUpon>frmImmun.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmConnect.resx">
+      <DependentUpon>frmConnect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

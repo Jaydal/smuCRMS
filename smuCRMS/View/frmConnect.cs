@@ -7,9 +7,9 @@ using smuCRMS.Model;
 
 namespace smuCRMS.View
 {
-    public partial class frmLogin : MetroFramework.Forms.MetroForm
+    public partial class frmConnect : MetroFramework.Forms.MetroForm
     {
-        public frmLogin()
+        public frmConnect()
         {
             InitializeComponent();
         }
@@ -80,21 +80,11 @@ namespace smuCRMS.View
             Application.Exit();
         }
 
-        private void lnkHost_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
 
-            if(lnkHost.Text==">>")
-            {
-                cmbHost.Show();
-                cmbHost.Enabled = true;
-                lnkHost.Text = "<<";
-            }
-            else
-            {
-                cmbHost.Hide();
-                cmbHost.Enabled = false;
-                lnkHost.Text =">>";
-            }
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            write(cmbHost.Text, path);
+            conn();
         }
     }
 }
