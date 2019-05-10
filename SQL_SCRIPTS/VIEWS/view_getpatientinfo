@@ -2,17 +2,13 @@ DELIMITER $$
 DROP VIEW IF EXISTS view_getpatientinfo;
 CREATE VIEW view_getpatientinfo AS 
 SELECT id AS "ID Number",
- P.LastName AS "Last Name",
- P.FirstName AS "First Name",
- P.MiddleName AS "Middle Name",
- D.Department AS "Department",
- C.Course AS "Course",
- P.Level AS "Level",
- P.Sex AS "SEx",
- P.Age AS "AGE"
- from patient AS P
- INNER JOIN department AS D
- INNER JOIN course AS C
- WHERE P.Department_id=D.Department_id AND 
- P.Course_ID=C.Course_id;$$
+ LastName AS "Last Name",
+ FirstName AS "First Name",
+ MiddleName AS "Middle Name",
+ Department_id AS "Department",
+ Course_id AS "Course",
+ Level AS "Level",
+ Sex AS "SEx",
+ Age AS "AGE"
+ from patient;$$
  DELIMITER ;
