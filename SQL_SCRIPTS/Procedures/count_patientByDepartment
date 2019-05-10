@@ -2,7 +2,7 @@ DELIMITER $$
 DROP PROCEDURE if exists count_patientByDepartment;
 CREATE procedure _clinic.count_patientByDepartment()
 BEGIN
-	SELECT COUNT(P.ID) AS "Number of Patients per Department"
+	SELECT P.Department_id AS "Department", COUNT(P.ID) AS "Number of Patients" 
     FROM patient AS P
     group by P.Department_id;
 END$$
