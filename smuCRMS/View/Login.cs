@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroSet_UI.Forms;
 
 namespace smuCRMS.View
 {
-    public partial class Login : MaterialSkin.Controls.MaterialForm
+    public partial class Login : Form
     {
         public Login()
         {
@@ -20,9 +21,40 @@ namespace smuCRMS.View
         private void Login_Load(object sender, EventArgs e)
         {
 
+
         }
 
         private void materialSingleLineTextField1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroSetScrollBar1_Scroll(object sender)
+        {
+
+        }
+
+        private void metroSetPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void metroSetLabel1_Click(object sender, EventArgs e)
+        {
+             
+        }
+
+        private void metroSetLabel1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialFlatButton1_Click_1(object sender, EventArgs e)
         {
 
         }
