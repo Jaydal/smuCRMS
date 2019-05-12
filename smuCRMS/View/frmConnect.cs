@@ -28,7 +28,7 @@ namespace smuCRMS.View
             }
             else
             {
-                MetroMessageBox.Show(this, "\n-Incorrect ID/Password \n-Can't Connect", "Connection Failed!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MetroMessageBox.Show(this, "\n-Incorrect Username/Password/Host \n-Can't Connect", "Connection Failed!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
         private void btnLogin_Click(object sender, EventArgs e)
