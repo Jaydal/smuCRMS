@@ -17,7 +17,7 @@ namespace smuCRMS.Model
         public MySqlDataAdapter adap = new MySqlDataAdapter();
         public DataTable dtable = new DataTable();
         private MySqlConnection conn = new MySqlConnection();
-        public void ConnectToDB()
+        private void ConnectToDB()
         {
             string h = frmConnect.read(frmConnect.path)[0];
             string u = frmConnect.read(frmConnect.path)[1];

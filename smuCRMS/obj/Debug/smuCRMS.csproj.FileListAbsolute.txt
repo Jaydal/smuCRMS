@@ -1666,3 +1666,4 @@ C:\Users\Chants\Documents\smuCRMS\smuCRMS\bin\Debug\MetroSet UI.dll
 C:\Users\Chants\Documents\smuCRMS\smuCRMS\obj\Debug\smuCRMS.View.Login.resources
 C:\Users\ASUS\Desktop\smuCRMS\smuCRMS\bin\Debug\MetroSet UI.dll
 C:\Users\ASUS\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.View.frmAccountManager.resources
