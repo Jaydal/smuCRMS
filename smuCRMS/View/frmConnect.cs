@@ -16,19 +16,19 @@ namespace smuCRMS.View
         {
             InitializeComponent();
         }
-        string path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\CRMShost";
+        public static string path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\CRMShost";
         void conn()
         {
             if (Connection.Verify(txtUsername.Text,txtPassword.Text,cmbHost.Text))
             {
                 write(cmbHost.Text, txtUsername.Text, txtUsername.Text, path);
-                this.Hide();
-                frmMain main = new frmMain();
-                main.Show();
+                this.Close();
+                Login lg = new Login();
+                lg.Show();
             }
             else
             {
-                MetroMessageBox.Show(this, "\n-Incorrect ID/Password \n-Can't Connect", "Connection Failed!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MetroMessageBox.Show(this, "\n-Incorrect Username/Password/Host \n-Can't Connect", "Connection Failed!", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
         private void btnLogin_Click(object sender, EventArgs e)

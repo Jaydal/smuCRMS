@@ -44,8 +44,8 @@ CREATE TABLE `course` (
   `Course` varchar(255) DEFAULT NULL,
   `Department_id` varchar(7) DEFAULT NULL,
   PRIMARY KEY (`Course_id`),
-  KEY `Department_id` (`Department_id`),
-  CONSTRAINT `course_ibfk_1` FOREIGN KEY (`Department_id`) REFERENCES `department` (`Department_id`)
+  KEY `course_ibfk_1` (`Department_id`),
+  CONSTRAINT `course_ibfk_1` FOREIGN KEY (`Department_id`) REFERENCES `department` (`Department_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `course` */
@@ -66,7 +66,11 @@ CREATE TABLE `department` (
 /*Data for the table `department` */
 
 insert  into `department`(`Department_id`,`Department`) values 
-('SEAIT','School of Engineering, Architecture and Information Technology');
+('111','Grade School-1'),
+('122','Junior High School-2'),
+('123','Senior High School-3'),
+('213','College of Law-4'),
+('SEAIT','School of Engineering, Architecture and Information Technology-3');
 
 /*Table structure for table `history` */
 
@@ -320,14 +324,14 @@ DELIMITER $$
 /*!50003 CREATE DEFINER=`root`@`%` PROCEDURE `vcrud_department`(
 	IN activity VARCHAR(10),
     IN department_id VARCHAR(7),
-    IN department VARCHAR(255))
+    IN department VARCHAR(30))
 BEGIN
 		IF activity="CREATE" THEN
 			INSERT INTO department
 				VALUES(department_id,department);
 		ELSEIF activity="UPDATE" THEN
 			UPDATE department
-				SET department.`Department_id`=department_id,
+				SET 
 				department.`Department`=department
 				WHERE department.`Department_id`=department_id;
 		ELSEIF activity="DELETE" THEN
@@ -369,6 +373,224 @@ BEGIN
 		ELSEIF activity="VIEW" THEN		
 			SELECT * FROM history
 				WHERE history.`History_id`=history_id;
+		END IF;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `vcrud_immunization` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `vcrud_immunization` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`%` PROCEDURE `vcrud_immunization`(
+    IN activity VARCHAR(10),
+	IN immunization_id VARCHAR(10),
+	IN uid VARCHAR(15),
+	IN immunization VARCHAR(255),
+	IN _LEVEL VARCHAR(15))
+BEGIN
+		IF activity="CREATE" THEN
+			INSERT INTO immunization 
+			VALUES(immunization_id,uid,immunization,LEVEL);
+		ELSEIF activity="UPDATE" THEN
+			UPDATE immunization
+				SET 
+				immunization.`uid`=uid,
+				immunization.`immunization`=immunization,
+				immunization.`level`=_LEVEL
+				WHERE immunization.`immunization_id`=immunization_id;
+		ELSEIF activity="DELETE" THEN
+			DELETE FROM immunization
+				WHERE immunization.`immunization_id`=immunization_id;
+		ELSEIF activity="VIEW" THEN		
+			SELECT * FROM immunization
+				WHERE immunization.`immunization_id`=immunization_id;
+		END IF;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `vcrud_patient` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `vcrud_patient` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`%` PROCEDURE `vcrud_patient`(
+	IN activity VARCHAR(15),
+    IN uid VARCHAR(7),
+    IN id VARCHAR(15),
+    IN Lastname VARCHAR(30),
+    IN FirstName VARCHAR(30),
+    IN MiddleName VARCHAR(30),
+    IN Department_id VARCHAR(7),
+    IN Course_id VARCHAR(7),
+    IN _Level VARCHAR(7),
+    IN Birthday datetime,
+    IN Age tinyint(3),
+    IN Sex VARCHAR(10),
+    IN CivilStatus VARCHAR(15),
+    IN Nationality VARCHAR(30),
+    IN HomeAddress VARCHAR(255),
+    IN BoardingAddress VARCHAR(255),
+    IN FathersName VARCHAR(50),
+    IN FathersOccupation VARCHAR(30),
+    IN FathersNumber VARCHAR(15),
+    IN MothersName VARCHAR(50),
+    IN MothersOccupation VARCHAR(30),
+    IN MothersNumber VARCHAR(15),
+    IN LandLadyName VARCHAR(50),
+    IN LandLadyNumber VARCHAR(15),
+    IN EmergencyCallName VARCHAR(50),
+    IN EmergencyRelation VARCHAR(30),
+    IN EmergencyNumber VARCHAR(15),
+    IN FirstMenstruation datetime,
+    IN LastMenstruation datetime,
+    IN Photo mediumblob,
+    IN Signature mediumblob)
+BEGIN
+		IF activity="CREATE" THEN
+			INSERT INTO patient
+				VALUES(uid,id,LastName,FirstName,MiddleName,Department_id,course_id,_Level,BirthDay,Age,Sex,CivilStatus,Nationality,HomeAddress,BoardingAddress,FathersName,FathersOccupation,FathersNumber,MothersName,MothersOccupation,MothersNumber,LandLadyName,LandLadyNumber,EmergencyCallName,EmergencyRelation,EmergencyNumber,FirstMenstruation,LastMenstruation,Photo,Signature);
+		ELSEIF activity="UPDATE" THEN
+			UPDATE patient
+				SET patient.uid=uid,
+				patient.id=id,
+				patient.LastName=LastName,
+				patient.`FirstName`=FirstName,
+				patient.MiddleName=MiddleName,
+				patient.Department_id=Department_id,
+				patient.course_id=Course_id,
+				patient.Level=_Level,
+				patient.BirthDay=Birthday,
+				patient.Age=Age,
+				patient.Sex=Sex,
+				patient.CivilStatus=CivilStatus,
+				patient.Nationality=Nationality,
+				patient.HomeAddress=HomeAddress,
+				patient.BoardingAddress=BoardingAddress,
+				patient.FathersName=FathersName,
+				patient.FathersOccupation=FathersOccupation,
+				patient.FathersNumber=FathersnNumber,
+				patient.MothersName=MothersName,
+				patient.MothersOccupation=MothersOccupation,
+				patient.MothersNumber=MothersNumber,
+				patient.LandLadyName=LandLadyName,
+				patient.LandLadyNumber=LandLadyNumber,
+				patient.EmergencyCallName=EmergencyCallName,
+				patient.EmergencyRelation=EmergencyRelation,
+				patient.EmergencyNumber=EmergencyNumber,
+				patient.FirstMenstruation=FirstMenstruation,
+				patient.LastMenstruation=LastMenstruation,
+				patient.Photo=Photo,
+				patient.Signature=Signature
+				WHERE patient.id=id;
+		ELSEIF activity="DELETE" THEN
+			DELETE FROM patient
+				WHERE patient.`id`=id;
+		ELSEIF activity="VIEW" THEN		
+			SELECT * FROM patient
+				WHERE patient.`id`=id;
+		END IF;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `vcrud_remark` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `vcrud_remark` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`%` PROCEDURE `vcrud_remark`(
+    IN activity VARCHAR(10),
+    IN remark_id VARCHAR(10),
+    IN uid VARCHAR(15),    
+    IN weight FLOAT,
+    IN height FLOAT,
+    IN bmi FLOAT,
+    IN bp VARCHAR(15),
+    IN pr VARCHAR(15),
+    IN rr VARCHAR(15),
+    IN temp FLOAT,
+    IN spo FLOAT,
+    IN remarks VARCHAR(255),
+    IN doctorincharge VARCHAR(50),
+    IN doctorsignature mediumblob)
+BEGIN
+		IF activity="CREATE" THEN
+			INSERT INTO remark
+				VALUES(remark_id,uid,weight,height,bmi,bp,pr,rr,temp,spo,remarks,doctorincharge,doctorsignature);
+		ELSEIF activity="UPDATE" THEN
+			UPDATE remark
+				SET 
+				remark.`uid`=uid,
+				remark.`weight`=weight,
+				remark.`height`=height,
+				remark.`BMI`=bmi,
+				remark.`BP`=bp,
+				remark.`PR`=pr,
+				remark.`RR`=rr,
+				remark.`Temperature`=temp,
+				remark.`SPO2`=spo2,
+				remark.`Remarks`=remarks,
+				remark.`DoctorInCharge`=doctorincharge,
+				remark.`DoctorSignature`=doctorsignature
+				WHERE remark.`remark_id`=remark_id;
+		ELSEIF activity="DELETE" THEN
+			DELETE FROM remark
+				WHERE remark.`remark_id`=remark_id;
+		ELSEIF activity="VIEW" THEN		
+			SELECT * FROM remark
+				WHERE remark.`remark_id`=remark_id;
+		END IF;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `vcrud_treatment` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `vcrud_treatment` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `vcrud_treatment`(
+    IN activity VARCHAR(10),
+    IN treatment_id VARCHAR(10),
+    IN uid VARCHAR(15),    
+    IN treatmentdate DATETIME,
+    IN chiefcomplaints VARCHAR(255),
+    IN diagnosis VARCHAR(255),
+    IN bp VARCHAR(15),
+    IN pr VARCHAR(15),
+    IN rr VARCHAR(15),
+    IN temp FLOAT,
+    IN spo FLOAT,
+    IN doctorincharge VARCHAR(50),
+    IN referral VARCHAR(50))
+BEGIN
+		IF activity="CREATE" THEN
+			INSERT INTO treatment
+				VALUES(treatment_id,uid,treatmentdate,chiefcomplaints,diagnosis,bp,pr,rr,temp,spo,doctorincharge,referral);
+		ELSEIF activity="UPDATE" THEN
+			UPDATE treatment
+				SET 
+				treatment.`uid`=uid,
+				treatment.`TreatmentDate`=treatmentdate,
+				treatment.`ChiefComplaints`=chiefcomplaints,
+				treatment.`Diagnosis`=diagnosis,
+				treatment.`BP`=bp,
+				treatment.`PR`=pr,
+				treatment.`RR`=rr,
+				treatment.`Temp`=temp,
+				treatment.`SPO2`=spo2,
+				treatment.`DoctorInCharge`=doctorincharge,
+				treatment.`Referral`=referral
+				WHERE treatment.`treatment_id`=treatment_id;
+		ELSEIF activity="DELETE" THEN
+			DELETE FROM treatment
+				WHERE treatment.`treatment_id`=treatment_id;
+		ELSEIF activity="VIEW" THEN		
+			SELECT * FROM treatment
+				WHERE treatment.`treatment_id`=treatment_id;
 		END IF;
 	END */$$
 DELIMITER ;
