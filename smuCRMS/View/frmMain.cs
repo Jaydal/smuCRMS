@@ -108,13 +108,10 @@ namespace smuCRMS.View
     
         public void autoback()
         {
-            string host = Cipher.Encipher("localhost",3);
             string h = frmConnect.read(hpath)[0];
-            if (h != "" || h != null)
-            {
-                host = h;
-            }
-       
+            string u = frmConnect.read(hpath)[1];
+            string p = frmConnect.read(hpath)[2];
+
             string dir = "C:\\_backup\\";
             if(!Directory.Exists(dir))
            {
@@ -123,7 +120,7 @@ namespace smuCRMS.View
         
             string[] files = Directory.GetFiles(dir);
             string _dir = dir + Cipher.Encipher("smucrms" + DateTime.Now.Year + DateTime.Now.Month + DateTime.Now.Day,3 );
-            Connection.Backup(_dir, "backup",host);
+            Connection.Backup(_dir, "backup",h,u,p);
             using (ZipFile zip = new ZipFile())
             {
                 zip.Password = Cipher.Decipher("vpxfolqlf2018",3);

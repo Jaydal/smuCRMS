@@ -6,6 +6,7 @@ using MySql.Data.MySqlClient;
 using System.Diagnostics;
 using smuCRMS.Controller;
 using smuCRMS.View;
+using System.Collections;
 
 namespace smuCRMS.Model
 {
@@ -16,20 +17,16 @@ namespace smuCRMS.Model
         public MySqlDataAdapter adap = new MySqlDataAdapter();
         public DataTable dtable = new DataTable();
         private MySqlConnection conn = new MySqlConnection();
-        public string host = "localhost";
-        string path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\CRMShost";
+        //public string host = "localhost";
+        private static string path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\CRMShost";
         public void ConnectToDB()
         {
             string h = frmConnect.read(path)[0];
-            Cipher.Encipher(host,3);
-            if (h != "" || h != null)
-            {
-                host = h;
-            }
-            //connectionString =
+            string u = frmConnect.read(path)[1];
+            string p = frmConnect.read(path)[2];
             if (conn.State==ConnectionState.Closed)
             {
-                conn.ConnectionString = Cipher.Decipher("vhuyhu="+host+"; xvhu lg=vpxfolqlf;sdvvzrug=vpxfolqlf2018;gdwdedvh=_vpxfolqlf;Frqyhuw Chur Gdwhwlph=Wuxh;", 3);
+                conn.ConnectionString = Cipher.Decipher("vhuyhu="+h+"; xvhu lg="+u+ ";sdvvzrug=" + p + ";gdwdedvh=_folqlf;Frqyhuw Chur Gdwhwlph=Wuxh;", 3);
             }
         
        
@@ -55,7 +52,7 @@ namespace smuCRMS.Model
         public static bool Verify(string u,string p,string host)
         {
             bool x=false;
-            MySqlConnection conn = new MySqlConnection("server=" + host + ";user id=" + u+";password="+p+";database="+Cipher.Decipher("_vpxfolqlf",3) +";Convert Zero Datetime=True;");
+            MySqlConnection conn = new MySqlConnection("server=" + host + ";user id=" + u+";password="+p+";database="+Cipher.Decipher("_folqlf",3) +";Convert Zero Datetime=True;");
             try
             {
                 conn.Open();
@@ -89,10 +86,10 @@ namespace smuCRMS.Model
             command.CommandType = CommandType.StoredProcedure;
         }
 
-        public static void Backup(string path, string action,string host)
+        public static void Backup(string path, string action,string host,string u,string p)
         {
            
-            string cstring= Cipher.Decipher("vhuyhu=" +host+";xvhu lg=vpxfolqlf;sdvvzrug=vpxfolqlf2018;gdwdedvh=_vpxfolqlf;Frqyhuw Chur Gdwhwlph=Wuxh;", 3);
+            string cstring= Cipher.Decipher("vhuyhu=" +host+";xvhu lg="+u+ ";sdvvzrug=" + p + ";gdwdedvh=_folqlf;Frqyhuw Chur Gdwhwlph=Wuxh;", 3);
             //string file = "C:\\backup.sql";
             using (MySqlConnection conn = new MySqlConnection(cstring))
             {
@@ -125,7 +122,7 @@ namespace smuCRMS.Model
                             {
                                 //path= Path.ChangeExtension(path, ".sql");
                                 //mb.ImportInfo.EnableEncryption = true;
-                                mb.ImportInfo.TargetDatabase = "_smuclinic";
+                                mb.ImportInfo.TargetDatabase = "_clinic";
                                 mb.ImportInfo.DatabaseDefaultCharSet = "utf8";
                                 mb.ImportFromFile(path);
                             }
