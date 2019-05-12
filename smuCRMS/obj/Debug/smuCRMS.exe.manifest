@@ -367,14 +367,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="smuCRMS.exe" size="1180160">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="smuCRMS.exe" size="1298944">
       <assemblyIdentity name="smuCRMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>p21h3okNTM4Ihnohj33VhrPbjRx5D5x1dDKxqf4Za7s=</dsig:DigestValue>
+        <dsig:DigestValue>fFXZPzcDHp78gmUg/vFlwcvtq0G2nrDxCBJFIolR/ow=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

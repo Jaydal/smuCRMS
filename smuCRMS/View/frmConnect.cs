@@ -96,7 +96,7 @@ namespace smuCRMS.View
 
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
 

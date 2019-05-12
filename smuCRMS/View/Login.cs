@@ -58,5 +58,17 @@ namespace smuCRMS.View
         {
 
         }
+
+        private void btnConnSettings_Click(object sender, EventArgs e)
+        {
+            frmConnect fc = new frmConnect();
+            fc.ShowDialog();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmConnect fc = new frmConnect();
+            fc.ShowDialog();
+        }
     }
 }
