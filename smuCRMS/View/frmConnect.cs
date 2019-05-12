@@ -16,7 +16,7 @@ namespace smuCRMS.View
         {
             InitializeComponent();
         }
-        string path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\CRMShost";
+        public static string path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\CRMShost";
         void conn()
         {
             if (Connection.Verify(txtUsername.Text,txtPassword.Text,cmbHost.Text))

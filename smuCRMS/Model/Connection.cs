@@ -17,13 +17,11 @@ namespace smuCRMS.Model
         public MySqlDataAdapter adap = new MySqlDataAdapter();
         public DataTable dtable = new DataTable();
         private MySqlConnection conn = new MySqlConnection();
-        //public string host = "localhost";
-        private static string path = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\CRMShost";
         public void ConnectToDB()
         {
-            string h = frmConnect.read(path)[0];
-            string u = frmConnect.read(path)[1];
-            string p = frmConnect.read(path)[2];
+            string h = frmConnect.read(frmConnect.path)[0];
+            string u = frmConnect.read(frmConnect.path)[1];
+            string p = frmConnect.read(frmConnect.path)[2];
             if (conn.State==ConnectionState.Closed)
             {
                 conn.ConnectionString = Cipher.Decipher("vhuyhu="+h+"; xvhu lg="+u+ ";sdvvzrug=" + p + ";gdwdedvh=_folqlf;Frqyhuw Chur Gdwhwlph=Wuxh;", 3);

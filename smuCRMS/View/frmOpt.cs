@@ -17,7 +17,7 @@ namespace smuCRMS.View
             InitializeComponent();
             lblProg.Text = "";
         }
-        string hpath = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\CRMShost";
+      
         string filename;
        
         string work = "";

@@ -18,10 +18,9 @@ namespace smuCRMS.View
             InitializeComponent();
             this.Opacity = 0;
             pw = mainPanel.Width;
-
+ 
             this.BackColor = Color.White;
         }
-        string hpath = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\CRMShost";
         private Random rnd = new Random();
         DataGridView dg = new DataGridView();
         //string work;
@@ -108,9 +107,9 @@ namespace smuCRMS.View
     
         public void autoback()
         {
-            string h = frmConnect.read(hpath)[0];
-            string u = frmConnect.read(hpath)[1];
-            string p = frmConnect.read(hpath)[2];
+            string h = frmConnect.read(frmConnect.path)[0];
+            string u = frmConnect.read(frmConnect.path)[1];
+            string p = frmConnect.read(frmConnect.path)[2];
 
             string dir = "C:\\_backup\\";
             if(!Directory.Exists(dir))
