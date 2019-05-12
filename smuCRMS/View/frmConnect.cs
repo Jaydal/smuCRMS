@@ -22,9 +22,9 @@ namespace smuCRMS.View
             if (Connection.Verify(txtUsername.Text,txtPassword.Text,cmbHost.Text))
             {
                 write(cmbHost.Text, txtUsername.Text, txtUsername.Text, path);
-                this.Hide();
-                frmMain main = new frmMain();
-                main.Show();
+                this.Close();
+                Login lg = new Login();
+                lg.Show();
             }
             else
             {
