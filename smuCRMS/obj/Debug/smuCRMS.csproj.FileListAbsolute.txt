@@ -1462,7 +1462,6 @@ C:\Users\ASUS\Documents\smuclinicproject\_ProjCRMS\THIS\__clinic\smuCRMS\smuCRMS
 C:\Users\ASUS\Documents\smuclinicproject\_ProjCRMS\THIS\__clinic\smuCRMS\smuCRMS\obj\Debug\smuCRMS.csproj.CopyComplete
 C:\Users\ASUS\Documents\smuclinicproject\_ProjCRMS\THIS\__clinic\smuCRMS\smuCRMS\obj\Debug\smuCRMS.exe
 C:\Users\ASUS\Documents\smuclinicproject\_ProjCRMS\THIS\__clinic\smuCRMS\smuCRMS\obj\Debug\smuCRMS.pdb
-C:\Users\ASUS\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.csprojAssemblyReference.cache
 C:\Users\ASUS\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.View.addCT.resources
 C:\Users\ASUS\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.View.addPatient.resources
 C:\Users\ASUS\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.View.frmLogView.resources
