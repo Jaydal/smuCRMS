@@ -162,9 +162,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\-Connection.cs" />
-    <Compile Include="Controller\-Login.cs" />
-    <Compile Include="Controller\-Patient.cs" />
     <Compile Include="Controller\Cipher.cs" />
     <Compile Include="Controller\PatientController.cs" />
     <Compile Include="Model\Connection.cs" />
