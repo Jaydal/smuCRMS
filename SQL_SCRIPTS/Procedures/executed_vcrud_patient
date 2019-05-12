@@ -36,12 +36,13 @@ CREATE
 	BEGIN
 		IF activity="CREATE" THEN
 			INSERT INTO patient
-				VALUES(uid,id,LastName,MiddleName,Department_id,course_id,_Level,BirthDay,Age,Sex,CivilStatus,Nationality,HomeAddress,BoardingAddress,FathersName,FathersOccupation,FathersNumber,MothersName,MothersOccupation,MothersNumber,LandLadyName,LandLadyNumber,EmergencyCallName,EmergencyRelation,EmergencyNumber,FirstMenstruation,LastMenstruation,Photo,Signature);
+				VALUES(uid,id,LastName,FirstName,MiddleName,Department_id,course_id,_Level,BirthDay,Age,Sex,CivilStatus,Nationality,HomeAddress,BoardingAddress,FathersName,FathersOccupation,FathersNumber,MothersName,MothersOccupation,MothersNumber,LandLadyName,LandLadyNumber,EmergencyCallName,EmergencyRelation,EmergencyNumber,FirstMenstruation,LastMenstruation,Photo,Signature);
 		ELSEIF activity="UPDATE" THEN
 			UPDATE patient
 				SET patient.uid=uid,
 				patient.id=id,
 				patient.LastName=LastName,
+				patient.`FirstName`=FirstName,
 				patient.MiddleName=MiddleName,
 				patient.Department_id=Department_id,
 				patient.course_id=Course_id,
