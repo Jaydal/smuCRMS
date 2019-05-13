@@ -392,7 +392,7 @@ DELIMITER $$
 BEGIN
 		IF activity="CREATE" THEN
 			INSERT INTO immunization 
-			VALUES(immunization_id,uid,immunization,LEVEL);
+			VALUES(immunization_id,uid,immunization,_LEVEL);
 		ELSEIF activity="UPDATE" THEN
 			UPDATE immunization
 				SET 
