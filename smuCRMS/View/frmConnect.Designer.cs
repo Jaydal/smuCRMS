@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConnect));
-            this.panel1 = new System.Windows.Forms.Panel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbHost = new System.Windows.Forms.ComboBox();
@@ -39,15 +38,6 @@
             this.txtUsername = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pnlLog.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
-            this.panel1.Location = new System.Drawing.Point(-1, 28);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(641, 21);
-            this.panel1.TabIndex = 8;
             // 
             // metroLabel3
             // 
@@ -150,7 +140,7 @@
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
-            this.txtPassword.Size = new System.Drawing.Size(275, 23);
+            this.txtPassword.Size = new System.Drawing.Size(275, 25);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.TabStop = false;
             this.txtPassword.Text = "smuclinic2018";
@@ -170,7 +160,7 @@
             this.txtUsername.SelectedText = "";
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
-            this.txtUsername.Size = new System.Drawing.Size(275, 23);
+            this.txtUsername.Size = new System.Drawing.Size(275, 25);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.TabStop = false;
             this.txtUsername.Text = "smuclinic";
@@ -182,7 +172,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(640, 480);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlLog);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
@@ -196,7 +185,7 @@
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.White;
-            this.TransparencyKey = System.Drawing.Color.Red;
+            this.TransparencyKey = System.Drawing.Color.Empty;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.pnlLog.ResumeLayout(false);
@@ -206,7 +195,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbHost;

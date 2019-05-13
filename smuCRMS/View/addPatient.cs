@@ -39,7 +39,8 @@ namespace smuCRMS.View
             txtPID.Select();
             dtBDay.MaxDate = DateTime.Now;
             enableMPeriod(false);
-            pm.department = cmbDepartment.Text;
+            //PENDING
+            //pm.department = cmbDepartment.Text;
         }
         string sex = "Male";
         public void GetInputs()
@@ -169,7 +170,7 @@ namespace smuCRMS.View
 
         private void addPatient_Load_1(object sender, EventArgs e)
         {
-         
+            
             //pm.loadCourses(this);
         }
 
@@ -764,6 +765,7 @@ namespace smuCRMS.View
             //    cmbYear.Visible = true;
             //}
             pm.studentId = txtPID.Text;
+
           if (pm.verifyID() && txtPID.Text!="")
             {
                 DialogResult res= MetroMessageBox.Show(this, "ID is already on the system \n" + "Do you want to view the record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);

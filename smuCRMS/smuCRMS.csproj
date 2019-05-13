@@ -181,6 +181,12 @@
       <DependentUpon>addPatient.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Card.cs" />
+    <Compile Include="View\frmAccountManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmAccountManager.Designer.cs">
+      <DependentUpon>frmAccountManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmLogView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\addPatient.resx">
       <DependentUpon>addPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmAccountManager.resx">
+      <DependentUpon>frmAccountManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogView.resx">
       <DependentUpon>frmLogView.cs</DependentUpon>

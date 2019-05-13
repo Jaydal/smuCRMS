@@ -23,8 +23,6 @@ namespace smuCRMS.View
             {
                 write(cmbHost.Text, txtUsername.Text, txtUsername.Text, path);
                 this.Close();
-                Login lg = new Login();
-                lg.Show();
             }
             else
             {
