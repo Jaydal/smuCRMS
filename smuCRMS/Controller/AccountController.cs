@@ -20,15 +20,6 @@ namespace smuCRMS.Controller
         Account ac = new Account();
         bool valid;
 
-        public AccountController(string aID,string uname,string pass,string n,string r)
-        {
-            accountId = aID;
-            username = uname;
-            _password = pass;
-            name = n;
-            role = r;
-            
-        }
         public bool accVerify()
         {
             return valid = (ac.accVerify(this)) ? true : false;
