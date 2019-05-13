@@ -49,6 +49,14 @@ namespace smuCRMS.Model
             con.getDataTable("vcrud_account");
             return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
+        public DataTable getUser(AccountController ac)
+        {
+            DataTable dtable = new DataTable();
+            con.command.Parameters.Clear();
+            getAccountCollections(ac, "VIEW");
+            con.getDataTable("vcrud_account");
+            return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
+        }
         private void getAccountCollections(AccountController ac,string act)
         {
             addParamVal("activity",act);

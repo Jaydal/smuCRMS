@@ -38,6 +38,18 @@ namespace smuCRMS.Controller
         {
             dg.DataSource = (ac.getUsers(this).Rows.Count > 0) ? ac.getUsers(this) : null;
         }
+        public bool getUser()
+        {
+            valid = false;
+           if((dt=ac.getUser(this)).Rows.Count > 0){
+                username = dt.Rows[0][1].ToString();
+                _password = dt.Rows[0][2].ToString();
+                name = dt.Rows[0][3].ToString();
+                role = dt.Rows[0][4].ToString();
+                valid=true;
+            }
+            return valid;
+        }
 
     }
 }

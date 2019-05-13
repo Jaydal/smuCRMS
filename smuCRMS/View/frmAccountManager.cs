@@ -41,5 +41,18 @@ namespace smuCRMS.View
             ac.getUsers(dgUsers);
             switchActive(1);
         }
+
+        private void dgUsers_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            ac.username=dgUsers.CurrentCell.Value.ToString();
+            if (ac.getUser())
+            {
+                txtName.Text = ac.name;
+                txtUsername.Text = ac.username;
+                txtPassword.Text = ac._password;
+                cmbRole.Text = ac.role;
+            }
+            
+        }
     }
 }
