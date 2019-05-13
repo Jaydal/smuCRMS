@@ -277,7 +277,7 @@ BEGIN
 			select * from account
 				where account.`account_id`=md5(username);
 		ELSEIF activity="VERIFY" THEN		
-			SELECT count(*) FROM account
+			SELECT * FROM account
 				WHERE account.`account_id`=MD5(username)
 					and account.`password`=md5(_password);
 		end if;
@@ -420,7 +420,7 @@ DELIMITER $$
 	IN activity VARCHAR(15),
     IN uid VARCHAR(7),
     IN id VARCHAR(15),
-    IN Lastname VARCHAR(30),
+    IN LastName VARCHAR(30),
     IN FirstName VARCHAR(30),
     IN MiddleName VARCHAR(30),
     IN Department_id VARCHAR(7),
