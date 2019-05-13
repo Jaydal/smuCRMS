@@ -32,8 +32,10 @@ CREATE TABLE `account` (
 /*Data for the table `account` */
 
 insert  into `account`(`account_id`,`username`,`password`,`Name`,`Role`) values 
-('11501255f17710952e79563ddc090a4d','june','bb5faf88644deb2d370e8f42a418981a','June Delmar','Admin'),
-('d10dbd7eca60d62cbd84e7620aedf5ad','juneyyyy','bb5faf88644deb2d370e8f42a418981a','June Delmar','Admin');
+('0eac63bc92f274ce9e3728f526ad10ba','enujs','ea2b1a27d33aa7b161a494069df1bf9e','JD','Admin'),
+('11501255f17710952e79563ddc090a4d','june','11501255f17710952e79563ddc090a4d','JD','Admin'),
+('bb5e73961d33c3cab71d2a503fc29a20','enujs','0eac63bc92f274ce9e3728f526ad10ba','enuj','Admin'),
+('d10dbd7eca60d62cbd84e7620aedf5ad','juneyyyys','3dad9cbf9baaa0360c0f2ba372d25716','June Delmars','Restricted');
 
 /*Table structure for table `course` */
 
@@ -261,10 +263,10 @@ BEGIN
 	DECLARE counter INT;
 		if activity="CREATE" then
 			insert into account 
-				values(md5(username),username,md5(_password),_name,role);
+				values(md5(concat(username,now())),username,md5(_password),_name,role);
 		ELSEIF activity="UPDATE" THEN
 			update account
-				set account.`account_id`=md5(username),
+				set 
 					account.`username`=username,
 						account.`password`=md5(_password),
 							account.`Name`=_name,
@@ -272,14 +274,16 @@ BEGIN
 									where account.`account_id`=account_id;
 		ELSEIF activity="DELETE" THEN
 			delete from account
-				where account.`account_id`=MD5(username);
+				WHERE account.`username`=username;
 		ELSEIF activity="VIEW" THEN		
 			select * from account
-				where account.`account_id`=md5(username);
+				where account.`username`=username;
 		ELSEIF activity="VERIFY" THEN		
 			SELECT * FROM account
 				WHERE account.`account_id`=MD5(username)
 					and account.`password`=md5(_password);
+		ELSEIF activity="VIEW_ALL" THEN
+			select account.`username` "USERNAME" from account;
 		end if;
 	END */$$
 DELIMITER ;
