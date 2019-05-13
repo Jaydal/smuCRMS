@@ -42,6 +42,7 @@ namespace smuCRMS.Controller
         {
             valid = false;
            if((dt=ac.getUser(this)).Rows.Count > 0){
+                accountId= dt.Rows[0][0].ToString();
                 username = dt.Rows[0][1].ToString();
                 _password = dt.Rows[0][2].ToString();
                 name = dt.Rows[0][3].ToString();
@@ -50,6 +51,9 @@ namespace smuCRMS.Controller
             }
             return valid;
         }
-
+        public bool updateUser()
+        {
+            return valid = (ac.updateUser(this)) ? true : false;
+        }
     }
 }

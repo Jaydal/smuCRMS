@@ -57,6 +57,26 @@ namespace smuCRMS.Model
             con.getDataTable("vcrud_account");
             return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
+        public bool updateUser(AccountController ac)
+        {
+            valid = false;
+            try
+            {
+                con.command.Parameters.Clear();
+                getAccountCollections(ac,"UPDATE");
+                con.getParameter("vcrud_account");
+                if (con.command.ExecuteNonQuery() == 1)
+                {
+                    con.close();
+                    valid = true;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return valid;
+        }
         private void getAccountCollections(AccountController ac,string act)
         {
             addParamVal("activity",act);
