@@ -20,13 +20,13 @@ namespace smuCRMS.Controller
         Account ac = new Account();
         bool valid;
 
-        public AccountController(string aID,string uname,string pass,string n,string r)
+        public AccountController()
         {
-            accountId = aID;
-            username = uname;
-            _password = pass;
-            name = n;
-            role = r;
+            accountId = "";
+            username = "";
+            _password = "";
+            name = "";
+            role = "";
             
         }
         public bool accVerify()

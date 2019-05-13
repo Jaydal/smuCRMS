@@ -16,7 +16,7 @@ namespace smuCRMS.View
     public partial class Login : Form
     {
         //public string role;
-        AccountController ac = new AccountController("", "", "", "", "");
+        AccountController ac = new AccountController();
         Account a = new Account();
         frmMain fm = new frmMain();
 
