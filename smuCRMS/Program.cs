@@ -14,7 +14,7 @@ namespace smuCRMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAccountManager());
+            Application.Run(new addPatient ());
 
 
         }

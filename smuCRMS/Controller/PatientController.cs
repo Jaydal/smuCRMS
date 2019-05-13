@@ -8,10 +8,10 @@ using System.Drawing;
 
 namespace smuCRMS.Controller
 {
-   
+
     class PatientController
     {
-        public string studentId{ get; set; }
+        public string studentId { get; set; }
         public string lastName { get; set; }
         public string firstName { get; set; }
         public string middleName { get; set; }
@@ -46,7 +46,7 @@ namespace smuCRMS.Controller
         public string rr { get; set; }
         public string temp { get; set; }
         public string remarks { get; set; }
-        bool valid ;
+        bool valid;
 
         //IMMUNIZATION MODELS
         public int immuID { get; set; }
@@ -72,7 +72,7 @@ namespace smuCRMS.Controller
 
 
         public string currentMed { get; set; }
-        public string  tDate  { get; set; }
+        public string tDate { get; set; }
         public double tHeight { get; set; }
         public double tWeight { get; set; }
         public string tCC { get; set; }
@@ -93,6 +93,87 @@ namespace smuCRMS.Controller
 
         DataTable dtable = new DataTable();
         Patient patient = new Patient();
+        public PatientController()
+        {
+            studentId = "";
+            lastName = "";
+            firstName = "";
+            middleName = "";
+            course = "";
+            year = "";
+            department = "";
+            birthday = null;
+            age = 0;
+            sex = "";
+            civilStatus = "";
+            nationality = "";
+            homeAddress = "";
+            boardingAddress = "";
+            fatherName = "";
+            fatherOccupation = "";
+            fatherNumber = "";
+            motherName = "";
+            motherOccupation = "";
+            motherNumber = "";
+            landladyName = "";
+            landladyNumber = "";
+            emergencyCall = "";
+            relation = "";
+            emergencyNumber = "";
+            height = 0.0;
+            weight = 0.0;
+            firstMenstrualdate = null;
+            lastMenstrualdate = null;
+            bmi = "";
+            bp = "";
+            pr = "";
+            rr = "";
+            temp = "";
+            remarks = "";
+
+
+            //IMMUNIZATION MODELS
+            immuID = 0;
+
+            BGC = "";
+            DPT = "";
+            OPV = "";
+            MMR = "";
+            HB = "";
+            HA = "";
+            Others = "";
+            othersDesc = "";
+            olddesc = "";
+
+            hospiDesc = "";
+            allergyDesc = "";
+            //INJURIES MODELS 
+            indescription = "";
+            EID = 0;
+            medcondescription = "";
+            phydefdescription = "";
+            psychodescription = "";
+
+
+            currentMed = "";
+            tDate = "";
+            tHeight = 0.0;
+            tWeight = 0.0;
+            tCC = "";
+            tDiag = "";
+
+            searchString = "";
+            classification = "";
+
+            filename = "";
+            photo = null;
+            spo2 = "";
+            dic = "";
+            refe = "";
+            uid = null;
+            psig = null;
+            phsig = null;
+        }
         public bool patientAdd(addPatient ap)
         {
             return valid = (patient.patientAdd(this)) ? true : false;
@@ -107,7 +188,7 @@ namespace smuCRMS.Controller
         }
         public bool addTreatment()
         {
-           return valid = (patient.addTreatment(this)) ? true : false;
+            return valid = (patient.addTreatment(this)) ? true : false;
         }
 
         public bool addRemark()
@@ -124,17 +205,17 @@ namespace smuCRMS.Controller
         }
         public bool updateImmunization()
         {
-            return valid = (patient.updateImmunization(this)) ? true : false;  
+            return valid = (patient.updateImmunization(this)) ? true : false;
         }
         public bool updateHistory()
         {
-          return  valid = (patient.updateHistory(this)) ? true : false;
+            return valid = (patient.updateHistory(this)) ? true : false;
         }
         public bool verifyID()
         {
             return valid = (patient.verifyID(this)) ? true : false;
         }
-      
+
         public bool getRemark()
         {
             valid = false;
@@ -151,23 +232,23 @@ namespace smuCRMS.Controller
                 temp = dtable.Rows[0][8].ToString();
                 spo2 = dtable.Rows[0][9].ToString();
                 remarks = dtable.Rows[0][10].ToString();
-                 //psig= dtable.Rows[0][11];
+                //psig= dtable.Rows[0][11];
                 dic = dtable.Rows[0][12].ToString();
                 valid = true;
             }
-    
+
             return valid;
-         }
+        }
         public DataTable getStudByIDRep()
         {
-           return dtable = patient.getStudByID(this);
+            return dtable = patient.getStudByID(this);
         }
-                public bool getStudByID(addPatient ap)
+        public bool getStudByID(addPatient ap)
         {
             dtable = patient.getStudByID(this);
             if (dtable.Rows.Count > 0)
             {
-              
+
                 uid = dtable.Rows[0][0].ToString();
                 lastName = dtable.Rows[0][2].ToString();
                 firstName = dtable.Rows[0][3].ToString();
@@ -176,35 +257,35 @@ namespace smuCRMS.Controller
                 course = dtable.Rows[0][6].ToString();
                 year = dtable.Rows[0][7].ToString();
 
-                    birthday = dtable.Rows[0][8].ToString();
-                    if(dtable.Rows[0][9].ToString()!="")
-                    {
-                        age = Int32.Parse(dtable.Rows[0][9].ToString());
-                    }
-                    else
-                    {
-                        age = 0;
-                    }
-                    sex = dtable.Rows[0][10].ToString();
-                    civilStatus = dtable.Rows[0][11].ToString();
-                    nationality = dtable.Rows[0][12].ToString();
-                    homeAddress = dtable.Rows[0][13].ToString();
-                    boardingAddress = dtable.Rows[0][14].ToString();
-                    fatherName = dtable.Rows[0][15].ToString();
-                    fatherOccupation = dtable.Rows[0][16].ToString();
-                    fatherNumber = dtable.Rows[0][17].ToString();
-                    motherName = dtable.Rows[0][18].ToString();
-                    motherOccupation = dtable.Rows[0][19].ToString();
-                    motherNumber = dtable.Rows[0][20].ToString();
-                    landladyName = dtable.Rows[0][21].ToString();
-                    landladyNumber = dtable.Rows[0][22].ToString();
-                    emergencyCall = dtable.Rows[0][23].ToString();
-                    relation = dtable.Rows[0][24].ToString();
-                    emergencyNumber = dtable.Rows[0][25].ToString();
-                    firstMenstrualdate = dtable.Rows[0][26].ToString();
-                    lastMenstrualdate = dtable.Rows[0][27].ToString();
+                birthday = dtable.Rows[0][8].ToString();
+                if (dtable.Rows[0][9].ToString() != "")
+                {
+                    age = Int32.Parse(dtable.Rows[0][9].ToString());
+                }
+                else
+                {
+                    age = 0;
+                }
+                sex = dtable.Rows[0][10].ToString();
+                civilStatus = dtable.Rows[0][11].ToString();
+                nationality = dtable.Rows[0][12].ToString();
+                homeAddress = dtable.Rows[0][13].ToString();
+                boardingAddress = dtable.Rows[0][14].ToString();
+                fatherName = dtable.Rows[0][15].ToString();
+                fatherOccupation = dtable.Rows[0][16].ToString();
+                fatherNumber = dtable.Rows[0][17].ToString();
+                motherName = dtable.Rows[0][18].ToString();
+                motherOccupation = dtable.Rows[0][19].ToString();
+                motherNumber = dtable.Rows[0][20].ToString();
+                landladyName = dtable.Rows[0][21].ToString();
+                landladyNumber = dtable.Rows[0][22].ToString();
+                emergencyCall = dtable.Rows[0][23].ToString();
+                relation = dtable.Rows[0][24].ToString();
+                emergencyNumber = dtable.Rows[0][25].ToString();
+                firstMenstrualdate = dtable.Rows[0][26].ToString();
+                lastMenstrualdate = dtable.Rows[0][27].ToString();
 
-                if(dtable.Rows[0][28]!=System.DBNull.Value)
+                if (dtable.Rows[0][28] != System.DBNull.Value)
                 {
                     byte[] img = (byte[])dtable.Rows[0][28];
                     MemoryStream ms = new MemoryStream(img);
@@ -212,7 +293,7 @@ namespace smuCRMS.Controller
                     ap.pbPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
                     ap.pbPhoto.Refresh();
                 }
-                    
+
                 valid = true;
             }
             return valid;
@@ -222,7 +303,7 @@ namespace smuCRMS.Controller
         public void basicSTUDinfo(DataGridView dg)
         {
             dtable = patient.basicStudInfo();
-            dg.DataSource = (dtable.Rows.Count > 0) ? dtable :null;
+            dg.DataSource = (dtable.Rows.Count > 0) ? dtable : null;
         }
         public void basicSTUDinfoArc(DataGridView dg)
         {
@@ -257,7 +338,7 @@ namespace smuCRMS.Controller
         public void getStudImmun(DataGridView dg)
         {
             dtable = patient.getStudImmun(this);
-            dg.DataSource=(dtable.Rows.Count > 0) ? dtable : null;
+            dg.DataSource = (dtable.Rows.Count > 0) ? dtable : null;
         }
         public DataTable getImmun()
         {
@@ -273,8 +354,8 @@ namespace smuCRMS.Controller
             return patient.getVisits(this);
         }
 
-    
-        public bool getHistory() 
+
+        public bool getHistory()
         {
             valid = false;
             dtable = patient.getHistory(this);
@@ -294,9 +375,9 @@ namespace smuCRMS.Controller
         }
         public string getID()
         {
-           string id = "";
-          dtable = patient.getPatientIDbyUID(this);
-            if(dtable.Rows.Count>0)
+            string id = "";
+            dtable = patient.getPatientIDbyUID(this);
+            if (dtable.Rows.Count > 0)
             {
                 id = dtable.Rows[0][0].ToString();
             }
@@ -323,20 +404,20 @@ namespace smuCRMS.Controller
             }
             return dt;
         }
-        public DataTable getMVisits(int yr,int month,string dept)
+        public DataTable getMVisits(int yr, int month, string dept)
         {
             DataTable dt;
-         return dt=patient.getMVisits(yr,month,dept);
+            return dt = patient.getMVisits(yr, month, dept);
         }
         public DataTable getYearEnd(int yr)
         {
             DataTable dt;
             return dt = patient.getYearEnd(yr);
         }
-        public DataTable getMidYearVis(int yr,string dept)
+        public DataTable getMidYearVis(int yr, string dept)
         {
             DataTable dt;
-            return dt = patient.getMidYearVis(yr,dept);
+            return dt = patient.getMidYearVis(yr, dept);
         }
         public DataTable countRecs()
         {
