@@ -18,7 +18,7 @@ namespace smuCRMS.Model
         MySqlCommand com = new MySqlCommand();
         bool valid;
 
-        void addParamVal(string param, string val)
+        void addParamVal(string param, object val)
         {
             con.command.Parameters.AddWithValue(param, val);
         }
@@ -29,7 +29,7 @@ namespace smuCRMS.Model
             {
                 con.command.Parameters.Clear();
 
-                addParamVal("account_id", ac.accountId.ToString());
+                getAccountCollections(ac,"VERIFY");
                 con.getDataTable("vcrud_account");
                 valid = (con.dtable.Rows.Count > 0) ? true : false;
 
@@ -40,6 +40,15 @@ namespace smuCRMS.Model
             }
 
             return valid;
+        }
+        private void getAccountCollections(AccountController ac,string act)
+        {
+            addParamVal("activity",act);
+            addParamVal("account_id", ac.accountId);
+            addParamVal("username", ac.username);
+            addParamVal("_password", ac._password);
+            addParamVal("_name", ac.name);
+            addParamVal("role", ac.role);
         }
 
     }

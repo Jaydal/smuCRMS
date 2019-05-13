@@ -299,8 +299,7 @@ namespace smuCRMS.Controller
             try
             {
                 con.command.Parameters.Clear();
-             
-                getPatientCollection(pc,"VIEW");
+                getPatientCollection_Basic(pc,"VIEW");
                 con.getDataTable("vcrud_patient");
                 valid = (con.dtable.Rows.Count > 0) ? true : false;
 
@@ -639,9 +638,9 @@ namespace smuCRMS.Controller
 
             return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
-        private void getPatientCollection(PatientController pc,string act)
+        private void getPatientCollection_Basic(PatientController pc,string act)
         {
-            Console.WriteLine(pc.department);
+            
             addParamVal("activity", act);
             addParamVal("uid", pc.uid);
             addParamVal("id", pc.studentId);

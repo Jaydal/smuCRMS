@@ -16,7 +16,7 @@ namespace smuCRMS.View
     public partial class Login : Form
     {
         //public string role;
-        AccountController ac = new AccountController("", "", "", "", "");
+        AccountController ac = new AccountController();
         Account a = new Account();
         frmMain fm = new frmMain();
 
@@ -67,17 +67,20 @@ namespace smuCRMS.View
             {
                 MessageBox.Show("Please check your fields!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            ac.username = txtUsername.Text;
-            ac._password = txtPassword.Text;
-            if (ac.accVerify())
-            {
-                MessageBox.Show("Successfully Logged-in!");
-                fm.Show();
-                this.Hide();
-            }
             else
             {
-                MessageBox.Show("Incorrect Username/Password!");
+                ac.username = txtUsername.Text;
+                ac._password = txtPassword.Text;
+                if (ac.accVerify())
+                {
+                    MessageBox.Show("Successfully Logged-in!");
+                    fm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Username/Password!");
+                }
             }
         }
 
