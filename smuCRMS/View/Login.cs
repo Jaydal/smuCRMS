@@ -67,17 +67,20 @@ namespace smuCRMS.View
             {
                 MessageBox.Show("Please check your fields!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            ac.username = txtUsername.Text;
-            ac._password = txtPassword.Text;
-            if (ac.accVerify())
-            {
-                MessageBox.Show("Successfully Logged-in!");
-                fm.Show();
-                this.Hide();
-            }
             else
             {
-                MessageBox.Show("Incorrect Username/Password!");
+                ac.username = txtUsername.Text;
+                ac._password = txtPassword.Text;
+                if (ac.accVerify())
+                {
+                    MessageBox.Show("Successfully Logged-in!");
+                    fm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Username/Password!");
+                }
             }
         }
 
