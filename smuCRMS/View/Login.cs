@@ -8,11 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroSet_UI.Forms;
+using smuCRMS.Controller;
+using smuCRMS.Model;
 
 namespace smuCRMS.View
 {
     public partial class Login : Form
     {
+        //public string role;
+        AccountController ac = new AccountController("", "", "", "", "");
+        Account a = new Account();
+        frmMain fm = new frmMain();
+
         public Login()
         {
             InitializeComponent();
@@ -56,7 +63,22 @@ namespace smuCRMS.View
 
         private void materialFlatButton1_Click_1(object sender, EventArgs e)
         {
-
+            if (txtPassword.Text == "" || txtUsername.Text == "")
+            {
+                MessageBox.Show("Please check your fields!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            ac.username = txtUsername.Text;
+            ac._password = txtPassword.Text;
+            if (ac.accVerify())
+            {
+                MessageBox.Show("Successfully Logged-in!");
+                fm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect Username/Password!");
+            }
         }
 
         private void btnConnSettings_Click(object sender, EventArgs e)

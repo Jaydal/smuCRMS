@@ -34,8 +34,8 @@
             this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
             this.metroSetControlBox1 = new MetroSet_UI.Controls.MetroSetControlBox();
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtUsername = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtPassword = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.btnLogin = new MaterialSkin.Controls.MaterialFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -67,6 +67,7 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(-20, 2);
             this.metroTextBox1.CustomButton.Name = "";
             this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(17, 17);
@@ -127,7 +128,8 @@
             // 
             // metroSetLabel1
             // 
-            this.metroSetLabel1.Font = new System.Drawing.Font("Segoe UI Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel1.Font = new System.Drawing.Font("Segoe UI Light", 20.25F);
+            this.metroSetLabel1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.metroSetLabel1.Location = new System.Drawing.Point(203, 103);
             this.metroSetLabel1.Name = "metroSetLabel1";
             this.metroSetLabel1.Size = new System.Drawing.Size(414, 46);
@@ -139,41 +141,41 @@
             this.metroSetLabel1.ThemeAuthor = "Narwin";
             this.metroSetLabel1.ThemeName = "MetroLite";
             // 
-            // materialSingleLineTextField1
+            // txtUsername
             // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialSingleLineTextField1.Hint = "username";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(273, 227);
-            this.materialSingleLineTextField1.MaxLength = 32767;
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(275, 23);
-            this.materialSingleLineTextField1.TabIndex = 1;
-            this.materialSingleLineTextField1.TabStop = false;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.txtUsername.Depth = 0;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI Light", 8.25F);
+            this.txtUsername.Hint = "username";
+            this.txtUsername.Location = new System.Drawing.Point(273, 227);
+            this.txtUsername.MaxLength = 32767;
+            this.txtUsername.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.SelectionLength = 0;
+            this.txtUsername.SelectionStart = 0;
+            this.txtUsername.Size = new System.Drawing.Size(275, 25);
+            this.txtUsername.TabIndex = 1;
+            this.txtUsername.TabStop = false;
+            this.txtUsername.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField2
+            // txtPassword
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialSingleLineTextField2.Hint = "password";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(273, 294);
-            this.materialSingleLineTextField2.MaxLength = 255;
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '*';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(275, 23);
-            this.materialSingleLineTextField2.TabIndex = 2;
-            this.materialSingleLineTextField2.TabStop = false;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.txtPassword.Depth = 0;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI Light", 8.25F);
+            this.txtPassword.Hint = "password";
+            this.txtPassword.Location = new System.Drawing.Point(273, 294);
+            this.txtPassword.MaxLength = 255;
+            this.txtPassword.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.SelectionLength = 0;
+            this.txtPassword.SelectionStart = 0;
+            this.txtPassword.Size = new System.Drawing.Size(275, 25);
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.TabStop = false;
+            this.txtPassword.UseSystemPasswordChar = false;
             // 
             // pnlLogin
             // 
@@ -193,6 +195,7 @@
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Icon = null;
+            this.btnLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnLogin.Location = new System.Drawing.Point(0, 0);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
@@ -220,7 +223,8 @@
             // 
             // metroSetLabel5
             // 
-            this.metroSetLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.metroSetLabel5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.metroSetLabel5.Location = new System.Drawing.Point(8, 374);
             this.metroSetLabel5.Name = "metroSetLabel5";
             this.metroSetLabel5.Size = new System.Drawing.Size(176, 23);
@@ -234,7 +238,8 @@
             // 
             // metroSetLabel4
             // 
-            this.metroSetLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.metroSetLabel4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.metroSetLabel4.Location = new System.Drawing.Point(8, 299);
             this.metroSetLabel4.Name = "metroSetLabel4";
             this.metroSetLabel4.Size = new System.Drawing.Size(176, 23);
@@ -248,7 +253,8 @@
             // 
             // metroSetLabel3
             // 
-            this.metroSetLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.metroSetLabel3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.metroSetLabel3.Location = new System.Drawing.Point(41, 276);
             this.metroSetLabel3.Name = "metroSetLabel3";
             this.metroSetLabel3.Size = new System.Drawing.Size(110, 23);
@@ -262,7 +268,8 @@
             // 
             // metroSetLabel2
             // 
-            this.metroSetLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.metroSetLabel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.metroSetLabel2.Location = new System.Drawing.Point(46, 253);
             this.metroSetLabel2.Name = "metroSetLabel2";
             this.metroSetLabel2.Size = new System.Drawing.Size(100, 23);
@@ -278,6 +285,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox1.Location = new System.Drawing.Point(42, 103);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 110);
@@ -288,6 +296,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox2.Location = new System.Drawing.Point(592, 452);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(16, 16);
@@ -299,6 +308,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.Location = new System.Drawing.Point(570, 452);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(16, 16);
@@ -315,8 +325,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlLogin);
-            this.Controls.Add(this.materialSingleLineTextField2);
-            this.Controls.Add(this.materialSingleLineTextField1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.metroSetLabel1);
             this.Controls.Add(this.metroSetControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -343,8 +353,8 @@
         private MetroFramework.Controls.MetroCheckBox metroCheckBox1;
         private MetroSet_UI.Controls.MetroSetControlBox metroSetControlBox1;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsername;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtPassword;
         private System.Windows.Forms.Panel pnlLogin;
         private MaterialSkin.Controls.MaterialFlatButton btnLogin;
         private System.Windows.Forms.Panel panel1;

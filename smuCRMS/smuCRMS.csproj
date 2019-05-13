@@ -162,10 +162,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\AccountController.cs" />
     <Compile Include="Controller\Cipher.cs" />
     <Compile Include="Controller\PatientController.cs" />
-    <Compile Include="Model\-AccountModels.cs" />
-    <Compile Include="Model\-PatientModels.cs" />
+    <Compile Include="Model\Account.cs" />
     <Compile Include="Model\Connection.cs" />
     <Compile Include="Model\Patient.cs" />
     <Compile Include="View\addCT.cs">
