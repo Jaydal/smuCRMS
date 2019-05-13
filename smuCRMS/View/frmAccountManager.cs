@@ -1,4 +1,5 @@
-﻿using System;
+﻿using smuCRMS.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace smuCRMS.View
 {
     public partial class frmAccountManager : MetroFramework.Forms.MetroForm
     {
+        AccountController ac = new AccountController();
         public frmAccountManager()
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace smuCRMS.View
         private void frmAccountManager_Load(object sender, EventArgs e)
         {
             switchActive(0);
+            
         }
         void switchActive(int i)
         {
@@ -35,6 +38,7 @@ namespace smuCRMS.View
 
         private void btnShowUsers_Click(object sender, EventArgs e)
         {
+            ac.getUsers(dgUsers);
             switchActive(1);
         }
     }

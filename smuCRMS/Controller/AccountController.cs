@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace smuCRMS.Controller
 {
@@ -19,7 +20,7 @@ namespace smuCRMS.Controller
         public string activity { get; set; }
         Account ac = new Account();
         bool valid;
-
+        DataTable dt = new DataTable();
         public AccountController()
         {
             accountId = "";
@@ -27,11 +28,15 @@ namespace smuCRMS.Controller
             _password = "";
             name = "";
             role = "";
-            
+
         }
         public bool accVerify()
         {
             return valid = (ac.accVerify(this)) ? true : false;
+        }
+        public void getUsers(DataGridView dg)
+        {
+            dg.DataSource = (ac.getUsers(this).Rows.Count > 0) ? ac.getUsers(this) : null;
         }
 
     }
