@@ -74,7 +74,6 @@ namespace smuCRMS.View
                 ac._password = txtPassword.Text;
                 if (ac.accVerify())
                 {
-                    //MetroMessageBox.Show(this,"Successfully Logged-in!");
                     fm.Show();
                     this.Hide();
                 }
