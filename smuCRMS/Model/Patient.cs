@@ -673,5 +673,21 @@ namespace smuCRMS.Controller
             addParamVal("Photo", pc.photo);
             addParamVal("Signature", pc.psig);
         }
+        private void getPatientCollection_Remarks(PatientController pc)
+        {
+
+        }
+        private void getPatientCollection_History(PatientController pc)
+        {
+
+        }
+        private void getPatientCollection_Immunization(PatientController pc)
+        {
+
+        }
+        private void getPatientCollection_Treatment(PatientController pc)
+        {
+
+        }
     }
 }

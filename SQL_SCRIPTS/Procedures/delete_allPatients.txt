@@ -1,0 +1,25 @@
+DROP PROCEDURE if exists delete_allPatients;
+DELIMITER $$
+CREATE
+    PROCEDURE `_clinic`.`delete_allPatients`()
+	BEGIN
+		DELETE 
+			h.*,
+            i.*,
+			r.*,
+			t.*
+		FROM 
+			history as h,
+            immunization as i,
+			remark as r,
+			treatment as t
+		INNER JOIN  patient as a
+		ON 			a.uid = h.uid
+		INNER JOIN  patient as b
+		ON			b.uid = i.uid
+		INNER JOIN  patient as c
+		ON			c.uid = r.uid
+		INNER JOIN  patient as d
+		ON			d.uid = t.uid;
+        DELETE FROM patient;
+	END$$
