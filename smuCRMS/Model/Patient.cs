@@ -675,7 +675,7 @@ namespace smuCRMS.Controller
         }
         private void getPatientCollection_Remarks(PatientController pc)
         {
-
+            //comment
         }
         private void getPatientCollection_History(PatientController pc)
         {
