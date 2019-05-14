@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework;
 using MetroSet_UI.Forms;
 using smuCRMS.Controller;
 using smuCRMS.Model;
@@ -65,7 +66,7 @@ namespace smuCRMS.View
         {
             if (txtPassword.Text == "" || txtUsername.Text == "")
             {
-                MessageBox.Show("Please check your fields!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MetroMessageBox.Show(this, "Please check your fields!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -73,13 +74,13 @@ namespace smuCRMS.View
                 ac._password = txtPassword.Text;
                 if (ac.accVerify())
                 {
-                    MessageBox.Show("Successfully Logged-in!");
+                    //MetroMessageBox.Show(this,"Successfully Logged-in!");
                     fm.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Incorrect Username/Password!");
+                    MetroMessageBox.Show(this,"Incorrect Username/Password!","Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }

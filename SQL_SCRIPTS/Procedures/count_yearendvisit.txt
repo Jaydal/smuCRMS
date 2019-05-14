@@ -1,0 +1,20 @@
+DELIMITER $$
+
+USE `_clinic`$$
+
+DROP PROCEDURE IF EXISTS `count_yearendvisit`$$
+
+CREATE DEFINER=`smuclinic`@`localhost` PROCEDURE `count_yearendvisit`()
+BEGIN
+
+	SELECT COUNT(P.id) AS "Number of Year-end Visits",D.Department
+	FROM patient AS P	
+	INNER JOIN department AS D
+	ON P.Department_id=D.Department_id
+	INNER JOIN treatment AS T
+	ON T.uid=P.uid
+	WHERE T.TreatmentDate BETWEEN CONCAT(YEAR(NOW()),"-01-01") AND CONCAT(YEAR(NOW()),"-12-31")	 
+	GROUP BY D.Department;	
+END$$
+
+DELIMITER ;
