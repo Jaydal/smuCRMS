@@ -8,6 +8,7 @@ using MetroFramework;
 using MetroFramework.Controls;
 using System.Resources;
 using smuCRMS.Properties;
+using System.Data;
 
 namespace smuCRMS.View
 {
@@ -31,14 +32,6 @@ namespace smuCRMS.View
         public addPatient()
         {
             InitializeComponent();
-            cmbDepartment.SelectedIndex = 0;
-            cmbCivilStat.SelectedIndex = 0;
-            txtNat.Text = "Filipino";
-            cmbYear.SelectedIndex = 0;
-            btnPrev.Hide();
-            txtPID.Select();
-            dtBDay.MaxDate = DateTime.Now;
-            enableMPeriod(false);
             //PENDING
             //pm.department = cmbDepartment.Text;
         }
@@ -170,8 +163,18 @@ namespace smuCRMS.View
 
         private void addPatient_Load_1(object sender, EventArgs e)
         {
-            
+            cmbDepartment.ValueMember = "department_id";
+            cmbDepartment.DisplayMember = "Department";
+            cmbDepartment.DataSource = pm.getDepartment();
             //pm.loadCourses(this);
+            cmbDepartment.SelectedIndex = 0;
+            cmbCivilStat.SelectedIndex = 0;
+            txtNat.Text = "Filipino";
+            cmbYear.SelectedIndex = 0;
+            btnPrev.Hide();
+            txtPID.Select();
+            dtBDay.MaxDate = DateTime.Now;
+            enableMPeriod(false);
         }
 
         //this will be passed to frmProfile
