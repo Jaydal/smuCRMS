@@ -2,10 +2,10 @@ DELIMITER $$
 DROP PROCEDURE if exists count_patientByDepartment;
 CREATE procedure _clinic.count_patientByDepartment()
 BEGIN
-	SELECT P.Department_id AS "Department", COUNT(P.ID) AS "Number of Patients" 
+	SELECT D.Department, COUNT(P.ID) AS "Number of Patients" 
     FROM patient AS P
+    INNER JOIN department AS D
+    WHERE P.Department_ID=D.Department_ID
     group by P.Department_id;
 END$$
 DELIMITER ;
-
-CALL count_patientByDepartment();
