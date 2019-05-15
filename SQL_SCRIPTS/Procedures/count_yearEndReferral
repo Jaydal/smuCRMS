@@ -1,0 +1,15 @@
+DROP PROCEDURE IF EXISTS count_yearEndReferral;
+DELIMITER $$
+CREATE PROCEDURE count_yearEndReferral(
+IN _year INT)
+BEGIN 
+SELECT D.Department,Count(T.Referral) AS "Number of Referrals"
+ from patient AS P
+ INNER JOIN treatment AS T
+ INNER JOIN department AS D
+ WHERE P.uid=T.uid &&
+ P.Department_ID=D.Department_id &&
+ T.TreatmentDate BETWEEN CONCAT(_year,"-01-01") AND CONCAT(_year,"-12-31")
+  GROUP BY T.Referral;
+ END$$
+ DELIMITER ;
