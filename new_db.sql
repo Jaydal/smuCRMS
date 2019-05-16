@@ -117,14 +117,16 @@ DROP TABLE IF EXISTS `level`;
 
 CREATE TABLE `level` (
   `Level_id` varchar(7) NOT NULL,
-  `LevelName` varchar(15) DEFAULT NULL,
+  `LevelName` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Level_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `level` */
 
 insert  into `level`(`Level_id`,`LevelName`) values 
-('C1','1st');
+('C1','College'),
+('GS','Grade School'),
+('SH','Senior High School');
 
 /*Table structure for table `logs` */
 
@@ -344,6 +346,8 @@ BEGIN
 		ELSEIF activity="VIEW" THEN		
 			SELECT * FROM department
 				WHERE department.`Department_id`=department_id;
+		ELSEIF activity="VIEW_ALL" THEN		
+			SELECT * FROM department;
 		END IF;
 	END */$$
 DELIMITER ;
@@ -427,7 +431,7 @@ DELIMITER $$
     IN LastName VARCHAR(30),
     IN FirstName VARCHAR(30),
     IN MiddleName VARCHAR(30),
-    IN Department_id VARCHAR(7),
+    IN department_id VARCHAR(7),
     IN Course_id VARCHAR(7),
     IN _Level VARCHAR(7),
     IN Birthday datetime,
@@ -455,7 +459,7 @@ DELIMITER $$
 BEGIN
 		IF activity="CREATE" THEN
 			INSERT INTO patient
-				VALUES(uid,id,LastName,FirstName,MiddleName,Department_id,course_id,_Level,BirthDay,Age,Sex,CivilStatus,Nationality,HomeAddress,BoardingAddress,FathersName,FathersOccupation,FathersNumber,MothersName,MothersOccupation,MothersNumber,LandLadyName,LandLadyNumber,EmergencyCallName,EmergencyRelation,EmergencyNumber,FirstMenstruation,LastMenstruation,Photo,Signature);
+				VALUES(uid,id,LastName,FirstName,MiddleName,department_id,course_id,_Level,BirthDay,Age,Sex,CivilStatus,Nationality,HomeAddress,BoardingAddress,FathersName,FathersOccupation,FathersNumber,MothersName,MothersOccupation,MothersNumber,LandLadyName,LandLadyNumber,EmergencyCallName,EmergencyRelation,EmergencyNumber,FirstMenstruation,LastMenstruation,Photo,Signature);
 		ELSEIF activity="UPDATE" THEN
 			UPDATE patient
 				SET patient.uid=uid,
@@ -463,7 +467,7 @@ BEGIN
 				patient.LastName=LastName,
 				patient.`FirstName`=FirstName,
 				patient.MiddleName=MiddleName,
-				patient.Department_id=Department_id,
+				patient.Department_id=department_id,
 				patient.course_id=Course_id,
 				patient.Level=_Level,
 				patient.BirthDay=Birthday,

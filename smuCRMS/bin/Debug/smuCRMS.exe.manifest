@@ -43,6 +43,11 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="log4net" version="1.2.10.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="x86" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrystalDecisions.CrystalReports.Engine.dll" size="380928">
       <assemblyIdentity name="CrystalDecisions.CrystalReports.Engine" version="13.0.3500.0" publicKeyToken="692FBEA5521E1304" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -523,14 +528,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="smuCRMS.exe" size="1309184">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="smuCRMS.exe" size="1307648">
       <assemblyIdentity name="smuCRMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+fq1Q+xhVOKkaXdUvPIJSBY5ljsxrudmReUZTux1hvg=</dsig:DigestValue>
+        <dsig:DigestValue>mIGrZVxNz9FLTSQT+tmGV/cEyg4kKQs5nfDUCX2QtNc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

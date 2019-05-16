@@ -1,0 +1,17 @@
+alter table account add column DateTimeCreated datetime;
+
+alter table course add column DateTimeCreated datetime;
+
+alter table department add column DateTimeCreated datetime;
+
+alter table history add column DateTimeCreated datetime;
+
+alter table immunization add column DateTimeCreated datetime;
+
+alter table level add column DateTimeCreated datetime;
+
+alter table logs add column DateTimeCreated datetime;
+
+alter table patient add column DateTimeCreated datetime;
+
+alter table remark add column DateTimeCreated datetime;

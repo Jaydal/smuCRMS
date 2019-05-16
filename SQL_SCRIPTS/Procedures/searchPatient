@@ -1,0 +1,18 @@
+DROP PROCEDURE IF EXISTS searchPatient;
+DELIMITER $$
+CREATE PROCEDURE searchPatient(
+IN wtsearch VARCHAR(35))
+BEGIN 
+ SELECT CONCAT(P.FirstName, " ", P.MiddleName, " ", P.LastName) AS "Name", D.Department,C.Course
+FROM patient AS P
+INNER JOIN department AS D
+INNER JOIN course AS C
+where P.Department_id=D.Department_id AND
+P.Course_id=C.Course_id AND
+P.uid LIKE '%'||wtsearch||'%' or
+P.id LIKE '%'||wtsearch||'%' or
+P.LastName LIKE '%'||wtsearch||'%' or
+P.MiddleName LIKE '%'||wtsearch||'%' or
+P.FirstName LIKE '%'||wtsearch||'%' ;
+ END$$
+ DELIMITER ;

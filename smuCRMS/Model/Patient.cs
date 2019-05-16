@@ -299,7 +299,8 @@ namespace smuCRMS.Controller
             try
             {
                 con.command.Parameters.Clear();
-                getPatientCollection_Basic(pc,"VIEW");
+                addParamVal("activity", "VIEW");
+                getPatientCollection_Basic(pc);
                 con.getDataTable("vcrud_patient");
                 valid = (con.dtable.Rows.Count > 0) ? true : false;
 
@@ -638,16 +639,16 @@ namespace smuCRMS.Controller
 
             return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
-        private void getPatientCollection_Basic(PatientController pc,string act)
+
+        //new code
+        private void getPatientCollection_Basic(PatientController pc)
         {
-            
-            addParamVal("activity", act);
             addParamVal("uid", pc.uid);
             addParamVal("id", pc.studentId);
             addParamVal("LastName", pc.lastName);
             addParamVal("MiddleName", pc.middleName);
             addParamVal("FirstName", pc.firstName);
-            addParamVal("Department_id",pc.department);
+            addParamVal("department_id",pc.department);
             addParamVal("Course_id", pc.course);
             addParamVal("_Level", pc.year);
             addParamVal("Birthday", pc.birthday);
@@ -688,6 +689,20 @@ namespace smuCRMS.Controller
         private void getPatientCollection_Treatment(PatientController pc)
         {
 
+        }
+        private void getPatientCollection_Department(PatientController pc)
+        {
+            addParamVal("department_id", pc.EID);
+            addParamVal("department", pc.department);
+        }
+        public DataTable getDepartment(PatientController pc)
+        {
+            DataTable dtable = new DataTable();
+            con.command.Parameters.Clear();
+            addParamVal("activity", "VIEW_ALL");
+            getPatientCollection_Department(pc);
+            con.getDataTable("vcrud_department");
+            return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
     }
 }

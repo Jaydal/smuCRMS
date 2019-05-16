@@ -449,6 +449,13 @@ namespace smuCRMS.Controller
             DataTable dt;
             return dt = patient.getBMIMY(yr);
         }
+
+        //new methods
+        public DataTable getDepartment()
+        {
+            DataTable dt;
+            return dt = patient.getDepartment(this);
+        }
     }
 
 }
