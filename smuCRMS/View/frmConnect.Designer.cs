@@ -58,12 +58,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Bk", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(101, 43);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(379, 23);
+            this.label1.Size = new System.Drawing.Size(373, 24);
             this.label1.TabIndex = 7;
             this.label1.Text = "Enter Connection Username and Password";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -71,6 +71,7 @@
             // cmbHost
             // 
             this.cmbHost.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.cmbHost.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbHost.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbHost.ForeColor = System.Drawing.Color.White;
@@ -112,6 +113,7 @@
             this.btnConnect.AutoSize = true;
             this.btnConnect.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnConnect.BackColor = System.Drawing.Color.DimGray;
+            this.btnConnect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConnect.Depth = 0;
             this.btnConnect.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnConnect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -140,7 +142,7 @@
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
-            this.txtPassword.Size = new System.Drawing.Size(275, 25);
+            this.txtPassword.Size = new System.Drawing.Size(275, 23);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.TabStop = false;
             this.txtPassword.Text = "smuclinic2018";
@@ -160,7 +162,7 @@
             this.txtUsername.SelectedText = "";
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
-            this.txtUsername.Size = new System.Drawing.Size(275, 25);
+            this.txtUsername.Size = new System.Drawing.Size(275, 23);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.TabStop = false;
             this.txtUsername.Text = "smuclinic";

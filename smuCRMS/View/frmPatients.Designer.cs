@@ -31,9 +31,9 @@ namespace smuCRMS.View
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatients));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.btnDoc = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnaddTreat = new MaterialSkin.Controls.MaterialFlatButton();
@@ -72,9 +72,9 @@ namespace smuCRMS.View
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(0, 38);
+            this.metroPanel2.Location = new System.Drawing.Point(0, 33);
             this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(1438, 37);
+            this.metroPanel2.Size = new System.Drawing.Size(1370, 37);
             this.metroPanel2.TabIndex = 5;
             this.metroPanel2.UseCustomBackColor = true;
             this.metroPanel2.VerticalScrollbarBarColor = true;
@@ -86,17 +86,18 @@ namespace smuCRMS.View
             this.btnDoc.AutoSize = true;
             this.btnDoc.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDoc.BackColor = System.Drawing.Color.White;
+            this.btnDoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDoc.Depth = 0;
             this.btnDoc.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoc.Icon = ((System.Drawing.Image)(resources.GetObject("btnDoc.Icon")));
-            this.btnDoc.Location = new System.Drawing.Point(1151, 0);
+            this.btnDoc.Location = new System.Drawing.Point(1123, 0);
             this.btnDoc.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDoc.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDoc.Name = "btnDoc";
             this.btnDoc.Primary = true;
-            this.btnDoc.Size = new System.Drawing.Size(99, 37);
+            this.btnDoc.Size = new System.Drawing.Size(88, 37);
             this.btnDoc.TabIndex = 29;
             this.btnDoc.Text = "Print";
             this.btnDoc.UseVisualStyleBackColor = false;
@@ -107,17 +108,18 @@ namespace smuCRMS.View
             this.btnaddTreat.AutoSize = true;
             this.btnaddTreat.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnaddTreat.BackColor = System.Drawing.Color.White;
+            this.btnaddTreat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnaddTreat.Depth = 0;
             this.btnaddTreat.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnaddTreat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnaddTreat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaddTreat.Icon = global::smuCRMS.Properties.Resources.appbar_clipboard_variant_edit;
-            this.btnaddTreat.Location = new System.Drawing.Point(1250, 0);
+            this.btnaddTreat.Location = new System.Drawing.Point(1211, 0);
             this.btnaddTreat.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnaddTreat.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnaddTreat.Name = "btnaddTreat";
             this.btnaddTreat.Primary = false;
-            this.btnaddTreat.Size = new System.Drawing.Size(188, 37);
+            this.btnaddTreat.Size = new System.Drawing.Size(159, 37);
             this.btnaddTreat.TabIndex = 28;
             this.btnaddTreat.Text = "Add Treatment";
             this.btnaddTreat.UseVisualStyleBackColor = false;
@@ -128,17 +130,18 @@ namespace smuCRMS.View
             this.btnTreatment.AutoSize = true;
             this.btnTreatment.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnTreatment.BackColor = System.Drawing.Color.White;
+            this.btnTreatment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTreatment.Depth = 0;
             this.btnTreatment.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnTreatment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTreatment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTreatment.Icon = global::smuCRMS.Properties.Resources.appbar_medical_pill;
-            this.btnTreatment.Location = new System.Drawing.Point(530, 0);
+            this.btnTreatment.Location = new System.Drawing.Point(460, 0);
             this.btnTreatment.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnTreatment.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnTreatment.Name = "btnTreatment";
             this.btnTreatment.Primary = false;
-            this.btnTreatment.Size = new System.Drawing.Size(210, 37);
+            this.btnTreatment.Size = new System.Drawing.Size(177, 37);
             this.btnTreatment.TabIndex = 26;
             this.btnTreatment.Text = "Treatment Chart";
             this.btnTreatment.UseVisualStyleBackColor = false;
@@ -149,17 +152,18 @@ namespace smuCRMS.View
             this.btnRem.AutoSize = true;
             this.btnRem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRem.BackColor = System.Drawing.Color.White;
+            this.btnRem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRem.Depth = 0;
             this.btnRem.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnRem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRem.Icon = global::smuCRMS.Properties.Resources.appbar_thermometer_celcius;
-            this.btnRem.Location = new System.Drawing.Point(412, 0);
+            this.btnRem.Location = new System.Drawing.Point(356, 0);
             this.btnRem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRem.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRem.Name = "btnRem";
             this.btnRem.Primary = false;
-            this.btnRem.Size = new System.Drawing.Size(118, 37);
+            this.btnRem.Size = new System.Drawing.Size(104, 37);
             this.btnRem.TabIndex = 25;
             this.btnRem.Text = "Remark";
             this.btnRem.UseVisualStyleBackColor = false;
@@ -170,17 +174,18 @@ namespace smuCRMS.View
             this.btnHis.AutoSize = true;
             this.btnHis.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnHis.BackColor = System.Drawing.Color.White;
+            this.btnHis.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHis.Depth = 0;
             this.btnHis.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnHis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHis.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHis.Icon = global::smuCRMS.Properties.Resources.appbar_medical_pill_broken;
-            this.btnHis.Location = new System.Drawing.Point(291, 0);
+            this.btnHis.Location = new System.Drawing.Point(250, 0);
             this.btnHis.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnHis.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnHis.Name = "btnHis";
             this.btnHis.Primary = false;
-            this.btnHis.Size = new System.Drawing.Size(121, 37);
+            this.btnHis.Size = new System.Drawing.Size(106, 37);
             this.btnHis.TabIndex = 24;
             this.btnHis.Text = "History";
             this.btnHis.UseVisualStyleBackColor = false;
@@ -191,17 +196,18 @@ namespace smuCRMS.View
             this.btnImmu.AutoSize = true;
             this.btnImmu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnImmu.BackColor = System.Drawing.Color.White;
+            this.btnImmu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImmu.Depth = 0;
             this.btnImmu.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnImmu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImmu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImmu.Icon = global::smuCRMS.Properties.Resources.appbar_shield;
-            this.btnImmu.Location = new System.Drawing.Point(117, 0);
+            this.btnImmu.Location = new System.Drawing.Point(102, 0);
             this.btnImmu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnImmu.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnImmu.Name = "btnImmu";
             this.btnImmu.Primary = false;
-            this.btnImmu.Size = new System.Drawing.Size(174, 37);
+            this.btnImmu.Size = new System.Drawing.Size(148, 37);
             this.btnImmu.TabIndex = 23;
             this.btnImmu.Text = "Immunization";
             this.btnImmu.UseVisualStyleBackColor = false;
@@ -212,6 +218,7 @@ namespace smuCRMS.View
             this.btnProf.AutoSize = true;
             this.btnProf.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnProf.BackColor = System.Drawing.Color.White;
+            this.btnProf.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProf.Depth = 0;
             this.btnProf.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnProf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -222,7 +229,7 @@ namespace smuCRMS.View
             this.btnProf.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnProf.Name = "btnProf";
             this.btnProf.Primary = false;
-            this.btnProf.Size = new System.Drawing.Size(117, 37);
+            this.btnProf.Size = new System.Drawing.Size(102, 37);
             this.btnProf.TabIndex = 22;
             this.btnProf.Text = "Profile";
             this.btnProf.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -234,24 +241,24 @@ namespace smuCRMS.View
             this.pbarSearch2.Depth = 0;
             this.pbarSearch2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pbarSearch2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pbarSearch2.Location = new System.Drawing.Point(0, 28);
+            this.pbarSearch2.Location = new System.Drawing.Point(0, 23);
             this.pbarSearch2.Maximum = 255;
             this.pbarSearch2.MouseState = MaterialSkin.MouseState.HOVER;
             this.pbarSearch2.Name = "pbarSearch2";
             this.pbarSearch2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.pbarSearch2.RightToLeftLayout = true;
-            this.pbarSearch2.Size = new System.Drawing.Size(1438, 5);
+            this.pbarSearch2.Size = new System.Drawing.Size(1370, 5);
             this.pbarSearch2.TabIndex = 34;
             // 
             // pbarSearch
             // 
             this.pbarSearch.Depth = 0;
             this.pbarSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pbarSearch.Location = new System.Drawing.Point(0, 33);
+            this.pbarSearch.Location = new System.Drawing.Point(0, 28);
             this.pbarSearch.Maximum = 255;
             this.pbarSearch.MouseState = MaterialSkin.MouseState.HOVER;
             this.pbarSearch.Name = "pbarSearch";
-            this.pbarSearch.Size = new System.Drawing.Size(1438, 5);
+            this.pbarSearch.Size = new System.Drawing.Size(1370, 5);
             this.pbarSearch.TabIndex = 33;
             this.pbarSearch.Click += new System.EventHandler(this.pbarSearch_Click);
             // 
@@ -270,7 +277,7 @@ namespace smuCRMS.View
             this.txtSearch1.SelectedText = "";
             this.txtSearch1.SelectionLength = 0;
             this.txtSearch1.SelectionStart = 0;
-            this.txtSearch1.Size = new System.Drawing.Size(1438, 28);
+            this.txtSearch1.Size = new System.Drawing.Size(1370, 23);
             this.txtSearch1.TabIndex = 32;
             this.txtSearch1.TabStop = false;
             this.txtSearch1.UseSystemPasswordChar = false;
@@ -284,12 +291,12 @@ namespace smuCRMS.View
             this.tbPmain.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.tbPmain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbPmain.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
-            this.tbPmain.Location = new System.Drawing.Point(0, 75);
+            this.tbPmain.Location = new System.Drawing.Point(0, 70);
             this.tbPmain.Margin = new System.Windows.Forms.Padding(4);
             this.tbPmain.Multiline = true;
             this.tbPmain.Name = "tbPmain";
             this.tbPmain.SelectedIndex = 0;
-            this.tbPmain.Size = new System.Drawing.Size(1438, 589);
+            this.tbPmain.Size = new System.Drawing.Size(1370, 594);
             this.tbPmain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbPmain.Style = MetroFramework.MetroColorStyle.Blue;
             this.tbPmain.TabIndex = 6;
@@ -305,7 +312,7 @@ namespace smuCRMS.View
             this.tbPStudents.Location = new System.Drawing.Point(4, 41);
             this.tbPStudents.Margin = new System.Windows.Forms.Padding(4);
             this.tbPStudents.Name = "tbPStudents";
-            this.tbPStudents.Size = new System.Drawing.Size(1430, 544);
+            this.tbPStudents.Size = new System.Drawing.Size(1362, 549);
             this.tbPStudents.TabIndex = 0;
             this.tbPStudents.Text = "Records";
             // 
@@ -313,8 +320,8 @@ namespace smuCRMS.View
             // 
             this.dgStudents.AllowUserToAddRows = false;
             this.dgStudents.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgStudents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgStudents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgStudents.BackgroundColor = System.Drawing.Color.White;
             this.dgStudents.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -322,14 +329,14 @@ namespace smuCRMS.View
             this.dgStudents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgStudents.ColumnHeadersHeight = 40;
             this.dgStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgStudents.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgStudents.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgStudents.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgStudents.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgStudents.GridColor = System.Drawing.Color.White;
@@ -341,23 +348,23 @@ namespace smuCRMS.View
             this.dgStudents.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgStudents.RowHeadersWidth = 30;
             this.dgStudents.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgStudents.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgStudents.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgStudents.RowTemplate.Height = 50;
             this.dgStudents.RowTemplate.ReadOnly = true;
             this.dgStudents.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgStudents.Size = new System.Drawing.Size(1430, 544);
+            this.dgStudents.Size = new System.Drawing.Size(1362, 549);
             this.dgStudents.TabIndex = 1;
             // 
             // tbArch
             // 
             this.tbArch.BackColor = System.Drawing.Color.White;
             this.tbArch.Controls.Add(this.dgArc);
-            this.tbArch.Location = new System.Drawing.Point(4, 42);
+            this.tbArch.Location = new System.Drawing.Point(4, 38);
             this.tbArch.Name = "tbArch";
-            this.tbArch.Size = new System.Drawing.Size(1430, 543);
+            this.tbArch.Size = new System.Drawing.Size(1430, 547);
             this.tbArch.TabIndex = 3;
             this.tbArch.Text = "Archives";
             // 
@@ -387,14 +394,14 @@ namespace smuCRMS.View
             this.dgArc.RowTemplate.ReadOnly = true;
             this.dgArc.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgArc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgArc.Size = new System.Drawing.Size(1430, 543);
+            this.dgArc.Size = new System.Drawing.Size(1430, 547);
             this.dgArc.TabIndex = 1;
             // 
             // frmPatients
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1438, 664);
+            this.ClientSize = new System.Drawing.Size(1370, 664);
             this.Controls.Add(this.tbPmain);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.pbarSearch);

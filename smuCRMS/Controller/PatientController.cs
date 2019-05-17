@@ -46,6 +46,7 @@ namespace smuCRMS.Controller
         public string rr { get; set; }
         public string temp { get; set; }
         public string remarks { get; set; }
+        public string department_id { get; set; }
         bool valid;
 
         //IMMUNIZATION MODELS
@@ -130,6 +131,7 @@ namespace smuCRMS.Controller
             rr = "";
             temp = "";
             remarks = "";
+            department_id = "";
 
 
             //IMMUNIZATION MODELS

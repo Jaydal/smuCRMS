@@ -144,6 +144,7 @@
             // 
             this.btnConfirm.AutoSize = true;
             this.btnConfirm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirm.Depth = 0;
             this.btnConfirm.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnConfirm.Icon = null;
@@ -162,6 +163,7 @@
             // 
             this.btnClear.AutoSize = true;
             this.btnClear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear.Depth = 0;
             this.btnClear.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClear.Icon = ((System.Drawing.Image)(resources.GetObject("btnClear.Icon")));

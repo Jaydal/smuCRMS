@@ -210,7 +210,7 @@
             this.label51.Location = new System.Drawing.Point(387, 359);
             this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(62, 22);
+            this.label51.Size = new System.Drawing.Size(50, 19);
             this.label51.TabIndex = 215;
             this.label51.Text = "SPO2:";
             // 
@@ -361,7 +361,7 @@
             this.label22.Location = new System.Drawing.Point(-1, 356);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(40, 22);
+            this.label22.Size = new System.Drawing.Size(31, 19);
             this.label22.TabIndex = 210;
             this.label22.Text = "BP:";
             // 
@@ -372,7 +372,7 @@
             this.label25.Location = new System.Drawing.Point(533, 359);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(60, 22);
+            this.label25.Size = new System.Drawing.Size(46, 19);
             this.label25.TabIndex = 213;
             this.label25.Text = "Temp:";
             // 
@@ -383,7 +383,7 @@
             this.label23.Location = new System.Drawing.Point(132, 359);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(40, 22);
+            this.label23.Size = new System.Drawing.Size(31, 19);
             this.label23.TabIndex = 211;
             this.label23.Text = "PR:";
             // 
@@ -394,7 +394,7 @@
             this.label24.Location = new System.Drawing.Point(259, 356);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(42, 22);
+            this.label24.Size = new System.Drawing.Size(32, 19);
             this.label24.TabIndex = 212;
             this.label24.Text = "RR:";
             // 
@@ -403,7 +403,7 @@
             this.groupBox13.Controls.Add(this.txtDiag);
             this.groupBox13.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.Location = new System.Drawing.Point(0, 272);
+            this.groupBox13.Location = new System.Drawing.Point(0, 271);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(1274, 75);
             this.groupBox13.TabIndex = 203;
@@ -416,9 +416,9 @@
             // 
             // 
             this.txtDiag.CustomButton.Image = null;
-            this.txtDiag.CustomButton.Location = new System.Drawing.Point(1230, 1);
+            this.txtDiag.CustomButton.Location = new System.Drawing.Point(1224, 1);
             this.txtDiag.CustomButton.Name = "";
-            this.txtDiag.CustomButton.Size = new System.Drawing.Size(37, 37);
+            this.txtDiag.CustomButton.Size = new System.Drawing.Size(43, 43);
             this.txtDiag.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtDiag.CustomButton.TabIndex = 1;
             this.txtDiag.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -427,7 +427,7 @@
             this.txtDiag.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtDiag.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtDiag.Lines = new string[0];
-            this.txtDiag.Location = new System.Drawing.Point(3, 33);
+            this.txtDiag.Location = new System.Drawing.Point(3, 27);
             this.txtDiag.MaxLength = 255;
             this.txtDiag.Multiline = true;
             this.txtDiag.Name = "txtDiag";
@@ -437,7 +437,7 @@
             this.txtDiag.SelectionLength = 0;
             this.txtDiag.SelectionStart = 0;
             this.txtDiag.ShortcutsEnabled = true;
-            this.txtDiag.Size = new System.Drawing.Size(1268, 39);
+            this.txtDiag.Size = new System.Drawing.Size(1268, 45);
             this.txtDiag.TabIndex = 24;
             this.txtDiag.UseSelectable = true;
             this.txtDiag.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -472,7 +472,7 @@
             this.groupBox12.Controls.Add(this.chkCaC);
             this.groupBox12.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox12.Location = new System.Drawing.Point(0, 30);
+            this.groupBox12.Location = new System.Drawing.Point(0, 29);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(1274, 242);
             this.groupBox12.TabIndex = 1;
@@ -485,7 +485,7 @@
             this.chkBV.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkBV.Location = new System.Drawing.Point(599, 94);
             this.chkBV.Name = "chkBV";
-            this.chkBV.Size = new System.Drawing.Size(135, 25);
+            this.chkBV.Size = new System.Drawing.Size(126, 25);
             this.chkBV.TabIndex = 19;
             this.chkBV.Text = "Blurry Vision";
             this.chkBV.UseSelectable = true;
@@ -497,7 +497,7 @@
             this.chkCCS.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkCCS.Location = new System.Drawing.Point(599, 214);
             this.chkCCS.Name = "chkCCS";
-            this.chkCCS.Size = new System.Drawing.Size(180, 25);
+            this.chkCCS.Size = new System.Drawing.Size(173, 25);
             this.chkCCS.TabIndex = 23;
             this.chkCCS.Text = "Cold Clammy Skin";
             this.chkCCS.UseSelectable = true;
@@ -509,7 +509,7 @@
             this.chkPalp.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkPalp.Location = new System.Drawing.Point(599, 184);
             this.chkPalp.Name = "chkPalp";
-            this.chkPalp.Size = new System.Drawing.Size(118, 25);
+            this.chkPalp.Size = new System.Drawing.Size(111, 25);
             this.chkPalp.TabIndex = 22;
             this.chkPalp.Text = "Palpitation";
             this.chkPalp.UseSelectable = true;
@@ -521,7 +521,7 @@
             this.chkNB.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkNB.Location = new System.Drawing.Point(599, 154);
             this.chkNB.Name = "chkNB";
-            this.chkNB.Size = new System.Drawing.Size(118, 25);
+            this.chkNB.Size = new System.Drawing.Size(113, 25);
             this.chkNB.TabIndex = 21;
             this.chkNB.Text = "Nosebleed";
             this.chkNB.UseSelectable = true;
@@ -533,7 +533,7 @@
             this.chkFaint.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkFaint.Location = new System.Drawing.Point(599, 124);
             this.chkFaint.Name = "chkFaint";
-            this.chkFaint.Size = new System.Drawing.Size(68, 25);
+            this.chkFaint.Size = new System.Drawing.Size(65, 25);
             this.chkFaint.TabIndex = 20;
             this.chkFaint.Text = "Faint";
             this.chkFaint.UseSelectable = true;
@@ -545,7 +545,7 @@
             this.chkRus.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkRus.Location = new System.Drawing.Point(599, 64);
             this.chkRus.Name = "chkRus";
-            this.chkRus.Size = new System.Drawing.Size(87, 25);
+            this.chkRus.Size = new System.Drawing.Size(84, 25);
             this.chkRus.TabIndex = 18;
             this.chkRus.Text = "Rushes";
             this.chkRus.UseSelectable = true;
@@ -557,7 +557,7 @@
             this.chkBite.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkBite.Location = new System.Drawing.Point(599, 34);
             this.chkBite.Name = "chkBite";
-            this.chkBite.Size = new System.Drawing.Size(60, 25);
+            this.chkBite.Size = new System.Drawing.Size(57, 25);
             this.chkBite.TabIndex = 17;
             this.chkBite.Text = "Bite";
             this.chkBite.UseSelectable = true;
@@ -583,11 +583,11 @@
             this.listCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listCC.Dock = System.Windows.Forms.DockStyle.Right;
             this.listCC.FormattingEnabled = true;
-            this.listCC.ItemHeight = 30;
-            this.listCC.Location = new System.Drawing.Point(963, 33);
+            this.listCC.ItemHeight = 22;
+            this.listCC.Location = new System.Drawing.Point(963, 27);
             this.listCC.Name = "listCC";
             this.listCC.ScrollAlwaysVisible = true;
-            this.listCC.Size = new System.Drawing.Size(308, 206);
+            this.listCC.Size = new System.Drawing.Size(308, 212);
             this.listCC.TabIndex = 47;
             // 
             // chkMP
@@ -596,7 +596,7 @@
             this.chkMP.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkMP.Location = new System.Drawing.Point(423, 94);
             this.chkMP.Name = "chkMP";
-            this.chkMP.Size = new System.Drawing.Size(129, 25);
+            this.chkMP.Size = new System.Drawing.Size(120, 25);
             this.chkMP.TabIndex = 12;
             this.chkMP.Text = "Muscle Pain";
             this.chkMP.UseSelectable = true;
@@ -608,7 +608,7 @@
             this.chkLBP.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkLBP.Location = new System.Drawing.Point(423, 214);
             this.chkLBP.Name = "chkLBP";
-            this.chkLBP.Size = new System.Drawing.Size(164, 25);
+            this.chkLBP.Size = new System.Drawing.Size(153, 25);
             this.chkLBP.TabIndex = 16;
             this.chkLBP.Text = "Lower Back Pain";
             this.chkLBP.UseSelectable = true;
@@ -620,7 +620,7 @@
             this.chkSS.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkSS.Location = new System.Drawing.Point(423, 184);
             this.chkSS.Name = "chkSS";
-            this.chkSS.Size = new System.Drawing.Size(130, 25);
+            this.chkSS.Size = new System.Drawing.Size(123, 25);
             this.chkSS.TabIndex = 15;
             this.chkSS.Text = "Spain/Strain";
             this.chkSS.UseSelectable = true;
@@ -632,7 +632,7 @@
             this.chkLBM.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkLBM.Location = new System.Drawing.Point(423, 154);
             this.chkLBM.Name = "chkLBM";
-            this.chkLBM.Size = new System.Drawing.Size(65, 25);
+            this.chkLBM.Size = new System.Drawing.Size(62, 25);
             this.chkLBM.TabIndex = 14;
             this.chkLBM.Text = "LBM";
             this.chkLBM.UseSelectable = true;
@@ -644,7 +644,7 @@
             this.ChkW.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.ChkW.Location = new System.Drawing.Point(231, 214);
             this.ChkW.Name = "ChkW";
-            this.ChkW.Size = new System.Drawing.Size(97, 25);
+            this.ChkW.Size = new System.Drawing.Size(94, 25);
             this.ChkW.TabIndex = 9;
             this.ChkW.Text = "Wounds";
             this.ChkW.UseSelectable = true;
@@ -656,7 +656,7 @@
             this.chkDyso.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkDyso.Location = new System.Drawing.Point(423, 124);
             this.chkDyso.Name = "chkDyso";
-            this.chkDyso.Size = new System.Drawing.Size(91, 25);
+            this.chkDyso.Size = new System.Drawing.Size(88, 25);
             this.chkDyso.TabIndex = 13;
             this.chkDyso.Text = "Dysoria";
             this.chkDyso.UseSelectable = true;
@@ -668,7 +668,7 @@
             this.chkUri.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkUri.Location = new System.Drawing.Point(423, 64);
             this.chkUri.Name = "chkUri";
-            this.chkUri.Size = new System.Drawing.Size(185, 25);
+            this.chkUri.Size = new System.Drawing.Size(173, 25);
             this.chkUri.TabIndex = 11;
             this.chkUri.Text = "Urination difficulty";
             this.chkUri.UseSelectable = true;
@@ -680,7 +680,7 @@
             this.chkBD.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkBD.Location = new System.Drawing.Point(231, 34);
             this.chkBD.Name = "chkBD";
-            this.chkBD.Size = new System.Drawing.Size(190, 25);
+            this.chkBD.Size = new System.Drawing.Size(178, 25);
             this.chkBD.TabIndex = 3;
             this.chkBD.Text = "Breathing Difficulty";
             this.chkBD.UseSelectable = true;
@@ -692,7 +692,7 @@
             this.chkST.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkST.Location = new System.Drawing.Point(423, 34);
             this.chkST.Name = "chkST";
-            this.chkST.Size = new System.Drawing.Size(122, 25);
+            this.chkST.Size = new System.Drawing.Size(117, 25);
             this.chkST.TabIndex = 10;
             this.chkST.Text = "Sore throat";
             this.chkST.UseSelectable = true;
@@ -704,7 +704,7 @@
             this.chkFev.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkFev.Location = new System.Drawing.Point(231, 154);
             this.chkFev.Name = "chkFev";
-            this.chkFev.Size = new System.Drawing.Size(73, 25);
+            this.chkFev.Size = new System.Drawing.Size(70, 25);
             this.chkFev.TabIndex = 7;
             this.chkFev.Text = "Fever";
             this.chkFev.UseSelectable = true;
@@ -715,9 +715,9 @@
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAdd.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnAdd.Highlight = true;
-            this.btnAdd.Location = new System.Drawing.Point(192, 33);
+            this.btnAdd.Location = new System.Drawing.Point(192, 27);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(34, 206);
+            this.btnAdd.Size = new System.Drawing.Size(34, 212);
             this.btnAdd.Style = MetroFramework.MetroColorStyle.Blue;
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "I\r\nN\r\nS\r\nE\r\nR\r\nT";
@@ -731,9 +731,9 @@
             // 
             // 
             this.txtComplaints.CustomButton.Image = null;
-            this.txtComplaints.CustomButton.Location = new System.Drawing.Point(-15, 2);
+            this.txtComplaints.CustomButton.Location = new System.Drawing.Point(-21, 2);
             this.txtComplaints.CustomButton.Name = "";
-            this.txtComplaints.CustomButton.Size = new System.Drawing.Size(201, 201);
+            this.txtComplaints.CustomButton.Size = new System.Drawing.Size(207, 207);
             this.txtComplaints.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtComplaints.CustomButton.TabIndex = 1;
             this.txtComplaints.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -741,7 +741,7 @@
             this.txtComplaints.CustomButton.Visible = false;
             this.txtComplaints.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtComplaints.Lines = new string[0];
-            this.txtComplaints.Location = new System.Drawing.Point(3, 33);
+            this.txtComplaints.Location = new System.Drawing.Point(3, 27);
             this.txtComplaints.MaxLength = 255;
             this.txtComplaints.Multiline = true;
             this.txtComplaints.Name = "txtComplaints";
@@ -752,7 +752,7 @@
             this.txtComplaints.SelectionLength = 0;
             this.txtComplaints.SelectionStart = 0;
             this.txtComplaints.ShortcutsEnabled = true;
-            this.txtComplaints.Size = new System.Drawing.Size(189, 206);
+            this.txtComplaints.Size = new System.Drawing.Size(189, 212);
             this.txtComplaints.TabIndex = 1;
             this.txtComplaints.UseSelectable = true;
             this.txtComplaints.WaterMark = "Specify complaints....";
@@ -765,7 +765,7 @@
             this.chkHead.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkHead.Location = new System.Drawing.Point(231, 184);
             this.chkHead.Name = "chkHead";
-            this.chkHead.Size = new System.Drawing.Size(112, 25);
+            this.chkHead.Size = new System.Drawing.Size(106, 25);
             this.chkHead.TabIndex = 8;
             this.chkHead.Text = "Headache";
             this.chkHead.UseSelectable = true;
@@ -777,7 +777,7 @@
             this.chkDiar.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkDiar.Location = new System.Drawing.Point(231, 94);
             this.chkDiar.Name = "chkDiar";
-            this.chkDiar.Size = new System.Drawing.Size(101, 25);
+            this.chkDiar.Size = new System.Drawing.Size(94, 25);
             this.chkDiar.TabIndex = 5;
             this.chkDiar.Text = "Diarrhea";
             this.chkDiar.UseSelectable = true;
@@ -789,7 +789,7 @@
             this.chkDIz.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkDIz.Location = new System.Drawing.Point(231, 124);
             this.chkDIz.Name = "chkDIz";
-            this.chkDIz.Size = new System.Drawing.Size(110, 25);
+            this.chkDIz.Size = new System.Drawing.Size(105, 25);
             this.chkDIz.TabIndex = 6;
             this.chkDIz.Text = "Dizzyness";
             this.chkDIz.UseSelectable = true;
@@ -801,7 +801,7 @@
             this.chkCaC.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
             this.chkCaC.Location = new System.Drawing.Point(231, 64);
             this.chkCaC.Name = "chkCaC";
-            this.chkCaC.Size = new System.Drawing.Size(165, 25);
+            this.chkCaC.Size = new System.Drawing.Size(158, 25);
             this.chkCaC.TabIndex = 4;
             this.chkCaC.Text = "Cough and Cold";
             this.chkCaC.UseSelectable = true;
@@ -814,7 +814,7 @@
             this.metroPanel5.HorizontalScrollbarBarColor = true;
             this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel5.HorizontalScrollbarSize = 8;
-            this.metroPanel5.Location = new System.Drawing.Point(0, 20);
+            this.metroPanel5.Location = new System.Drawing.Point(0, 19);
             this.metroPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel5.Name = "metroPanel5";
             this.metroPanel5.Size = new System.Drawing.Size(1274, 10);
@@ -832,7 +832,7 @@
             this.metroLabel8.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel8.Location = new System.Drawing.Point(0, 0);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(207, 20);
+            this.metroLabel8.Size = new System.Drawing.Size(189, 19);
             this.metroLabel8.TabIndex = 196;
             this.metroLabel8.Text = "CLINICAL AND TREATMENT";
             // 
@@ -840,15 +840,16 @@
             // 
             this.btnCancel.AutoSize = true;
             this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Depth = 0;
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCancel.Icon = null;
-            this.btnCancel.Location = new System.Drawing.Point(1187, 466);
+            this.btnCancel.Location = new System.Drawing.Point(1201, 466);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Primary = false;
-            this.btnCancel.Size = new System.Drawing.Size(87, 48);
+            this.btnCancel.Size = new System.Drawing.Size(73, 48);
             this.btnCancel.TabIndex = 33;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -858,15 +859,16 @@
             // 
             this.btnSave.AutoSize = true;
             this.btnSave.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Depth = 0;
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSave.Icon = null;
-            this.btnSave.Location = new System.Drawing.Point(1122, 466);
+            this.btnSave.Location = new System.Drawing.Point(1146, 466);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSave.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSave.Name = "btnSave";
             this.btnSave.Primary = false;
-            this.btnSave.Size = new System.Drawing.Size(65, 48);
+            this.btnSave.Size = new System.Drawing.Size(55, 48);
             this.btnSave.TabIndex = 32;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;

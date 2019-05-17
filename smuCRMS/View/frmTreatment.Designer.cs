@@ -112,7 +112,7 @@
             this.lblID.Location = new System.Drawing.Point(778, 42);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(46, 17);
+            this.lblID.Size = new System.Drawing.Size(35, 13);
             this.lblID.TabIndex = 4;
             this.lblID.Text = "label1";
             this.lblID.Visible = false;
@@ -121,15 +121,16 @@
             // 
             this.btnDone.AutoSize = true;
             this.btnDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDone.Depth = 0;
             this.btnDone.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnDone.Icon = null;
-            this.btnDone.Location = new System.Drawing.Point(999, 489);
+            this.btnDone.Location = new System.Drawing.Point(1009, 489);
             this.btnDone.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDone.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDone.Name = "btnDone";
             this.btnDone.Primary = false;
-            this.btnDone.Size = new System.Drawing.Size(67, 45);
+            this.btnDone.Size = new System.Drawing.Size(57, 45);
             this.btnDone.TabIndex = 5;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = true;
@@ -139,15 +140,16 @@
             // 
             this.btnCT.AutoSize = true;
             this.btnCT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCT.Depth = 0;
             this.btnCT.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCT.Icon = null;
-            this.btnCT.Location = new System.Drawing.Point(940, 489);
+            this.btnCT.Location = new System.Drawing.Point(958, 489);
             this.btnCT.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCT.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCT.Name = "btnCT";
             this.btnCT.Primary = false;
-            this.btnCT.Size = new System.Drawing.Size(59, 45);
+            this.btnCT.Size = new System.Drawing.Size(51, 45);
             this.btnCT.TabIndex = 6;
             this.btnCT.Text = "New";
             this.btnCT.UseVisualStyleBackColor = true;

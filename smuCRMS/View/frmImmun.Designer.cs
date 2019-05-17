@@ -108,7 +108,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Location = new System.Drawing.Point(403, 177);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 22);
+            this.lblID.Size = new System.Drawing.Size(0, 19);
             this.lblID.TabIndex = 0;
             // 
             // panelAddImmu
@@ -155,7 +155,7 @@
             this.groupBox8.Controls.Add(this.metroLabel7);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(3, 350);
+            this.groupBox8.Location = new System.Drawing.Point(3, 346);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(662, 54);
             this.groupBox8.TabIndex = 9;
@@ -166,7 +166,7 @@
             this.cbOTHERSb2.AutoSize = true;
             this.cbOTHERSb2.Location = new System.Drawing.Point(440, 24);
             this.cbOTHERSb2.Name = "cbOTHERSb2";
-            this.cbOTHERSb2.Size = new System.Drawing.Size(69, 17);
+            this.cbOTHERSb2.Size = new System.Drawing.Size(63, 15);
             this.cbOTHERSb2.TabIndex = 16;
             this.cbOTHERSb2.Text = "Booster";
             this.cbOTHERSb2.UseSelectable = true;
@@ -176,7 +176,7 @@
             this.cbOTHERSb1.AutoSize = true;
             this.cbOTHERSb1.Location = new System.Drawing.Point(371, 24);
             this.cbOTHERSb1.Name = "cbOTHERSb1";
-            this.cbOTHERSb1.Size = new System.Drawing.Size(69, 17);
+            this.cbOTHERSb1.Size = new System.Drawing.Size(63, 15);
             this.cbOTHERSb1.TabIndex = 15;
             this.cbOTHERSb1.Text = "Booster";
             this.cbOTHERSb1.UseSelectable = true;
@@ -186,7 +186,7 @@
             this.cbOTHERS3rd.AutoSize = true;
             this.cbOTHERS3rd.Location = new System.Drawing.Point(325, 24);
             this.cbOTHERS3rd.Name = "cbOTHERS3rd";
-            this.cbOTHERS3rd.Size = new System.Drawing.Size(44, 17);
+            this.cbOTHERS3rd.Size = new System.Drawing.Size(40, 15);
             this.cbOTHERS3rd.TabIndex = 14;
             this.cbOTHERS3rd.Text = "3rd";
             this.cbOTHERS3rd.UseSelectable = true;
@@ -196,7 +196,7 @@
             this.cbOTHERS2nd.AutoSize = true;
             this.cbOTHERS2nd.Location = new System.Drawing.Point(276, 24);
             this.cbOTHERS2nd.Name = "cbOTHERS2nd";
-            this.cbOTHERS2nd.Size = new System.Drawing.Size(46, 17);
+            this.cbOTHERS2nd.Size = new System.Drawing.Size(43, 15);
             this.cbOTHERS2nd.TabIndex = 13;
             this.cbOTHERS2nd.Text = "2nd";
             this.cbOTHERS2nd.UseSelectable = true;
@@ -206,7 +206,7 @@
             this.cbOTHERS1st.AutoSize = true;
             this.cbOTHERS1st.Location = new System.Drawing.Point(232, 24);
             this.cbOTHERS1st.Name = "cbOTHERS1st";
-            this.cbOTHERS1st.Size = new System.Drawing.Size(41, 17);
+            this.cbOTHERS1st.Size = new System.Drawing.Size(38, 15);
             this.cbOTHERS1st.TabIndex = 12;
             this.cbOTHERS1st.Text = "1st";
             this.cbOTHERS1st.UseSelectable = true;
@@ -248,9 +248,9 @@
             // 
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroLabel7.Location = new System.Drawing.Point(3, 25);
+            this.metroLabel7.Location = new System.Drawing.Point(3, 21);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(51, 20);
+            this.metroLabel7.Size = new System.Drawing.Size(48, 19);
             this.metroLabel7.TabIndex = 1;
             this.metroLabel7.Text = "Others";
             // 
@@ -264,7 +264,7 @@
             this.groupBox6.Controls.Add(this.metroLabel5);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(3, 296);
+            this.groupBox6.Location = new System.Drawing.Point(3, 292);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(662, 54);
             this.groupBox6.TabIndex = 13;
@@ -275,7 +275,7 @@
             this.cbHEPAb2.AutoSize = true;
             this.cbHEPAb2.Location = new System.Drawing.Point(440, 21);
             this.cbHEPAb2.Name = "cbHEPAb2";
-            this.cbHEPAb2.Size = new System.Drawing.Size(69, 17);
+            this.cbHEPAb2.Size = new System.Drawing.Size(63, 15);
             this.cbHEPAb2.TabIndex = 11;
             this.cbHEPAb2.Text = "Booster";
             this.cbHEPAb2.UseSelectable = true;
@@ -285,7 +285,7 @@
             this.cbHEPAb1.AutoSize = true;
             this.cbHEPAb1.Location = new System.Drawing.Point(371, 21);
             this.cbHEPAb1.Name = "cbHEPAb1";
-            this.cbHEPAb1.Size = new System.Drawing.Size(69, 17);
+            this.cbHEPAb1.Size = new System.Drawing.Size(63, 15);
             this.cbHEPAb1.TabIndex = 10;
             this.cbHEPAb1.Text = "Booster";
             this.cbHEPAb1.UseSelectable = true;
@@ -295,7 +295,7 @@
             this.cbHEPA3rd.AutoSize = true;
             this.cbHEPA3rd.Location = new System.Drawing.Point(325, 21);
             this.cbHEPA3rd.Name = "cbHEPA3rd";
-            this.cbHEPA3rd.Size = new System.Drawing.Size(44, 17);
+            this.cbHEPA3rd.Size = new System.Drawing.Size(40, 15);
             this.cbHEPA3rd.TabIndex = 9;
             this.cbHEPA3rd.Text = "3rd";
             this.cbHEPA3rd.UseSelectable = true;
@@ -305,7 +305,7 @@
             this.cbHEPA2nd.AutoSize = true;
             this.cbHEPA2nd.Location = new System.Drawing.Point(276, 21);
             this.cbHEPA2nd.Name = "cbHEPA2nd";
-            this.cbHEPA2nd.Size = new System.Drawing.Size(46, 17);
+            this.cbHEPA2nd.Size = new System.Drawing.Size(43, 15);
             this.cbHEPA2nd.TabIndex = 8;
             this.cbHEPA2nd.Text = "2nd";
             this.cbHEPA2nd.UseSelectable = true;
@@ -315,7 +315,7 @@
             this.cbHEPA1st.AutoSize = true;
             this.cbHEPA1st.Location = new System.Drawing.Point(232, 21);
             this.cbHEPA1st.Name = "cbHEPA1st";
-            this.cbHEPA1st.Size = new System.Drawing.Size(41, 17);
+            this.cbHEPA1st.Size = new System.Drawing.Size(38, 15);
             this.cbHEPA1st.TabIndex = 7;
             this.cbHEPA1st.Text = "1st";
             this.cbHEPA1st.UseSelectable = true;
@@ -324,9 +324,9 @@
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroLabel5.Location = new System.Drawing.Point(3, 25);
+            this.metroLabel5.Location = new System.Drawing.Point(3, 21);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(75, 20);
+            this.metroLabel5.Size = new System.Drawing.Size(72, 19);
             this.metroLabel5.TabIndex = 1;
             this.metroLabel5.Text = "Hepatitis A";
             // 
@@ -340,7 +340,7 @@
             this.groupBox7.Controls.Add(this.lblhepaB);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(3, 242);
+            this.groupBox7.Location = new System.Drawing.Point(3, 238);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(662, 54);
             this.groupBox7.TabIndex = 12;
@@ -351,7 +351,7 @@
             this.cbHEPBb2.AutoSize = true;
             this.cbHEPBb2.Location = new System.Drawing.Point(440, 21);
             this.cbHEPBb2.Name = "cbHEPBb2";
-            this.cbHEPBb2.Size = new System.Drawing.Size(69, 17);
+            this.cbHEPBb2.Size = new System.Drawing.Size(63, 15);
             this.cbHEPBb2.TabIndex = 11;
             this.cbHEPBb2.Text = "Booster";
             this.cbHEPBb2.UseSelectable = true;
@@ -361,7 +361,7 @@
             this.cbHEPBb1.AutoSize = true;
             this.cbHEPBb1.Location = new System.Drawing.Point(371, 21);
             this.cbHEPBb1.Name = "cbHEPBb1";
-            this.cbHEPBb1.Size = new System.Drawing.Size(69, 17);
+            this.cbHEPBb1.Size = new System.Drawing.Size(63, 15);
             this.cbHEPBb1.TabIndex = 10;
             this.cbHEPBb1.Text = "Booster";
             this.cbHEPBb1.UseSelectable = true;
@@ -371,7 +371,7 @@
             this.cbHEPB3rd.AutoSize = true;
             this.cbHEPB3rd.Location = new System.Drawing.Point(325, 21);
             this.cbHEPB3rd.Name = "cbHEPB3rd";
-            this.cbHEPB3rd.Size = new System.Drawing.Size(44, 17);
+            this.cbHEPB3rd.Size = new System.Drawing.Size(40, 15);
             this.cbHEPB3rd.TabIndex = 9;
             this.cbHEPB3rd.Text = "3rd";
             this.cbHEPB3rd.UseSelectable = true;
@@ -381,7 +381,7 @@
             this.cbHEPB2nd.AutoSize = true;
             this.cbHEPB2nd.Location = new System.Drawing.Point(272, 21);
             this.cbHEPB2nd.Name = "cbHEPB2nd";
-            this.cbHEPB2nd.Size = new System.Drawing.Size(46, 17);
+            this.cbHEPB2nd.Size = new System.Drawing.Size(43, 15);
             this.cbHEPB2nd.TabIndex = 8;
             this.cbHEPB2nd.Text = "2nd";
             this.cbHEPB2nd.UseSelectable = true;
@@ -391,7 +391,7 @@
             this.cbHEPB1st.AutoSize = true;
             this.cbHEPB1st.Location = new System.Drawing.Point(232, 21);
             this.cbHEPB1st.Name = "cbHEPB1st";
-            this.cbHEPB1st.Size = new System.Drawing.Size(41, 17);
+            this.cbHEPB1st.Size = new System.Drawing.Size(38, 15);
             this.cbHEPB1st.TabIndex = 7;
             this.cbHEPB1st.Text = "1st";
             this.cbHEPB1st.UseSelectable = true;
@@ -400,9 +400,9 @@
             // 
             this.lblhepaB.AutoSize = true;
             this.lblhepaB.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblhepaB.Location = new System.Drawing.Point(3, 25);
+            this.lblhepaB.Location = new System.Drawing.Point(3, 21);
             this.lblhepaB.Name = "lblhepaB";
-            this.lblhepaB.Size = new System.Drawing.Size(74, 20);
+            this.lblhepaB.Size = new System.Drawing.Size(71, 19);
             this.lblhepaB.TabIndex = 1;
             this.lblhepaB.Text = "Hepatitis B";
             // 
@@ -416,7 +416,7 @@
             this.groupBox4.Controls.Add(this.cbMMR2nd);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(3, 188);
+            this.groupBox4.Location = new System.Drawing.Point(3, 184);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(662, 54);
             this.groupBox4.TabIndex = 11;
@@ -427,7 +427,7 @@
             this.cbMMRb2.AutoSize = true;
             this.cbMMRb2.Location = new System.Drawing.Point(440, 24);
             this.cbMMRb2.Name = "cbMMRb2";
-            this.cbMMRb2.Size = new System.Drawing.Size(69, 17);
+            this.cbMMRb2.Size = new System.Drawing.Size(63, 15);
             this.cbMMRb2.TabIndex = 11;
             this.cbMMRb2.Text = "Booster";
             this.cbMMRb2.UseSelectable = true;
@@ -436,9 +436,9 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroLabel3.Location = new System.Drawing.Point(3, 25);
+            this.metroLabel3.Location = new System.Drawing.Point(3, 21);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(204, 20);
+            this.metroLabel3.Size = new System.Drawing.Size(196, 19);
             this.metroLabel3.TabIndex = 1;
             this.metroLabel3.Text = "MMR(Measles, Mumps, Rubella)";
             // 
@@ -447,7 +447,7 @@
             this.cbMMRb1.AutoSize = true;
             this.cbMMRb1.Location = new System.Drawing.Point(371, 24);
             this.cbMMRb1.Name = "cbMMRb1";
-            this.cbMMRb1.Size = new System.Drawing.Size(69, 17);
+            this.cbMMRb1.Size = new System.Drawing.Size(63, 15);
             this.cbMMRb1.TabIndex = 10;
             this.cbMMRb1.Text = "Booster";
             this.cbMMRb1.UseSelectable = true;
@@ -457,7 +457,7 @@
             this.cbMMR3rd.AutoSize = true;
             this.cbMMR3rd.Location = new System.Drawing.Point(325, 24);
             this.cbMMR3rd.Name = "cbMMR3rd";
-            this.cbMMR3rd.Size = new System.Drawing.Size(44, 17);
+            this.cbMMR3rd.Size = new System.Drawing.Size(40, 15);
             this.cbMMR3rd.TabIndex = 9;
             this.cbMMR3rd.Text = "3rd";
             this.cbMMR3rd.UseSelectable = true;
@@ -467,7 +467,7 @@
             this.cbMMR1st.AutoSize = true;
             this.cbMMR1st.Location = new System.Drawing.Point(232, 24);
             this.cbMMR1st.Name = "cbMMR1st";
-            this.cbMMR1st.Size = new System.Drawing.Size(41, 17);
+            this.cbMMR1st.Size = new System.Drawing.Size(38, 15);
             this.cbMMR1st.TabIndex = 7;
             this.cbMMR1st.Text = "1st";
             this.cbMMR1st.UseSelectable = true;
@@ -477,7 +477,7 @@
             this.cbMMR2nd.AutoSize = true;
             this.cbMMR2nd.Location = new System.Drawing.Point(276, 24);
             this.cbMMR2nd.Name = "cbMMR2nd";
-            this.cbMMR2nd.Size = new System.Drawing.Size(46, 17);
+            this.cbMMR2nd.Size = new System.Drawing.Size(43, 15);
             this.cbMMR2nd.TabIndex = 8;
             this.cbMMR2nd.Text = "2nd";
             this.cbMMR2nd.UseSelectable = true;
@@ -492,7 +492,7 @@
             this.groupBox5.Controls.Add(this.metroLabel4);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(3, 134);
+            this.groupBox5.Location = new System.Drawing.Point(3, 130);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(662, 54);
             this.groupBox5.TabIndex = 10;
@@ -503,7 +503,7 @@
             this.cbOPVb2.AutoSize = true;
             this.cbOPVb2.Location = new System.Drawing.Point(440, 21);
             this.cbOPVb2.Name = "cbOPVb2";
-            this.cbOPVb2.Size = new System.Drawing.Size(69, 17);
+            this.cbOPVb2.Size = new System.Drawing.Size(63, 15);
             this.cbOPVb2.TabIndex = 11;
             this.cbOPVb2.Text = "Booster";
             this.cbOPVb2.UseSelectable = true;
@@ -513,7 +513,7 @@
             this.cbOPVb1.AutoSize = true;
             this.cbOPVb1.Location = new System.Drawing.Point(371, 21);
             this.cbOPVb1.Name = "cbOPVb1";
-            this.cbOPVb1.Size = new System.Drawing.Size(69, 17);
+            this.cbOPVb1.Size = new System.Drawing.Size(63, 15);
             this.cbOPVb1.TabIndex = 10;
             this.cbOPVb1.Text = "Booster";
             this.cbOPVb1.UseSelectable = true;
@@ -523,7 +523,7 @@
             this.cbOPV3rd.AutoSize = true;
             this.cbOPV3rd.Location = new System.Drawing.Point(325, 21);
             this.cbOPV3rd.Name = "cbOPV3rd";
-            this.cbOPV3rd.Size = new System.Drawing.Size(44, 17);
+            this.cbOPV3rd.Size = new System.Drawing.Size(40, 15);
             this.cbOPV3rd.TabIndex = 9;
             this.cbOPV3rd.Text = "3rd";
             this.cbOPV3rd.UseSelectable = true;
@@ -533,7 +533,7 @@
             this.cbOPV2nd.AutoSize = true;
             this.cbOPV2nd.Location = new System.Drawing.Point(276, 21);
             this.cbOPV2nd.Name = "cbOPV2nd";
-            this.cbOPV2nd.Size = new System.Drawing.Size(46, 17);
+            this.cbOPV2nd.Size = new System.Drawing.Size(43, 15);
             this.cbOPV2nd.TabIndex = 8;
             this.cbOPV2nd.Text = "2nd";
             this.cbOPV2nd.UseSelectable = true;
@@ -543,7 +543,7 @@
             this.cbOPV1st.AutoSize = true;
             this.cbOPV1st.Location = new System.Drawing.Point(232, 21);
             this.cbOPV1st.Name = "cbOPV1st";
-            this.cbOPV1st.Size = new System.Drawing.Size(41, 17);
+            this.cbOPV1st.Size = new System.Drawing.Size(38, 15);
             this.cbOPV1st.TabIndex = 7;
             this.cbOPV1st.Text = "1st";
             this.cbOPV1st.UseSelectable = true;
@@ -552,9 +552,9 @@
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroLabel4.Location = new System.Drawing.Point(3, 25);
+            this.metroLabel4.Location = new System.Drawing.Point(3, 21);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(154, 20);
+            this.metroLabel4.Size = new System.Drawing.Size(148, 19);
             this.metroLabel4.TabIndex = 1;
             this.metroLabel4.Text = "OPV(Oro polio vaccine)";
             // 
@@ -568,7 +568,7 @@
             this.groupBox3.Controls.Add(this.metroLabel2);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(3, 80);
+            this.groupBox3.Location = new System.Drawing.Point(3, 76);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(662, 54);
             this.groupBox3.TabIndex = 8;
@@ -579,7 +579,7 @@
             this.cbDPTb2.AutoSize = true;
             this.cbDPTb2.Location = new System.Drawing.Point(440, 25);
             this.cbDPTb2.Name = "cbDPTb2";
-            this.cbDPTb2.Size = new System.Drawing.Size(69, 17);
+            this.cbDPTb2.Size = new System.Drawing.Size(63, 15);
             this.cbDPTb2.TabIndex = 11;
             this.cbDPTb2.Text = "Booster";
             this.cbDPTb2.UseSelectable = true;
@@ -589,7 +589,7 @@
             this.cbDPTb1.AutoSize = true;
             this.cbDPTb1.Location = new System.Drawing.Point(371, 25);
             this.cbDPTb1.Name = "cbDPTb1";
-            this.cbDPTb1.Size = new System.Drawing.Size(69, 17);
+            this.cbDPTb1.Size = new System.Drawing.Size(63, 15);
             this.cbDPTb1.TabIndex = 10;
             this.cbDPTb1.Text = "Booster";
             this.cbDPTb1.UseSelectable = true;
@@ -599,7 +599,7 @@
             this.cbDPT3rd.AutoSize = true;
             this.cbDPT3rd.Location = new System.Drawing.Point(325, 25);
             this.cbDPT3rd.Name = "cbDPT3rd";
-            this.cbDPT3rd.Size = new System.Drawing.Size(44, 17);
+            this.cbDPT3rd.Size = new System.Drawing.Size(40, 15);
             this.cbDPT3rd.TabIndex = 9;
             this.cbDPT3rd.Text = "3rd";
             this.cbDPT3rd.UseSelectable = true;
@@ -609,7 +609,7 @@
             this.cbDPT2nd.AutoSize = true;
             this.cbDPT2nd.Location = new System.Drawing.Point(276, 25);
             this.cbDPT2nd.Name = "cbDPT2nd";
-            this.cbDPT2nd.Size = new System.Drawing.Size(46, 17);
+            this.cbDPT2nd.Size = new System.Drawing.Size(43, 15);
             this.cbDPT2nd.TabIndex = 8;
             this.cbDPT2nd.Text = "2nd";
             this.cbDPT2nd.UseSelectable = true;
@@ -619,7 +619,7 @@
             this.cbDPT1st.AutoSize = true;
             this.cbDPT1st.Location = new System.Drawing.Point(232, 25);
             this.cbDPT1st.Name = "cbDPT1st";
-            this.cbDPT1st.Size = new System.Drawing.Size(41, 17);
+            this.cbDPT1st.Size = new System.Drawing.Size(38, 15);
             this.cbDPT1st.TabIndex = 7;
             this.cbDPT1st.Text = "1st";
             this.cbDPT1st.UseSelectable = true;
@@ -628,9 +628,9 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroLabel2.Location = new System.Drawing.Point(3, 25);
+            this.metroLabel2.Location = new System.Drawing.Point(3, 21);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(222, 20);
+            this.metroLabel2.Size = new System.Drawing.Size(206, 19);
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "DPT(Diphtheria, Pertussis, Tetanus)";
             // 
@@ -644,7 +644,7 @@
             this.groupBox2.Controls.Add(this.metroLabel1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(3, 26);
+            this.groupBox2.Location = new System.Drawing.Point(3, 22);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(662, 54);
             this.groupBox2.TabIndex = 7;
@@ -655,7 +655,7 @@
             this.cbBCGb2.AutoSize = true;
             this.cbBCGb2.Location = new System.Drawing.Point(440, 25);
             this.cbBCGb2.Name = "cbBCGb2";
-            this.cbBCGb2.Size = new System.Drawing.Size(69, 17);
+            this.cbBCGb2.Size = new System.Drawing.Size(63, 15);
             this.cbBCGb2.TabIndex = 5;
             this.cbBCGb2.Text = "Booster";
             this.cbBCGb2.UseSelectable = true;
@@ -665,7 +665,7 @@
             this.cbBCGb1.AutoSize = true;
             this.cbBCGb1.Location = new System.Drawing.Point(371, 25);
             this.cbBCGb1.Name = "cbBCGb1";
-            this.cbBCGb1.Size = new System.Drawing.Size(69, 17);
+            this.cbBCGb1.Size = new System.Drawing.Size(63, 15);
             this.cbBCGb1.TabIndex = 4;
             this.cbBCGb1.Text = "Booster";
             this.cbBCGb1.UseSelectable = true;
@@ -675,7 +675,7 @@
             this.cbBCG3rd.AutoSize = true;
             this.cbBCG3rd.Location = new System.Drawing.Point(325, 25);
             this.cbBCG3rd.Name = "cbBCG3rd";
-            this.cbBCG3rd.Size = new System.Drawing.Size(44, 17);
+            this.cbBCG3rd.Size = new System.Drawing.Size(40, 15);
             this.cbBCG3rd.TabIndex = 3;
             this.cbBCG3rd.Text = "3rd";
             this.cbBCG3rd.UseSelectable = true;
@@ -685,7 +685,7 @@
             this.cbBCG2nd.AutoSize = true;
             this.cbBCG2nd.Location = new System.Drawing.Point(276, 25);
             this.cbBCG2nd.Name = "cbBCG2nd";
-            this.cbBCG2nd.Size = new System.Drawing.Size(46, 17);
+            this.cbBCG2nd.Size = new System.Drawing.Size(43, 15);
             this.cbBCG2nd.TabIndex = 2;
             this.cbBCG2nd.Text = "2nd";
             this.cbBCG2nd.UseSelectable = true;
@@ -695,7 +695,7 @@
             this.cbBCG1st.AutoSize = true;
             this.cbBCG1st.Location = new System.Drawing.Point(232, 25);
             this.cbBCG1st.Name = "cbBCG1st";
-            this.cbBCG1st.Size = new System.Drawing.Size(41, 17);
+            this.cbBCG1st.Size = new System.Drawing.Size(38, 15);
             this.cbBCG1st.TabIndex = 1;
             this.cbBCG1st.Text = "1st";
             this.cbBCG1st.UseSelectable = true;
@@ -704,9 +704,9 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 25);
+            this.metroLabel1.Location = new System.Drawing.Point(3, 21);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(200, 20);
+            this.metroLabel1.Size = new System.Drawing.Size(191, 19);
             this.metroLabel1.TabIndex = 1;
             this.metroLabel1.Text = "BCG(Bacilli, Chalmette Guarine)";
             // 
@@ -775,15 +775,16 @@
             // 
             this.btnEdit.AutoSize = true;
             this.btnEdit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.Depth = 0;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEdit.Icon = null;
-            this.btnEdit.Location = new System.Drawing.Point(514, 0);
+            this.btnEdit.Location = new System.Drawing.Point(538, 0);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEdit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Primary = false;
-            this.btnEdit.Size = new System.Drawing.Size(87, 42);
+            this.btnEdit.Size = new System.Drawing.Size(73, 42);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Update";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -793,15 +794,16 @@
             // 
             this.btnDone.AutoSize = true;
             this.btnDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDone.Depth = 0;
             this.btnDone.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnDone.Icon = null;
-            this.btnDone.Location = new System.Drawing.Point(601, 0);
+            this.btnDone.Location = new System.Drawing.Point(611, 0);
             this.btnDone.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDone.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDone.Name = "btnDone";
             this.btnDone.Primary = false;
-            this.btnDone.Size = new System.Drawing.Size(67, 42);
+            this.btnDone.Size = new System.Drawing.Size(57, 42);
             this.btnDone.TabIndex = 2;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = true;
