@@ -1,0 +1,16 @@
+DELIMITER $$
+USE `_clinic`$$
+DROP PROCEDURE IF EXISTS `count_YearEndVisit`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `count_YearEndVisit`(IN StartDate DATETIME,IN EndDate DATETIME)
+BEGIN
+SELECT COUNT(P.id) AS "Number of Year-end Visits",D.Department
+FROM patient AS P
+INNER JOIN department AS D
+	ON P.Department_id=D.Department_id
+	INNER JOIN treatment AS T
+	ON T.uid=P.uid
+WHERE T.TreatmentDate >= StartDate AND T.TreatmentDate <= EndDate
+GROUP BY D.Department;
+END$$
+DELIMITER ;
+CALL NewProc (CURDATE() - INTERVAL 1 MONTH,CURDATE());
