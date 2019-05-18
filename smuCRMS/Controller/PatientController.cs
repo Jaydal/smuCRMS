@@ -174,10 +174,10 @@ namespace smuCRMS.Controller
             psig = null;
             phsig = null;
         }
-        public bool patientAdd(addPatient ap)
-        {
-            return valid = (patient.patientAdd(this)) ? true : false;
-        }
+        //public bool patientAdd(addPatient ap)
+        //{
+        //    return valid = (patient.patientAdd(this)) ? true : false;
+        //}
         public bool patientRemove()
         {
             return valid = (patient.patientRemove(this)) ? true : false;
@@ -211,10 +211,7 @@ namespace smuCRMS.Controller
         {
             return valid = (patient.updateHistory(this)) ? true : false;
         }
-        public bool verifyID()
-        {
-            return valid = (patient.verifyID(this)) ? true : false;
-        }
+       
 
         public bool getRemark()
         {
@@ -454,7 +451,24 @@ namespace smuCRMS.Controller
         public DataTable getDepartment()
         {
             DataTable dt;
-            return dt = patient.getDepartment(this);
+            return dt = patient.callProcedure(this,
+                "VIEW_ALL", "vcrud_department", true);
+        }
+        public DataTable getCourse()
+        {
+            DataTable dt;
+            return dt = patient.callProcedure(this,
+                "VIEW_BY_DEPARTMENT", "vcrud_course",true);
+        }
+        public bool verifyID()
+        {
+            return valid = (patient.callProcedure(this, 
+                "VIEW", "vcrud_patient",true).Rows.Count>0) ? true : false;
+        }
+        public bool patientAdd(addPatient ap)
+        {
+            return valid = (patient.callProcedure(this,
+                "CREATE", "vcrud_patient", true).Columns.Count > 0) ? true : false;
         }
     }
 

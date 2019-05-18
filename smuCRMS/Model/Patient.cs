@@ -293,25 +293,6 @@ namespace smuCRMS.Controller
 
             return valid;
         }
-        public bool verifyID(PatientController pc)
-        {
-            DataTable dtable = new DataTable();
-            try
-            {
-                con.command.Parameters.Clear();
-                addParamVal("activity", "VIEW");
-                getPatientCollection_Basic(pc);
-                con.getDataTable("vcrud_patient");
-                valid = (con.dtable.Rows.Count > 0) ? true : false;
-
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("" + ex);
-            }
-
-            return valid;
-        }
         public bool updateImmunization(PatientController pm)
         {
 
@@ -640,6 +621,8 @@ namespace smuCRMS.Controller
             return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
 
+
+
         //new code
         private void getPatientCollection_Basic(PatientController pc)
         {
@@ -690,19 +673,68 @@ namespace smuCRMS.Controller
         {
 
         }
+        private void getPatientCollection_Remark(PatientController pc)
+        {
+
+        }
         private void getPatientCollection_Department(PatientController pc)
         {
             addParamVal("department_id", pc.EID);
             addParamVal("department", pc.department);
         }
-        public DataTable getDepartment(PatientController pc)
+        private void getPatientCollection_Course(PatientController pc)
+        {
+            addParamVal("course_id", pc.course);
+            addParamVal("course", pc.course);
+            addParamVal("department_id", pc.department);
+        }
+        public DataTable callProcedure(PatientController pc,string ACTIVITY,string STORED_PROCEDURE,bool Query)
         {
             DataTable dtable = new DataTable();
             con.command.Parameters.Clear();
-            addParamVal("activity", "VIEW_ALL");
-            getPatientCollection_Department(pc);
-            con.getDataTable("vcrud_department");
-            return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
+            addParamVal("activity", ACTIVITY);
+                if (STORED_PROCEDURE.Contains("patient"))
+                {
+                    getPatientCollection_Basic(pc);
+                }
+                else if (STORED_PROCEDURE.Contains("course"))
+                {
+                    getPatientCollection_Course(pc);
+                }
+                else if (STORED_PROCEDURE.Contains("department"))
+                {
+                    getPatientCollection_Department(pc);
+                }
+                else if (STORED_PROCEDURE.Contains("history"))
+                {
+                    getPatientCollection_History(pc);
+                }
+                else if (STORED_PROCEDURE.Contains("immunization"))
+                {
+                    getPatientCollection_Immunization(pc);
+                }
+                else if (STORED_PROCEDURE.Contains("remark"))
+                {
+                    getPatientCollection_Remark(pc);
+                }
+                else if (STORED_PROCEDURE.Contains("treatment"))
+                {
+                    getPatientCollection_Treatment(pc);
+                }
+            if (Query)
+            {
+                con.getDataTable(STORED_PROCEDURE);
+                return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
+            }
+            else{
+                con.getParameter(STORED_PROCEDURE);
+                if (con.command.ExecuteNonQuery() == 1)
+                {
+                    dtable.Columns.Add("NON_QUERY");
+                }
+                con.close();
+                return dtable = (con.dtable.Columns.Count > 0) ? dtable : con.dtable;
+            }
         }
     }
 }

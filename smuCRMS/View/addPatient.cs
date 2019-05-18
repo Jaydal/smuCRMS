@@ -21,14 +21,6 @@ namespace smuCRMS.View
         string[] ss = new string[] { "11", "12" };
         string[] college = new string[] { "1st", "2nd", "3rd", "4th", "5th" };
         string[] cmbVal = new string[6];
-        string[] seait = new string[] { "BSArchi", "BSCE", "BSCOE", "BSEE", "BSIS", "BSIT", "BSLIS",
-            "BSECE" };
-        string[] sab = new string[] { "BSA", "BSEM", "BSHM", "BSMA", "BSOA", "BSTM", "Commercial Cooking", "Bread and Pastry Producton", "Housekeeping Services", "Front Office Services",
-        "Tour Guiding Services","Bartending Services","Food and Beverages Services",""};
-        string[] steh = new string[] { "BSABE", "BSABJ", "BSArts", "BSCrim", "BSMath", "BSPE", "BSPhil", "BSPolSci", "BSPsycho",
-        "BSSE","Elementary Education","Pre School Education","Guidance and Counselling"};
-        string[] shans = new string[] { "BSBio", "BSM", "BSMLS", "BSMT", "BSN", "BSP" };
-        string[] shs = new string[] { "GAS", "HUMMS", "STEM", "ABM", "TVL", "ICT", };
         public addPatient()
         {
             InitializeComponent();
@@ -166,11 +158,11 @@ namespace smuCRMS.View
             cmbDepartment.ValueMember = "department_id";
             cmbDepartment.DisplayMember = "Department";
             cmbDepartment.DataSource = pm.getDepartment();
-            //pm.loadCourses(this);
             cmbDepartment.SelectedIndex = 0;
+            LoadCourses();
             cmbCivilStat.SelectedIndex = 0;
             txtNat.Text = "Filipino";
-            cmbYear.SelectedIndex = 0;
+            //cmbYear.SelectedIndex = 0;
             btnPrev.Hide();
             txtPID.Select();
             dtBDay.MaxDate = DateTime.Now;
@@ -281,59 +273,15 @@ namespace smuCRMS.View
         //changing label Year/Grade based on department
         private void cmbDepartment_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            cmbYear.Items.Clear();
-            cmbCourse.Items.Clear();
-            cmbCourse.Text = "";
-            if (cmbDepartment.SelectedIndex == 0 || cmbDepartment.SelectedIndex == 1 || cmbDepartment.SelectedIndex == 2)
-            {
-
-                lblYear.Text = "Grade";
-                cmbCourse.Enabled = false;
-                if (cmbDepartment.SelectedIndex == 0)
-                {
-                    cmbVal = gs;
-
-                }
-                else if (cmbDepartment.SelectedIndex == 1)
-                {
-                    cmbVal = js;
-                }
-                else
-                {
-                    cmbCourse.Enabled = true;
-                    lblCourse.Text = "Track";
-                    cmbCourse.Items.AddRange(shs);
-                    cmbVal = ss;
-                }
-
-            }
-            else
-            {
-                cmbCourse.Enabled = true;
-                lblYear.Text = "Year";
-                lblCourse.Text = "Course";
-                cmbVal = college;
-                if (cmbDepartment.SelectedIndex == 3)
-                {
-                    cmbCourse.Items.AddRange(sab);
-                }
-                else if (cmbDepartment.SelectedIndex == 4)
-                {
-                    cmbCourse.Items.AddRange(seait);
-                }
-                else if (cmbDepartment.SelectedIndex == 5)
-                {
-                    cmbCourse.Items.AddRange(shans);
-                }
-                else if (cmbDepartment.SelectedIndex == 6)
-                {
-                    cmbCourse.Items.AddRange(steh);
-                }
-            }
-            cmbYear.Items.AddRange(cmbVal);
-            cmbYear.SelectedIndex = 0;
+            LoadCourses();
         }
-
+        void LoadCourses()
+        {
+            pm.department = cmbDepartment.SelectedValue.ToString();
+            cmbCourse.ValueMember = "Course_id";
+            cmbCourse.DisplayMember = "Course";
+            cmbCourse.DataSource = pm.getCourse();
+        }
         void ConvertPhotoTobyte()
         {
             Image img = pbPhoto.Image;
@@ -1045,16 +993,13 @@ namespace smuCRMS.View
                 }
                 txtPID.Text = "V" + DateTime.Now.Month + DateTime.Now.Day + (DateTime.Now.Year) % 2000 + DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second;
                 txtLName.Select();
-                cmbDepartment.Items.Clear();
-                cmbYear.Items.Clear();
-                cmbCourse.Items.Clear();
+                //cmbDepartment.Items.Clear();
+                //cmbYear.Items.Clear();
+                //cmbCourse.Items.Clear();
                 
             }
             else
             {
-                string[] dept = new string[] { "Grade School", "Junior HS", "Senior HS", "SAB", "SEAIT", "SHANS", "STEH" };
-                cmbDepartment.Items.AddRange(dept);
-                cmbDepartment.SelectedIndex = 0;
                 enableCYD(true);
                 txtPID.Enabled = true;
                 foreach (Control c in gbImmu.Controls)
