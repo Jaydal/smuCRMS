@@ -528,14 +528,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="smuCRMS.exe" size="1304576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="smuCRMS.exe" size="1301504">
       <assemblyIdentity name="smuCRMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Z3S+B3Uk1luhFqu1y+TcJ/g/bixf3E80o5HmybOVJGI=</dsig:DigestValue>
+        <dsig:DigestValue>zo9RnT4Bv6/DkQr+d8x2N3wc3jpXOGmk2J++RksJKFI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -84,6 +84,7 @@
             this.lblBDay = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.lblSex = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblCourse = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblYear = new System.Windows.Forms.Label();
@@ -147,54 +148,19 @@
             this.rbNo1 = new MetroFramework.Controls.MetroRadioButton();
             this.gbImmu = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.txtImmuOther = new MetroFramework.Controls.MetroTextBox();
-            this.cbOTHERS1st = new MetroFramework.Controls.MetroCheckBox();
-            this.cbOTHERS2nd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbOTHERS3rd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbOTHERSb1 = new MetroFramework.Controls.MetroCheckBox();
-            this.cbOTHERSb2 = new MetroFramework.Controls.MetroCheckBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.cbHEPA1st = new MetroFramework.Controls.MetroCheckBox();
-            this.cbHEPA2nd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbHEPA3rd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbHEPAb1 = new MetroFramework.Controls.MetroCheckBox();
-            this.cbHEPAb2 = new MetroFramework.Controls.MetroCheckBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.cbHEPB1st = new MetroFramework.Controls.MetroCheckBox();
-            this.cbHEPB2nd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbHEPB3rd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbHEPBb1 = new MetroFramework.Controls.MetroCheckBox();
-            this.cbHEPBb2 = new MetroFramework.Controls.MetroCheckBox();
             this.lblhepaB = new MetroFramework.Controls.MetroLabel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cbMMR1st = new MetroFramework.Controls.MetroCheckBox();
-            this.cbMMR2nd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbMMR3rd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbMMRb1 = new MetroFramework.Controls.MetroCheckBox();
-            this.cbMMRb2 = new MetroFramework.Controls.MetroCheckBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.cbOPV1st = new MetroFramework.Controls.MetroCheckBox();
-            this.cbOPV2nd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbOPV3rd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbOPVb1 = new MetroFramework.Controls.MetroCheckBox();
-            this.cbOPVb2 = new MetroFramework.Controls.MetroCheckBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbDPT1st = new MetroFramework.Controls.MetroCheckBox();
-            this.cbDPT2nd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbDPT3rd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbDPTb1 = new MetroFramework.Controls.MetroCheckBox();
-            this.cbDPTb2 = new MetroFramework.Controls.MetroCheckBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbBCG1st = new MetroFramework.Controls.MetroCheckBox();
-            this.cbBCG2nd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbBCG3rd = new MetroFramework.Controls.MetroCheckBox();
-            this.cbBCGb1 = new MetroFramework.Controls.MetroCheckBox();
-            this.cbBCGb2 = new MetroFramework.Controls.MetroCheckBox();
+            this.cmbImmu = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.tbRemark = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -221,7 +187,14 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox5 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox6 = new MetroFramework.Controls.MetroComboBox();
+            this.txtImmuOther = new MetroFramework.Controls.MetroTextBox();
             this.metroPanel1.SuspendLayout();
             this.tbProfile.SuspendLayout();
             this.tbProf.SuspendLayout();
@@ -1138,6 +1111,20 @@
             this.lblSex.TabIndex = 119;
             this.lblSex.Text = "Sex:";
             this.lblSex.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 13F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(208, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 21);
+            this.label1.TabIndex = 133;
+            this.label1.Text = "ID:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblCourse
             // 
@@ -2403,11 +2390,7 @@
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.txtImmuOther);
-            this.groupBox8.Controls.Add(this.cbOTHERS1st);
-            this.groupBox8.Controls.Add(this.cbOTHERS2nd);
-            this.groupBox8.Controls.Add(this.cbOTHERS3rd);
-            this.groupBox8.Controls.Add(this.cbOTHERSb1);
-            this.groupBox8.Controls.Add(this.cbOTHERSb2);
+            this.groupBox8.Controls.Add(this.metroComboBox6);
             this.groupBox8.Controls.Add(this.metroLabel7);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2416,101 +2399,6 @@
             this.groupBox8.Size = new System.Drawing.Size(1118, 65);
             this.groupBox8.TabIndex = 7;
             this.groupBox8.TabStop = false;
-            // 
-            // txtImmuOther
-            // 
-            // 
-            // 
-            // 
-            this.txtImmuOther.CustomButton.Image = null;
-            this.txtImmuOther.CustomButton.Location = new System.Drawing.Point(665, 1);
-            this.txtImmuOther.CustomButton.Name = "";
-            this.txtImmuOther.CustomButton.Size = new System.Drawing.Size(39, 39);
-            this.txtImmuOther.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtImmuOther.CustomButton.TabIndex = 1;
-            this.txtImmuOther.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtImmuOther.CustomButton.UseSelectable = true;
-            this.txtImmuOther.CustomButton.Visible = false;
-            this.txtImmuOther.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtImmuOther.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.txtImmuOther.Lines = new string[0];
-            this.txtImmuOther.Location = new System.Drawing.Point(66, 21);
-            this.txtImmuOther.MaxLength = 255;
-            this.txtImmuOther.Name = "txtImmuOther";
-            this.txtImmuOther.PasswordChar = '\0';
-            this.txtImmuOther.PromptText = "Please specify";
-            this.txtImmuOther.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtImmuOther.SelectedText = "";
-            this.txtImmuOther.SelectionLength = 0;
-            this.txtImmuOther.SelectionStart = 0;
-            this.txtImmuOther.ShortcutsEnabled = true;
-            this.txtImmuOther.Size = new System.Drawing.Size(705, 41);
-            this.txtImmuOther.TabIndex = 30;
-            this.txtImmuOther.UseSelectable = true;
-            this.txtImmuOther.WaterMark = "Please specify";
-            this.txtImmuOther.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtImmuOther.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtImmuOther.Click += new System.EventHandler(this.txtImmuOther_Click);
-            // 
-            // cbOTHERS1st
-            // 
-            this.cbOTHERS1st.AutoSize = true;
-            this.cbOTHERS1st.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbOTHERS1st.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbOTHERS1st.Location = new System.Drawing.Point(771, 21);
-            this.cbOTHERS1st.Name = "cbOTHERS1st";
-            this.cbOTHERS1st.Size = new System.Drawing.Size(52, 41);
-            this.cbOTHERS1st.TabIndex = 31;
-            this.cbOTHERS1st.Text = "1st";
-            this.cbOTHERS1st.UseSelectable = true;
-            // 
-            // cbOTHERS2nd
-            // 
-            this.cbOTHERS2nd.AutoSize = true;
-            this.cbOTHERS2nd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbOTHERS2nd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbOTHERS2nd.Location = new System.Drawing.Point(823, 21);
-            this.cbOTHERS2nd.Name = "cbOTHERS2nd";
-            this.cbOTHERS2nd.Size = new System.Drawing.Size(59, 41);
-            this.cbOTHERS2nd.TabIndex = 32;
-            this.cbOTHERS2nd.Text = "2nd";
-            this.cbOTHERS2nd.UseSelectable = true;
-            // 
-            // cbOTHERS3rd
-            // 
-            this.cbOTHERS3rd.AutoSize = true;
-            this.cbOTHERS3rd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbOTHERS3rd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbOTHERS3rd.Location = new System.Drawing.Point(882, 21);
-            this.cbOTHERS3rd.Name = "cbOTHERS3rd";
-            this.cbOTHERS3rd.Size = new System.Drawing.Size(55, 41);
-            this.cbOTHERS3rd.TabIndex = 33;
-            this.cbOTHERS3rd.Text = "3rd";
-            this.cbOTHERS3rd.UseSelectable = true;
-            // 
-            // cbOTHERSb1
-            // 
-            this.cbOTHERSb1.AutoSize = true;
-            this.cbOTHERSb1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbOTHERSb1.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbOTHERSb1.Location = new System.Drawing.Point(937, 21);
-            this.cbOTHERSb1.Name = "cbOTHERSb1";
-            this.cbOTHERSb1.Size = new System.Drawing.Size(89, 41);
-            this.cbOTHERSb1.TabIndex = 34;
-            this.cbOTHERSb1.Text = "Booster";
-            this.cbOTHERSb1.UseSelectable = true;
-            // 
-            // cbOTHERSb2
-            // 
-            this.cbOTHERSb2.AutoSize = true;
-            this.cbOTHERSb2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbOTHERSb2.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbOTHERSb2.Location = new System.Drawing.Point(1026, 21);
-            this.cbOTHERSb2.Name = "cbOTHERSb2";
-            this.cbOTHERSb2.Size = new System.Drawing.Size(89, 41);
-            this.cbOTHERSb2.TabIndex = 35;
-            this.cbOTHERSb2.Text = "Booster";
-            this.cbOTHERSb2.UseSelectable = true;
             // 
             // metroLabel7
             // 
@@ -2525,11 +2413,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.cbHEPA1st);
-            this.groupBox6.Controls.Add(this.cbHEPA2nd);
-            this.groupBox6.Controls.Add(this.cbHEPA3rd);
-            this.groupBox6.Controls.Add(this.cbHEPAb1);
-            this.groupBox6.Controls.Add(this.cbHEPAb2);
+            this.groupBox6.Controls.Add(this.metroComboBox5);
             this.groupBox6.Controls.Add(this.metroLabel5);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2538,66 +2422,6 @@
             this.groupBox6.Size = new System.Drawing.Size(1118, 65);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
-            // 
-            // cbHEPA1st
-            // 
-            this.cbHEPA1st.AutoSize = true;
-            this.cbHEPA1st.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbHEPA1st.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbHEPA1st.Location = new System.Drawing.Point(771, 21);
-            this.cbHEPA1st.Name = "cbHEPA1st";
-            this.cbHEPA1st.Size = new System.Drawing.Size(52, 41);
-            this.cbHEPA1st.TabIndex = 25;
-            this.cbHEPA1st.Text = "1st";
-            this.cbHEPA1st.UseSelectable = true;
-            // 
-            // cbHEPA2nd
-            // 
-            this.cbHEPA2nd.AutoSize = true;
-            this.cbHEPA2nd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbHEPA2nd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbHEPA2nd.Location = new System.Drawing.Point(823, 21);
-            this.cbHEPA2nd.Name = "cbHEPA2nd";
-            this.cbHEPA2nd.Size = new System.Drawing.Size(59, 41);
-            this.cbHEPA2nd.TabIndex = 26;
-            this.cbHEPA2nd.Text = "2nd";
-            this.cbHEPA2nd.UseSelectable = true;
-            // 
-            // cbHEPA3rd
-            // 
-            this.cbHEPA3rd.AutoSize = true;
-            this.cbHEPA3rd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbHEPA3rd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbHEPA3rd.Location = new System.Drawing.Point(882, 21);
-            this.cbHEPA3rd.Name = "cbHEPA3rd";
-            this.cbHEPA3rd.Size = new System.Drawing.Size(55, 41);
-            this.cbHEPA3rd.TabIndex = 27;
-            this.cbHEPA3rd.Text = "3rd";
-            this.cbHEPA3rd.UseSelectable = true;
-            // 
-            // cbHEPAb1
-            // 
-            this.cbHEPAb1.AutoSize = true;
-            this.cbHEPAb1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbHEPAb1.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbHEPAb1.Location = new System.Drawing.Point(937, 21);
-            this.cbHEPAb1.Name = "cbHEPAb1";
-            this.cbHEPAb1.Size = new System.Drawing.Size(89, 41);
-            this.cbHEPAb1.TabIndex = 28;
-            this.cbHEPAb1.Text = "Booster";
-            this.cbHEPAb1.UseSelectable = true;
-            // 
-            // cbHEPAb2
-            // 
-            this.cbHEPAb2.AutoSize = true;
-            this.cbHEPAb2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbHEPAb2.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbHEPAb2.Location = new System.Drawing.Point(1026, 21);
-            this.cbHEPAb2.Name = "cbHEPAb2";
-            this.cbHEPAb2.Size = new System.Drawing.Size(89, 41);
-            this.cbHEPAb2.TabIndex = 29;
-            this.cbHEPAb2.Text = "Booster";
-            this.cbHEPAb2.UseSelectable = true;
             // 
             // metroLabel5
             // 
@@ -2612,11 +2436,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.cbHEPB1st);
-            this.groupBox7.Controls.Add(this.cbHEPB2nd);
-            this.groupBox7.Controls.Add(this.cbHEPB3rd);
-            this.groupBox7.Controls.Add(this.cbHEPBb1);
-            this.groupBox7.Controls.Add(this.cbHEPBb2);
+            this.groupBox7.Controls.Add(this.metroComboBox4);
             this.groupBox7.Controls.Add(this.lblhepaB);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2625,66 +2445,6 @@
             this.groupBox7.Size = new System.Drawing.Size(1118, 65);
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
-            // 
-            // cbHEPB1st
-            // 
-            this.cbHEPB1st.AutoSize = true;
-            this.cbHEPB1st.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbHEPB1st.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbHEPB1st.Location = new System.Drawing.Point(771, 21);
-            this.cbHEPB1st.Name = "cbHEPB1st";
-            this.cbHEPB1st.Size = new System.Drawing.Size(52, 41);
-            this.cbHEPB1st.TabIndex = 20;
-            this.cbHEPB1st.Text = "1st";
-            this.cbHEPB1st.UseSelectable = true;
-            // 
-            // cbHEPB2nd
-            // 
-            this.cbHEPB2nd.AutoSize = true;
-            this.cbHEPB2nd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbHEPB2nd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbHEPB2nd.Location = new System.Drawing.Point(823, 21);
-            this.cbHEPB2nd.Name = "cbHEPB2nd";
-            this.cbHEPB2nd.Size = new System.Drawing.Size(59, 41);
-            this.cbHEPB2nd.TabIndex = 21;
-            this.cbHEPB2nd.Text = "2nd";
-            this.cbHEPB2nd.UseSelectable = true;
-            // 
-            // cbHEPB3rd
-            // 
-            this.cbHEPB3rd.AutoSize = true;
-            this.cbHEPB3rd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbHEPB3rd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbHEPB3rd.Location = new System.Drawing.Point(882, 21);
-            this.cbHEPB3rd.Name = "cbHEPB3rd";
-            this.cbHEPB3rd.Size = new System.Drawing.Size(55, 41);
-            this.cbHEPB3rd.TabIndex = 22;
-            this.cbHEPB3rd.Text = "3rd";
-            this.cbHEPB3rd.UseSelectable = true;
-            // 
-            // cbHEPBb1
-            // 
-            this.cbHEPBb1.AutoSize = true;
-            this.cbHEPBb1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbHEPBb1.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbHEPBb1.Location = new System.Drawing.Point(937, 21);
-            this.cbHEPBb1.Name = "cbHEPBb1";
-            this.cbHEPBb1.Size = new System.Drawing.Size(89, 41);
-            this.cbHEPBb1.TabIndex = 23;
-            this.cbHEPBb1.Text = "Booster";
-            this.cbHEPBb1.UseSelectable = true;
-            // 
-            // cbHEPBb2
-            // 
-            this.cbHEPBb2.AutoSize = true;
-            this.cbHEPBb2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbHEPBb2.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbHEPBb2.Location = new System.Drawing.Point(1026, 21);
-            this.cbHEPBb2.Name = "cbHEPBb2";
-            this.cbHEPBb2.Size = new System.Drawing.Size(89, 41);
-            this.cbHEPBb2.TabIndex = 24;
-            this.cbHEPBb2.Text = "Booster";
-            this.cbHEPBb2.UseSelectable = true;
             // 
             // lblhepaB
             // 
@@ -2699,11 +2459,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.cbMMR1st);
-            this.groupBox4.Controls.Add(this.cbMMR2nd);
-            this.groupBox4.Controls.Add(this.cbMMR3rd);
-            this.groupBox4.Controls.Add(this.cbMMRb1);
-            this.groupBox4.Controls.Add(this.cbMMRb2);
+            this.groupBox4.Controls.Add(this.metroComboBox3);
             this.groupBox4.Controls.Add(this.metroLabel3);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2712,66 +2468,6 @@
             this.groupBox4.Size = new System.Drawing.Size(1118, 65);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
-            // 
-            // cbMMR1st
-            // 
-            this.cbMMR1st.AutoSize = true;
-            this.cbMMR1st.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbMMR1st.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbMMR1st.Location = new System.Drawing.Point(771, 21);
-            this.cbMMR1st.Name = "cbMMR1st";
-            this.cbMMR1st.Size = new System.Drawing.Size(52, 41);
-            this.cbMMR1st.TabIndex = 16;
-            this.cbMMR1st.Text = "1st";
-            this.cbMMR1st.UseSelectable = true;
-            // 
-            // cbMMR2nd
-            // 
-            this.cbMMR2nd.AutoSize = true;
-            this.cbMMR2nd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbMMR2nd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbMMR2nd.Location = new System.Drawing.Point(823, 21);
-            this.cbMMR2nd.Name = "cbMMR2nd";
-            this.cbMMR2nd.Size = new System.Drawing.Size(59, 41);
-            this.cbMMR2nd.TabIndex = 17;
-            this.cbMMR2nd.Text = "2nd";
-            this.cbMMR2nd.UseSelectable = true;
-            // 
-            // cbMMR3rd
-            // 
-            this.cbMMR3rd.AutoSize = true;
-            this.cbMMR3rd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbMMR3rd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbMMR3rd.Location = new System.Drawing.Point(882, 21);
-            this.cbMMR3rd.Name = "cbMMR3rd";
-            this.cbMMR3rd.Size = new System.Drawing.Size(55, 41);
-            this.cbMMR3rd.TabIndex = 28;
-            this.cbMMR3rd.Text = "3rd";
-            this.cbMMR3rd.UseSelectable = true;
-            // 
-            // cbMMRb1
-            // 
-            this.cbMMRb1.AutoSize = true;
-            this.cbMMRb1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbMMRb1.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbMMRb1.Location = new System.Drawing.Point(937, 21);
-            this.cbMMRb1.Name = "cbMMRb1";
-            this.cbMMRb1.Size = new System.Drawing.Size(89, 41);
-            this.cbMMRb1.TabIndex = 18;
-            this.cbMMRb1.Text = "Booster";
-            this.cbMMRb1.UseSelectable = true;
-            // 
-            // cbMMRb2
-            // 
-            this.cbMMRb2.AutoSize = true;
-            this.cbMMRb2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbMMRb2.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbMMRb2.Location = new System.Drawing.Point(1026, 21);
-            this.cbMMRb2.Name = "cbMMRb2";
-            this.cbMMRb2.Size = new System.Drawing.Size(89, 41);
-            this.cbMMRb2.TabIndex = 19;
-            this.cbMMRb2.Text = "Booster";
-            this.cbMMRb2.UseSelectable = true;
             // 
             // metroLabel3
             // 
@@ -2786,11 +2482,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.cbOPV1st);
-            this.groupBox5.Controls.Add(this.cbOPV2nd);
-            this.groupBox5.Controls.Add(this.cbOPV3rd);
-            this.groupBox5.Controls.Add(this.cbOPVb1);
-            this.groupBox5.Controls.Add(this.cbOPVb2);
+            this.groupBox5.Controls.Add(this.metroComboBox2);
             this.groupBox5.Controls.Add(this.metroLabel4);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2799,66 +2491,6 @@
             this.groupBox5.Size = new System.Drawing.Size(1118, 65);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
-            // 
-            // cbOPV1st
-            // 
-            this.cbOPV1st.AutoSize = true;
-            this.cbOPV1st.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbOPV1st.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbOPV1st.Location = new System.Drawing.Point(771, 21);
-            this.cbOPV1st.Name = "cbOPV1st";
-            this.cbOPV1st.Size = new System.Drawing.Size(52, 41);
-            this.cbOPV1st.TabIndex = 11;
-            this.cbOPV1st.Text = "1st";
-            this.cbOPV1st.UseSelectable = true;
-            // 
-            // cbOPV2nd
-            // 
-            this.cbOPV2nd.AutoSize = true;
-            this.cbOPV2nd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbOPV2nd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbOPV2nd.Location = new System.Drawing.Point(823, 21);
-            this.cbOPV2nd.Name = "cbOPV2nd";
-            this.cbOPV2nd.Size = new System.Drawing.Size(59, 41);
-            this.cbOPV2nd.TabIndex = 12;
-            this.cbOPV2nd.Text = "2nd";
-            this.cbOPV2nd.UseSelectable = true;
-            // 
-            // cbOPV3rd
-            // 
-            this.cbOPV3rd.AutoSize = true;
-            this.cbOPV3rd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbOPV3rd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbOPV3rd.Location = new System.Drawing.Point(882, 21);
-            this.cbOPV3rd.Name = "cbOPV3rd";
-            this.cbOPV3rd.Size = new System.Drawing.Size(55, 41);
-            this.cbOPV3rd.TabIndex = 13;
-            this.cbOPV3rd.Text = "3rd";
-            this.cbOPV3rd.UseSelectable = true;
-            // 
-            // cbOPVb1
-            // 
-            this.cbOPVb1.AutoSize = true;
-            this.cbOPVb1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbOPVb1.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbOPVb1.Location = new System.Drawing.Point(937, 21);
-            this.cbOPVb1.Name = "cbOPVb1";
-            this.cbOPVb1.Size = new System.Drawing.Size(89, 41);
-            this.cbOPVb1.TabIndex = 14;
-            this.cbOPVb1.Text = "Booster";
-            this.cbOPVb1.UseSelectable = true;
-            // 
-            // cbOPVb2
-            // 
-            this.cbOPVb2.AutoSize = true;
-            this.cbOPVb2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbOPVb2.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbOPVb2.Location = new System.Drawing.Point(1026, 21);
-            this.cbOPVb2.Name = "cbOPVb2";
-            this.cbOPVb2.Size = new System.Drawing.Size(89, 41);
-            this.cbOPVb2.TabIndex = 15;
-            this.cbOPVb2.Text = "Booster";
-            this.cbOPVb2.UseSelectable = true;
             // 
             // metroLabel4
             // 
@@ -2873,11 +2505,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.cbDPT1st);
-            this.groupBox3.Controls.Add(this.cbDPT2nd);
-            this.groupBox3.Controls.Add(this.cbDPT3rd);
-            this.groupBox3.Controls.Add(this.cbDPTb1);
-            this.groupBox3.Controls.Add(this.cbDPTb2);
+            this.groupBox3.Controls.Add(this.metroComboBox1);
             this.groupBox3.Controls.Add(this.metroLabel2);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2886,66 +2514,6 @@
             this.groupBox3.Size = new System.Drawing.Size(1118, 65);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            // 
-            // cbDPT1st
-            // 
-            this.cbDPT1st.AutoSize = true;
-            this.cbDPT1st.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbDPT1st.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbDPT1st.Location = new System.Drawing.Point(771, 21);
-            this.cbDPT1st.Name = "cbDPT1st";
-            this.cbDPT1st.Size = new System.Drawing.Size(52, 41);
-            this.cbDPT1st.TabIndex = 6;
-            this.cbDPT1st.Text = "1st";
-            this.cbDPT1st.UseSelectable = true;
-            // 
-            // cbDPT2nd
-            // 
-            this.cbDPT2nd.AutoSize = true;
-            this.cbDPT2nd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbDPT2nd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbDPT2nd.Location = new System.Drawing.Point(823, 21);
-            this.cbDPT2nd.Name = "cbDPT2nd";
-            this.cbDPT2nd.Size = new System.Drawing.Size(59, 41);
-            this.cbDPT2nd.TabIndex = 7;
-            this.cbDPT2nd.Text = "2nd";
-            this.cbDPT2nd.UseSelectable = true;
-            // 
-            // cbDPT3rd
-            // 
-            this.cbDPT3rd.AutoSize = true;
-            this.cbDPT3rd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbDPT3rd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbDPT3rd.Location = new System.Drawing.Point(882, 21);
-            this.cbDPT3rd.Name = "cbDPT3rd";
-            this.cbDPT3rd.Size = new System.Drawing.Size(55, 41);
-            this.cbDPT3rd.TabIndex = 8;
-            this.cbDPT3rd.Text = "3rd";
-            this.cbDPT3rd.UseSelectable = true;
-            // 
-            // cbDPTb1
-            // 
-            this.cbDPTb1.AutoSize = true;
-            this.cbDPTb1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbDPTb1.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbDPTb1.Location = new System.Drawing.Point(937, 21);
-            this.cbDPTb1.Name = "cbDPTb1";
-            this.cbDPTb1.Size = new System.Drawing.Size(89, 41);
-            this.cbDPTb1.TabIndex = 9;
-            this.cbDPTb1.Text = "Booster";
-            this.cbDPTb1.UseSelectable = true;
-            // 
-            // cbDPTb2
-            // 
-            this.cbDPTb2.AutoSize = true;
-            this.cbDPTb2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbDPTb2.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbDPTb2.Location = new System.Drawing.Point(1026, 21);
-            this.cbDPTb2.Name = "cbDPTb2";
-            this.cbDPTb2.Size = new System.Drawing.Size(89, 41);
-            this.cbDPTb2.TabIndex = 10;
-            this.cbDPTb2.Text = "Booster";
-            this.cbDPTb2.UseSelectable = true;
             // 
             // metroLabel2
             // 
@@ -2960,11 +2528,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cbBCG1st);
-            this.groupBox2.Controls.Add(this.cbBCG2nd);
-            this.groupBox2.Controls.Add(this.cbBCG3rd);
-            this.groupBox2.Controls.Add(this.cbBCGb1);
-            this.groupBox2.Controls.Add(this.cbBCGb2);
+            this.groupBox2.Controls.Add(this.cmbImmu);
             this.groupBox2.Controls.Add(this.metroLabel1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2974,65 +2538,27 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // cbBCG1st
+            // cmbImmu
             // 
-            this.cbBCG1st.AutoSize = true;
-            this.cbBCG1st.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbBCG1st.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbBCG1st.Location = new System.Drawing.Point(771, 21);
-            this.cbBCG1st.Name = "cbBCG1st";
-            this.cbBCG1st.Size = new System.Drawing.Size(52, 41);
-            this.cbBCG1st.TabIndex = 1;
-            this.cbBCG1st.Text = "1st";
-            this.cbBCG1st.UseSelectable = true;
-            // 
-            // cbBCG2nd
-            // 
-            this.cbBCG2nd.AutoSize = true;
-            this.cbBCG2nd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbBCG2nd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbBCG2nd.Location = new System.Drawing.Point(823, 21);
-            this.cbBCG2nd.Name = "cbBCG2nd";
-            this.cbBCG2nd.Size = new System.Drawing.Size(59, 41);
-            this.cbBCG2nd.TabIndex = 2;
-            this.cbBCG2nd.Text = "2nd";
-            this.cbBCG2nd.UseSelectable = true;
-            // 
-            // cbBCG3rd
-            // 
-            this.cbBCG3rd.AutoSize = true;
-            this.cbBCG3rd.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbBCG3rd.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbBCG3rd.Location = new System.Drawing.Point(882, 21);
-            this.cbBCG3rd.Name = "cbBCG3rd";
-            this.cbBCG3rd.Size = new System.Drawing.Size(55, 41);
-            this.cbBCG3rd.TabIndex = 3;
-            this.cbBCG3rd.Text = "3rd";
-            this.cbBCG3rd.UseSelectable = true;
-            // 
-            // cbBCGb1
-            // 
-            this.cbBCGb1.AutoSize = true;
-            this.cbBCGb1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbBCGb1.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbBCGb1.Location = new System.Drawing.Point(937, 21);
-            this.cbBCGb1.Name = "cbBCGb1";
-            this.cbBCGb1.Size = new System.Drawing.Size(89, 41);
-            this.cbBCGb1.TabIndex = 4;
-            this.cbBCGb1.Text = "Booster";
-            this.cbBCGb1.UseSelectable = true;
-            // 
-            // cbBCGb2
-            // 
-            this.cbBCGb2.AutoSize = true;
-            this.cbBCGb2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cbBCGb2.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.cbBCGb2.Location = new System.Drawing.Point(1026, 21);
-            this.cbBCGb2.Name = "cbBCGb2";
-            this.cbBCGb2.Size = new System.Drawing.Size(89, 41);
-            this.cbBCGb2.TabIndex = 5;
-            this.cbBCGb2.Text = "Booster";
-            this.cbBCGb2.UseSelectable = true;
+            this.cmbImmu.DisplayFocus = true;
+            this.cmbImmu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.cmbImmu.FormattingEnabled = true;
+            this.cmbImmu.ItemHeight = 23;
+            this.cmbImmu.Items.AddRange(new object[] {
+            "1st",
+            "2nd",
+            "3rd",
+            "Booster-1",
+            "Booster-2"});
+            this.cmbImmu.Location = new System.Drawing.Point(609, 21);
+            this.cmbImmu.Name = "cmbImmu";
+            this.cmbImmu.PromptText = "SELECT LEVEL OF IMMUNIZATION";
+            this.cmbImmu.Size = new System.Drawing.Size(506, 29);
+            this.cmbImmu.Style = MetroFramework.MetroColorStyle.Blue;
+            this.cmbImmu.TabIndex = 2;
+            this.metroToolTip1.SetToolTip(this.cmbImmu, "Right click to remove level of immunization");
+            this.cmbImmu.UseSelectable = true;
+            this.cmbImmu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // metroLabel1
             // 
@@ -3566,19 +3092,177 @@
             this.label24.TabIndex = 173;
             this.label24.Text = "RR:";
             // 
-            // label1
+            // metroToolTip1
             // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(208, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 21);
-            this.label1.TabIndex = 133;
-            this.label1.Text = "ID:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroToolTip1.StyleManager = null;
+            this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.DisplayFocus = true;
+            this.metroComboBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Items.AddRange(new object[] {
+            "1st",
+            "2nd",
+            "3rd",
+            "Booster-1",
+            "Booster-2"});
+            this.metroComboBox1.Location = new System.Drawing.Point(609, 21);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.PromptText = "SELECT LEVEL OF IMMUNIZATION";
+            this.metroComboBox1.Size = new System.Drawing.Size(506, 29);
+            this.metroComboBox1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroComboBox1.TabIndex = 3;
+            this.metroToolTip1.SetToolTip(this.metroComboBox1, "Right click to remove level of immunization");
+            this.metroComboBox1.UseSelectable = true;
+            this.metroComboBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
+            // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.DisplayFocus = true;
+            this.metroComboBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Items.AddRange(new object[] {
+            "1st",
+            "2nd",
+            "3rd",
+            "Booster-1",
+            "Booster-2"});
+            this.metroComboBox2.Location = new System.Drawing.Point(609, 21);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.PromptText = "SELECT LEVEL OF IMMUNIZATION";
+            this.metroComboBox2.Size = new System.Drawing.Size(506, 29);
+            this.metroComboBox2.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroComboBox2.TabIndex = 3;
+            this.metroToolTip1.SetToolTip(this.metroComboBox2, "Right click to remove level of immunization");
+            this.metroComboBox2.UseSelectable = true;
+            this.metroComboBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
+            // 
+            // metroComboBox3
+            // 
+            this.metroComboBox3.DisplayFocus = true;
+            this.metroComboBox3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroComboBox3.FormattingEnabled = true;
+            this.metroComboBox3.ItemHeight = 23;
+            this.metroComboBox3.Items.AddRange(new object[] {
+            "1st",
+            "2nd",
+            "3rd",
+            "Booster-1",
+            "Booster-2"});
+            this.metroComboBox3.Location = new System.Drawing.Point(609, 21);
+            this.metroComboBox3.Name = "metroComboBox3";
+            this.metroComboBox3.PromptText = "SELECT LEVEL OF IMMUNIZATION";
+            this.metroComboBox3.Size = new System.Drawing.Size(506, 29);
+            this.metroComboBox3.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroComboBox3.TabIndex = 3;
+            this.metroToolTip1.SetToolTip(this.metroComboBox3, "Right click to remove level of immunization");
+            this.metroComboBox3.UseSelectable = true;
+            this.metroComboBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
+            // 
+            // metroComboBox4
+            // 
+            this.metroComboBox4.DisplayFocus = true;
+            this.metroComboBox4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroComboBox4.FormattingEnabled = true;
+            this.metroComboBox4.ItemHeight = 23;
+            this.metroComboBox4.Items.AddRange(new object[] {
+            "1st",
+            "2nd",
+            "3rd",
+            "Booster-1",
+            "Booster-2"});
+            this.metroComboBox4.Location = new System.Drawing.Point(609, 21);
+            this.metroComboBox4.Name = "metroComboBox4";
+            this.metroComboBox4.PromptText = "SELECT LEVEL OF IMMUNIZATION";
+            this.metroComboBox4.Size = new System.Drawing.Size(506, 29);
+            this.metroComboBox4.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroComboBox4.TabIndex = 3;
+            this.metroToolTip1.SetToolTip(this.metroComboBox4, "Right click to remove level of immunization");
+            this.metroComboBox4.UseSelectable = true;
+            this.metroComboBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
+            // 
+            // metroComboBox5
+            // 
+            this.metroComboBox5.DisplayFocus = true;
+            this.metroComboBox5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroComboBox5.FormattingEnabled = true;
+            this.metroComboBox5.ItemHeight = 23;
+            this.metroComboBox5.Items.AddRange(new object[] {
+            "1st",
+            "2nd",
+            "3rd",
+            "Booster-1",
+            "Booster-2"});
+            this.metroComboBox5.Location = new System.Drawing.Point(609, 21);
+            this.metroComboBox5.Name = "metroComboBox5";
+            this.metroComboBox5.PromptText = "SELECT LEVEL OF IMMUNIZATION";
+            this.metroComboBox5.Size = new System.Drawing.Size(506, 29);
+            this.metroComboBox5.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroComboBox5.TabIndex = 3;
+            this.metroToolTip1.SetToolTip(this.metroComboBox5, "Right click to remove level of immunization");
+            this.metroComboBox5.UseSelectable = true;
+            this.metroComboBox5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
+            // 
+            // metroComboBox6
+            // 
+            this.metroComboBox6.DisplayFocus = true;
+            this.metroComboBox6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroComboBox6.FormattingEnabled = true;
+            this.metroComboBox6.ItemHeight = 23;
+            this.metroComboBox6.Items.AddRange(new object[] {
+            "1st",
+            "2nd",
+            "3rd",
+            "Booster-1",
+            "Booster-2"});
+            this.metroComboBox6.Location = new System.Drawing.Point(609, 21);
+            this.metroComboBox6.Name = "metroComboBox6";
+            this.metroComboBox6.PromptText = "SELECT LEVEL OF IMMUNIZATION";
+            this.metroComboBox6.Size = new System.Drawing.Size(506, 29);
+            this.metroComboBox6.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroComboBox6.TabIndex = 33;
+            this.metroToolTip1.SetToolTip(this.metroComboBox6, "Right click to remove level of immunization");
+            this.metroComboBox6.UseSelectable = true;
+            this.metroComboBox6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
+            // 
+            // txtImmuOther
+            // 
+            // 
+            // 
+            // 
+            this.txtImmuOther.CustomButton.Image = null;
+            this.txtImmuOther.CustomButton.Location = new System.Drawing.Point(503, 1);
+            this.txtImmuOther.CustomButton.Name = "";
+            this.txtImmuOther.CustomButton.Size = new System.Drawing.Size(39, 39);
+            this.txtImmuOther.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtImmuOther.CustomButton.TabIndex = 1;
+            this.txtImmuOther.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtImmuOther.CustomButton.UseSelectable = true;
+            this.txtImmuOther.CustomButton.Visible = false;
+            this.txtImmuOther.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtImmuOther.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.txtImmuOther.Lines = new string[0];
+            this.txtImmuOther.Location = new System.Drawing.Point(66, 21);
+            this.txtImmuOther.MaxLength = 255;
+            this.txtImmuOther.Name = "txtImmuOther";
+            this.txtImmuOther.PasswordChar = '\0';
+            this.txtImmuOther.PromptText = "Please specify";
+            this.txtImmuOther.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtImmuOther.SelectedText = "";
+            this.txtImmuOther.SelectionLength = 0;
+            this.txtImmuOther.SelectionStart = 0;
+            this.txtImmuOther.ShortcutsEnabled = true;
+            this.txtImmuOther.Size = new System.Drawing.Size(543, 41);
+            this.txtImmuOther.TabIndex = 34;
+            this.txtImmuOther.UseSelectable = true;
+            this.txtImmuOther.WaterMark = "Please specify";
+            this.txtImmuOther.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtImmuOther.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // addPatient
             // 
@@ -3756,54 +3440,18 @@
         private MetroFramework.Controls.MetroRadioButton rbNo1;
         private System.Windows.Forms.GroupBox gbImmu;
         private System.Windows.Forms.GroupBox groupBox8;
-        private MetroFramework.Controls.MetroTextBox txtImmuOther;
-        private MetroFramework.Controls.MetroCheckBox cbOTHERS1st;
-        private MetroFramework.Controls.MetroCheckBox cbOTHERS2nd;
-        private MetroFramework.Controls.MetroCheckBox cbOTHERS3rd;
-        private MetroFramework.Controls.MetroCheckBox cbOTHERSb1;
-        private MetroFramework.Controls.MetroCheckBox cbOTHERSb2;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private System.Windows.Forms.GroupBox groupBox6;
-        private MetroFramework.Controls.MetroCheckBox cbHEPA1st;
-        private MetroFramework.Controls.MetroCheckBox cbHEPA2nd;
-        private MetroFramework.Controls.MetroCheckBox cbHEPA3rd;
-        private MetroFramework.Controls.MetroCheckBox cbHEPAb1;
-        private MetroFramework.Controls.MetroCheckBox cbHEPAb2;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private System.Windows.Forms.GroupBox groupBox7;
-        private MetroFramework.Controls.MetroCheckBox cbHEPB1st;
-        private MetroFramework.Controls.MetroCheckBox cbHEPB2nd;
-        private MetroFramework.Controls.MetroCheckBox cbHEPB3rd;
-        private MetroFramework.Controls.MetroCheckBox cbHEPBb1;
-        private MetroFramework.Controls.MetroCheckBox cbHEPBb2;
         private MetroFramework.Controls.MetroLabel lblhepaB;
         private System.Windows.Forms.GroupBox groupBox4;
-        private MetroFramework.Controls.MetroCheckBox cbMMR1st;
-        private MetroFramework.Controls.MetroCheckBox cbMMR2nd;
-        private MetroFramework.Controls.MetroCheckBox cbMMR3rd;
-        private MetroFramework.Controls.MetroCheckBox cbMMRb1;
-        private MetroFramework.Controls.MetroCheckBox cbMMRb2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.GroupBox groupBox5;
-        private MetroFramework.Controls.MetroCheckBox cbOPV1st;
-        private MetroFramework.Controls.MetroCheckBox cbOPV2nd;
-        private MetroFramework.Controls.MetroCheckBox cbOPV3rd;
-        private MetroFramework.Controls.MetroCheckBox cbOPVb1;
-        private MetroFramework.Controls.MetroCheckBox cbOPVb2;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private MetroFramework.Controls.MetroCheckBox cbDPT1st;
-        private MetroFramework.Controls.MetroCheckBox cbDPT2nd;
-        private MetroFramework.Controls.MetroCheckBox cbDPT3rd;
-        private MetroFramework.Controls.MetroCheckBox cbDPTb1;
-        private MetroFramework.Controls.MetroCheckBox cbDPTb2;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private MetroFramework.Controls.MetroCheckBox cbBCG1st;
-        private MetroFramework.Controls.MetroCheckBox cbBCG2nd;
-        private MetroFramework.Controls.MetroCheckBox cbBCG3rd;
-        private MetroFramework.Controls.MetroCheckBox cbBCGb1;
-        private MetroFramework.Controls.MetroCheckBox cbBCGb2;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         public System.Windows.Forms.TabPage tbRemark;
         private System.Windows.Forms.Panel panel1;
@@ -3840,5 +3488,14 @@
         private System.Windows.Forms.ComboBox cmbBMI;
         public MetroFramework.Controls.MetroComboBox cmbCourse;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroComboBox cmbImmu;
+        private MetroFramework.Components.MetroToolTip metroToolTip1;
+        private MetroFramework.Controls.MetroTextBox txtImmuOther;
+        private MetroFramework.Controls.MetroComboBox metroComboBox6;
+        private MetroFramework.Controls.MetroComboBox metroComboBox5;
+        private MetroFramework.Controls.MetroComboBox metroComboBox4;
+        private MetroFramework.Controls.MetroComboBox metroComboBox3;
+        private MetroFramework.Controls.MetroComboBox metroComboBox2;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
     }
 }

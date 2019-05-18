@@ -1078,5 +1078,19 @@ namespace smuCRMS.View
         {
 
         }
+
+        private void cmbImmu_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                //cmbImmu.SelectedItem = null;
+                ((MetroComboBox)sender).SelectedItem = null;
+            }
+        }
+
+        private void metroSetToolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }
