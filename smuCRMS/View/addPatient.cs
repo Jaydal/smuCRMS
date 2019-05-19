@@ -467,7 +467,7 @@ namespace smuCRMS.View
                     //calling save method from controller
                     //backgroundWorker.RunWorkerAsync();
                     //p.ShowDialog();
-                    if (pm.patientAdd(this))
+                    if (pm.patientAdd())
                     {
                         MetroMessageBox.Show(this, "Saved Successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         DialogResult res = MetroMessageBox.Show(this, "Add Treatment?", "Clinical and Treatment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

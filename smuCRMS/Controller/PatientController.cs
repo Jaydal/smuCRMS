@@ -465,10 +465,11 @@ namespace smuCRMS.Controller
             return valid = (patient.callProcedure(this, 
                 "VIEW", "vcrud_patient",true).Rows.Count>0) ? true : false;
         }
-        public bool patientAdd(addPatient ap)
+        public bool patientAdd()
         {
+            //this is non-query
             return valid = (patient.callProcedure(this,
-                "CREATE", "vcrud_patient", true).Columns.Count > 0) ? true : false;
+                "CREATE", "vcrud_patient", false).Columns.Count > 0) ? true : false;
         }
     }
 
