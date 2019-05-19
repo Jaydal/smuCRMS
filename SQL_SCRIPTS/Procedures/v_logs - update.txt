@@ -1,0 +1,15 @@
+DELIMITER $$
+
+USE `_clinic`$$
+
+DROP PROCEDURE IF EXISTS `v_logs`$$
+
+CREATE DEFINER=`root`@`%` PROCEDURE `v_logs`()
+BEGIN
+	SELECT CONCAT(log_id,">"),comments FROM _clinic.`logs`
+		ORDER BY lid DESC
+		LIMIT 500;
+		
+	END$$
+
+DELIMITER ;
