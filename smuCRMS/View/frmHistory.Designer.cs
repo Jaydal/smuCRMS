@@ -77,7 +77,7 @@
             this.lblID.Location = new System.Drawing.Point(643, 298);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(35, 17);
+            this.lblID.Size = new System.Drawing.Size(28, 13);
             this.lblID.TabIndex = 0;
             this.lblID.Text = "lblID";
             this.lblID.Visible = false;
@@ -113,10 +113,10 @@
             // 
             // 
             this.txthospi.CustomButton.Image = null;
-            this.txthospi.CustomButton.Location = new System.Drawing.Point(933, 1);
+            this.txthospi.CustomButton.Location = new System.Drawing.Point(929, 2);
             this.txthospi.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txthospi.CustomButton.Name = "";
-            this.txthospi.CustomButton.Size = new System.Drawing.Size(49, 49);
+            this.txthospi.CustomButton.Size = new System.Drawing.Size(51, 51);
             this.txthospi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txthospi.CustomButton.TabIndex = 1;
             this.txthospi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -125,7 +125,7 @@
             this.txthospi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txthospi.Enabled = false;
             this.txthospi.Lines = new string[0];
-            this.txthospi.Location = new System.Drawing.Point(4, 29);
+            this.txthospi.Location = new System.Drawing.Point(4, 24);
             this.txthospi.Margin = new System.Windows.Forms.Padding(4);
             this.txthospi.MaxLength = 255;
             this.txthospi.Multiline = true;
@@ -136,7 +136,7 @@
             this.txthospi.SelectionLength = 0;
             this.txthospi.SelectionStart = 0;
             this.txthospi.ShortcutsEnabled = true;
-            this.txthospi.Size = new System.Drawing.Size(983, 51);
+            this.txthospi.Size = new System.Drawing.Size(983, 56);
             this.txthospi.TabIndex = 1;
             this.txthospi.UseSelectable = true;
             this.txthospi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -173,10 +173,10 @@
             // 
             // 
             this.txtinj.CustomButton.Image = null;
-            this.txtinj.CustomButton.Location = new System.Drawing.Point(933, 1);
+            this.txtinj.CustomButton.Location = new System.Drawing.Point(929, 2);
             this.txtinj.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtinj.CustomButton.Name = "";
-            this.txtinj.CustomButton.Size = new System.Drawing.Size(49, 49);
+            this.txtinj.CustomButton.Size = new System.Drawing.Size(51, 51);
             this.txtinj.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtinj.CustomButton.TabIndex = 1;
             this.txtinj.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -185,7 +185,7 @@
             this.txtinj.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtinj.Enabled = false;
             this.txtinj.Lines = new string[0];
-            this.txtinj.Location = new System.Drawing.Point(4, 29);
+            this.txtinj.Location = new System.Drawing.Point(4, 24);
             this.txtinj.Margin = new System.Windows.Forms.Padding(4);
             this.txtinj.MaxLength = 255;
             this.txtinj.Multiline = true;
@@ -196,7 +196,7 @@
             this.txtinj.SelectionLength = 0;
             this.txtinj.SelectionStart = 0;
             this.txtinj.ShortcutsEnabled = true;
-            this.txtinj.Size = new System.Drawing.Size(983, 51);
+            this.txtinj.Size = new System.Drawing.Size(983, 56);
             this.txtinj.TabIndex = 2;
             this.txtinj.UseSelectable = true;
             this.txtinj.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -233,10 +233,10 @@
             // 
             // 
             this.txtpsych.CustomButton.Image = null;
-            this.txtpsych.CustomButton.Location = new System.Drawing.Point(933, 1);
+            this.txtpsych.CustomButton.Location = new System.Drawing.Point(929, 2);
             this.txtpsych.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtpsych.CustomButton.Name = "";
-            this.txtpsych.CustomButton.Size = new System.Drawing.Size(49, 49);
+            this.txtpsych.CustomButton.Size = new System.Drawing.Size(51, 51);
             this.txtpsych.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtpsych.CustomButton.TabIndex = 1;
             this.txtpsych.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -245,7 +245,7 @@
             this.txtpsych.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtpsych.Enabled = false;
             this.txtpsych.Lines = new string[0];
-            this.txtpsych.Location = new System.Drawing.Point(4, 29);
+            this.txtpsych.Location = new System.Drawing.Point(4, 24);
             this.txtpsych.Margin = new System.Windows.Forms.Padding(4);
             this.txtpsych.MaxLength = 255;
             this.txtpsych.Multiline = true;
@@ -256,7 +256,7 @@
             this.txtpsych.SelectionLength = 0;
             this.txtpsych.SelectionStart = 0;
             this.txtpsych.ShortcutsEnabled = true;
-            this.txtpsych.Size = new System.Drawing.Size(983, 51);
+            this.txtpsych.Size = new System.Drawing.Size(983, 56);
             this.txtpsych.TabIndex = 3;
             this.txtpsych.UseSelectable = true;
             this.txtpsych.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -293,10 +293,10 @@
             // 
             // 
             this.txtallergy.CustomButton.Image = null;
-            this.txtallergy.CustomButton.Location = new System.Drawing.Point(933, 1);
+            this.txtallergy.CustomButton.Location = new System.Drawing.Point(929, 2);
             this.txtallergy.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtallergy.CustomButton.Name = "";
-            this.txtallergy.CustomButton.Size = new System.Drawing.Size(49, 49);
+            this.txtallergy.CustomButton.Size = new System.Drawing.Size(51, 51);
             this.txtallergy.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtallergy.CustomButton.TabIndex = 1;
             this.txtallergy.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -305,7 +305,7 @@
             this.txtallergy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtallergy.Enabled = false;
             this.txtallergy.Lines = new string[0];
-            this.txtallergy.Location = new System.Drawing.Point(4, 29);
+            this.txtallergy.Location = new System.Drawing.Point(4, 24);
             this.txtallergy.Margin = new System.Windows.Forms.Padding(4);
             this.txtallergy.MaxLength = 255;
             this.txtallergy.Multiline = true;
@@ -316,7 +316,7 @@
             this.txtallergy.SelectionLength = 0;
             this.txtallergy.SelectionStart = 0;
             this.txtallergy.ShortcutsEnabled = true;
-            this.txtallergy.Size = new System.Drawing.Size(983, 51);
+            this.txtallergy.Size = new System.Drawing.Size(983, 56);
             this.txtallergy.TabIndex = 4;
             this.txtallergy.UseSelectable = true;
             this.txtallergy.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -353,10 +353,10 @@
             // 
             // 
             this.txtphys.CustomButton.Image = null;
-            this.txtphys.CustomButton.Location = new System.Drawing.Point(933, 1);
+            this.txtphys.CustomButton.Location = new System.Drawing.Point(929, 2);
             this.txtphys.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtphys.CustomButton.Name = "";
-            this.txtphys.CustomButton.Size = new System.Drawing.Size(49, 49);
+            this.txtphys.CustomButton.Size = new System.Drawing.Size(51, 51);
             this.txtphys.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtphys.CustomButton.TabIndex = 1;
             this.txtphys.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -365,7 +365,7 @@
             this.txtphys.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtphys.Enabled = false;
             this.txtphys.Lines = new string[0];
-            this.txtphys.Location = new System.Drawing.Point(4, 29);
+            this.txtphys.Location = new System.Drawing.Point(4, 24);
             this.txtphys.Margin = new System.Windows.Forms.Padding(4);
             this.txtphys.MaxLength = 255;
             this.txtphys.Multiline = true;
@@ -376,7 +376,7 @@
             this.txtphys.SelectionLength = 0;
             this.txtphys.SelectionStart = 0;
             this.txtphys.ShortcutsEnabled = true;
-            this.txtphys.Size = new System.Drawing.Size(983, 51);
+            this.txtphys.Size = new System.Drawing.Size(983, 56);
             this.txtphys.TabIndex = 5;
             this.txtphys.UseSelectable = true;
             this.txtphys.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -413,10 +413,10 @@
             // 
             // 
             this.txtmed.CustomButton.Image = null;
-            this.txtmed.CustomButton.Location = new System.Drawing.Point(933, 1);
+            this.txtmed.CustomButton.Location = new System.Drawing.Point(929, 2);
             this.txtmed.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtmed.CustomButton.Name = "";
-            this.txtmed.CustomButton.Size = new System.Drawing.Size(49, 49);
+            this.txtmed.CustomButton.Size = new System.Drawing.Size(51, 51);
             this.txtmed.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtmed.CustomButton.TabIndex = 1;
             this.txtmed.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -425,7 +425,7 @@
             this.txtmed.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtmed.Enabled = false;
             this.txtmed.Lines = new string[0];
-            this.txtmed.Location = new System.Drawing.Point(4, 29);
+            this.txtmed.Location = new System.Drawing.Point(4, 24);
             this.txtmed.Margin = new System.Windows.Forms.Padding(4);
             this.txtmed.MaxLength = 255;
             this.txtmed.Multiline = true;
@@ -436,7 +436,7 @@
             this.txtmed.SelectionLength = 0;
             this.txtmed.SelectionStart = 0;
             this.txtmed.ShortcutsEnabled = true;
-            this.txtmed.Size = new System.Drawing.Size(983, 51);
+            this.txtmed.Size = new System.Drawing.Size(983, 56);
             this.txtmed.TabIndex = 6;
             this.txtmed.UseSelectable = true;
             this.txtmed.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -473,10 +473,10 @@
             // 
             // 
             this.txtcurr.CustomButton.Image = null;
-            this.txtcurr.CustomButton.Location = new System.Drawing.Point(933, 1);
+            this.txtcurr.CustomButton.Location = new System.Drawing.Point(929, 2);
             this.txtcurr.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtcurr.CustomButton.Name = "";
-            this.txtcurr.CustomButton.Size = new System.Drawing.Size(49, 49);
+            this.txtcurr.CustomButton.Size = new System.Drawing.Size(51, 51);
             this.txtcurr.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtcurr.CustomButton.TabIndex = 1;
             this.txtcurr.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -485,7 +485,7 @@
             this.txtcurr.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtcurr.Enabled = false;
             this.txtcurr.Lines = new string[0];
-            this.txtcurr.Location = new System.Drawing.Point(4, 29);
+            this.txtcurr.Location = new System.Drawing.Point(4, 24);
             this.txtcurr.Margin = new System.Windows.Forms.Padding(4);
             this.txtcurr.MaxLength = 255;
             this.txtcurr.Multiline = true;
@@ -496,7 +496,7 @@
             this.txtcurr.SelectionLength = 0;
             this.txtcurr.SelectionStart = 0;
             this.txtcurr.ShortcutsEnabled = true;
-            this.txtcurr.Size = new System.Drawing.Size(983, 51);
+            this.txtcurr.Size = new System.Drawing.Size(983, 56);
             this.txtcurr.TabIndex = 7;
             this.txtcurr.UseSelectable = true;
             this.txtcurr.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -522,15 +522,16 @@
             // 
             this.btnEdit.AutoSize = true;
             this.btnEdit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.Depth = 0;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEdit.Icon = null;
-            this.btnEdit.Location = new System.Drawing.Point(837, 0);
+            this.btnEdit.Location = new System.Drawing.Point(861, 0);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEdit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Primary = false;
-            this.btnEdit.Size = new System.Drawing.Size(87, 42);
+            this.btnEdit.Size = new System.Drawing.Size(73, 42);
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Update";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -540,15 +541,16 @@
             // 
             this.btnDone.AutoSize = true;
             this.btnDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDone.Depth = 0;
             this.btnDone.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnDone.Icon = null;
-            this.btnDone.Location = new System.Drawing.Point(924, 0);
+            this.btnDone.Location = new System.Drawing.Point(934, 0);
             this.btnDone.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDone.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDone.Name = "btnDone";
             this.btnDone.Primary = false;
-            this.btnDone.Size = new System.Drawing.Size(67, 42);
+            this.btnDone.Size = new System.Drawing.Size(57, 42);
             this.btnDone.TabIndex = 10;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = true;

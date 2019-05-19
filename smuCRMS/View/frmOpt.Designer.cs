@@ -94,6 +94,7 @@
             // metroTile4
             // 
             this.metroTile4.ActiveControl = null;
+            this.metroTile4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTile4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTile4.Location = new System.Drawing.Point(186, 90);
             this.metroTile4.Name = "metroTile4";
@@ -114,6 +115,7 @@
             // metroTile3
             // 
             this.metroTile3.ActiveControl = null;
+            this.metroTile3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTile3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTile3.Location = new System.Drawing.Point(3, 90);
             this.metroTile3.Name = "metroTile3";
@@ -134,6 +136,7 @@
             // metroTile2
             // 
             this.metroTile2.ActiveControl = null;
+            this.metroTile2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTile2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTile2.Location = new System.Drawing.Point(186, 3);
             this.metroTile2.Name = "metroTile2";
@@ -154,6 +157,7 @@
             // tileBack
             // 
             this.tileBack.ActiveControl = null;
+            this.tileBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tileBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tileBack.Location = new System.Drawing.Point(3, 3);
             this.tileBack.Name = "tileBack";

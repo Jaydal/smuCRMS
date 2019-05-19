@@ -43,10 +43,9 @@
             // 
             // 
             this.txtID.CustomButton.Image = null;
-            this.txtID.CustomButton.Location = new System.Drawing.Point(93, 1);
-            this.txtID.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtID.CustomButton.Location = new System.Drawing.Point(60, 1);
             this.txtID.CustomButton.Name = "";
-            this.txtID.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtID.CustomButton.Size = new System.Drawing.Size(17, 17);
             this.txtID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtID.CustomButton.TabIndex = 1;
             this.txtID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -54,8 +53,7 @@
             this.txtID.CustomButton.Visible = false;
             this.txtID.Lines = new string[] {
         " "};
-            this.txtID.Location = new System.Drawing.Point(8, 325);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtID.Location = new System.Drawing.Point(6, 260);
             this.txtID.MaxLength = 32767;
             this.txtID.Name = "txtID";
             this.txtID.PasswordChar = '\0';
@@ -64,7 +62,7 @@
             this.txtID.SelectionLength = 0;
             this.txtID.SelectionStart = 0;
             this.txtID.ShortcutsEnabled = true;
-            this.txtID.Size = new System.Drawing.Size(121, 29);
+            this.txtID.Size = new System.Drawing.Size(97, 23);
             this.txtID.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtID.TabIndex = 1;
             this.txtID.Text = " ";
@@ -77,10 +75,9 @@
             // tabProfile
             // 
             this.tabProfile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabProfile.Location = new System.Drawing.Point(0, 38);
-            this.tabProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.tabProfile.Location = new System.Drawing.Point(0, 30);
             this.tabProfile.Name = "tabProfile";
-            this.tabProfile.Size = new System.Drawing.Size(1290, 741);
+            this.tabProfile.Size = new System.Drawing.Size(1032, 593);
             this.tabProfile.Style = MetroFramework.MetroColorStyle.Magenta;
             this.tabProfile.TabIndex = 2;
             this.tabProfile.UseSelectable = true;
@@ -92,29 +89,30 @@
             this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(0, 735);
+            this.metroPanel1.HorizontalScrollbarSize = 8;
+            this.metroPanel1.Location = new System.Drawing.Point(0, 588);
             this.metroPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1290, 44);
+            this.metroPanel1.Size = new System.Drawing.Size(1032, 35);
             this.metroPanel1.TabIndex = 3;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.VerticalScrollbarSize = 8;
             // 
             // btnEdit
             // 
             this.btnEdit.AutoSize = true;
             this.btnEdit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.Depth = 0;
             this.btnEdit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEdit.Icon = null;
-            this.btnEdit.Location = new System.Drawing.Point(1136, 0);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnEdit.Location = new System.Drawing.Point(902, 0);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnEdit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Primary = false;
-            this.btnEdit.Size = new System.Drawing.Size(87, 44);
+            this.btnEdit.Size = new System.Drawing.Size(73, 35);
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Update";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -124,15 +122,16 @@
             // 
             this.btnDone.AutoSize = true;
             this.btnDone.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDone.Depth = 0;
             this.btnDone.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnDone.Icon = null;
-            this.btnDone.Location = new System.Drawing.Point(1223, 0);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnDone.Location = new System.Drawing.Point(975, 0);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnDone.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDone.Name = "btnDone";
             this.btnDone.Primary = false;
-            this.btnDone.Size = new System.Drawing.Size(67, 44);
+            this.btnDone.Size = new System.Drawing.Size(57, 35);
             this.btnDone.TabIndex = 7;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = true;
@@ -140,19 +139,18 @@
             // 
             // frmProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1300, 779);
+            this.ClientSize = new System.Drawing.Size(1040, 623);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.tabProfile);
             this.Controls.Add(this.txtID);
             this.DisplayHeader = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmProfile";
-            this.Padding = new System.Windows.Forms.Padding(0, 38, 10, 0);
+            this.Padding = new System.Windows.Forms.Padding(0, 30, 8, 0);
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

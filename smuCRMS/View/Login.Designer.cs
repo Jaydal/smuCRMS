@@ -39,10 +39,10 @@
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.btnLogin = new MaterialSkin.Controls.MaterialFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.metroSetLabel5 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel4 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel3 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel2 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -147,14 +147,14 @@
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI Light", 8.25F);
             this.txtUsername.Hint = "username";
             this.txtUsername.Location = new System.Drawing.Point(273, 227);
-            this.txtUsername.MaxLength = 32767;
+            this.txtUsername.MaxLength = 30;
             this.txtUsername.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.SelectedText = "";
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
-            this.txtUsername.Size = new System.Drawing.Size(275, 25);
+            this.txtUsername.Size = new System.Drawing.Size(275, 23);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.TabStop = false;
             this.txtUsername.UseSystemPasswordChar = false;
@@ -172,7 +172,7 @@
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
-            this.txtPassword.Size = new System.Drawing.Size(275, 25);
+            this.txtPassword.Size = new System.Drawing.Size(275, 23);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TabStop = false;
             this.txtPassword.UseSystemPasswordChar = false;
@@ -190,6 +190,7 @@
             this.btnLogin.AutoSize = true;
             this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnLogin.BackColor = System.Drawing.Color.Crimson;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Depth = 0;
             this.btnLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -210,10 +211,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
-            this.panel1.Controls.Add(this.metroSetLabel5);
-            this.panel1.Controls.Add(this.metroSetLabel4);
-            this.panel1.Controls.Add(this.metroSetLabel3);
-            this.panel1.Controls.Add(this.metroSetLabel2);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.Color.White;
@@ -222,65 +223,49 @@
             this.panel1.Size = new System.Drawing.Size(200, 480);
             this.panel1.TabIndex = 13;
             // 
-            // metroSetLabel5
+            // label4
             // 
-            this.metroSetLabel5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroSetLabel5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.metroSetLabel5.Location = new System.Drawing.Point(8, 374);
-            this.metroSetLabel5.Name = "metroSetLabel5";
-            this.metroSetLabel5.Size = new System.Drawing.Size(176, 23);
-            this.metroSetLabel5.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetLabel5.StyleManager = null;
-            this.metroSetLabel5.TabIndex = 4;
-            this.metroSetLabel5.Text = "Welcome!";
-            this.metroSetLabel5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetLabel5.ThemeAuthor = "Narwin";
-            this.metroSetLabel5.ThemeName = "MetroLite";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(58, 382);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 21);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Welcome!";
             // 
-            // metroSetLabel4
+            // label3
             // 
-            this.metroSetLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroSetLabel4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.metroSetLabel4.Location = new System.Drawing.Point(8, 299);
-            this.metroSetLabel4.Name = "metroSetLabel4";
-            this.metroSetLabel4.Size = new System.Drawing.Size(176, 23);
-            this.metroSetLabel4.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetLabel4.StyleManager = null;
-            this.metroSetLabel4.TabIndex = 3;
-            this.metroSetLabel4.Text = "Management System";
-            this.metroSetLabel4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetLabel4.ThemeAuthor = "Narwin";
-            this.metroSetLabel4.ThemeName = "MetroLite";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(19, 300);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(157, 21);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Management System";
             // 
-            // metroSetLabel3
+            // label2
             // 
-            this.metroSetLabel3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroSetLabel3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.metroSetLabel3.Location = new System.Drawing.Point(41, 276);
-            this.metroSetLabel3.Name = "metroSetLabel3";
-            this.metroSetLabel3.Size = new System.Drawing.Size(110, 23);
-            this.metroSetLabel3.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetLabel3.StyleManager = null;
-            this.metroSetLabel3.TabIndex = 2;
-            this.metroSetLabel3.Text = "Clinic Record";
-            this.metroSetLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel3.ThemeAuthor = "Narwin";
-            this.metroSetLabel3.ThemeName = "MetroLite";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(47, 279);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 21);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Clinic Record";
             // 
-            // metroSetLabel2
+            // label1
             // 
-            this.metroSetLabel2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroSetLabel2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.metroSetLabel2.Location = new System.Drawing.Point(46, 253);
-            this.metroSetLabel2.Name = "metroSetLabel2";
-            this.metroSetLabel2.Size = new System.Drawing.Size(100, 23);
-            this.metroSetLabel2.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetLabel2.StyleManager = null;
-            this.metroSetLabel2.TabIndex = 1;
-            this.metroSetLabel2.Text = "SMU-";
-            this.metroSetLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel2.ThemeAuthor = "Narwin";
-            this.metroSetLabel2.ThemeName = "MetroLite";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(75, 258);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 21);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "SMU";
             // 
             // pictureBox1
             // 
@@ -296,6 +281,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox2.Location = new System.Drawing.Point(592, 452);
@@ -308,6 +294,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.Location = new System.Drawing.Point(570, 452);
@@ -335,11 +322,12 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.Login_Load);
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -360,11 +348,11 @@
         private MaterialSkin.Controls.MaterialFlatButton btnLogin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel4;
-        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel3;
-        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel2;
-        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -32,35 +32,7 @@ namespace smuCRMS.View
 
         }
 
-        private void materialSingleLineTextField1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroSetScrollBar1_Scroll(object sender)
-        {
-
-        }
-
-        private void metroSetPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void metroSetLabel1_Click(object sender, EventArgs e)
-        {
-             
-        }
-
-        private void metroSetLabel1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialFlatButton1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void materialFlatButton1_Click_1(object sender, EventArgs e)
         {

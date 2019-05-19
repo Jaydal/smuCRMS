@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlNavigation = new System.Windows.Forms.Panel();
             this.btnAddUser = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnShowUsers = new MaterialSkin.Controls.MaterialFlatButton();
@@ -137,8 +137,8 @@
             // 
             this.dgUsers.AllowUserToAddRows = false;
             this.dgUsers.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgUsers.BackgroundColor = System.Drawing.Color.White;
             this.dgUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -146,14 +146,14 @@
             this.dgUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgUsers.ColumnHeadersHeight = 40;
             this.dgUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgUsers.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgUsers.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgUsers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgUsers.GridColor = System.Drawing.Color.White;
@@ -165,9 +165,9 @@
             this.dgUsers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgUsers.RowHeadersWidth = 30;
             this.dgUsers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgUsers.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgUsers.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgUsers.RowTemplate.Height = 50;
             this.dgUsers.RowTemplate.ReadOnly = true;
             this.dgUsers.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -181,6 +181,7 @@
             this.btnUpdateUser.AutoSize = true;
             this.btnUpdateUser.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnUpdateUser.BackColor = System.Drawing.Color.White;
+            this.btnUpdateUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateUser.Depth = 0;
             this.btnUpdateUser.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnUpdateUser.Icon = null;
@@ -255,10 +256,11 @@
             // cmbRole
             // 
             this.cmbRole.BackColor = System.Drawing.Color.White;
+            this.cmbRole.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRole.Enabled = false;
             this.cmbRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbRole.Font = new System.Drawing.Font("Roboto Bk", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRole.ForeColor = System.Drawing.Color.Black;
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Items.AddRange(new object[] {
@@ -285,7 +287,7 @@
             this.txtName.SelectedText = "";
             this.txtName.SelectionLength = 0;
             this.txtName.SelectionStart = 0;
-            this.txtName.Size = new System.Drawing.Size(211, 25);
+            this.txtName.Size = new System.Drawing.Size(211, 23);
             this.txtName.TabIndex = 3;
             this.txtName.TabStop = false;
             this.txtName.UseSystemPasswordChar = false;
@@ -303,7 +305,7 @@
             this.txtPassword.SelectedText = "";
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
-            this.txtPassword.Size = new System.Drawing.Size(211, 25);
+            this.txtPassword.Size = new System.Drawing.Size(211, 23);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.TabStop = false;
             this.txtPassword.UseSystemPasswordChar = false;
@@ -321,7 +323,7 @@
             this.txtUsername.SelectedText = "";
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
-            this.txtUsername.Size = new System.Drawing.Size(211, 25);
+            this.txtUsername.Size = new System.Drawing.Size(211, 23);
             this.txtUsername.TabIndex = 4;
             this.txtUsername.TabStop = false;
             this.txtUsername.UseSystemPasswordChar = false;

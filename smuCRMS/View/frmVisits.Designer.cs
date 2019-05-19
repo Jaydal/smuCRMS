@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.lblMonth = new MetroFramework.Controls.MetroLabel();
             this.cmbMonth = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -58,10 +58,10 @@
             this.dgv6 = new System.Windows.Forms.DataGridView();
             this.dgv7 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chartVmonth4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartVmonth3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartVmonth2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartVmonth1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartVmonth2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartVmonth3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartVmonth4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.pnlDGV = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.npYear)).BeginInit();
@@ -74,10 +74,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv7)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartVmonth4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartVmonth3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartVmonth2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartVmonth1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartVmonth2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartVmonth3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartVmonth4)).BeginInit();
             this.metroPanel2.SuspendLayout();
             this.pnlDGV.SuspendLayout();
             this.SuspendLayout();
@@ -90,12 +90,13 @@
             this.lblMonth.Location = new System.Drawing.Point(173, 18);
             this.lblMonth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMonth.Name = "lblMonth";
-            this.lblMonth.Size = new System.Drawing.Size(72, 25);
+            this.lblMonth.Size = new System.Drawing.Size(69, 25);
             this.lblMonth.TabIndex = 5;
             this.lblMonth.Text = "Month";
             // 
             // cmbMonth
             // 
+            this.cmbMonth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbMonth.FontSize = MetroFramework.MetroComboBoxSize.Tall;
             this.cmbMonth.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
             this.cmbMonth.FormattingEnabled = true;
@@ -129,12 +130,13 @@
             this.metroLabel1.Location = new System.Drawing.Point(414, 18);
             this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(50, 25);
+            this.metroLabel1.Size = new System.Drawing.Size(48, 25);
             this.metroLabel1.TabIndex = 7;
             this.metroLabel1.Text = "Year";
             // 
             // cmbClass
             // 
+            this.cmbClass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbClass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbClass.FontSize = MetroFramework.MetroComboBoxSize.Tall;
             this.cmbClass.FontWeight = MetroFramework.MetroComboBoxWeight.Light;
@@ -155,10 +157,11 @@
             // 
             // npYear
             // 
+            this.npYear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.npYear.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.npYear.Location = new System.Drawing.Point(471, 15);
             this.npYear.Name = "npYear";
-            this.npYear.Size = new System.Drawing.Size(46, 36);
+            this.npYear.Size = new System.Drawing.Size(46, 30);
             this.npYear.TabIndex = 10;
             this.npYear.ValueChanged += new System.EventHandler(this.npYear_ValueChanged);
             // 
@@ -207,7 +210,7 @@
             this.dgv1.RowTemplate.ReadOnly = true;
             this.dgv1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv1.Size = new System.Drawing.Size(1096, 200);
+            this.dgv1.Size = new System.Drawing.Size(1100, 200);
             this.dgv1.TabIndex = 11;
             // 
             // dgv2
@@ -236,7 +239,7 @@
             this.dgv2.RowTemplate.ReadOnly = true;
             this.dgv2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv2.Size = new System.Drawing.Size(1096, 200);
+            this.dgv2.Size = new System.Drawing.Size(1100, 200);
             this.dgv2.TabIndex = 12;
             // 
             // dgv3
@@ -265,7 +268,7 @@
             this.dgv3.RowTemplate.ReadOnly = true;
             this.dgv3.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv3.Size = new System.Drawing.Size(1096, 200);
+            this.dgv3.Size = new System.Drawing.Size(1100, 200);
             this.dgv3.TabIndex = 13;
             // 
             // dgv4
@@ -294,7 +297,7 @@
             this.dgv4.RowTemplate.ReadOnly = true;
             this.dgv4.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv4.Size = new System.Drawing.Size(1096, 200);
+            this.dgv4.Size = new System.Drawing.Size(1100, 200);
             this.dgv4.TabIndex = 14;
             // 
             // dgv5
@@ -323,7 +326,7 @@
             this.dgv5.RowTemplate.ReadOnly = true;
             this.dgv5.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv5.Size = new System.Drawing.Size(1096, 200);
+            this.dgv5.Size = new System.Drawing.Size(1100, 200);
             this.dgv5.TabIndex = 15;
             // 
             // dgv6
@@ -352,7 +355,7 @@
             this.dgv6.RowTemplate.ReadOnly = true;
             this.dgv6.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv6.Size = new System.Drawing.Size(1096, 200);
+            this.dgv6.Size = new System.Drawing.Size(1100, 200);
             this.dgv6.TabIndex = 16;
             // 
             // dgv7
@@ -381,7 +384,7 @@
             this.dgv7.RowTemplate.ReadOnly = true;
             this.dgv7.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv7.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv7.Size = new System.Drawing.Size(1096, 200);
+            this.dgv7.Size = new System.Drawing.Size(1100, 200);
             this.dgv7.TabIndex = 17;
             // 
             // panel1
@@ -396,51 +399,28 @@
             this.panel1.Size = new System.Drawing.Size(1117, 183);
             this.panel1.TabIndex = 4;
             // 
-            // chartVmonth4
+            // chartVmonth1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartVmonth4.ChartAreas.Add(chartArea4);
-            this.chartVmonth4.Dock = System.Windows.Forms.DockStyle.Right;
-            legend4.Name = "Legend1";
-            this.chartVmonth4.Legends.Add(legend4);
-            this.chartVmonth4.Location = new System.Drawing.Point(845, 0);
-            this.chartVmonth4.Name = "chartVmonth4";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series4.IsValueShownAsLabel = true;
-            series4.LabelForeColor = System.Drawing.Color.White;
-            series4.Legend = "Legend1";
-            series4.Name = "Visits";
-            this.chartVmonth4.Series.Add(series4);
-            this.chartVmonth4.Size = new System.Drawing.Size(272, 183);
-            this.chartVmonth4.TabIndex = 11;
-            this.chartVmonth4.Text = "chart1";
-            title4.Name = "Title1";
-            this.chartVmonth4.Titles.Add(title4);
-            // 
-            // chartVmonth3
-            // 
-            chartArea3.Name = "ChartArea1";
-            this.chartVmonth3.ChartAreas.Add(chartArea3);
-            this.chartVmonth3.Dock = System.Windows.Forms.DockStyle.Right;
-            legend3.Name = "Legend1";
-            this.chartVmonth3.Legends.Add(legend3);
-            this.chartVmonth3.Location = new System.Drawing.Point(584, 0);
-            this.chartVmonth3.Name = "chartVmonth3";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series3.IsValueShownAsLabel = true;
-            series3.LabelForeColor = System.Drawing.Color.White;
-            series3.Legend = "Legend1";
-            series3.Name = "Visits";
-            this.chartVmonth3.Series.Add(series3);
-            this.chartVmonth3.Size = new System.Drawing.Size(261, 183);
-            this.chartVmonth3.TabIndex = 12;
-            this.chartVmonth3.Text = "chart1";
-            title3.Name = "Title1";
-            this.chartVmonth3.Titles.Add(title3);
+            chartArea1.Name = "ChartArea1";
+            this.chartVmonth1.ChartAreas.Add(chartArea1);
+            this.chartVmonth1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chartVmonth1.Legends.Add(legend1);
+            this.chartVmonth1.Location = new System.Drawing.Point(0, 0);
+            this.chartVmonth1.Name = "chartVmonth1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.IsValueShownAsLabel = true;
+            series1.LabelForeColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.Name = "Visits";
+            this.chartVmonth1.Series.Add(series1);
+            this.chartVmonth1.Size = new System.Drawing.Size(325, 183);
+            this.chartVmonth1.TabIndex = 14;
+            this.chartVmonth1.Text = "chart1";
+            title1.Name = "Title1";
+            this.chartVmonth1.Titles.Add(title1);
             // 
             // chartVmonth2
             // 
@@ -465,28 +445,51 @@
             title2.Name = "Title1";
             this.chartVmonth2.Titles.Add(title2);
             // 
-            // chartVmonth1
+            // chartVmonth3
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartVmonth1.ChartAreas.Add(chartArea1);
-            this.chartVmonth1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartVmonth1.Legends.Add(legend1);
-            this.chartVmonth1.Location = new System.Drawing.Point(0, 0);
-            this.chartVmonth1.Name = "chartVmonth1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.IsValueShownAsLabel = true;
-            series1.LabelForeColor = System.Drawing.Color.White;
-            series1.Legend = "Legend1";
-            series1.Name = "Visits";
-            this.chartVmonth1.Series.Add(series1);
-            this.chartVmonth1.Size = new System.Drawing.Size(325, 183);
-            this.chartVmonth1.TabIndex = 14;
-            this.chartVmonth1.Text = "chart1";
-            title1.Name = "Title1";
-            this.chartVmonth1.Titles.Add(title1);
+            chartArea3.Name = "ChartArea1";
+            this.chartVmonth3.ChartAreas.Add(chartArea3);
+            this.chartVmonth3.Dock = System.Windows.Forms.DockStyle.Right;
+            legend3.Name = "Legend1";
+            this.chartVmonth3.Legends.Add(legend3);
+            this.chartVmonth3.Location = new System.Drawing.Point(584, 0);
+            this.chartVmonth3.Name = "chartVmonth3";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series3.IsValueShownAsLabel = true;
+            series3.LabelForeColor = System.Drawing.Color.White;
+            series3.Legend = "Legend1";
+            series3.Name = "Visits";
+            this.chartVmonth3.Series.Add(series3);
+            this.chartVmonth3.Size = new System.Drawing.Size(261, 183);
+            this.chartVmonth3.TabIndex = 12;
+            this.chartVmonth3.Text = "chart1";
+            title3.Name = "Title1";
+            this.chartVmonth3.Titles.Add(title3);
+            // 
+            // chartVmonth4
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chartVmonth4.ChartAreas.Add(chartArea4);
+            this.chartVmonth4.Dock = System.Windows.Forms.DockStyle.Right;
+            legend4.Name = "Legend1";
+            this.chartVmonth4.Legends.Add(legend4);
+            this.chartVmonth4.Location = new System.Drawing.Point(845, 0);
+            this.chartVmonth4.Name = "chartVmonth4";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.IsValueShownAsLabel = true;
+            series4.LabelForeColor = System.Drawing.Color.White;
+            series4.Legend = "Legend1";
+            series4.Name = "Visits";
+            this.chartVmonth4.Series.Add(series4);
+            this.chartVmonth4.Size = new System.Drawing.Size(272, 183);
+            this.chartVmonth4.TabIndex = 11;
+            this.chartVmonth4.Text = "chart1";
+            title4.Name = "Title1";
+            this.chartVmonth4.Titles.Add(title4);
             // 
             // metroPanel2
             // 
@@ -547,10 +550,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv7)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartVmonth4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartVmonth3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartVmonth2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartVmonth1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartVmonth2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartVmonth3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartVmonth4)).EndInit();
             this.metroPanel2.ResumeLayout(false);
             this.pnlDGV.ResumeLayout(false);
             this.ResumeLayout(false);
