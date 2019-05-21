@@ -14,7 +14,7 @@ namespace smuCRMS.Controller
         {
             String[] prm = new String[] {"uid","id", "LName","FName","MName","_course","_dept","_year", "BDay", "_age", "_sex", "CS",
                     "nat", "HA", "BA", "FN", "FO", "FTCN", "MN", "MO", "MTCN", "LLN", "LTCN", "ECN", "Rel", "ETCN", "_fmp", "_lmp"};
-            string[] val = new string[] {pm.uid,pm.studentId.ToString(),pm.lastName,pm.firstName,pm.middleName,pm.course,pm.department,pm.year,pm.birthday,pm.age.ToString(),
+            string[] val = new string[] {pm.uid,pm.id.ToString(),pm.lastName,pm.firstName,pm.middleName,pm.course_id,pm.department,pm.year,pm.birthday,pm.age.ToString(),
                 pm.sex,pm.civilStatus,pm.nationality,pm.homeAddress,pm.boardingAddress,pm.fatherName,pm.fatherOccupation,pm.fatherNumber,pm.motherName,pm.motherOccupation,
                 pm.motherNumber,pm.landladyName,pm.landladyNumber,pm.emergencyCall,pm.relation,pm.emergencyNumber.ToString(),pm.firstMenstrualdate,pm.lastMenstrualdate};
 
@@ -90,7 +90,7 @@ namespace smuCRMS.Controller
             try
             {
                 con.command.Parameters.Clear();
-                addParamVal("id", pm.studentId.ToString());
+                addParamVal("id", pm.id.ToString());
                 addParamVal("bp", pm.bp);
                 addParamVal("pr", pm.pr);
                 addParamVal("rr", pm.rr);
@@ -152,7 +152,7 @@ namespace smuCRMS.Controller
             try
             {
                 con.command.Parameters.Clear();
-                con.command.Parameters.AddWithValue("id", pm.studentId.ToString());
+                con.command.Parameters.AddWithValue("id", pm.id.ToString());
                 con.command.Parameters.AddWithValue("_wkg", pm.weight.ToString());
                 con.command.Parameters.AddWithValue("_hcm", pm.height.ToString());
                 con.command.Parameters.AddWithValue("_bmi", pm.bmi.ToString());
@@ -193,7 +193,7 @@ namespace smuCRMS.Controller
 
             String[] prm = new String[] {"uid","_id", "LName","FName","MName","_course","_dept","_year", "BDay", "_age", "_sex", "CS",
                     "nat", "HA", "BA", "FN", "FO", "FTCN", "MN", "MO", "MTCN", "LLN", "LTCN", "ECN", "Rel", "ETCN", "_fmp", "_lmp"};
-            string[] val = new string[] {pm.uid,pm.studentId.ToString(),pm.lastName,pm.firstName,pm.middleName,pm.course,pm.department,pm.year,pm.birthday,pm.age.ToString(),
+            string[] val = new string[] {pm.uid,pm.id.ToString(),pm.lastName,pm.firstName,pm.middleName,pm.course_id,pm.department,pm.year,pm.birthday,pm.age.ToString(),
                 pm.sex,pm.civilStatus,pm.nationality,pm.homeAddress,pm.boardingAddress,pm.fatherName,pm.fatherOccupation,pm.fatherNumber,pm.motherName,pm.motherOccupation,
                 pm.motherNumber,pm.landladyName,pm.landladyNumber,pm.emergencyCall,pm.relation,pm.emergencyNumber.ToString(),pm.firstMenstrualdate,pm.lastMenstrualdate};
 
@@ -235,11 +235,11 @@ namespace smuCRMS.Controller
             {
                 con.command.Parameters.Clear();
 
-                con.command.Parameters.AddWithValue("id", pm.studentId);
+                con.command.Parameters.AddWithValue("id", pm.id);
                 con.command.Parameters.AddWithValue("lnm", pm.lastName);
                 con.command.Parameters.AddWithValue("fn", pm.firstName);
                 con.command.Parameters.AddWithValue("mn", pm.middleName);
-                con.command.Parameters.AddWithValue("cr", pm.course);
+                con.command.Parameters.AddWithValue("cr", pm.course_id);
                 con.command.Parameters.AddWithValue("dt", pm.department);
                 con.command.Parameters.AddWithValue("yr", pm.year);
                 con.command.Parameters.AddWithValue("sx", pm.sex);
@@ -269,7 +269,7 @@ namespace smuCRMS.Controller
             {
                 con.command.Parameters.Clear();
 
-                addParamVal("id", pm.studentId.ToString());
+                addParamVal("id", pm.id.ToString());
                 addParamVal("hospi", pm.hospiDesc);
                 addParamVal("injury", pm.indescription);
                 addParamVal("psych", pm.psychodescription);
@@ -300,7 +300,7 @@ namespace smuCRMS.Controller
             {
                 con.command.Parameters.Clear();
 
-                addParamVal("id", pm.studentId.ToString());
+                addParamVal("id", pm.id.ToString());
                 addParamVal("BCG", pm.BGC);
                 addParamVal("DPT", pm.DPT);
                 addParamVal("OPV", pm.OPV);
@@ -335,7 +335,7 @@ namespace smuCRMS.Controller
             try
             {
                 con.command.Parameters.Clear();
-                con.command.Parameters.AddWithValue("id", pm.studentId);
+                con.command.Parameters.AddWithValue("id", pm.id);
                 con.getDataTable("getRemark");
                 dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
             }
@@ -351,7 +351,7 @@ namespace smuCRMS.Controller
             try
             {
                 con.command.Parameters.Clear();
-                con.command.Parameters.AddWithValue("id", pc.studentId);
+                con.command.Parameters.AddWithValue("id", pc.id);
                 con.getDataTable("getPatientbyID");
                 dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
             }
@@ -427,7 +427,7 @@ namespace smuCRMS.Controller
         {
             DataTable dtable = new DataTable();
             con.command.Parameters.Clear();
-            con.command.Parameters.AddWithValue("id", pc.studentId);
+            con.command.Parameters.AddWithValue("id", pc.id);
             con.getDataTable("getImmubyID");
             return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
@@ -436,7 +436,7 @@ namespace smuCRMS.Controller
         {
             DataTable dtable = new DataTable();
             con.command.Parameters.Clear();
-            con.command.Parameters.AddWithValue("id", pc.studentId);
+            con.command.Parameters.AddWithValue("id", pc.id);
             con.getDataTable("getTreatment");
             return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
@@ -454,7 +454,7 @@ namespace smuCRMS.Controller
         {
             DataTable dtable = new DataTable();
             con.command.Parameters.Clear();
-            con.command.Parameters.AddWithValue("id", pc.studentId);
+            con.command.Parameters.AddWithValue("id", pc.id);
             con.getDataTable("getHistory");
             return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
@@ -627,12 +627,12 @@ namespace smuCRMS.Controller
         private void getPatientCollection_Basic(PatientController pc)
         {
             addParamVal("uid", pc.uid);
-            addParamVal("id", pc.studentId);
+            addParamVal("id", pc.id);
             addParamVal("LastName", pc.lastName);
             addParamVal("MiddleName", pc.middleName);
             addParamVal("FirstName", pc.firstName);
             addParamVal("department_id",pc.department);
-            addParamVal("Course_id", pc.course);
+            addParamVal("Course_id", pc.course_id);
             addParamVal("_Level", pc.year);
             addParamVal("Birthday", pc.birthday);
             addParamVal("Age", pc.age);
@@ -684,8 +684,8 @@ namespace smuCRMS.Controller
         }
         private void getPatientCollection_Course(PatientController pc)
         {
-            addParamVal("course_id", pc.course);
-            addParamVal("course", pc.course);
+            addParamVal("course_id", pc.course_id);
+            addParamVal("course", pc.course_id);
             addParamVal("department_id", pc.department);
         }
         public DataTable callProcedure(PatientController pc,string ACTIVITY,string STORED_PROCEDURE,bool Query)
