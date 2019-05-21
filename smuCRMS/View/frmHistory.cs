@@ -28,7 +28,7 @@ namespace smuCRMS.View
             //{
 
             //}
-            pc.studentId = lblID.Text;
+            pc.StudentId = lblID.Text;
             if(pc.getHistory())
             {
                     loadData();

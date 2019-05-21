@@ -364,7 +364,7 @@ namespace smuCRMS.View
             this.tbArch.Controls.Add(this.dgArc);
             this.tbArch.Location = new System.Drawing.Point(4, 38);
             this.tbArch.Name = "tbArch";
-            this.tbArch.Size = new System.Drawing.Size(1430, 547);
+            this.tbArch.Size = new System.Drawing.Size(1362, 552);
             this.tbArch.TabIndex = 3;
             this.tbArch.Text = "Archives";
             // 
@@ -394,7 +394,7 @@ namespace smuCRMS.View
             this.dgArc.RowTemplate.ReadOnly = true;
             this.dgArc.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgArc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgArc.Size = new System.Drawing.Size(1430, 547);
+            this.dgArc.Size = new System.Drawing.Size(1362, 552);
             this.dgArc.TabIndex = 1;
             // 
             // frmPatients

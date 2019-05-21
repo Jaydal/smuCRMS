@@ -11,12 +11,14 @@ namespace smuCRMS.Controller
 
     class PatientController
     {
-        public string studentId { get; set; }
+        //changed course-course_id, year-level
+        public string id { get; set; }
         public string lastName { get; set; }
         public string firstName { get; set; }
         public string middleName { get; set; }
-        public string course { get; set; }
+        public string course_id { get; set; }
         public string year { get; set; }
+        public string level { get; set; }
         public string department { get; set; }
         public string birthday { get; set; }
         public int age { get; set; }
@@ -96,12 +98,13 @@ namespace smuCRMS.Controller
         Patient patient = new Patient();
         public PatientController()
         {
-            studentId = "";
+            id = "";
             lastName = "";
             firstName = "";
             middleName = "";
-            course = "";
+            course_id = "";
             year = "";
+            level = "";
             department = "";
             birthday = null;
             age = 0;
@@ -224,7 +227,7 @@ namespace smuCRMS.Controller
             dtable = patient.getRemark(this);
             if (dtable.Rows.Count > 0)
             {
-                studentId = dtable.Rows[0][1].ToString();
+                id = dtable.Rows[0][1].ToString();
                 weight = double.Parse(dtable.Rows[0][2].ToString());
                 height = double.Parse(dtable.Rows[0][3].ToString());
                 bmi = dtable.Rows[0][4].ToString();
@@ -256,10 +259,11 @@ namespace smuCRMS.Controller
                 firstName = dtable.Rows[0][3].ToString();
                 middleName = dtable.Rows[0][4].ToString();
                 department = dtable.Rows[0][5].ToString();
-                course = dtable.Rows[0][6].ToString();
-                year = dtable.Rows[0][7].ToString();
+                course_id = dtable.Rows[0][6].ToString();
+                year= dtable.Rows[0][7].ToString();
+                level = dtable.Rows[0][8].ToString();
 
-                birthday = dtable.Rows[0][8].ToString();
+                birthday = dtable.Rows[0][9].ToString();
                 if (dtable.Rows[0][9].ToString() != "")
                 {
                     age = Int32.Parse(dtable.Rows[0][9].ToString());

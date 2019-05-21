@@ -46,7 +46,7 @@ namespace smuCRMS.View
                 {
                     pm.uid = uid;
                 }
-                pm.studentId = txtPID.Text;
+                pm.StudentId = txtPID.Text;
                 pm.spo2 = txtSPo2.Text;
                 pm.lastName = txtLName.Text;
                 pm.firstName = txtFName.Text;
@@ -181,7 +181,7 @@ namespace smuCRMS.View
         public void getProfilebyID(string idnumber)
         {
             txtPID.Text = idnumber;
-            pm.studentId = idnumber;
+            pm.StudentId = idnumber;
             txtPID.Enabled = false;
             if (pm.getStudByID(this))
             {
@@ -194,7 +194,7 @@ namespace smuCRMS.View
         void loadValToControls()
         {
           
-            txtPID.Text = pm.studentId.ToString();
+            txtPID.Text = pm.StudentId.ToString();
             txtLName.Text = pm.lastName;
             txtFName.Text = pm.firstName;
             txtMName.Text = pm.middleName;
@@ -632,7 +632,7 @@ namespace smuCRMS.View
                         if (res == DialogResult.Yes)
                         {
                             addCT ct = new addCT();
-                            ct.id = pm.studentId;
+                            ct.id = pm.StudentId;
                             ct.ShowDialog();
                         }
                         }
@@ -767,7 +767,7 @@ namespace smuCRMS.View
             //    cmbCourse.Visible = true;
             //    cmbYear.Visible = true;
             //}
-            pm.studentId = txtPID.Text;
+            pm.StudentId = txtPID.Text;
 
           if (pm.verifyID() && txtPID.Text!="")
             {

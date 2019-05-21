@@ -457,5 +457,6 @@ namespace smuCRMS.View
         {
             txtSearch1.Clear();
         }
+
     }
 }

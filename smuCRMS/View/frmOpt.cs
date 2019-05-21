@@ -74,7 +74,7 @@ namespace smuCRMS.View
                     string id = itemString[0];
                     if (id != "")
                     {
-                        pc.studentId = id;
+                        pc.StudentId = id;
                         pc.firstName = itemString[1];
                         pc.middleName = itemString[2];
                         pc.lastName = itemString[3];

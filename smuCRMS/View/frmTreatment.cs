@@ -20,7 +20,7 @@ namespace smuCRMS.View
             //    btnCT.Visible = false;
             //}
             //dgCT.Columns[4].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            pc.studentId = lblID.Text;
+            pc.StudentId = lblID.Text;
             pc.getTreatment(dgCT);
             if (dgCT.DataSource == null)
             {
