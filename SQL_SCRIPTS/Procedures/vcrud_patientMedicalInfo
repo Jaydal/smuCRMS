@@ -1,0 +1,59 @@
+DELIMITER $$
+DROP PROCEDURE if exists vcrud_patientMedicalInfo;
+CREATE procedure vcrud_patientMedicalInfo(
+IN activity VARCHAR(15),
+    IN uid VARCHAR(7),
+    IN id VARCHAR(15),
+    IN Lastname VARCHAR(30),
+    IN FirstName VARCHAR(30),
+    IN MiddleName VARCHAR(30),
+    IN Department_id VARCHAR(7),
+    IN Course_id VARCHAR(7),
+    IN _Level VARCHAR(7),
+    IN Birthday datetime,
+    IN Age tinyint(3),
+    IN Sex VARCHAR(10),
+    IN CivilStatus VARCHAR(15),
+    IN Nationality VARCHAR(30),
+    IN HomeAddress VARCHAR(255),
+    IN BoardingAddress VARCHAR(255),
+    IN FathersName VARCHAR(50),
+    IN FathersOccupation VARCHAR(30),
+    IN FathersNumber VARCHAR(15),
+    IN MothersName VARCHAR(50),
+    IN MothersOccupation VARCHAR(30),
+    IN MothersNumber VARCHAR(15),
+    IN LandLadyName VARCHAR(50),
+    IN LandLadyNumber VARCHAR(15),
+    IN EmergencyCallName VARCHAR(50),
+    IN EmergencyRelation VARCHAR(30),
+    IN EmergencyNumber VARCHAR(15),
+    IN FirstMenstruation datetime,
+    IN LastMenstruation datetime,
+    IN Photo mediumblob,
+    IN Signature mediumblob,
+    IN immunization_id VARCHAR(10),
+	  IN immunization VARCHAR(255),
+	  IN LEVEL VARCHAR(15),
+    IN history_id VARCHAR(7),
+    IN history VARCHAR(30),
+    IN history_description VARCHAR(30),
+    IN remark_id VARCHAR(10),
+    IN weight FLOAT,
+    IN height FLOAT,
+    IN bmi FLOAT,
+    IN bp VARCHAR(15),
+    IN pr VARCHAR(15),
+    IN rr VARCHAR(15),
+    IN temp FLOAT,
+    IN spo FLOAT,
+    IN remarks VARCHAR(255),
+    IN doctorincharge VARCHAR(50),
+    IN doctorsignature mediumblob)
+BEGIN
+	  CALL vcrud_patient();
+    CALL vcrud_immunization();
+    CALL vcrud_history();
+	  CALL vcrud_remarks();
+END$$
+DELIMITER ;

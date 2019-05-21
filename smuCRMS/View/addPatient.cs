@@ -18,17 +18,9 @@ namespace smuCRMS.View
         public string uid=null;
         string[] gs = new string[] { "1", "2", "3", "4", "5", "6" };
         string[] js = new string[] { "7", "8", "9", "10" };
-        string[] ss = new string[] { "11", "12" };
-        string[] college = new string[] { "1st", "2nd", "3rd", "4th", "5th" };
+        string[] sh = new string[] { "11", "12" };
+        string[] undergrad = new string[] { "1st", "2nd", "3rd", "4th", "5th" };
         string[] cmbVal = new string[6];
-        string[] seait = new string[] { "BSArchi", "BSCE", "BSCOE", "BSEE", "BSIS", "BSIT", "BSLIS",
-            "BSECE" };
-        string[] sab = new string[] { "BSA", "BSEM", "BSHM", "BSMA", "BSOA", "BSTM", "Commercial Cooking", "Bread and Pastry Producton", "Housekeeping Services", "Front Office Services",
-        "Tour Guiding Services","Bartending Services","Food and Beverages Services",""};
-        string[] steh = new string[] { "BSABE", "BSABJ", "BSArts", "BSCrim", "BSMath", "BSPE", "BSPhil", "BSPolSci", "BSPsycho",
-        "BSSE","Elementary Education","Pre School Education","Guidance and Counselling"};
-        string[] shans = new string[] { "BSBio", "BSM", "BSMLS", "BSMT", "BSN", "BSP" };
-        string[] shs = new string[] { "GAS", "HUMMS", "STEM", "ABM", "TVL", "ICT", };
         public addPatient()
         {
             InitializeComponent();
@@ -83,17 +75,8 @@ namespace smuCRMS.View
                 pm.emergencyNumber = txtECNumber.Text;
                 pm.remarks ="("+cmbBMI.Text+") "+ txtRemarks.Text;
 
-                pm.BGC = immunCode(cbBCG1st, cbBCG2nd, cbBCG3rd, cbBCGb1, cbBCGb2);
-                pm.DPT = immunCode(cbDPT1st, cbDPT2nd, cbDPT3rd, cbDPTb1, cbDPTb2);
-                pm.OPV = immunCode(cbOPV1st, cbOPV2nd, cbOPV3rd, cbOPVb1, cbOPVb2);
-                pm.MMR = immunCode(cbMMR1st, cbMMR2nd, cbMMR3rd, cbMMRb1, cbMMRb2);
-                pm.HA = immunCode(cbHEPA1st, cbHEPA2nd, cbHEPA3rd, cbHEPAb1, cbHEPAb2);
-                pm.HB = immunCode(cbHEPB1st, cbHEPB2nd, cbHEPB3rd, cbHEPBb1, cbHEPBb2);
-                pm.othersDesc = txtImmuOther.Text;
-                if (pm.othersDesc != "")
-                {
-                    pm.Others = immunCode(cbOTHERS1st, cbOTHERS2nd, cbOTHERS3rd, cbOTHERSb1, cbOTHERSb2);
-                }
+                //add immunization here ------------------
+
                 string h1 = txtH1.Text;
                 string h2 = txtH2.Text;
                 string h3 = txtH3.Text;
@@ -130,47 +113,15 @@ namespace smuCRMS.View
 
         }
 
-        //custom number coding to determin immunization
-        public string immunCode(CheckBox cb1, CheckBox cb2, CheckBox cb3, CheckBox cbB1, CheckBox cbB2)
-        {
-            string code = "";
-            if (cb1.Checked == true && cb2.Checked == true && cb3.Checked == true && cbB1.Checked == true && cbB2.Checked == true)
-            {
-                code = "11111";
-            }
-            else if (cb1.Checked == true && cb2.Checked == true && cb3.Checked == true && cbB1.Checked == true && cbB2.Checked == false)
-            {
-                code = "11110";
-            }
-            else if (cb1.Checked == true && cb2.Checked == true && cb3.Checked == true && cbB1.Checked == false && cbB2.Checked == false)
-            {
-                code = "11100";
-            }
-            else if (cb1.Checked == true && cb2.Checked == true && cb3.Checked == false && cbB1.Checked == false && cbB2.Checked == false)
-            {
-                code = "11000";
-            }
-            else if (cb1.Checked == true && cb2.Checked == false && cb3.Checked == false && cbB1.Checked == false && cbB2.Checked == false)
-            {
-                code = "10000";
-            }
-            else if (cb1.Checked == false && cb2.Checked == false && cb3.Checked == false && cbB1.Checked == false && cbB2.Checked == false)
-            {
-                code = "00000";
-            }
-            return code;
-        }
-
         private void addPatient_Load_1(object sender, EventArgs e)
         {
             cmbDepartment.ValueMember = "department_id";
             cmbDepartment.DisplayMember = "Department";
             cmbDepartment.DataSource = pm.getDepartment();
-            //pm.loadCourses(this);
             cmbDepartment.SelectedIndex = 0;
+            LoadCourses();
             cmbCivilStat.SelectedIndex = 0;
             txtNat.Text = "Filipino";
-            cmbYear.SelectedIndex = 0;
             btnPrev.Hide();
             txtPID.Select();
             dtBDay.MaxDate = DateTime.Now;
@@ -281,59 +232,44 @@ namespace smuCRMS.View
         //changing label Year/Grade based on department
         private void cmbDepartment_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            LoadCourses();
+        }
+        void LoadCourses()
+        {
+            pm.department = cmbDepartment.SelectedValue.ToString();
+            cmbCourse.ValueMember = "Course_id";
+            cmbCourse.DisplayMember = "Course";
+            cmbCourse.DataSource = pm.getCourse();
             cmbYear.Items.Clear();
-            cmbCourse.Items.Clear();
-            cmbCourse.Text = "";
-            if (cmbDepartment.SelectedIndex == 0 || cmbDepartment.SelectedIndex == 1 || cmbDepartment.SelectedIndex == 2)
+            if (cmbCourse.Text=="GRADE SCHOOL")
             {
-
+               
+                cmbYear.Items.AddRange(gs);
                 lblYear.Text = "Grade";
                 cmbCourse.Enabled = false;
-                if (cmbDepartment.SelectedIndex == 0)
-                {
-                    cmbVal = gs;
-
-                }
-                else if (cmbDepartment.SelectedIndex == 1)
-                {
-                    cmbVal = js;
-                }
-                else
-                {
-                    cmbCourse.Enabled = true;
-                    lblCourse.Text = "Track";
-                    cmbCourse.Items.AddRange(shs);
-                    cmbVal = ss;
-                }
-
             }
-            else
+            else if(cmbCourse.Text== "JUNIOR HIGH SCHOOL")
             {
-                cmbCourse.Enabled = true;
+                cmbYear.Items.AddRange(js);
+                lblYear.Text = "Grade";
+                cmbCourse.Enabled = false;
+            }
+            else if (cmbCourse.Text == "SENIOR HIGH SCHOOL")
+            {
+                cmbYear.Items.AddRange(sh);
+                lblYear.Text = "Grade";
+                lblCourse.Text = "Track";
+            }
+            else 
+            {
                 lblYear.Text = "Year";
                 lblCourse.Text = "Course";
-                cmbVal = college;
-                if (cmbDepartment.SelectedIndex == 3)
-                {
-                    cmbCourse.Items.AddRange(sab);
-                }
-                else if (cmbDepartment.SelectedIndex == 4)
-                {
-                    cmbCourse.Items.AddRange(seait);
-                }
-                else if (cmbDepartment.SelectedIndex == 5)
-                {
-                    cmbCourse.Items.AddRange(shans);
-                }
-                else if (cmbDepartment.SelectedIndex == 6)
-                {
-                    cmbCourse.Items.AddRange(steh);
-                }
+                cmbCourse.Enabled = true;
+                //get level to determine-----
+                cmbYear.Items.AddRange(undergrad);
             }
-            cmbYear.Items.AddRange(cmbVal);
             cmbYear.SelectedIndex = 0;
         }
-
         void ConvertPhotoTobyte()
         {
             Image img = pbPhoto.Image;
@@ -384,24 +320,6 @@ namespace smuCRMS.View
 
         }
 
-
-
-
-
-
-
-
-
-
-
-        //private void btnCT_Click(object sender, EventArgs e)
-        //{
-
-
-        //}
-
-
-
         private void txtHeight_TextChanged_1(object sender, EventArgs e)
         {
             computeBMI();
@@ -451,38 +369,6 @@ namespace smuCRMS.View
             //    }
             //}
         }
-
-        //private void btnNext2_Click(object sender, EventArgs e)
-        //{
-        //    //if(btnNext2.Text=="Save")
-        //    //{
-        //    //    try
-        //    //    {
-             
-        //    //            GetInputs();
-        //    //            //calling save method from controller
-        //    //            backgroundWorker.RunWorkerAsync();
-        //    //            p.ShowDialog();
-
-
-        //    //            reset();
-        //    //            tbProfile.SelectedIndex = 0;
-
-        //    //    }
-        //    //    catch (Exception ex)
-        //    //    {
-        //    //        MetroMessageBox.Show(this, "Error " + ex);
-        //    //    }
-        //    //}
-        //    //else
-        //    //{
-        //    //    frmSig fs = new frmSig();
-        //    //    fs.ShowDialog();
-        //    //    pm.psig = fs.arr;
-        //    //    tbProfile.SelectedIndex = 2;
-        //    //}
-           
-        //}
 
         private void rbFem_CheckedChanged_1(object sender, EventArgs e)
         {
@@ -555,48 +441,6 @@ namespace smuCRMS.View
             txtTemp.Text = "0";
             txtWeight.Text = "";
             cmbAge.Text = "0";
-   
-            cbBCG1st.Checked = false;
-            cbBCG2nd.Checked = false;
-            cbBCG3rd.Checked = false;
-            cbBCGb1.Checked = false;
-            cbBCGb2.Checked = false;
-
-            cbDPT1st.Checked = false;
-            cbDPT2nd.Checked = false;
-            cbDPT3rd.Checked = false;
-            cbDPTb1.Checked = false;
-            cbDPTb2.Checked = false;
-
-            cbHEPA1st.Checked = false;
-            cbHEPA2nd.Checked = false;
-            cbHEPA3rd.Checked = false;
-            cbHEPAb1.Checked = false;
-            cbHEPAb2.Checked = false;
-
-            cbHEPB1st.Checked = false;
-            cbHEPB2nd.Checked = false;
-            cbHEPB3rd.Checked = false;
-            cbHEPBb1.Checked = false;
-            cbHEPBb2.Checked = false;
-
-            cbMMR1st.Checked = false;
-            cbMMR2nd.Checked = false;
-            cbMMR3rd.Checked = false;
-            cbMMRb1.Checked = false;
-            cbMMRb2.Checked = false;
-
-            cbOPV1st.Checked = false;
-            cbOPV2nd.Checked = false;
-            cbOPV3rd.Checked = false;
-            cbOPVb1.Checked = false;
-            cbOPVb2.Checked = false;
-
-            cbOTHERS1st.Checked = false;
-            cbOTHERS2nd.Checked = false;
-            cbOTHERS3rd.Checked = false;
-            cbOTHERSb1.Checked = false;
-            cbOTHERSb2.Checked = false;
        
             rbFem.Checked = false;
             rbNo1.Checked = true;
@@ -605,8 +449,6 @@ namespace smuCRMS.View
             rbNo4.Checked = true;
             rbNo5.Checked = true;
             rbNo6.Checked = true;
-            
-
         }
 
 
@@ -625,7 +467,7 @@ namespace smuCRMS.View
                     //calling save method from controller
                     //backgroundWorker.RunWorkerAsync();
                     //p.ShowDialog();
-                    if (pm.patientAdd(this))
+                    if (pm.patientAdd())
                     {
                         MetroMessageBox.Show(this, "Saved Successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         DialogResult res = MetroMessageBox.Show(this, "Add Treatment?", "Clinical and Treatment", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -1044,17 +886,10 @@ namespace smuCRMS.View
                     }
                 }
                 txtPID.Text = "V" + DateTime.Now.Month + DateTime.Now.Day + (DateTime.Now.Year) % 2000 + DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second;
-                txtLName.Select();
-                cmbDepartment.Items.Clear();
-                cmbYear.Items.Clear();
-                cmbCourse.Items.Clear();
-                
+                txtLName.Select();  
             }
             else
             {
-                string[] dept = new string[] { "Grade School", "Junior HS", "Senior HS", "SAB", "SEAIT", "SHANS", "STEH" };
-                cmbDepartment.Items.AddRange(dept);
-                cmbDepartment.SelectedIndex = 0;
                 enableCYD(true);
                 txtPID.Enabled = true;
                 foreach (Control c in gbImmu.Controls)
@@ -1067,7 +902,6 @@ namespace smuCRMS.View
                 }
                 txtPID.Text = "";
                 txtPID.Select();
-                cmbCourse.Enabled = false;
             }
     
         }
@@ -1169,50 +1003,6 @@ namespace smuCRMS.View
                 txtLLNumber.Hide();
             }
         }
-        void cbImmu(MetroCheckBox cb1, MetroCheckBox cb2, MetroCheckBox cb3, MetroCheckBox cb4, MetroCheckBox cb5)
-        {
-            if(cb1.Checked && !cb2.Checked && !cb3.Checked && !cb4.Checked && !cb5.Checked)
-            {
-                cb1.Checked=true;
-                cb2.Checked = !true;
-                cb3.Checked = !true;
-                cb4.Checked = !true;
-                cb5.Checked = !true;
-            }
-            else if(!cb1.Checked && cb2.Checked && !cb3.Checked && !cb4.Checked && !cb5.Checked)
-            {
-                cb1.Checked = true;
-                cb2.Checked = true;
-                cb3.Checked = !true;
-                cb4.Checked = !true;
-                cb5.Checked = !true;
-            }
-            else if (!cb1.Checked && !cb2.Checked && cb3.Checked && !cb4.Checked && !cb5.Checked)
-            {
-                cb1.Checked = true;
-                cb2.Checked = true;
-                cb3.Checked = true;
-                cb4.Checked = !true;
-                cb5.Checked = !true;
-            }
-            else if (!cb1.Checked && !cb2.Checked && !cb3.Checked && cb4.Checked && !cb5.Checked) 
-            {
-                cb1.Checked = true;
-                cb2.Checked = true;
-                cb3.Checked = true;
-                cb4.Checked = true;
-                cb5.Checked = !true;
-            }
-            else if (!cb1.Checked && !cb2.Checked && !cb3.Checked && !cb4.Checked && cb5.Checked)
-            {
-                cb1.Checked = true;
-                cb2.Checked = true;
-                cb3.Checked = true;
-                cb4.Checked = true;
-                cb5.Checked = true;
-            }
-        }
-
        
         private void txtBMI_TextChanged(object sender, EventArgs e)
         {
@@ -1277,6 +1067,30 @@ namespace smuCRMS.View
         private void txtBMI_Click(object sender, EventArgs e)
         {
             txtBMI.SelectAll();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbImmu_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                //cmbImmu.SelectedItem = null;
+                ((MetroComboBox)sender).SelectedItem = null;
+            }
+        }
+
+        private void metroSetToolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

@@ -163,16 +163,16 @@ namespace smuCRMS.View
         }
         void getImmun()
         {
-            pc.BGC = ap.immunCode(cbBCG1st, cbBCG2nd, cbBCG3rd, cbBCGb1, cbBCGb2);
-            pc.DPT = ap.immunCode(cbDPT1st, cbDPT2nd, cbDPT3rd, cbDPTb1, cbDPTb2);
-            pc.OPV = ap.immunCode(cbOPV1st, cbOPV2nd, cbOPV3rd, cbOPVb1, cbOPVb2);
-            pc.MMR = ap.immunCode(cbMMR1st, cbMMR2nd, cbMMR3rd, cbMMRb1, cbMMRb2);
-            pc.HA = ap.immunCode(cbHEPA1st, cbHEPA2nd, cbHEPA3rd, cbHEPAb1, cbHEPAb2);
-            pc.HB = ap.immunCode(cbHEPB1st, cbHEPB2nd, cbHEPB3rd, cbHEPBb1, cbHEPBb2);
+            //pc.BGC = ap.immunCode(cbBCG1st, cbBCG2nd, cbBCG3rd, cbBCGb1, cbBCGb2);
+            //pc.DPT = ap.immunCode(cbDPT1st, cbDPT2nd, cbDPT3rd, cbDPTb1, cbDPTb2);
+            //pc.OPV = ap.immunCode(cbOPV1st, cbOPV2nd, cbOPV3rd, cbOPVb1, cbOPVb2);
+            //pc.MMR = ap.immunCode(cbMMR1st, cbMMR2nd, cbMMR3rd, cbMMRb1, cbMMRb2);
+            //pc.HA = ap.immunCode(cbHEPA1st, cbHEPA2nd, cbHEPA3rd, cbHEPAb1, cbHEPAb2);
+            //pc.HB = ap.immunCode(cbHEPB1st, cbHEPB2nd, cbHEPB3rd, cbHEPBb1, cbHEPBb2);
             pc.othersDesc = txtImmuOther.Text;
             if (pc.othersDesc != "")
             {
-                pc.Others = ap.immunCode(cbOTHERS1st, cbOTHERS2nd, cbOTHERS3rd, cbOTHERSb1, cbOTHERSb2);
+                //pc.Others = ap.immunCode(cbOTHERS1st, cbOTHERS2nd, cbOTHERS3rd, cbOTHERSb1, cbOTHERSb2);
             }
 
         }
