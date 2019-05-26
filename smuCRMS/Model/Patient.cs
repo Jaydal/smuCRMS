@@ -621,8 +621,6 @@ namespace smuCRMS.Controller
             return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
 
-
-
         //new code
         private void getPatientCollection_Basic(PatientController pc)
         {
@@ -631,7 +629,7 @@ namespace smuCRMS.Controller
             addParamVal("LastName", pc.lastName);
             addParamVal("MiddleName", pc.middleName);
             addParamVal("FirstName", pc.firstName);
-            addParamVal("department_id",pc.department);
+            addParamVal("department_id", pc.department);
             addParamVal("Course_id", pc.course_id);
             addParamVal("_Level", pc.year);
             addParamVal("Birthday", pc.birthday);
@@ -688,45 +686,52 @@ namespace smuCRMS.Controller
             addParamVal("course", pc.course_id);
             addParamVal("department_id", pc.department);
         }
-        public DataTable callProcedure(PatientController pc,string ACTIVITY,string STORED_PROCEDURE,bool Query)
+        public DataTable callProcedure(PatientController pc, string ACTIVITY, string STORED_PROCEDURE, bool Query)
         {
             DataTable dtable = new DataTable();
             con.command.Parameters.Clear();
             addParamVal("activity", ACTIVITY);
-                if (STORED_PROCEDURE.Contains("patient"))
-                {
-                    getPatientCollection_Basic(pc);
-                }
-                else if (STORED_PROCEDURE.Contains("course"))
-                {
-                    getPatientCollection_Course(pc);
-                }
-                else if (STORED_PROCEDURE.Contains("department"))
-                {
-                    getPatientCollection_Department(pc);
-                }
-                else if (STORED_PROCEDURE.Contains("history"))
-                {
-                    getPatientCollection_History(pc);
-                }
-                else if (STORED_PROCEDURE.Contains("immunization"))
-                {
-                    getPatientCollection_Immunization(pc);
-                }
-                else if (STORED_PROCEDURE.Contains("remark"))
-                {
-                    getPatientCollection_Remark(pc);
-                }
-                else if (STORED_PROCEDURE.Contains("treatment"))
-                {
-                    getPatientCollection_Treatment(pc);
-                }
+            if (STORED_PROCEDURE.Contains("patient"))
+            {
+                getPatientCollection_Basic(pc);
+            }
+            else if (STORED_PROCEDURE.Contains("course"))
+            {
+                getPatientCollection_Course(pc);
+            }
+            else if (STORED_PROCEDURE.Contains("department"))
+            {
+                getPatientCollection_Department(pc);
+            }
+            else if (STORED_PROCEDURE.Contains("history"))
+            {
+                getPatientCollection_History(pc);
+            }
+            else if (STORED_PROCEDURE.Contains("immunization"))
+            {
+                getPatientCollection_Immunization(pc);
+            }
+            else if (STORED_PROCEDURE.Contains("remark"))
+            {
+                getPatientCollection_Remark(pc);
+            }
+            else if (STORED_PROCEDURE.Contains("treatment"))
+            {
+                getPatientCollection_Treatment(pc);
+            }
+            else if (STORED_PROCEDURE.Contains("searchPatient"))
+            {
+                //modify this soon
+                addParamVal("searchClass", pc.classification);
+                addParamVal("searchString", pc.searchString);
+            }
             if (Query)
             {
                 con.getDataTable(STORED_PROCEDURE);
                 return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
             }
-            else{
+            else
+            {
                 con.getParameter(STORED_PROCEDURE);
                 if (con.command.ExecuteNonQuery() == 1)
                 {

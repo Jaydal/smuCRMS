@@ -313,11 +313,11 @@ namespace smuCRMS.Controller
             dtable = patient.basicSTUDinfoArc();
             dg.DataSource = (dtable.Rows.Count > 0) ? dtable : null;
         }
-        public void searchInfo(DataGridView dg)
-        {
-            dtable = patient.searchInfo(this);
-            dg.DataSource = (dtable.Rows.Count > 0) ? dtable : null;
-        }
+        //public void searchInfo(DataGridView dg)
+        //{
+        //    dtable = patient.searchInfo(this);
+        //    dg.DataSource = (dtable.Rows.Count > 0) ? dtable : null;
+        //}
         public void searchInfoArc(DataGridView dg)
         {
             dtable = patient.searchInfoArc(this);
@@ -465,6 +465,12 @@ namespace smuCRMS.Controller
             DataTable dt;
             return dt = patient.callProcedure(this,
                 "VIEW_BY_DEPARTMENT", "vcrud_course",true);
+        }
+        public DataTable search()
+        {
+            DataTable dt;
+            return dt = patient.callProcedure(this,
+                "", "searchPatient", true);
         }
         public bool verifyID()
         {
