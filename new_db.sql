@@ -26,16 +26,17 @@ CREATE TABLE `account` (
   `password` varchar(255) DEFAULT NULL,
   `Name` varchar(50) DEFAULT NULL,
   `Role` varchar(15) DEFAULT NULL,
+  `DateTimeCreated` datetime DEFAULT NULL,
   PRIMARY KEY (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `account` */
 
-insert  into `account`(`account_id`,`username`,`password`,`Name`,`Role`) values 
-('0eac63bc92f274ce9e3728f526ad10ba','enujs','ea2b1a27d33aa7b161a494069df1bf9e','JD','Admin'),
-('11501255f17710952e79563ddc090a4d','june','11501255f17710952e79563ddc090a4d','JD','Admin'),
-('bb5e73961d33c3cab71d2a503fc29a20','enujs','0eac63bc92f274ce9e3728f526ad10ba','enuj','Admin'),
-('d10dbd7eca60d62cbd84e7620aedf5ad','juneyyyys','3dad9cbf9baaa0360c0f2ba372d25716','June Delmars','Restricted');
+insert  into `account`(`account_id`,`username`,`password`,`Name`,`Role`,`DateTimeCreated`) values 
+('0eac63bc92f274ce9e3728f526ad10ba','enujs','ea2b1a27d33aa7b161a494069df1bf9e','JD','Admin',NULL),
+('11501255f17710952e79563ddc090a4d','june','11501255f17710952e79563ddc090a4d','JD','Admin',NULL),
+('bb5e73961d33c3cab71d2a503fc29a20','enujs','0eac63bc92f274ce9e3728f526ad10ba','enuj','Admin',NULL),
+('d10dbd7eca60d62cbd84e7620aedf5ad','juneyyyys','3dad9cbf9baaa0360c0f2ba372d25716','June Delmars','Restricted',NULL);
 
 /*Table structure for table `course` */
 
@@ -45,6 +46,7 @@ CREATE TABLE `course` (
   `Course_id` varchar(7) NOT NULL,
   `Course` varchar(255) DEFAULT NULL,
   `Department_id` varchar(7) DEFAULT NULL,
+  `DateTimeCreated` datetime DEFAULT NULL,
   PRIMARY KEY (`Course_id`),
   KEY `course_ibfk_1` (`Department_id`),
   CONSTRAINT `course_ibfk_1` FOREIGN KEY (`Department_id`) REFERENCES `department` (`Department_id`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -52,8 +54,12 @@ CREATE TABLE `course` (
 
 /*Data for the table `course` */
 
-insert  into `course`(`Course_id`,`Course`,`Department_id`) values 
-('BSIT','Bachelore of Science in Information Technology','SEAIT');
+insert  into `course`(`Course_id`,`Course`,`Department_id`,`DateTimeCreated`) values 
+('1','GRADE SCHOOL','111',NULL),
+('2','JUNIOR HIGH SCHOOL','122',NULL),
+('BSABD','akjbdkjasd','213',NULL),
+('BSIT','Bachelore of Science in Information Technology','SEAIT',NULL),
+('Track','ajnsjakd','123',NULL);
 
 /*Table structure for table `department` */
 
@@ -62,17 +68,18 @@ DROP TABLE IF EXISTS `department`;
 CREATE TABLE `department` (
   `Department_id` varchar(7) NOT NULL,
   `Department` varchar(255) DEFAULT NULL,
+  `DateTimeCreated` datetime DEFAULT NULL,
   PRIMARY KEY (`Department_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `department` */
 
-insert  into `department`(`Department_id`,`Department`) values 
-('111','Grade School-1'),
-('122','Junior High School-2'),
-('123','Senior High School-3'),
-('213','College of Law-4'),
-('SEAIT','School of Engineering, Architecture and Information Technology-3');
+insert  into `department`(`Department_id`,`Department`,`DateTimeCreated`) values 
+('111','Grade School',NULL),
+('122','Junior High School',NULL),
+('123','Senior High School',NULL),
+('213','College of Law',NULL),
+('SEAIT','School of Engineering, Architecture and Information Technology-3',NULL);
 
 /*Table structure for table `history` */
 
@@ -83,6 +90,7 @@ CREATE TABLE `history` (
   `history` varchar(50) DEFAULT NULL,
   `history_description` varchar(255) DEFAULT NULL,
   `uid` varchar(15) DEFAULT NULL,
+  `DateTimeCreated` datetime DEFAULT NULL,
   PRIMARY KEY (`history_id`),
   KEY `uid` (`uid`),
   CONSTRAINT `history_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `patient` (`uid`)
@@ -90,8 +98,8 @@ CREATE TABLE `history` (
 
 /*Data for the table `history` */
 
-insert  into `history`(`history_id`,`history`,`history_description`,`uid`) values 
-('H123','Lorem','Lorem','12345');
+insert  into `history`(`history_id`,`history`,`history_description`,`uid`,`DateTimeCreated`) values 
+('H123','Lorem','Lorem','12345',NULL);
 
 /*Table structure for table `immunization` */
 
@@ -102,14 +110,15 @@ CREATE TABLE `immunization` (
   `uid` varchar(15) DEFAULT NULL,
   `immunization` varchar(255) DEFAULT NULL,
   `level` varchar(15) DEFAULT NULL,
+  `DateTimeCreated` datetime DEFAULT NULL,
   KEY `uid` (`uid`),
   CONSTRAINT `immunization_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `patient` (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `immunization` */
 
-insert  into `immunization`(`immunization_id`,`uid`,`immunization`,`level`) values 
-('I123','12345','Lorem','Booster2');
+insert  into `immunization`(`immunization_id`,`uid`,`immunization`,`level`,`DateTimeCreated`) values 
+('I123','12345','Lorem','Booster2',NULL);
 
 /*Table structure for table `level` */
 
@@ -118,15 +127,17 @@ DROP TABLE IF EXISTS `level`;
 CREATE TABLE `level` (
   `Level_id` varchar(7) NOT NULL,
   `LevelName` varchar(50) DEFAULT NULL,
+  `DateTimeCreated` datetime DEFAULT NULL,
   PRIMARY KEY (`Level_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `level` */
 
-insert  into `level`(`Level_id`,`LevelName`) values 
-('C1','College'),
-('GS','Grade School'),
-('SH','Senior High School');
+insert  into `level`(`Level_id`,`LevelName`,`DateTimeCreated`) values 
+('C1','Undergraduate',NULL),
+('G','Graduate',NULL),
+('GS','Grade School',NULL),
+('SH','Senior High School',NULL);
 
 /*Table structure for table `logs` */
 
@@ -157,6 +168,7 @@ CREATE TABLE `patient` (
   `Department_id` varchar(7) DEFAULT NULL,
   `Course_id` varchar(7) DEFAULT NULL,
   `Level` varchar(7) DEFAULT NULL,
+  `YearOrGrade` varchar(30) DEFAULT NULL,
   `Birthday` datetime DEFAULT NULL,
   `Age` tinyint(3) DEFAULT NULL,
   `Sex` varchar(10) DEFAULT NULL,
@@ -179,6 +191,7 @@ CREATE TABLE `patient` (
   `LastMenstruation` datetime DEFAULT NULL,
   `Photo` mediumblob,
   `Signature` mediumblob,
+  `DateTimeCreated` datetime DEFAULT NULL,
   PRIMARY KEY (`uid`),
   KEY `Department_id` (`Department_id`),
   KEY `Course_id` (`Course_id`),
@@ -190,8 +203,8 @@ CREATE TABLE `patient` (
 
 /*Data for the table `patient` */
 
-insert  into `patient`(`uid`,`id`,`LastName`,`FirstName`,`MiddleName`,`Department_id`,`Course_id`,`Level`,`Birthday`,`Age`,`Sex`,`CivilStatus`,`Nationality`,`HomeAddress`,`BoardingAddress`,`FathersName`,`FathersOccupation`,`FathersNumber`,`MothersName`,`MothersOccupation`,`MothersNumber`,`LandLadyName`,`LandLadyNumber`,`EmergencyCallName`,`EmergencyRelation`,`EmergencyNumber`,`FirstMenstruation`,`LastMenstruation`,`Photo`,`Signature`) values 
-('12345','29695150','Labitori','June Delmar','Agoot','SEAIT','BSIT','C1','2019-05-08 14:39:34',64,'Male','Single','Filipino','Salvacion',NULL,'Rodel','Rodel','123','Marivel','Marivel','123',NULL,NULL,'Marivel','Mother','123',NULL,NULL,NULL,NULL);
+insert  into `patient`(`uid`,`id`,`LastName`,`FirstName`,`MiddleName`,`Department_id`,`Course_id`,`Level`,`YearOrGrade`,`Birthday`,`Age`,`Sex`,`CivilStatus`,`Nationality`,`HomeAddress`,`BoardingAddress`,`FathersName`,`FathersOccupation`,`FathersNumber`,`MothersName`,`MothersOccupation`,`MothersNumber`,`LandLadyName`,`LandLadyNumber`,`EmergencyCallName`,`EmergencyRelation`,`EmergencyNumber`,`FirstMenstruation`,`LastMenstruation`,`Photo`,`Signature`,`DateTimeCreated`) values 
+('12345','29695150','Labitori','June Delmar','Agoot','SEAIT','BSIT','C1',NULL,'2019-05-08 14:39:34',64,'Male','Single','Filipino','Salvacion',NULL,'Rodel','Rodel','123','Marivel','Marivel','123',NULL,NULL,'Marivel','Mother','123',NULL,NULL,NULL,NULL,NULL);
 
 /*Table structure for table `remark` */
 
@@ -211,6 +224,7 @@ CREATE TABLE `remark` (
   `Remarks` varchar(255) DEFAULT NULL,
   `DoctorInCharge` varchar(50) DEFAULT NULL,
   `DoctorSignature` mediumblob,
+  `DateTimeCreated` datetime DEFAULT NULL,
   PRIMARY KEY (`remark_id`),
   KEY `uid` (`uid`),
   CONSTRAINT `remark_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `patient` (`uid`)
@@ -218,8 +232,8 @@ CREATE TABLE `remark` (
 
 /*Data for the table `remark` */
 
-insert  into `remark`(`remark_id`,`uid`,`weight`,`height`,`BMI`,`BP`,`PR`,`RR`,`Temperature`,`SPO2`,`Remarks`,`DoctorInCharge`,`DoctorSignature`) values 
-('R123','12345',64,64,64,'64','64','64',64,646,'4','June Delmar',NULL);
+insert  into `remark`(`remark_id`,`uid`,`weight`,`height`,`BMI`,`BP`,`PR`,`RR`,`Temperature`,`SPO2`,`Remarks`,`DoctorInCharge`,`DoctorSignature`,`DateTimeCreated`) values 
+('R123','12345',64,64,64,'64','64','64',64,646,'4','June Delmar',NULL,NULL);
 
 /*Table structure for table `treatment` */
 
@@ -247,6 +261,81 @@ CREATE TABLE `treatment` (
 
 insert  into `treatment`(`treatment_id`,`uid`,`TreatmentDate`,`ChiefComplaints`,`Diagnosis`,`BP`,`PR`,`RR`,`Temp`,`SPO2`,`DoctorInCharge`,`Referral`) values 
 ('T124','12345','2019-05-08 14:41:57','Lorem','Lorem','64','64','64',64,64,'June Delmar','Alvolaryow');
+
+/* Procedure structure for procedure `count_midyearReferral` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `count_midyearReferral` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`%` PROCEDURE `count_midyearReferral`()
+BEGIN 
+SELECT D.Department,Count(T.Referral) AS "Number of Referrals"
+ from patient AS P
+ INNER JOIN treatment AS T
+ INNER JOIN department AS D
+ WHERE P.uid=T.uid &&
+ P.Department_ID=D.Department_id &&
+ T.TreatmentDate BETWEEN CONCAT(YEAR(NOW()),"-01-01") AND CONCAT(YEAR(NOW()),"-07-31")
+  GROUP BY T.Referral;
+ END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `count_patient_records_by_department` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `count_patient_records_by_department` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`%` PROCEDURE `count_patient_records_by_department`()
+BEGIN
+SELECT D.Department, COUNT(P.ID) AS "Number of Records" 
+    FROM patient AS P
+    INNER JOIN department AS D
+    WHERE P.Department_ID=D.Department_ID
+    group by P.Department_id;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `searchPatient` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `searchPatient` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`%` PROCEDURE `searchPatient`(iN searchClass VARCHAR(25),
+ IN searchString VARCHAR(255))
+BEGIN 
+IF searchclass="Recs" THEN
+		SELECT id AS "ID Number",lastname AS "Lastname",firstname AS "First Name",MiddleName AS "Middle Name",C.Course AS "Course",D.Department AS "Department",YearOrGrade AS "Year",Sex  AS "Sex",Age
+		FROM patient P
+		INNER JOIN department AS D
+		INNER JOIN course AS C
+		WHERE 
+		P.Department_id=D.Department_id AND
+		P.Course_id=C.Course_id AND
+		(id LIKE CONCAT('%',searchString,'%')
+		OR lastname LIKE CONCAT('%',searchString,'%')
+		OR firstname LIKE CONCAT('%',searchString,'%')
+		OR MiddleName LIKE CONCAT('%',searchString,'%'))
+		AND id NOT LIKE 'A-%' ;
+	       
+		ELSE
+		SELECT id AS "ID Number",lastname AS "Lastname",firstname AS "First Name",MiddleName AS "Middle Name",C.Course AS "Course",D.Department AS "Department",YearOrGrade AS "Year",Sex  AS "Sex",Age
+		FROM patient P
+		INNER JOIN department AS D
+		INNER JOIN course AS C
+		WHERE  
+		P.Department_id=D.Department_id AND
+		P.Course_id=C.Course_id AND (id LIKE CONCAT('%',searchString,'%')
+		OR lastname LIKE CONCAT('%',searchString,'%')
+		OR firstname LIKE CONCAT('%',searchString,'%')
+		OR MiddleName LIKE CONCAT('%',searchString,'%'))
+		AND id LIKE 'A-%';
+	       
+		END IF;
+ END */$$
+DELIMITER ;
 
 /* Procedure structure for procedure `vcrud_account` */
 
@@ -297,7 +386,7 @@ DELIMITER ;
 DELIMITER $$
 
 /*!50003 CREATE DEFINER=`root`@`%` PROCEDURE `vcrud_course`(
-     IN activity VARCHAR(10),
+     IN activity VARCHAR(50),
     IN course_id VARCHAR(7),
     IN course VARCHAR(255),
     IN department_id VARCHAR(6))
@@ -317,6 +406,9 @@ BEGIN
 		ELSEIF activity="VIEW" THEN		
 			SELECT * FROM course
 				WHERE course.`Course_id`=course_id;
+		elseif activity="VIEW_BY_DEPARTMENT" then
+			select course.`Course_id`,course.`Course` from course
+				where course.`Department_id`=department_id;
 		END IF;
 	END */$$
 DELIMITER ;
@@ -600,6 +692,21 @@ BEGIN
 			SELECT * FROM treatment
 				WHERE treatment.`treatment_id`=treatment_id;
 		END IF;
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `view_logs` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `view_logs` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`%` PROCEDURE `view_logs`()
+BEGIN
+	SELECT CONCAT(log_id,">"),comments FROM _clinic.`logs`
+		ORDER BY lid DESC
+		LIMIT 500;
+		
 	END */$$
 DELIMITER ;
 
