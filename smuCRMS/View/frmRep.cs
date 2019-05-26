@@ -42,7 +42,7 @@ namespace smuCRMS.View
         private void frmReport_Load(object sender, EventArgs e)
         {
            
-            pc.StudentId = pid;
+            pc.id = pid;
             d = pc.getStudByIDRep();
             PDoc1.SetParameterValue("uid", d.Rows[0][0].ToString());
             //customConn();

@@ -38,12 +38,12 @@ namespace smuCRMS.View
                 {
                     pm.uid = uid;
                 }
-                pm.StudentId = txtPID.Text;
+                pm.id = txtPID.Text;
                 pm.spo2 = txtSPo2.Text;
                 pm.lastName = txtLName.Text;
                 pm.firstName = txtFName.Text;
                 pm.middleName = txtMName.Text;
-                pm.course = cmbCourse.Text;
+                pm.course_id = cmbCourse.ValueMember;
                 pm.age = Int32.Parse(cmbAge.Text);
                 pm.year = cmbYear.Text;
                 pm.department = cmbDepartment.Text;
@@ -132,7 +132,7 @@ namespace smuCRMS.View
         public void getProfilebyID(string idnumber)
         {
             txtPID.Text = idnumber;
-            pm.StudentId = idnumber;
+            pm.id = idnumber;
             txtPID.Enabled = false;
             if (pm.getStudByID(this))
             {
@@ -145,12 +145,12 @@ namespace smuCRMS.View
         void loadValToControls()
         {
           
-            txtPID.Text = pm.StudentId.ToString();
+            txtPID.Text = pm.id.ToString();
             txtLName.Text = pm.lastName;
             txtFName.Text = pm.firstName;
             txtMName.Text = pm.middleName;
             cmbDepartment.Text = pm.department;
-            cmbCourse.Text = pm.course;
+            cmbCourse.Text = pm.course_id;
             cmbYear.Text = pm.year;
             if(txtPID.Text.Contains("V") || txtPID.Text.Length.Equals(4))
             {
@@ -474,7 +474,7 @@ namespace smuCRMS.View
                         if (res == DialogResult.Yes)
                         {
                             addCT ct = new addCT();
-                            ct.id = pm.StudentId;
+                            ct.id = pm.id;
                             ct.ShowDialog();
                         }
                         }
@@ -609,7 +609,7 @@ namespace smuCRMS.View
             //    cmbCourse.Visible = true;
             //    cmbYear.Visible = true;
             //}
-            pm.StudentId = txtPID.Text;
+            pm.id = txtPID.Text;
 
           if (pm.verifyID() && txtPID.Text!="")
             {

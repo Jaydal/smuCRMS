@@ -40,7 +40,7 @@ namespace smuCRMS.View
         {
             if(listCC.Items.Count>0 && txtDiag.Text!="" && txtIC.Text!="")
             {
-                pc.StudentId = id;
+                pc.id = id;
                 int ind = listCC.Items.Count;
                 string cc = "";
                 for (int c = 0; c < ind; c++)

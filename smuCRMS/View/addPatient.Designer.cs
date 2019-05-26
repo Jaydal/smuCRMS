@@ -349,11 +349,7 @@
             this.tbProf.Margin = new System.Windows.Forms.Padding(0);
             this.tbProf.Name = "tbProf";
             this.tbProf.Padding = new System.Windows.Forms.Padding(3);
-<<<<<<< HEAD
             this.tbProf.Size = new System.Drawing.Size(1147, 504);
-=======
-            this.tbProf.Size = new System.Drawing.Size(1088, 584);
->>>>>>> 929c0e9317c8e3ddd5cf156ec08a060ab112e6a5
             this.tbProf.TabIndex = 0;
             this.tbProf.Text = "Profile";
             // 
@@ -1828,11 +1824,7 @@
             this.tabPerHist.Location = new System.Drawing.Point(4, 24);
             this.tabPerHist.Name = "tabPerHist";
             this.tabPerHist.Padding = new System.Windows.Forms.Padding(3);
-<<<<<<< HEAD
             this.tabPerHist.Size = new System.Drawing.Size(1147, 504);
-=======
-            this.tabPerHist.Size = new System.Drawing.Size(1088, 584);
->>>>>>> 929c0e9317c8e3ddd5cf156ec08a060ab112e6a5
             this.tabPerHist.TabIndex = 1;
             this.tabPerHist.Text = "Pertinent History";
             // 
@@ -2591,11 +2583,7 @@
             this.tbRemark.Controls.Add(this.pnlRem);
             this.tbRemark.Location = new System.Drawing.Point(4, 24);
             this.tbRemark.Name = "tbRemark";
-<<<<<<< HEAD
             this.tbRemark.Size = new System.Drawing.Size(1147, 504);
-=======
-            this.tbRemark.Size = new System.Drawing.Size(1088, 584);
->>>>>>> 929c0e9317c8e3ddd5cf156ec08a060ab112e6a5
             this.tbRemark.TabIndex = 2;
             this.tbRemark.Text = "Remarks";
             // 
@@ -2787,11 +2775,7 @@
             // 
             // 
             this.txtRemarks.CustomButton.Image = null;
-<<<<<<< HEAD
             this.txtRemarks.CustomButton.Location = new System.Drawing.Point(1043, 2);
-=======
-            this.txtRemarks.CustomButton.Location = new System.Drawing.Point(984, 2);
->>>>>>> 929c0e9317c8e3ddd5cf156ec08a060ab112e6a5
             this.txtRemarks.CustomButton.Margin = new System.Windows.Forms.Padding(4);
             this.txtRemarks.CustomButton.Name = "";
             this.txtRemarks.CustomButton.Size = new System.Drawing.Size(89, 89);

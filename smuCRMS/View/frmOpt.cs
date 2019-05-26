@@ -74,12 +74,12 @@ namespace smuCRMS.View
                     string id = itemString[0];
                     if (id != "")
                     {
-                        pc.StudentId = id;
+                        pc.id = id;
                         pc.firstName = itemString[1];
                         pc.middleName = itemString[2];
                         pc.lastName = itemString[3];
                         pc.sex = itemString[4];
-                        pc.course = itemString[5];
+                        pc.course_id = itemString[5];
                         pc.year = itemString[7];
                         pc.department = itemString[8];
                         pc.addPatientExcel();

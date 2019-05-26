@@ -19,7 +19,7 @@ namespace smuCRMS.View
 
             panelAddImmu.Visible = false;
             panelAddImmu.Enabled = false;
-            pc.StudentId = lblID.Text;
+            pc.id = lblID.Text;
             pc.getStudImmun(dgImmun);
             if (dgImmun.DataSource == null)
             {

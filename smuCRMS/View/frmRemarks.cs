@@ -16,7 +16,7 @@ namespace smuCRMS.View
 
         private void frmRemarks_Load(object sender, EventArgs e)
         {
-               pc.StudentId = lblID.Text;
+               pc.id = lblID.Text;
                 if (pc.getRemark())
                 {
                     txtBMI.Text = pc.bmi;
@@ -64,7 +64,7 @@ namespace smuCRMS.View
             if (btnDone.Text == "Save")
             {
                 btnCancel.Show();
-                pc.StudentId = lblID.Text;
+                pc.id = lblID.Text;
                 pc.bp = txtBP.Text;
                 pc.height = Int32.Parse(txtHeight.Text);
                 pc.pr = txtPR.Text;
