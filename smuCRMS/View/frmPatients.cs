@@ -35,7 +35,8 @@ namespace smuCRMS.View
             {
                 pc.department = search;
                 pc.searchString = txtSearch1.Text;
-                pc.searchInfo(dgv);
+                dgv.DataSource=pc.search();
+    
             }
  
         }
@@ -405,7 +406,7 @@ namespace smuCRMS.View
         private void txtSearch1_TextChanged_1(object sender, EventArgs e)
         {
             pc.searchString = txtSearch1.Text;
-            pc.searchInfo(dgv);
+            dgv.DataSource=pc.search();
             pbarSearch.Value = Int32.Parse(txtSearch1.TextLength.ToString());
             pbarSearch2.Value = Int32.Parse(txtSearch1.TextLength.ToString()) ;
         }
