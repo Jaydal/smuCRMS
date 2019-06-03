@@ -657,23 +657,46 @@ namespace smuCRMS.Controller
         }
         private void getPatientCollection_Remarks(PatientController pc)
         {
-
+            addParamVal("remark_id", pc.remark_id);
+            addParamVal("weight", pc.weight);
+            addParamVal("height",pc.height);
+            addParamVal("BMI",pc.bmi);
+            addParamVal("BP",pc.bp);
+            addParamVal("PR",pc.pr);
+            addParamVal("RR", pc.rr);
+            addParamVal("Temperature",pc.temp);
+            addParamVal("SPO2",pc.spo2);
+            addParamVal("Remarks",pc.remarks);
+            addParamVal("DoctorInCharge",pc.dic);
+            addParamVal("DoctorSignature",pc.phsig);
         }
         private void getPatientCollection_History(PatientController pc)
         {
-
+            //process this into json
+            addParamVal("history_id",pc.hid);
+            addParamVal("history",pc.hid); 
+            addParamVal("history_description",pc.hid);
         }
         private void getPatientCollection_Immunization(PatientController pc)
         {
-
+            //process this into json
+            addParamVal("immunization_id",pc.immuID);
+            addParamVal("immunization",pc.immuID); 
+            addParamVal("level",pc.level);
         }
         private void getPatientCollection_Treatment(PatientController pc)
         {
-
-        }
-        private void getPatientCollection_Remark(PatientController pc)
-        {
-
+            addParamVal("treament_id",pc.tid);
+            addParamVal("TreatmentDate",pc.tDate);
+            addParamVal("ChiefComplaints",pc.tCC);
+            addParamVal("Diagnosis",pc.tDiag);
+            addParamVal("BP",pc.bp);
+            addParamVal("PR",pc.pr);
+            addParamVal("RR",pc.rr);
+            addParamVal("Temp",pc.temp);
+            addParamVal("SPO2",pc.spo2);
+            addParamVal("DoctorInCharge",pc.dic);
+            addParamVal("Referral",pc.refe);
         }
         private void getPatientCollection_Department(PatientController pc)
         {
@@ -713,7 +736,7 @@ namespace smuCRMS.Controller
             }
             else if (STORED_PROCEDURE.Contains("remark"))
             {
-                getPatientCollection_Remark(pc);
+                getPatientCollection_Remarks(pc);
             }
             else if (STORED_PROCEDURE.Contains("treatment"))
             {

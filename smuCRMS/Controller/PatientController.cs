@@ -48,6 +48,7 @@ namespace smuCRMS.Controller
         public string rr { get; set; }
         public string temp { get; set; }
         public string remarks { get; set; }
+        public string remark_id { get; set; }
         public string department_id { get; set; }
         bool valid;
 
@@ -64,6 +65,7 @@ namespace smuCRMS.Controller
         public string othersDesc { get; set; }
         public string olddesc { get; set; }
 
+        public string hid { get; set; }
         public string hospiDesc { get; set; }
         public string allergyDesc { get; set; }
         //INJURIES MODELS 
@@ -80,6 +82,8 @@ namespace smuCRMS.Controller
         public double tWeight { get; set; }
         public string tCC { get; set; }
         public string tDiag { get; set; }
+        public string MyProperty { get; set; }
+        public string tid { get; set; }
 
         public string searchString { get; set; }
         public string classification { get; set; }
