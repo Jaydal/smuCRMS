@@ -135,7 +135,7 @@
             this.metroSetLabel1.Size = new System.Drawing.Size(414, 46);
             this.metroSetLabel1.Style = MetroSet_UI.Design.Style.Light;
             this.metroSetLabel1.StyleManager = null;
-            this.metroSetLabel1.TabIndex = 7;
+            this.metroSetLabel1.TabIndex = 0;
             this.metroSetLabel1.Text = "Log in";
             this.metroSetLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroSetLabel1.ThemeAuthor = "Narwin";
