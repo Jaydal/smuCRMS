@@ -380,16 +380,7 @@ namespace smuCRMS.Controller
             valid = false;
             return dtable = patient.getLogs(this);
         }
-        public string getID()
-        {
-            string id = "";
-            dtable = patient.getPatientIDbyUID(this);
-            if (dtable.Rows.Count > 0)
-            {
-                id = dtable.Rows[0][0].ToString();
-            }
-            return id;
-        }
+     
         public DataTable GetDataFromExcel()
         {
             DataTable dt = new DataTable();
@@ -486,6 +477,12 @@ namespace smuCRMS.Controller
             //this is non-query
             return valid = (patient.callProcedure(this,
                 "CREATE", "vcrud_patient", false).Columns.Count > 0) ? true : false;
+        }
+        public string getID()
+        {
+            DataTable dt = patient.callProcedure(this,
+                "VIEW", "vcrud_patient", true);
+            return (dt.Rows.Count>0)? dt.Rows[0][1].ToString() : "";
         }
     }
 
