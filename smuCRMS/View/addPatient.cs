@@ -207,14 +207,7 @@ namespace smuCRMS.View
         }
         public void enableMPeriod(bool x)
         {
-            label17.Visible = x;
-            label18.Visible = x;
-            dtFMP.Visible = x;
-            dtLMP.Visible = x;
-            label17.Enabled = x;
-            label18.Enabled = x;
-            dtFMP.Enabled = x;
-            dtLMP.Enabled = x;
+            gbMens.Visible = x;
         }
 
         private void rbYes1_CheckedChanged_1(object sender, EventArgs e)
@@ -245,25 +238,25 @@ namespace smuCRMS.View
             {
                
                 cmbYear.Items.AddRange(gs);
-                lblYear.Text = "Grade";
+                //lblYear.Text = "Grade";
                 cmbCourse.Enabled = false;
             }
             else if(cmbCourse.Text== "JUNIOR HIGH SCHOOL")
             {
                 cmbYear.Items.AddRange(js);
-                lblYear.Text = "Grade";
+                //lblYear.Text = "Grade";
                 cmbCourse.Enabled = false;
             }
             else if (cmbCourse.Text == "SENIOR HIGH SCHOOL")
             {
                 cmbYear.Items.AddRange(sh);
-                lblYear.Text = "Grade";
-                lblCourse.Text = "Track";
+                //lblYear.Text = "Grade";
+                //lblCourse.Text = "Track";
             }
             else 
             {
-                lblYear.Text = "Year";
-                lblCourse.Text = "Course";
+                //lblYear.Text = "Year";
+                //lblCourse.Text = "Course";
                 cmbCourse.Enabled = true;
                 //get level to determine-----
                 cmbYear.Items.AddRange(undergrad);
@@ -624,34 +617,34 @@ namespace smuCRMS.View
                 txtPID.Text = "";
                 txtPID.Focus();
             }
-          //else
-          //  {
+          else
+            {
                 
-          //      DialogResult res = MetroMessageBox.Show(this,"If Yes, Kindly Tap your ID Card to Card Reader","Register your SMU ID Card?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-          //      if (res == DialogResult.Yes)
-          //      {
-          //          frmRFID rf = new frmRFID();
-          //          for (int i = 0; i == 0; i++)
-          //          {
-          //              if (rf.connectCard())
-          //              {
-          //                  pm.uid = rf.getcardUID();
-          //              }
-          //              else
-          //              {
-          //                  pm.uid = "";
-          //                  DialogResult ress = MetroMessageBox.Show(this, "No ID Card Recognized!", "Do you want to try again?", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-          //                  if (res == DialogResult.Retry)
-          //                  {
+                DialogResult res = MetroMessageBox.Show(this,"If Yes, Kindly Tap your ID Card to Card Reader","Register your SMU ID Card?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                if (res == DialogResult.Yes)
+                {
+                    frmRFID rf = new frmRFID();
+                    for (int i = 0; i == 0; i++)
+                    {
+                        if (rf.connectCard())
+                        {
+                            pm.uid = rf.getcardUID();
+                        }
+                        else
+                        {
+                            pm.uid = "";
+                            DialogResult ress = MetroMessageBox.Show(this, "No ID Card Recognized!", "Do you want to try again?", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                            if (res == DialogResult.Retry)
+                            {
                     
-          //                      i = 0;
-          //                  }
-          //              }
-          //          }
-          //          rf.Dispose();
-          //      }
-          //      MessageBox.Show(pm.uid);
-          //  }
+                                i = 0;
+                            }
+                        }
+                    }
+                    rf.Dispose();
+                }
+                MessageBox.Show(pm.uid);
+            }
 
         }
 
@@ -990,15 +983,15 @@ namespace smuCRMS.View
         {
             if (txtBoardAdd.Text.Count() > 0)
             {
-                lblLL.Show();
-                lblLLN.Show();
+                gbLL.Show();
+                gbLLn.Show();
                 txtLandLady.Show();
                 txtLLNumber.Show();
             }
             else
             {
-                lblLL.Hide();
-                lblLLN.Hide();
+                gbLL.Hide();
+                gbLLn.Hide();
                 txtLandLady.Hide();
                 txtLLNumber.Hide();
             }

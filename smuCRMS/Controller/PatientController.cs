@@ -451,20 +451,17 @@ namespace smuCRMS.Controller
         //new methods
         public DataTable getDepartment()
         {
-            DataTable dt;
-            return dt = patient.callProcedure(this,
+            return patient.callProcedure(this,
                 "VIEW_ALL", "vcrud_department", true);
         }
         public DataTable getCourse()
         {
-            DataTable dt;
-            return dt = patient.callProcedure(this,
+            return patient.callProcedure(this,
                 "VIEW_BY_DEPARTMENT", "vcrud_course",true);
         }
         public DataTable search()
         {
-            DataTable dt;
-            return dt = patient.callProcedure(this,
+            return patient.callProcedure(this,
                 "", "searchPatient", true);
         }
         public bool verifyID()
@@ -480,6 +477,7 @@ namespace smuCRMS.Controller
         }
         public string getID()
         {
+            //get id by uid in RFID
             DataTable dt = patient.callProcedure(this,
                 "VIEW", "vcrud_patient", true);
             return (dt.Rows.Count>0)? dt.Rows[0][1].ToString() : "";
