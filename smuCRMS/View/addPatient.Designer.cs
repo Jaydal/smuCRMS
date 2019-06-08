@@ -38,6 +38,63 @@
             this.tbProfile = new System.Windows.Forms.TabControl();
             this.tbProf = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.txtPID = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.txtLName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.txtFName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.txtMName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.rbFem = new MaterialSkin.Controls.MaterialRadioButton();
+            this.rbMale = new MaterialSkin.Controls.MaterialRadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbDepartment = new MetroFramework.Controls.MetroComboBox();
+            this.gbC = new System.Windows.Forms.GroupBox();
+            this.cmbCourse = new MetroFramework.Controls.MetroComboBox();
+            this.gbY = new System.Windows.Forms.GroupBox();
+            this.cmbYear = new MetroFramework.Controls.MetroComboBox();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.dtBDay = new System.Windows.Forms.DateTimePicker();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.cmbAge = new System.Windows.Forms.NumericUpDown();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.cmbCivilStat = new MetroFramework.Controls.MetroComboBox();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.txtNat = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.txtHomeAdd = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.txtBoardAdd = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.gbLL = new System.Windows.Forms.GroupBox();
+            this.txtLandLady = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.gbLLn = new System.Windows.Forms.GroupBox();
+            this.txtLLNumber = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.txtFatherName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox28 = new System.Windows.Forms.GroupBox();
+            this.txtFatherOcc = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.txtFatherNumber = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.txtMotherName = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox31 = new System.Windows.Forms.GroupBox();
+            this.txtMotherOcc = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox32 = new System.Windows.Forms.GroupBox();
+            this.txtMotherNumber = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox33 = new System.Windows.Forms.GroupBox();
+            this.txtEmergencyCall = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox34 = new System.Windows.Forms.GroupBox();
+            this.txtRelation = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.groupBox35 = new System.Windows.Forms.GroupBox();
+            this.txtECNumber = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.gbMens = new System.Windows.Forms.GroupBox();
+            this.dtFMP = new System.Windows.Forms.DateTimePicker();
+            this.dtLMP = new System.Windows.Forms.DateTimePicker();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSelect = new MaterialSkin.Controls.MaterialFlatButton();
             this.pbPhoto = new System.Windows.Forms.PictureBox();
             this.tabPerHist = new System.Windows.Forms.TabPage();
             this.gbHist = new System.Windows.Forms.GroupBox();
@@ -116,68 +173,39 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.txtPID = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.txtLName = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.txtFName = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.txtMName = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.rbFem = new MaterialSkin.Controls.MaterialRadioButton();
-            this.rbMale = new MaterialSkin.Controls.MaterialRadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbDepartment = new MetroFramework.Controls.MetroComboBox();
-            this.course = new System.Windows.Forms.GroupBox();
-            this.cmbCourse = new MetroFramework.Controls.MetroComboBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.cmbYear = new MetroFramework.Controls.MetroComboBox();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.dtBDay = new System.Windows.Forms.DateTimePicker();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.cmbAge = new System.Windows.Forms.NumericUpDown();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.cmbCivilStat = new MetroFramework.Controls.MetroComboBox();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.txtNat = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.txtHomeAdd = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.txtBoardAdd = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.gbLL = new System.Windows.Forms.GroupBox();
-            this.txtLandLady = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.gbLLn = new System.Windows.Forms.GroupBox();
-            this.txtLLNumber = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.txtFatherName = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.txtFatherOcc = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.txtFatherNumber = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox30 = new System.Windows.Forms.GroupBox();
-            this.txtMotherName = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox31 = new System.Windows.Forms.GroupBox();
-            this.txtMotherOcc = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox32 = new System.Windows.Forms.GroupBox();
-            this.txtMotherNumber = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox33 = new System.Windows.Forms.GroupBox();
-            this.txtEmergencyCall = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox34 = new System.Windows.Forms.GroupBox();
-            this.txtRelation = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox35 = new System.Windows.Forms.GroupBox();
-            this.txtECNumber = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.gbMens = new System.Windows.Forms.GroupBox();
-            this.dtFMP = new System.Windows.Forms.DateTimePicker();
-            this.dtLMP = new System.Windows.Forms.DateTimePicker();
-            this.cbVisitor = new MetroFramework.Controls.MetroCheckBox();
-            this.btnSelect = new MaterialSkin.Controls.MaterialFlatButton();
             this.metroPanel1.SuspendLayout();
             this.tbProfile.SuspendLayout();
             this.tbProf.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.gbC.SuspendLayout();
+            this.gbY.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAge)).BeginInit();
+            this.groupBox20.SuspendLayout();
+            this.groupBox21.SuspendLayout();
+            this.groupBox22.SuspendLayout();
+            this.groupBox24.SuspendLayout();
+            this.gbLL.SuspendLayout();
+            this.gbLLn.SuspendLayout();
+            this.groupBox27.SuspendLayout();
+            this.groupBox28.SuspendLayout();
+            this.groupBox29.SuspendLayout();
+            this.groupBox30.SuspendLayout();
+            this.groupBox31.SuspendLayout();
+            this.groupBox32.SuspendLayout();
+            this.groupBox33.SuspendLayout();
+            this.groupBox34.SuspendLayout();
+            this.groupBox35.SuspendLayout();
+            this.gbMens.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).BeginInit();
             this.tabPerHist.SuspendLayout();
             this.gbHist.SuspendLayout();
@@ -201,35 +229,6 @@
             this.pnlRem.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.groupBox15.SuspendLayout();
-            this.groupBox17.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.course.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox18.SuspendLayout();
-            this.groupBox19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbAge)).BeginInit();
-            this.groupBox20.SuspendLayout();
-            this.groupBox21.SuspendLayout();
-            this.groupBox22.SuspendLayout();
-            this.groupBox24.SuspendLayout();
-            this.gbLL.SuspendLayout();
-            this.gbLLn.SuspendLayout();
-            this.groupBox27.SuspendLayout();
-            this.groupBox28.SuspendLayout();
-            this.groupBox29.SuspendLayout();
-            this.groupBox30.SuspendLayout();
-            this.groupBox31.SuspendLayout();
-            this.groupBox32.SuspendLayout();
-            this.groupBox33.SuspendLayout();
-            this.groupBox34.SuspendLayout();
-            this.groupBox35.SuspendLayout();
-            this.gbMens.SuspendLayout();
             this.SuspendLayout();
             // 
             // backgroundWorker
@@ -238,6 +237,7 @@
             // 
             // metroPanel1
             // 
+            this.metroPanel1.BackColor = System.Drawing.Color.White;
             this.metroPanel1.Controls.Add(this.btnSave1);
             this.metroPanel1.Controls.Add(this.materialFlatButton3);
             this.metroPanel1.Controls.Add(this.btnPrev);
@@ -246,7 +246,7 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(0, 823);
+            this.metroPanel1.Location = new System.Drawing.Point(0, 715);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(1318, 34);
             this.metroPanel1.TabIndex = 3;
@@ -341,7 +341,7 @@
             this.tbProfile.Location = new System.Drawing.Point(0, 0);
             this.tbProfile.Name = "tbProfile";
             this.tbProfile.SelectedIndex = 0;
-            this.tbProfile.Size = new System.Drawing.Size(1318, 823);
+            this.tbProfile.Size = new System.Drawing.Size(1318, 715);
             this.tbProfile.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tbProfile.TabIndex = 4;
             this.tbProfile.SelectedIndexChanged += new System.EventHandler(this.tbProfile_SelectedIndexChanged);
@@ -356,13 +356,12 @@
             this.tbProf.Margin = new System.Windows.Forms.Padding(0);
             this.tbProf.Name = "tbProf";
             this.tbProf.Padding = new System.Windows.Forms.Padding(3);
-            this.tbProf.Size = new System.Drawing.Size(1310, 795);
+            this.tbProf.Size = new System.Drawing.Size(1310, 687);
             this.tbProf.TabIndex = 0;
             this.tbProf.Text = "Profile";
             // 
             // panel2
             // 
-            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.flowLayoutPanel2);
             this.panel2.Controls.Add(this.panel3);
@@ -370,9 +369,823 @@
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1304, 789);
+            this.panel2.Size = new System.Drawing.Size(1304, 681);
             this.panel2.TabIndex = 158;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.flowLayoutPanel2.Controls.Add(this.groupBox14);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox13);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox15);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox17);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox11);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox1);
+            this.flowLayoutPanel2.Controls.Add(this.gbC);
+            this.flowLayoutPanel2.Controls.Add(this.gbY);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox18);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox19);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox20);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox21);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox22);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox24);
+            this.flowLayoutPanel2.Controls.Add(this.gbLL);
+            this.flowLayoutPanel2.Controls.Add(this.gbLLn);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox27);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox28);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox29);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox30);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox31);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox32);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox33);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox34);
+            this.flowLayoutPanel2.Controls.Add(this.groupBox35);
+            this.flowLayoutPanel2.Controls.Add(this.gbMens);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel2.ForeColor = System.Drawing.Color.Black;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(1063, 0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(50, 0, 50, 50);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1104, 681);
+            this.flowLayoutPanel2.TabIndex = 192;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.txtPID);
+            this.groupBox14.Location = new System.Drawing.Point(53, 3);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(482, 53);
+            this.groupBox14.TabIndex = 193;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "ID Number";
+            // 
+            // txtPID
+            // 
+            this.txtPID.Depth = 0;
+            this.txtPID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPID.Hint = "Leave blank if visitor";
+            this.txtPID.Location = new System.Drawing.Point(3, 26);
+            this.txtPID.MaxLength = 32767;
+            this.txtPID.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtPID.Name = "txtPID";
+            this.txtPID.PasswordChar = '\0';
+            this.txtPID.SelectedText = "";
+            this.txtPID.SelectionLength = 0;
+            this.txtPID.SelectionStart = 0;
+            this.txtPID.Size = new System.Drawing.Size(476, 23);
+            this.txtPID.TabIndex = 191;
+            this.txtPID.TabStop = false;
+            this.txtPID.UseSystemPasswordChar = false;
+            this.txtPID.Click += new System.EventHandler(this.txtPID_Click);
+            this.txtPID.Leave += new System.EventHandler(this.txtPID_Leave);
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.txtLName);
+            this.groupBox13.Location = new System.Drawing.Point(541, 3);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(482, 53);
+            this.groupBox13.TabIndex = 192;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Last Name";
+            // 
+            // txtLName
+            // 
+            this.txtLName.Depth = 0;
+            this.txtLName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtLName.Hint = "";
+            this.txtLName.Location = new System.Drawing.Point(3, 26);
+            this.txtLName.MaxLength = 32767;
+            this.txtLName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtLName.Name = "txtLName";
+            this.txtLName.PasswordChar = '\0';
+            this.txtLName.SelectedText = "";
+            this.txtLName.SelectionLength = 0;
+            this.txtLName.SelectionStart = 0;
+            this.txtLName.Size = new System.Drawing.Size(476, 23);
+            this.txtLName.TabIndex = 192;
+            this.txtLName.TabStop = false;
+            this.txtLName.UseSystemPasswordChar = false;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.txtFName);
+            this.groupBox15.Location = new System.Drawing.Point(53, 62);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(482, 53);
+            this.groupBox15.TabIndex = 192;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "First Name";
+            // 
+            // txtFName
+            // 
+            this.txtFName.Depth = 0;
+            this.txtFName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFName.Hint = "";
+            this.txtFName.Location = new System.Drawing.Point(3, 26);
+            this.txtFName.MaxLength = 32767;
+            this.txtFName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtFName.Name = "txtFName";
+            this.txtFName.PasswordChar = '\0';
+            this.txtFName.SelectedText = "";
+            this.txtFName.SelectionLength = 0;
+            this.txtFName.SelectionStart = 0;
+            this.txtFName.Size = new System.Drawing.Size(476, 23);
+            this.txtFName.TabIndex = 193;
+            this.txtFName.TabStop = false;
+            this.txtFName.UseSystemPasswordChar = false;
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.txtMName);
+            this.groupBox17.Location = new System.Drawing.Point(541, 62);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(482, 53);
+            this.groupBox17.TabIndex = 194;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Middle Name";
+            // 
+            // txtMName
+            // 
+            this.txtMName.Depth = 0;
+            this.txtMName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMName.Hint = "";
+            this.txtMName.Location = new System.Drawing.Point(3, 26);
+            this.txtMName.MaxLength = 32767;
+            this.txtMName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtMName.Name = "txtMName";
+            this.txtMName.PasswordChar = '\0';
+            this.txtMName.SelectedText = "";
+            this.txtMName.SelectionLength = 0;
+            this.txtMName.SelectionStart = 0;
+            this.txtMName.Size = new System.Drawing.Size(476, 23);
+            this.txtMName.TabIndex = 194;
+            this.txtMName.TabStop = false;
+            this.txtMName.UseSystemPasswordChar = false;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.rbFem);
+            this.groupBox11.Controls.Add(this.rbMale);
+            this.groupBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox11.ForeColor = System.Drawing.Color.Black;
+            this.groupBox11.Location = new System.Drawing.Point(53, 121);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(482, 53);
+            this.groupBox11.TabIndex = 194;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Sex";
+            // 
+            // rbFem
+            // 
+            this.rbFem.AutoSize = true;
+            this.rbFem.Depth = 0;
+            this.rbFem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.rbFem.Font = new System.Drawing.Font("Roboto", 10F);
+            this.rbFem.Location = new System.Drawing.Point(59, 26);
+            this.rbFem.Margin = new System.Windows.Forms.Padding(0);
+            this.rbFem.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rbFem.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rbFem.Name = "rbFem";
+            this.rbFem.Ripple = true;
+            this.rbFem.Size = new System.Drawing.Size(71, 24);
+            this.rbFem.TabIndex = 7;
+            this.rbFem.Text = "Female";
+            this.rbFem.UseVisualStyleBackColor = true;
+            this.rbFem.CheckedChanged += new System.EventHandler(this.rbFem_CheckedChanged_1);
+            // 
+            // rbMale
+            // 
+            this.rbMale.AutoSize = true;
+            this.rbMale.Checked = true;
+            this.rbMale.Depth = 0;
+            this.rbMale.Dock = System.Windows.Forms.DockStyle.Left;
+            this.rbMale.Font = new System.Drawing.Font("Roboto", 10F);
+            this.rbMale.Location = new System.Drawing.Point(3, 26);
+            this.rbMale.Margin = new System.Windows.Forms.Padding(0);
+            this.rbMale.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rbMale.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rbMale.Name = "rbMale";
+            this.rbMale.Ripple = true;
+            this.rbMale.Size = new System.Drawing.Size(56, 24);
+            this.rbMale.TabIndex = 5;
+            this.rbMale.TabStop = true;
+            this.rbMale.Text = "Male";
+            this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.CheckedChanged += new System.EventHandler(this.rbFem_CheckedChanged_1);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cmbDepartment);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(541, 121);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(482, 53);
+            this.groupBox1.TabIndex = 193;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Department";
+            // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.ItemHeight = 23;
+            this.cmbDepartment.Location = new System.Drawing.Point(3, 26);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(476, 29);
+            this.cmbDepartment.TabIndex = 7;
+            this.cmbDepartment.UseSelectable = true;
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged_1);
+            // 
+            // gbC
+            // 
+            this.gbC.Controls.Add(this.cmbCourse);
+            this.gbC.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.gbC.Location = new System.Drawing.Point(53, 180);
+            this.gbC.Name = "gbC";
+            this.gbC.Size = new System.Drawing.Size(482, 53);
+            this.gbC.TabIndex = 192;
+            this.gbC.TabStop = false;
+            this.gbC.Text = "Course";
+            // 
+            // cmbCourse
+            // 
+            this.cmbCourse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbCourse.FormattingEnabled = true;
+            this.cmbCourse.IntegralHeight = false;
+            this.cmbCourse.ItemHeight = 23;
+            this.cmbCourse.Location = new System.Drawing.Point(3, 26);
+            this.cmbCourse.MaxDropDownItems = 50;
+            this.cmbCourse.MaxLength = 100;
+            this.cmbCourse.Name = "cmbCourse";
+            this.cmbCourse.Size = new System.Drawing.Size(476, 29);
+            this.cmbCourse.TabIndex = 188;
+            this.cmbCourse.UseSelectable = true;
+            // 
+            // gbY
+            // 
+            this.gbY.Controls.Add(this.cmbYear);
+            this.gbY.Location = new System.Drawing.Point(541, 180);
+            this.gbY.Name = "gbY";
+            this.gbY.Size = new System.Drawing.Size(482, 53);
+            this.gbY.TabIndex = 192;
+            this.gbY.TabStop = false;
+            this.gbY.Text = "Year";
+            // 
+            // cmbYear
+            // 
+            this.cmbYear.BackColor = System.Drawing.Color.White;
+            this.cmbYear.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbYear.FormattingEnabled = true;
+            this.cmbYear.ItemHeight = 23;
+            this.cmbYear.Location = new System.Drawing.Point(3, 26);
+            this.cmbYear.Name = "cmbYear";
+            this.cmbYear.Size = new System.Drawing.Size(476, 29);
+            this.cmbYear.Style = MetroFramework.MetroColorStyle.Teal;
+            this.cmbYear.TabIndex = 8;
+            this.cmbYear.UseSelectable = true;
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.dtBDay);
+            this.groupBox18.Location = new System.Drawing.Point(53, 239);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(482, 53);
+            this.groupBox18.TabIndex = 194;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Date of Birth";
+            // 
+            // dtBDay
+            // 
+            this.dtBDay.CalendarFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtBDay.CustomFormat = "yyyy-MM-dd";
+            this.dtBDay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtBDay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtBDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtBDay.Location = new System.Drawing.Point(3, 26);
+            this.dtBDay.Margin = new System.Windows.Forms.Padding(2);
+            this.dtBDay.MaxDate = new System.DateTime(2099, 11, 26, 0, 0, 0, 0);
+            this.dtBDay.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtBDay.Name = "dtBDay";
+            this.dtBDay.Size = new System.Drawing.Size(476, 26);
+            this.dtBDay.TabIndex = 11;
+            this.dtBDay.Value = new System.DateTime(2018, 5, 19, 0, 0, 0, 0);
+            this.dtBDay.ValueChanged += new System.EventHandler(this.dtBDay_ValueChanged);
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.cmbAge);
+            this.groupBox19.Location = new System.Drawing.Point(541, 239);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(482, 53);
+            this.groupBox19.TabIndex = 194;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Age";
+            // 
+            // cmbAge
+            // 
+            this.cmbAge.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbAge.Enabled = false;
+            this.cmbAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAge.Location = new System.Drawing.Point(3, 26);
+            this.cmbAge.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbAge.Name = "cmbAge";
+            this.cmbAge.Size = new System.Drawing.Size(476, 27);
+            this.cmbAge.TabIndex = 11;
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.cmbCivilStat);
+            this.groupBox20.Location = new System.Drawing.Point(53, 298);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(482, 53);
+            this.groupBox20.TabIndex = 194;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Civil Status";
+            // 
+            // cmbCivilStat
+            // 
+            this.cmbCivilStat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbCivilStat.FormattingEnabled = true;
+            this.cmbCivilStat.ItemHeight = 23;
+            this.cmbCivilStat.Items.AddRange(new object[] {
+            "Single",
+            "Married",
+            "Separated",
+            "Widowed"});
+            this.cmbCivilStat.Location = new System.Drawing.Point(3, 26);
+            this.cmbCivilStat.Name = "cmbCivilStat";
+            this.cmbCivilStat.Size = new System.Drawing.Size(476, 29);
+            this.cmbCivilStat.TabIndex = 194;
+            this.cmbCivilStat.UseSelectable = true;
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.txtNat);
+            this.groupBox21.Location = new System.Drawing.Point(541, 298);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(482, 53);
+            this.groupBox21.TabIndex = 194;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Nationality";
+            // 
+            // txtNat
+            // 
+            this.txtNat.Depth = 0;
+            this.txtNat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNat.Hint = "";
+            this.txtNat.Location = new System.Drawing.Point(3, 26);
+            this.txtNat.MaxLength = 32767;
+            this.txtNat.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtNat.Name = "txtNat";
+            this.txtNat.PasswordChar = '\0';
+            this.txtNat.SelectedText = "";
+            this.txtNat.SelectionLength = 0;
+            this.txtNat.SelectionStart = 0;
+            this.txtNat.Size = new System.Drawing.Size(476, 23);
+            this.txtNat.TabIndex = 191;
+            this.txtNat.TabStop = false;
+            this.txtNat.Text = "Filipino";
+            this.txtNat.UseSystemPasswordChar = false;
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.txtHomeAdd);
+            this.groupBox22.Location = new System.Drawing.Point(53, 357);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(482, 53);
+            this.groupBox22.TabIndex = 194;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Home Address";
+            // 
+            // txtHomeAdd
+            // 
+            this.txtHomeAdd.Depth = 0;
+            this.txtHomeAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtHomeAdd.Hint = "";
+            this.txtHomeAdd.Location = new System.Drawing.Point(3, 26);
+            this.txtHomeAdd.MaxLength = 32767;
+            this.txtHomeAdd.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtHomeAdd.Name = "txtHomeAdd";
+            this.txtHomeAdd.PasswordChar = '\0';
+            this.txtHomeAdd.SelectedText = "";
+            this.txtHomeAdd.SelectionLength = 0;
+            this.txtHomeAdd.SelectionStart = 0;
+            this.txtHomeAdd.Size = new System.Drawing.Size(476, 23);
+            this.txtHomeAdd.TabIndex = 192;
+            this.txtHomeAdd.TabStop = false;
+            this.txtHomeAdd.UseSystemPasswordChar = false;
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.Controls.Add(this.txtBoardAdd);
+            this.groupBox24.Location = new System.Drawing.Point(541, 357);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(482, 53);
+            this.groupBox24.TabIndex = 195;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "Boarding Address";
+            // 
+            // txtBoardAdd
+            // 
+            this.txtBoardAdd.Depth = 0;
+            this.txtBoardAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBoardAdd.Hint = "";
+            this.txtBoardAdd.Location = new System.Drawing.Point(3, 26);
+            this.txtBoardAdd.MaxLength = 32767;
+            this.txtBoardAdd.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtBoardAdd.Name = "txtBoardAdd";
+            this.txtBoardAdd.PasswordChar = '\0';
+            this.txtBoardAdd.SelectedText = "";
+            this.txtBoardAdd.SelectionLength = 0;
+            this.txtBoardAdd.SelectionStart = 0;
+            this.txtBoardAdd.Size = new System.Drawing.Size(476, 23);
+            this.txtBoardAdd.TabIndex = 192;
+            this.txtBoardAdd.TabStop = false;
+            this.txtBoardAdd.UseSystemPasswordChar = false;
+            this.txtBoardAdd.TextChanged += new System.EventHandler(this.txtBoardAdd_TextChanged);
+            // 
+            // gbLL
+            // 
+            this.gbLL.Controls.Add(this.txtLandLady);
+            this.gbLL.Location = new System.Drawing.Point(53, 416);
+            this.gbLL.Name = "gbLL";
+            this.gbLL.Size = new System.Drawing.Size(482, 53);
+            this.gbLL.TabIndex = 195;
+            this.gbLL.TabStop = false;
+            this.gbLL.Text = "Land Lady/Lord";
+            this.gbLL.Visible = false;
+            // 
+            // txtLandLady
+            // 
+            this.txtLandLady.Depth = 0;
+            this.txtLandLady.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtLandLady.Hint = "";
+            this.txtLandLady.Location = new System.Drawing.Point(3, 26);
+            this.txtLandLady.MaxLength = 32767;
+            this.txtLandLady.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtLandLady.Name = "txtLandLady";
+            this.txtLandLady.PasswordChar = '\0';
+            this.txtLandLady.SelectedText = "";
+            this.txtLandLady.SelectionLength = 0;
+            this.txtLandLady.SelectionStart = 0;
+            this.txtLandLady.Size = new System.Drawing.Size(476, 23);
+            this.txtLandLady.TabIndex = 192;
+            this.txtLandLady.TabStop = false;
+            this.txtLandLady.UseSystemPasswordChar = false;
+            // 
+            // gbLLn
+            // 
+            this.gbLLn.Controls.Add(this.txtLLNumber);
+            this.gbLLn.Location = new System.Drawing.Point(541, 416);
+            this.gbLLn.Name = "gbLLn";
+            this.gbLLn.Size = new System.Drawing.Size(482, 53);
+            this.gbLLn.TabIndex = 196;
+            this.gbLLn.TabStop = false;
+            this.gbLLn.Text = "Tel/Cel Number";
+            this.gbLLn.Visible = false;
+            // 
+            // txtLLNumber
+            // 
+            this.txtLLNumber.Depth = 0;
+            this.txtLLNumber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtLLNumber.Hint = "";
+            this.txtLLNumber.Location = new System.Drawing.Point(3, 26);
+            this.txtLLNumber.MaxLength = 32767;
+            this.txtLLNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtLLNumber.Name = "txtLLNumber";
+            this.txtLLNumber.PasswordChar = '\0';
+            this.txtLLNumber.SelectedText = "";
+            this.txtLLNumber.SelectionLength = 0;
+            this.txtLLNumber.SelectionStart = 0;
+            this.txtLLNumber.Size = new System.Drawing.Size(476, 23);
+            this.txtLLNumber.TabIndex = 192;
+            this.txtLLNumber.TabStop = false;
+            this.txtLLNumber.UseSystemPasswordChar = false;
+            // 
+            // groupBox27
+            // 
+            this.groupBox27.Controls.Add(this.txtFatherName);
+            this.groupBox27.Location = new System.Drawing.Point(53, 475);
+            this.groupBox27.Name = "groupBox27";
+            this.groupBox27.Size = new System.Drawing.Size(482, 53);
+            this.groupBox27.TabIndex = 197;
+            this.groupBox27.TabStop = false;
+            this.groupBox27.Text = "Father\'s Name";
+            // 
+            // txtFatherName
+            // 
+            this.txtFatherName.Depth = 0;
+            this.txtFatherName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFatherName.Hint = "";
+            this.txtFatherName.Location = new System.Drawing.Point(3, 26);
+            this.txtFatherName.MaxLength = 32767;
+            this.txtFatherName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtFatherName.Name = "txtFatherName";
+            this.txtFatherName.PasswordChar = '\0';
+            this.txtFatherName.SelectedText = "";
+            this.txtFatherName.SelectionLength = 0;
+            this.txtFatherName.SelectionStart = 0;
+            this.txtFatherName.Size = new System.Drawing.Size(476, 23);
+            this.txtFatherName.TabIndex = 192;
+            this.txtFatherName.TabStop = false;
+            this.txtFatherName.UseSystemPasswordChar = false;
+            // 
+            // groupBox28
+            // 
+            this.groupBox28.Controls.Add(this.txtFatherOcc);
+            this.groupBox28.Location = new System.Drawing.Point(541, 475);
+            this.groupBox28.Name = "groupBox28";
+            this.groupBox28.Size = new System.Drawing.Size(482, 53);
+            this.groupBox28.TabIndex = 198;
+            this.groupBox28.TabStop = false;
+            this.groupBox28.Text = "Occupation";
+            // 
+            // txtFatherOcc
+            // 
+            this.txtFatherOcc.Depth = 0;
+            this.txtFatherOcc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFatherOcc.Hint = "";
+            this.txtFatherOcc.Location = new System.Drawing.Point(3, 26);
+            this.txtFatherOcc.MaxLength = 32767;
+            this.txtFatherOcc.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtFatherOcc.Name = "txtFatherOcc";
+            this.txtFatherOcc.PasswordChar = '\0';
+            this.txtFatherOcc.SelectedText = "";
+            this.txtFatherOcc.SelectionLength = 0;
+            this.txtFatherOcc.SelectionStart = 0;
+            this.txtFatherOcc.Size = new System.Drawing.Size(476, 23);
+            this.txtFatherOcc.TabIndex = 192;
+            this.txtFatherOcc.TabStop = false;
+            this.txtFatherOcc.UseSystemPasswordChar = false;
+            // 
+            // groupBox29
+            // 
+            this.groupBox29.Controls.Add(this.txtFatherNumber);
+            this.groupBox29.Location = new System.Drawing.Point(53, 534);
+            this.groupBox29.Name = "groupBox29";
+            this.groupBox29.Size = new System.Drawing.Size(482, 53);
+            this.groupBox29.TabIndex = 199;
+            this.groupBox29.TabStop = false;
+            this.groupBox29.Text = "Tel/Cel Number";
+            // 
+            // txtFatherNumber
+            // 
+            this.txtFatherNumber.Depth = 0;
+            this.txtFatherNumber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFatherNumber.Hint = "";
+            this.txtFatherNumber.Location = new System.Drawing.Point(3, 26);
+            this.txtFatherNumber.MaxLength = 32767;
+            this.txtFatherNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtFatherNumber.Name = "txtFatherNumber";
+            this.txtFatherNumber.PasswordChar = '\0';
+            this.txtFatherNumber.SelectedText = "";
+            this.txtFatherNumber.SelectionLength = 0;
+            this.txtFatherNumber.SelectionStart = 0;
+            this.txtFatherNumber.Size = new System.Drawing.Size(476, 23);
+            this.txtFatherNumber.TabIndex = 192;
+            this.txtFatherNumber.TabStop = false;
+            this.txtFatherNumber.UseSystemPasswordChar = false;
+            // 
+            // groupBox30
+            // 
+            this.groupBox30.Controls.Add(this.txtMotherName);
+            this.groupBox30.Location = new System.Drawing.Point(541, 534);
+            this.groupBox30.Name = "groupBox30";
+            this.groupBox30.Size = new System.Drawing.Size(482, 53);
+            this.groupBox30.TabIndex = 200;
+            this.groupBox30.TabStop = false;
+            this.groupBox30.Text = "Mother\'s Name";
+            // 
+            // txtMotherName
+            // 
+            this.txtMotherName.Depth = 0;
+            this.txtMotherName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMotherName.Hint = "";
+            this.txtMotherName.Location = new System.Drawing.Point(3, 26);
+            this.txtMotherName.MaxLength = 32767;
+            this.txtMotherName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtMotherName.Name = "txtMotherName";
+            this.txtMotherName.PasswordChar = '\0';
+            this.txtMotherName.SelectedText = "";
+            this.txtMotherName.SelectionLength = 0;
+            this.txtMotherName.SelectionStart = 0;
+            this.txtMotherName.Size = new System.Drawing.Size(476, 23);
+            this.txtMotherName.TabIndex = 192;
+            this.txtMotherName.TabStop = false;
+            this.txtMotherName.UseSystemPasswordChar = false;
+            this.txtMotherName.TextChanged += new System.EventHandler(this.txtMotherName_TextChanged);
+            // 
+            // groupBox31
+            // 
+            this.groupBox31.Controls.Add(this.txtMotherOcc);
+            this.groupBox31.Location = new System.Drawing.Point(53, 593);
+            this.groupBox31.Name = "groupBox31";
+            this.groupBox31.Size = new System.Drawing.Size(482, 53);
+            this.groupBox31.TabIndex = 201;
+            this.groupBox31.TabStop = false;
+            this.groupBox31.Text = "Occupation";
+            // 
+            // txtMotherOcc
+            // 
+            this.txtMotherOcc.Depth = 0;
+            this.txtMotherOcc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMotherOcc.Hint = "";
+            this.txtMotherOcc.Location = new System.Drawing.Point(3, 26);
+            this.txtMotherOcc.MaxLength = 32767;
+            this.txtMotherOcc.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtMotherOcc.Name = "txtMotherOcc";
+            this.txtMotherOcc.PasswordChar = '\0';
+            this.txtMotherOcc.SelectedText = "";
+            this.txtMotherOcc.SelectionLength = 0;
+            this.txtMotherOcc.SelectionStart = 0;
+            this.txtMotherOcc.Size = new System.Drawing.Size(476, 23);
+            this.txtMotherOcc.TabIndex = 192;
+            this.txtMotherOcc.TabStop = false;
+            this.txtMotherOcc.UseSystemPasswordChar = false;
+            // 
+            // groupBox32
+            // 
+            this.groupBox32.Controls.Add(this.txtMotherNumber);
+            this.groupBox32.Location = new System.Drawing.Point(541, 593);
+            this.groupBox32.Name = "groupBox32";
+            this.groupBox32.Size = new System.Drawing.Size(482, 53);
+            this.groupBox32.TabIndex = 202;
+            this.groupBox32.TabStop = false;
+            this.groupBox32.Text = "Tel/Cel Number";
+            // 
+            // txtMotherNumber
+            // 
+            this.txtMotherNumber.Depth = 0;
+            this.txtMotherNumber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtMotherNumber.Hint = "";
+            this.txtMotherNumber.Location = new System.Drawing.Point(3, 26);
+            this.txtMotherNumber.MaxLength = 32767;
+            this.txtMotherNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtMotherNumber.Name = "txtMotherNumber";
+            this.txtMotherNumber.PasswordChar = '\0';
+            this.txtMotherNumber.SelectedText = "";
+            this.txtMotherNumber.SelectionLength = 0;
+            this.txtMotherNumber.SelectionStart = 0;
+            this.txtMotherNumber.Size = new System.Drawing.Size(476, 23);
+            this.txtMotherNumber.TabIndex = 192;
+            this.txtMotherNumber.TabStop = false;
+            this.txtMotherNumber.UseSystemPasswordChar = false;
+            this.txtMotherNumber.TextChanged += new System.EventHandler(this.txtMotherNumber_TextChanged);
+            // 
+            // groupBox33
+            // 
+            this.groupBox33.Controls.Add(this.txtEmergencyCall);
+            this.groupBox33.Location = new System.Drawing.Point(53, 652);
+            this.groupBox33.Name = "groupBox33";
+            this.groupBox33.Size = new System.Drawing.Size(482, 53);
+            this.groupBox33.TabIndex = 203;
+            this.groupBox33.TabStop = false;
+            this.groupBox33.Text = "Emergency Contact";
+            // 
+            // txtEmergencyCall
+            // 
+            this.txtEmergencyCall.Depth = 0;
+            this.txtEmergencyCall.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtEmergencyCall.Hint = "";
+            this.txtEmergencyCall.Location = new System.Drawing.Point(3, 26);
+            this.txtEmergencyCall.MaxLength = 32767;
+            this.txtEmergencyCall.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtEmergencyCall.Name = "txtEmergencyCall";
+            this.txtEmergencyCall.PasswordChar = '\0';
+            this.txtEmergencyCall.SelectedText = "";
+            this.txtEmergencyCall.SelectionLength = 0;
+            this.txtEmergencyCall.SelectionStart = 0;
+            this.txtEmergencyCall.Size = new System.Drawing.Size(476, 23);
+            this.txtEmergencyCall.TabIndex = 192;
+            this.txtEmergencyCall.TabStop = false;
+            this.txtEmergencyCall.UseSystemPasswordChar = false;
+            this.txtEmergencyCall.TextChanged += new System.EventHandler(this.txtEmergencyCall_TextChanged);
+            // 
+            // groupBox34
+            // 
+            this.groupBox34.Controls.Add(this.txtRelation);
+            this.groupBox34.Location = new System.Drawing.Point(541, 652);
+            this.groupBox34.Name = "groupBox34";
+            this.groupBox34.Size = new System.Drawing.Size(482, 53);
+            this.groupBox34.TabIndex = 204;
+            this.groupBox34.TabStop = false;
+            this.groupBox34.Text = "Relation";
+            // 
+            // txtRelation
+            // 
+            this.txtRelation.Depth = 0;
+            this.txtRelation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtRelation.Hint = "";
+            this.txtRelation.Location = new System.Drawing.Point(3, 26);
+            this.txtRelation.MaxLength = 32767;
+            this.txtRelation.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtRelation.Name = "txtRelation";
+            this.txtRelation.PasswordChar = '\0';
+            this.txtRelation.SelectedText = "";
+            this.txtRelation.SelectionLength = 0;
+            this.txtRelation.SelectionStart = 0;
+            this.txtRelation.Size = new System.Drawing.Size(476, 23);
+            this.txtRelation.TabIndex = 192;
+            this.txtRelation.TabStop = false;
+            this.txtRelation.UseSystemPasswordChar = false;
+            this.txtRelation.TextChanged += new System.EventHandler(this.txtRelation_TextChanged_1);
+            // 
+            // groupBox35
+            // 
+            this.groupBox35.Controls.Add(this.txtECNumber);
+            this.groupBox35.Location = new System.Drawing.Point(53, 711);
+            this.groupBox35.Name = "groupBox35";
+            this.groupBox35.Size = new System.Drawing.Size(482, 53);
+            this.groupBox35.TabIndex = 205;
+            this.groupBox35.TabStop = false;
+            this.groupBox35.Text = "Tel/Cel Number";
+            // 
+            // txtECNumber
+            // 
+            this.txtECNumber.Depth = 0;
+            this.txtECNumber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtECNumber.Hint = "";
+            this.txtECNumber.Location = new System.Drawing.Point(3, 26);
+            this.txtECNumber.MaxLength = 32767;
+            this.txtECNumber.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtECNumber.Name = "txtECNumber";
+            this.txtECNumber.PasswordChar = '\0';
+            this.txtECNumber.SelectedText = "";
+            this.txtECNumber.SelectionLength = 0;
+            this.txtECNumber.SelectionStart = 0;
+            this.txtECNumber.Size = new System.Drawing.Size(476, 23);
+            this.txtECNumber.TabIndex = 192;
+            this.txtECNumber.TabStop = false;
+            this.txtECNumber.UseSystemPasswordChar = false;
+            // 
+            // gbMens
+            // 
+            this.gbMens.Controls.Add(this.dtFMP);
+            this.gbMens.Controls.Add(this.dtLMP);
+            this.gbMens.Location = new System.Drawing.Point(541, 711);
+            this.gbMens.Name = "gbMens";
+            this.gbMens.Size = new System.Drawing.Size(482, 53);
+            this.gbMens.TabIndex = 193;
+            this.gbMens.TabStop = false;
+            this.gbMens.Text = "First and Last Menstruation";
+            // 
+            // dtFMP
+            // 
+            this.dtFMP.CustomFormat = "yyyy-MM-dd";
+            this.dtFMP.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dtFMP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFMP.Location = new System.Drawing.Point(3, 26);
+            this.dtFMP.Name = "dtFMP";
+            this.dtFMP.Size = new System.Drawing.Size(156, 30);
+            this.dtFMP.TabIndex = 14;
+            // 
+            // dtLMP
+            // 
+            this.dtLMP.CustomFormat = "yyyy-MM-dd";
+            this.dtLMP.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dtLMP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtLMP.Location = new System.Drawing.Point(323, 26);
+            this.dtLMP.Name = "dtLMP";
+            this.dtLMP.Size = new System.Drawing.Size(156, 30);
+            this.dtLMP.TabIndex = 15;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel3.Controls.Add(this.btnSelect);
+            this.panel3.Controls.Add(this.pbPhoto);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(1104, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 681);
+            this.panel3.TabIndex = 191;
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.AutoSize = true;
+            this.btnSelect.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSelect.BackColor = System.Drawing.Color.White;
+            this.btnSelect.Depth = 0;
+            this.btnSelect.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSelect.Icon = null;
+            this.btnSelect.Location = new System.Drawing.Point(0, 200);
+            this.btnSelect.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSelect.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Primary = false;
+            this.btnSelect.Size = new System.Drawing.Size(200, 36);
+            this.btnSelect.TabIndex = 188;
+            this.btnSelect.Text = "Browse Picture";
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnTake_Click);
             // 
             // pbPhoto
             // 
@@ -1840,822 +2653,13 @@
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.Controls.Add(this.btnSelect);
-            this.panel3.Controls.Add(this.pbPhoto);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1104, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 789);
-            this.panel3.TabIndex = 191;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.flowLayoutPanel2.Controls.Add(this.groupBox14);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox13);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox15);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox17);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox11);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox1);
-            this.flowLayoutPanel2.Controls.Add(this.course);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox12);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox18);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox19);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox20);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox21);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox22);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox24);
-            this.flowLayoutPanel2.Controls.Add(this.gbLL);
-            this.flowLayoutPanel2.Controls.Add(this.gbLLn);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox27);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox28);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox29);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox30);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox31);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox32);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox33);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox34);
-            this.flowLayoutPanel2.Controls.Add(this.groupBox35);
-            this.flowLayoutPanel2.Controls.Add(this.gbMens);
-            this.flowLayoutPanel2.Controls.Add(this.cbVisitor);
-            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(1063, 200);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1104, 789);
-            this.flowLayoutPanel2.TabIndex = 192;
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.txtPID);
-            this.groupBox14.Location = new System.Drawing.Point(3, 3);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(166, 53);
-            this.groupBox14.TabIndex = 193;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "ID Number";
-            // 
-            // txtPID
-            // 
-            this.txtPID.Depth = 0;
-            this.txtPID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPID.Hint = "";
-            this.txtPID.Location = new System.Drawing.Point(3, 24);
-            this.txtPID.MaxLength = 32767;
-            this.txtPID.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtPID.Name = "txtPID";
-            this.txtPID.PasswordChar = '\0';
-            this.txtPID.SelectedText = "";
-            this.txtPID.SelectionLength = 0;
-            this.txtPID.SelectionStart = 0;
-            this.txtPID.Size = new System.Drawing.Size(160, 23);
-            this.txtPID.TabIndex = 191;
-            this.txtPID.TabStop = false;
-            this.txtPID.UseSystemPasswordChar = false;
-            this.txtPID.Leave += new System.EventHandler(this.txtPID_Leave);
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.txtLName);
-            this.groupBox13.Location = new System.Drawing.Point(175, 3);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(226, 53);
-            this.groupBox13.TabIndex = 192;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Last Name";
-            // 
-            // txtLName
-            // 
-            this.txtLName.Depth = 0;
-            this.txtLName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtLName.Hint = "";
-            this.txtLName.Location = new System.Drawing.Point(3, 24);
-            this.txtLName.MaxLength = 32767;
-            this.txtLName.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtLName.Name = "txtLName";
-            this.txtLName.PasswordChar = '\0';
-            this.txtLName.SelectedText = "";
-            this.txtLName.SelectionLength = 0;
-            this.txtLName.SelectionStart = 0;
-            this.txtLName.Size = new System.Drawing.Size(220, 23);
-            this.txtLName.TabIndex = 192;
-            this.txtLName.TabStop = false;
-            this.txtLName.UseSystemPasswordChar = false;
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.txtFName);
-            this.groupBox15.Location = new System.Drawing.Point(407, 3);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(226, 53);
-            this.groupBox15.TabIndex = 192;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "First Name";
-            // 
-            // txtFName
-            // 
-            this.txtFName.Depth = 0;
-            this.txtFName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtFName.Hint = "";
-            this.txtFName.Location = new System.Drawing.Point(3, 24);
-            this.txtFName.MaxLength = 32767;
-            this.txtFName.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtFName.Name = "txtFName";
-            this.txtFName.PasswordChar = '\0';
-            this.txtFName.SelectedText = "";
-            this.txtFName.SelectionLength = 0;
-            this.txtFName.SelectionStart = 0;
-            this.txtFName.Size = new System.Drawing.Size(220, 23);
-            this.txtFName.TabIndex = 193;
-            this.txtFName.TabStop = false;
-            this.txtFName.UseSystemPasswordChar = false;
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.txtMName);
-            this.groupBox17.Location = new System.Drawing.Point(639, 3);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(226, 53);
-            this.groupBox17.TabIndex = 194;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "Middle Name";
-            // 
-            // txtMName
-            // 
-            this.txtMName.Depth = 0;
-            this.txtMName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMName.Hint = "";
-            this.txtMName.Location = new System.Drawing.Point(3, 24);
-            this.txtMName.MaxLength = 32767;
-            this.txtMName.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtMName.Name = "txtMName";
-            this.txtMName.PasswordChar = '\0';
-            this.txtMName.SelectedText = "";
-            this.txtMName.SelectionLength = 0;
-            this.txtMName.SelectionStart = 0;
-            this.txtMName.Size = new System.Drawing.Size(220, 23);
-            this.txtMName.TabIndex = 194;
-            this.txtMName.TabStop = false;
-            this.txtMName.UseSystemPasswordChar = false;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.rbFem);
-            this.groupBox11.Controls.Add(this.rbMale);
-            this.groupBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox11.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.groupBox11.Location = new System.Drawing.Point(871, 3);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(142, 53);
-            this.groupBox11.TabIndex = 194;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Sex";
-            // 
-            // rbFem
-            // 
-            this.rbFem.AutoSize = true;
-            this.rbFem.Depth = 0;
-            this.rbFem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbFem.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rbFem.Location = new System.Drawing.Point(64, 24);
-            this.rbFem.Margin = new System.Windows.Forms.Padding(0);
-            this.rbFem.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.rbFem.MouseState = MaterialSkin.MouseState.HOVER;
-            this.rbFem.Name = "rbFem";
-            this.rbFem.Ripple = true;
-            this.rbFem.Size = new System.Drawing.Size(76, 26);
-            this.rbFem.TabIndex = 7;
-            this.rbFem.Text = "Female";
-            this.rbFem.UseVisualStyleBackColor = true;
-            // 
-            // rbMale
-            // 
-            this.rbMale.AutoSize = true;
-            this.rbMale.Checked = true;
-            this.rbMale.Depth = 0;
-            this.rbMale.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbMale.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rbMale.Location = new System.Drawing.Point(3, 24);
-            this.rbMale.Margin = new System.Windows.Forms.Padding(0);
-            this.rbMale.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.rbMale.MouseState = MaterialSkin.MouseState.HOVER;
-            this.rbMale.Name = "rbMale";
-            this.rbMale.Ripple = true;
-            this.rbMale.Size = new System.Drawing.Size(61, 26);
-            this.rbMale.TabIndex = 5;
-            this.rbMale.TabStop = true;
-            this.rbMale.Text = "Male";
-            this.rbMale.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cmbDepartment);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.groupBox1.Location = new System.Drawing.Point(3, 62);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 53);
-            this.groupBox1.TabIndex = 193;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Department";
-            // 
-            // cmbDepartment
-            // 
-            this.cmbDepartment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmbDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.ItemHeight = 23;
-            this.cmbDepartment.Location = new System.Drawing.Point(3, 24);
-            this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(392, 29);
-            this.cmbDepartment.TabIndex = 7;
-            this.cmbDepartment.UseSelectable = true;
-            // 
-            // course
-            // 
-            this.course.Controls.Add(this.cmbCourse);
-            this.course.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.course.Location = new System.Drawing.Point(407, 62);
-            this.course.Name = "course";
-            this.course.Size = new System.Drawing.Size(479, 53);
-            this.course.TabIndex = 192;
-            this.course.TabStop = false;
-            this.course.Text = "Course";
-            // 
-            // cmbCourse
-            // 
-            this.cmbCourse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmbCourse.FormattingEnabled = true;
-            this.cmbCourse.IntegralHeight = false;
-            this.cmbCourse.ItemHeight = 23;
-            this.cmbCourse.Location = new System.Drawing.Point(3, 24);
-            this.cmbCourse.MaxDropDownItems = 50;
-            this.cmbCourse.MaxLength = 100;
-            this.cmbCourse.Name = "cmbCourse";
-            this.cmbCourse.Size = new System.Drawing.Size(473, 29);
-            this.cmbCourse.TabIndex = 188;
-            this.cmbCourse.UseSelectable = true;
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.cmbYear);
-            this.groupBox12.Location = new System.Drawing.Point(892, 62);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(160, 56);
-            this.groupBox12.TabIndex = 192;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Year";
-            // 
-            // cmbYear
-            // 
-            this.cmbYear.BackColor = System.Drawing.Color.White;
-            this.cmbYear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmbYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbYear.FormattingEnabled = true;
-            this.cmbYear.ItemHeight = 23;
-            this.cmbYear.Location = new System.Drawing.Point(3, 24);
-            this.cmbYear.Name = "cmbYear";
-            this.cmbYear.Size = new System.Drawing.Size(154, 29);
-            this.cmbYear.Style = MetroFramework.MetroColorStyle.Teal;
-            this.cmbYear.TabIndex = 8;
-            this.cmbYear.UseSelectable = true;
-            // 
-            // groupBox18
-            // 
-            this.groupBox18.Controls.Add(this.dtBDay);
-            this.groupBox18.Location = new System.Drawing.Point(3, 124);
-            this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(166, 53);
-            this.groupBox18.TabIndex = 194;
-            this.groupBox18.TabStop = false;
-            this.groupBox18.Text = "Date of Birth";
-            // 
-            // dtBDay
-            // 
-            this.dtBDay.CalendarFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtBDay.CustomFormat = "yyyy-MM-dd";
-            this.dtBDay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtBDay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtBDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtBDay.Location = new System.Drawing.Point(3, 24);
-            this.dtBDay.Margin = new System.Windows.Forms.Padding(2);
-            this.dtBDay.MaxDate = new System.DateTime(2099, 11, 26, 0, 0, 0, 0);
-            this.dtBDay.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dtBDay.Name = "dtBDay";
-            this.dtBDay.Size = new System.Drawing.Size(160, 26);
-            this.dtBDay.TabIndex = 11;
-            this.dtBDay.Value = new System.DateTime(2018, 5, 19, 0, 0, 0, 0);
-            // 
-            // groupBox19
-            // 
-            this.groupBox19.Controls.Add(this.cmbAge);
-            this.groupBox19.Location = new System.Drawing.Point(175, 124);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(68, 53);
-            this.groupBox19.TabIndex = 194;
-            this.groupBox19.TabStop = false;
-            this.groupBox19.Text = "Age";
-            // 
-            // cmbAge
-            // 
-            this.cmbAge.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmbAge.Enabled = false;
-            this.cmbAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAge.Location = new System.Drawing.Point(3, 24);
-            this.cmbAge.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbAge.Name = "cmbAge";
-            this.cmbAge.Size = new System.Drawing.Size(62, 27);
-            this.cmbAge.TabIndex = 11;
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Controls.Add(this.cmbCivilStat);
-            this.groupBox20.Location = new System.Drawing.Point(249, 124);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(152, 53);
-            this.groupBox20.TabIndex = 194;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "Civil Status";
-            // 
-            // cmbCivilStat
-            // 
-            this.cmbCivilStat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmbCivilStat.FormattingEnabled = true;
-            this.cmbCivilStat.ItemHeight = 23;
-            this.cmbCivilStat.Items.AddRange(new object[] {
-            "Single",
-            "Married",
-            "Separated",
-            "Widowed"});
-            this.cmbCivilStat.Location = new System.Drawing.Point(3, 24);
-            this.cmbCivilStat.Name = "cmbCivilStat";
-            this.cmbCivilStat.Size = new System.Drawing.Size(146, 29);
-            this.cmbCivilStat.TabIndex = 194;
-            this.cmbCivilStat.UseSelectable = true;
-            // 
-            // groupBox21
-            // 
-            this.groupBox21.Controls.Add(this.txtNat);
-            this.groupBox21.Location = new System.Drawing.Point(407, 124);
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(166, 53);
-            this.groupBox21.TabIndex = 194;
-            this.groupBox21.TabStop = false;
-            this.groupBox21.Text = "Nationality";
-            // 
-            // txtNat
-            // 
-            this.txtNat.Depth = 0;
-            this.txtNat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtNat.Hint = "";
-            this.txtNat.Location = new System.Drawing.Point(3, 24);
-            this.txtNat.MaxLength = 32767;
-            this.txtNat.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtNat.Name = "txtNat";
-            this.txtNat.PasswordChar = '\0';
-            this.txtNat.SelectedText = "";
-            this.txtNat.SelectionLength = 0;
-            this.txtNat.SelectionStart = 0;
-            this.txtNat.Size = new System.Drawing.Size(160, 23);
-            this.txtNat.TabIndex = 191;
-            this.txtNat.TabStop = false;
-            this.txtNat.Text = "Filipino";
-            this.txtNat.UseSystemPasswordChar = false;
-            // 
-            // groupBox22
-            // 
-            this.groupBox22.Controls.Add(this.txtHomeAdd);
-            this.groupBox22.Location = new System.Drawing.Point(579, 124);
-            this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(470, 53);
-            this.groupBox22.TabIndex = 194;
-            this.groupBox22.TabStop = false;
-            this.groupBox22.Text = "Home Address";
-            // 
-            // txtHomeAdd
-            // 
-            this.txtHomeAdd.Depth = 0;
-            this.txtHomeAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtHomeAdd.Hint = "";
-            this.txtHomeAdd.Location = new System.Drawing.Point(3, 24);
-            this.txtHomeAdd.MaxLength = 32767;
-            this.txtHomeAdd.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtHomeAdd.Name = "txtHomeAdd";
-            this.txtHomeAdd.PasswordChar = '\0';
-            this.txtHomeAdd.SelectedText = "";
-            this.txtHomeAdd.SelectionLength = 0;
-            this.txtHomeAdd.SelectionStart = 0;
-            this.txtHomeAdd.Size = new System.Drawing.Size(464, 23);
-            this.txtHomeAdd.TabIndex = 192;
-            this.txtHomeAdd.TabStop = false;
-            this.txtHomeAdd.UseSystemPasswordChar = false;
-            // 
-            // groupBox24
-            // 
-            this.groupBox24.Controls.Add(this.txtBoardAdd);
-            this.groupBox24.Location = new System.Drawing.Point(3, 183);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(570, 53);
-            this.groupBox24.TabIndex = 195;
-            this.groupBox24.TabStop = false;
-            this.groupBox24.Text = "Boarding Address";
-            // 
-            // txtBoardAdd
-            // 
-            this.txtBoardAdd.Depth = 0;
-            this.txtBoardAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBoardAdd.Hint = "";
-            this.txtBoardAdd.Location = new System.Drawing.Point(3, 24);
-            this.txtBoardAdd.MaxLength = 32767;
-            this.txtBoardAdd.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtBoardAdd.Name = "txtBoardAdd";
-            this.txtBoardAdd.PasswordChar = '\0';
-            this.txtBoardAdd.SelectedText = "";
-            this.txtBoardAdd.SelectionLength = 0;
-            this.txtBoardAdd.SelectionStart = 0;
-            this.txtBoardAdd.Size = new System.Drawing.Size(564, 23);
-            this.txtBoardAdd.TabIndex = 192;
-            this.txtBoardAdd.TabStop = false;
-            this.txtBoardAdd.UseSystemPasswordChar = false;
-            // 
-            // gbLL
-            // 
-            this.gbLL.Controls.Add(this.txtLandLady);
-            this.gbLL.Location = new System.Drawing.Point(579, 183);
-            this.gbLL.Name = "gbLL";
-            this.gbLL.Size = new System.Drawing.Size(231, 53);
-            this.gbLL.TabIndex = 195;
-            this.gbLL.TabStop = false;
-            this.gbLL.Text = "Land Lady/Lord";
-            // 
-            // txtLandLady
-            // 
-            this.txtLandLady.Depth = 0;
-            this.txtLandLady.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtLandLady.Hint = "";
-            this.txtLandLady.Location = new System.Drawing.Point(3, 24);
-            this.txtLandLady.MaxLength = 32767;
-            this.txtLandLady.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtLandLady.Name = "txtLandLady";
-            this.txtLandLady.PasswordChar = '\0';
-            this.txtLandLady.SelectedText = "";
-            this.txtLandLady.SelectionLength = 0;
-            this.txtLandLady.SelectionStart = 0;
-            this.txtLandLady.Size = new System.Drawing.Size(225, 23);
-            this.txtLandLady.TabIndex = 192;
-            this.txtLandLady.TabStop = false;
-            this.txtLandLady.UseSystemPasswordChar = false;
-            // 
-            // gbLLn
-            // 
-            this.gbLLn.Controls.Add(this.txtLLNumber);
-            this.gbLLn.Location = new System.Drawing.Point(816, 183);
-            this.gbLLn.Name = "gbLLn";
-            this.gbLLn.Size = new System.Drawing.Size(231, 53);
-            this.gbLLn.TabIndex = 196;
-            this.gbLLn.TabStop = false;
-            this.gbLLn.Text = "Tel/Cel Number";
-            // 
-            // txtLLNumber
-            // 
-            this.txtLLNumber.Depth = 0;
-            this.txtLLNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtLLNumber.Hint = "";
-            this.txtLLNumber.Location = new System.Drawing.Point(3, 24);
-            this.txtLLNumber.MaxLength = 32767;
-            this.txtLLNumber.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtLLNumber.Name = "txtLLNumber";
-            this.txtLLNumber.PasswordChar = '\0';
-            this.txtLLNumber.SelectedText = "";
-            this.txtLLNumber.SelectionLength = 0;
-            this.txtLLNumber.SelectionStart = 0;
-            this.txtLLNumber.Size = new System.Drawing.Size(225, 23);
-            this.txtLLNumber.TabIndex = 192;
-            this.txtLLNumber.TabStop = false;
-            this.txtLLNumber.UseSystemPasswordChar = false;
-            // 
-            // groupBox27
-            // 
-            this.groupBox27.Controls.Add(this.txtFatherName);
-            this.groupBox27.Location = new System.Drawing.Point(3, 242);
-            this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Size = new System.Drawing.Size(231, 53);
-            this.groupBox27.TabIndex = 197;
-            this.groupBox27.TabStop = false;
-            this.groupBox27.Text = "Father\'s Name";
-            // 
-            // txtFatherName
-            // 
-            this.txtFatherName.Depth = 0;
-            this.txtFatherName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtFatherName.Hint = "";
-            this.txtFatherName.Location = new System.Drawing.Point(3, 24);
-            this.txtFatherName.MaxLength = 32767;
-            this.txtFatherName.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtFatherName.Name = "txtFatherName";
-            this.txtFatherName.PasswordChar = '\0';
-            this.txtFatherName.SelectedText = "";
-            this.txtFatherName.SelectionLength = 0;
-            this.txtFatherName.SelectionStart = 0;
-            this.txtFatherName.Size = new System.Drawing.Size(225, 23);
-            this.txtFatherName.TabIndex = 192;
-            this.txtFatherName.TabStop = false;
-            this.txtFatherName.UseSystemPasswordChar = false;
-            // 
-            // groupBox28
-            // 
-            this.groupBox28.Controls.Add(this.txtFatherOcc);
-            this.groupBox28.Location = new System.Drawing.Point(240, 242);
-            this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Size = new System.Drawing.Size(163, 53);
-            this.groupBox28.TabIndex = 198;
-            this.groupBox28.TabStop = false;
-            this.groupBox28.Text = "Occupation";
-            // 
-            // txtFatherOcc
-            // 
-            this.txtFatherOcc.Depth = 0;
-            this.txtFatherOcc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtFatherOcc.Hint = "";
-            this.txtFatherOcc.Location = new System.Drawing.Point(3, 24);
-            this.txtFatherOcc.MaxLength = 32767;
-            this.txtFatherOcc.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtFatherOcc.Name = "txtFatherOcc";
-            this.txtFatherOcc.PasswordChar = '\0';
-            this.txtFatherOcc.SelectedText = "";
-            this.txtFatherOcc.SelectionLength = 0;
-            this.txtFatherOcc.SelectionStart = 0;
-            this.txtFatherOcc.Size = new System.Drawing.Size(157, 23);
-            this.txtFatherOcc.TabIndex = 192;
-            this.txtFatherOcc.TabStop = false;
-            this.txtFatherOcc.UseSystemPasswordChar = false;
-            // 
-            // groupBox29
-            // 
-            this.groupBox29.Controls.Add(this.txtFatherNumber);
-            this.groupBox29.Location = new System.Drawing.Point(409, 242);
-            this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Size = new System.Drawing.Size(231, 53);
-            this.groupBox29.TabIndex = 199;
-            this.groupBox29.TabStop = false;
-            this.groupBox29.Text = "Tel/Cel Number";
-            // 
-            // txtFatherNumber
-            // 
-            this.txtFatherNumber.Depth = 0;
-            this.txtFatherNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtFatherNumber.Hint = "";
-            this.txtFatherNumber.Location = new System.Drawing.Point(3, 24);
-            this.txtFatherNumber.MaxLength = 32767;
-            this.txtFatherNumber.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtFatherNumber.Name = "txtFatherNumber";
-            this.txtFatherNumber.PasswordChar = '\0';
-            this.txtFatherNumber.SelectedText = "";
-            this.txtFatherNumber.SelectionLength = 0;
-            this.txtFatherNumber.SelectionStart = 0;
-            this.txtFatherNumber.Size = new System.Drawing.Size(225, 23);
-            this.txtFatherNumber.TabIndex = 192;
-            this.txtFatherNumber.TabStop = false;
-            this.txtFatherNumber.UseSystemPasswordChar = false;
-            // 
-            // groupBox30
-            // 
-            this.groupBox30.Controls.Add(this.txtMotherName);
-            this.groupBox30.Location = new System.Drawing.Point(646, 242);
-            this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Size = new System.Drawing.Size(231, 53);
-            this.groupBox30.TabIndex = 200;
-            this.groupBox30.TabStop = false;
-            this.groupBox30.Text = "Mother\'s Name";
-            // 
-            // txtMotherName
-            // 
-            this.txtMotherName.Depth = 0;
-            this.txtMotherName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMotherName.Hint = "";
-            this.txtMotherName.Location = new System.Drawing.Point(3, 24);
-            this.txtMotherName.MaxLength = 32767;
-            this.txtMotherName.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtMotherName.Name = "txtMotherName";
-            this.txtMotherName.PasswordChar = '\0';
-            this.txtMotherName.SelectedText = "";
-            this.txtMotherName.SelectionLength = 0;
-            this.txtMotherName.SelectionStart = 0;
-            this.txtMotherName.Size = new System.Drawing.Size(225, 23);
-            this.txtMotherName.TabIndex = 192;
-            this.txtMotherName.TabStop = false;
-            this.txtMotherName.UseSystemPasswordChar = false;
-            // 
-            // groupBox31
-            // 
-            this.groupBox31.Controls.Add(this.txtMotherOcc);
-            this.groupBox31.Location = new System.Drawing.Point(883, 242);
-            this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Size = new System.Drawing.Size(163, 53);
-            this.groupBox31.TabIndex = 201;
-            this.groupBox31.TabStop = false;
-            this.groupBox31.Text = "Occupation";
-            // 
-            // txtMotherOcc
-            // 
-            this.txtMotherOcc.Depth = 0;
-            this.txtMotherOcc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMotherOcc.Hint = "";
-            this.txtMotherOcc.Location = new System.Drawing.Point(3, 24);
-            this.txtMotherOcc.MaxLength = 32767;
-            this.txtMotherOcc.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtMotherOcc.Name = "txtMotherOcc";
-            this.txtMotherOcc.PasswordChar = '\0';
-            this.txtMotherOcc.SelectedText = "";
-            this.txtMotherOcc.SelectionLength = 0;
-            this.txtMotherOcc.SelectionStart = 0;
-            this.txtMotherOcc.Size = new System.Drawing.Size(157, 23);
-            this.txtMotherOcc.TabIndex = 192;
-            this.txtMotherOcc.TabStop = false;
-            this.txtMotherOcc.UseSystemPasswordChar = false;
-            // 
-            // groupBox32
-            // 
-            this.groupBox32.Controls.Add(this.txtMotherNumber);
-            this.groupBox32.Location = new System.Drawing.Point(3, 301);
-            this.groupBox32.Name = "groupBox32";
-            this.groupBox32.Size = new System.Drawing.Size(231, 53);
-            this.groupBox32.TabIndex = 202;
-            this.groupBox32.TabStop = false;
-            this.groupBox32.Text = "Tel/Cel Number";
-            // 
-            // txtMotherNumber
-            // 
-            this.txtMotherNumber.Depth = 0;
-            this.txtMotherNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtMotherNumber.Hint = "";
-            this.txtMotherNumber.Location = new System.Drawing.Point(3, 24);
-            this.txtMotherNumber.MaxLength = 32767;
-            this.txtMotherNumber.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtMotherNumber.Name = "txtMotherNumber";
-            this.txtMotherNumber.PasswordChar = '\0';
-            this.txtMotherNumber.SelectedText = "";
-            this.txtMotherNumber.SelectionLength = 0;
-            this.txtMotherNumber.SelectionStart = 0;
-            this.txtMotherNumber.Size = new System.Drawing.Size(225, 23);
-            this.txtMotherNumber.TabIndex = 192;
-            this.txtMotherNumber.TabStop = false;
-            this.txtMotherNumber.UseSystemPasswordChar = false;
-            // 
-            // groupBox33
-            // 
-            this.groupBox33.Controls.Add(this.txtEmergencyCall);
-            this.groupBox33.Location = new System.Drawing.Point(240, 301);
-            this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Size = new System.Drawing.Size(231, 53);
-            this.groupBox33.TabIndex = 203;
-            this.groupBox33.TabStop = false;
-            this.groupBox33.Text = "Emergency Contact";
-            // 
-            // txtEmergencyCall
-            // 
-            this.txtEmergencyCall.Depth = 0;
-            this.txtEmergencyCall.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEmergencyCall.Hint = "";
-            this.txtEmergencyCall.Location = new System.Drawing.Point(3, 24);
-            this.txtEmergencyCall.MaxLength = 32767;
-            this.txtEmergencyCall.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtEmergencyCall.Name = "txtEmergencyCall";
-            this.txtEmergencyCall.PasswordChar = '\0';
-            this.txtEmergencyCall.SelectedText = "";
-            this.txtEmergencyCall.SelectionLength = 0;
-            this.txtEmergencyCall.SelectionStart = 0;
-            this.txtEmergencyCall.Size = new System.Drawing.Size(225, 23);
-            this.txtEmergencyCall.TabIndex = 192;
-            this.txtEmergencyCall.TabStop = false;
-            this.txtEmergencyCall.UseSystemPasswordChar = false;
-            // 
-            // groupBox34
-            // 
-            this.groupBox34.Controls.Add(this.txtRelation);
-            this.groupBox34.Location = new System.Drawing.Point(477, 301);
-            this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Size = new System.Drawing.Size(231, 53);
-            this.groupBox34.TabIndex = 204;
-            this.groupBox34.TabStop = false;
-            this.groupBox34.Text = "Relation";
-            // 
-            // txtRelation
-            // 
-            this.txtRelation.Depth = 0;
-            this.txtRelation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtRelation.Hint = "";
-            this.txtRelation.Location = new System.Drawing.Point(3, 24);
-            this.txtRelation.MaxLength = 32767;
-            this.txtRelation.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtRelation.Name = "txtRelation";
-            this.txtRelation.PasswordChar = '\0';
-            this.txtRelation.SelectedText = "";
-            this.txtRelation.SelectionLength = 0;
-            this.txtRelation.SelectionStart = 0;
-            this.txtRelation.Size = new System.Drawing.Size(225, 23);
-            this.txtRelation.TabIndex = 192;
-            this.txtRelation.TabStop = false;
-            this.txtRelation.UseSystemPasswordChar = false;
-            // 
-            // groupBox35
-            // 
-            this.groupBox35.Controls.Add(this.txtECNumber);
-            this.groupBox35.Location = new System.Drawing.Point(714, 301);
-            this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Size = new System.Drawing.Size(231, 53);
-            this.groupBox35.TabIndex = 205;
-            this.groupBox35.TabStop = false;
-            this.groupBox35.Text = "Tel/Cel Number";
-            // 
-            // txtECNumber
-            // 
-            this.txtECNumber.Depth = 0;
-            this.txtECNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtECNumber.Hint = "";
-            this.txtECNumber.Location = new System.Drawing.Point(3, 24);
-            this.txtECNumber.MaxLength = 32767;
-            this.txtECNumber.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtECNumber.Name = "txtECNumber";
-            this.txtECNumber.PasswordChar = '\0';
-            this.txtECNumber.SelectedText = "";
-            this.txtECNumber.SelectionLength = 0;
-            this.txtECNumber.SelectionStart = 0;
-            this.txtECNumber.Size = new System.Drawing.Size(225, 23);
-            this.txtECNumber.TabIndex = 192;
-            this.txtECNumber.TabStop = false;
-            this.txtECNumber.UseSystemPasswordChar = false;
-            // 
-            // gbMens
-            // 
-            this.gbMens.Controls.Add(this.dtFMP);
-            this.gbMens.Controls.Add(this.dtLMP);
-            this.gbMens.Location = new System.Drawing.Point(3, 360);
-            this.gbMens.Name = "gbMens";
-            this.gbMens.Size = new System.Drawing.Size(353, 53);
-            this.gbMens.TabIndex = 193;
-            this.gbMens.TabStop = false;
-            this.gbMens.Text = "First and Last Menstruation";
-            // 
-            // dtFMP
-            // 
-            this.dtFMP.CustomFormat = "yyyy-MM-dd";
-            this.dtFMP.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dtFMP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFMP.Location = new System.Drawing.Point(3, 24);
-            this.dtFMP.Name = "dtFMP";
-            this.dtFMP.Size = new System.Drawing.Size(156, 28);
-            this.dtFMP.TabIndex = 14;
-            // 
-            // dtLMP
-            // 
-            this.dtLMP.CustomFormat = "yyyy-MM-dd";
-            this.dtLMP.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dtLMP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtLMP.Location = new System.Drawing.Point(194, 24);
-            this.dtLMP.Name = "dtLMP";
-            this.dtLMP.Size = new System.Drawing.Size(156, 28);
-            this.dtLMP.TabIndex = 15;
-            // 
-            // cbVisitor
-            // 
-            this.cbVisitor.AutoSize = true;
-            this.cbVisitor.FontWeight = MetroFramework.MetroCheckBoxWeight.Light;
-            this.cbVisitor.Location = new System.Drawing.Point(362, 360);
-            this.cbVisitor.Name = "cbVisitor";
-            this.cbVisitor.Size = new System.Drawing.Size(54, 15);
-            this.cbVisitor.TabIndex = 187;
-            this.cbVisitor.Text = "Visitor";
-            this.cbVisitor.UseSelectable = true;
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.AutoSize = true;
-            this.btnSelect.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSelect.BackColor = System.Drawing.Color.White;
-            this.btnSelect.Depth = 0;
-            this.btnSelect.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSelect.Icon = null;
-            this.btnSelect.Location = new System.Drawing.Point(0, 200);
-            this.btnSelect.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnSelect.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Primary = false;
-            this.btnSelect.Size = new System.Drawing.Size(200, 36);
-            this.btnSelect.TabIndex = 188;
-            this.btnSelect.Text = "Browse Picture";
-            this.btnSelect.UseVisualStyleBackColor = false;
-            this.btnSelect.Click += new System.EventHandler(this.btnTake_Click);
-            // 
             // addPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1318, 857);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(1318, 749);
             this.Controls.Add(this.tbProfile);
             this.Controls.Add(this.metroPanel1);
             this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2671,6 +2675,37 @@
             this.tbProfile.ResumeLayout(false);
             this.tbProf.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.gbC.ResumeLayout(false);
+            this.gbY.ResumeLayout(false);
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox19.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAge)).EndInit();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox24.ResumeLayout(false);
+            this.gbLL.ResumeLayout(false);
+            this.gbLLn.ResumeLayout(false);
+            this.groupBox27.ResumeLayout(false);
+            this.groupBox28.ResumeLayout(false);
+            this.groupBox29.ResumeLayout(false);
+            this.groupBox30.ResumeLayout(false);
+            this.groupBox31.ResumeLayout(false);
+            this.groupBox32.ResumeLayout(false);
+            this.groupBox33.ResumeLayout(false);
+            this.groupBox34.ResumeLayout(false);
+            this.groupBox35.ResumeLayout(false);
+            this.gbMens.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).EndInit();
             this.tabPerHist.ResumeLayout(false);
             this.gbHist.ResumeLayout(false);
@@ -2709,38 +2744,6 @@
             this.groupBox9.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox15.ResumeLayout(false);
-            this.groupBox17.ResumeLayout(false);
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.course.ResumeLayout(false);
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox18.ResumeLayout(false);
-            this.groupBox19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cmbAge)).EndInit();
-            this.groupBox20.ResumeLayout(false);
-            this.groupBox21.ResumeLayout(false);
-            this.groupBox22.ResumeLayout(false);
-            this.groupBox24.ResumeLayout(false);
-            this.gbLL.ResumeLayout(false);
-            this.gbLLn.ResumeLayout(false);
-            this.groupBox27.ResumeLayout(false);
-            this.groupBox28.ResumeLayout(false);
-            this.groupBox29.ResumeLayout(false);
-            this.groupBox30.ResumeLayout(false);
-            this.groupBox31.ResumeLayout(false);
-            this.groupBox32.ResumeLayout(false);
-            this.groupBox33.ResumeLayout(false);
-            this.groupBox34.ResumeLayout(false);
-            this.groupBox35.ResumeLayout(false);
-            this.gbMens.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2848,9 +2851,9 @@
         private MaterialSkin.Controls.MaterialRadioButton rbMale;
         private System.Windows.Forms.GroupBox groupBox1;
         public MetroFramework.Controls.MetroComboBox cmbDepartment;
-        private System.Windows.Forms.GroupBox course;
+        private System.Windows.Forms.GroupBox gbC;
         public MetroFramework.Controls.MetroComboBox cmbCourse;
-        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.GroupBox gbY;
         private MetroFramework.Controls.MetroComboBox cmbYear;
         private System.Windows.Forms.GroupBox groupBox18;
         private System.Windows.Forms.DateTimePicker dtBDay;
@@ -2889,7 +2892,6 @@
         private System.Windows.Forms.GroupBox gbMens;
         private System.Windows.Forms.DateTimePicker dtFMP;
         private System.Windows.Forms.DateTimePicker dtLMP;
-        private MetroFramework.Controls.MetroCheckBox cbVisitor;
         private MaterialSkin.Controls.MaterialFlatButton btnSelect;
     }
 }

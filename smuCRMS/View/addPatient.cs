@@ -234,29 +234,29 @@ namespace smuCRMS.View
             cmbCourse.DisplayMember = "Course";
             cmbCourse.DataSource = pm.getCourse();
             cmbYear.Items.Clear();
-            if (cmbCourse.Text=="GRADE SCHOOL")
+            if (cmbDepartment.Text.ToLower().Contains("grade"))
             {
                
                 cmbYear.Items.AddRange(gs);
                 //lblYear.Text = "Grade";
                 cmbCourse.Enabled = false;
             }
-            else if(cmbCourse.Text== "JUNIOR HIGH SCHOOL")
+            else if(cmbDepartment.Text.ToLower().Contains("junior"))
             {
                 cmbYear.Items.AddRange(js);
-                //lblYear.Text = "Grade";
+                gbY.Text = "Grade";
                 cmbCourse.Enabled = false;
             }
-            else if (cmbCourse.Text == "SENIOR HIGH SCHOOL")
+            else if (cmbDepartment.Text.ToLower().Contains("senior"))
             {
                 cmbYear.Items.AddRange(sh);
-                //lblYear.Text = "Grade";
-                //lblCourse.Text = "Track";
+                gbY.Text = "Grade";
+                gbC.Text = "Track";
             }
             else 
             {
-                //lblYear.Text = "Year";
-                //lblCourse.Text = "Course";
+                gbY.Text = "Year";
+                gbC.Text = "Course";
                 cmbCourse.Enabled = true;
                 //get level to determine-----
                 cmbYear.Items.AddRange(undergrad);
@@ -390,7 +390,6 @@ namespace smuCRMS.View
         }
         void reset()
         {
-            cbVisitor.Checked = false;
             txtSPo2.Clear();
             dtBDay.Text = DateTime.Now.ToShortDateString();
             dtFMP.Text = DateTime.Now.ToShortDateString();
@@ -575,35 +574,8 @@ namespace smuCRMS.View
 
         private void txtPID_Leave(object sender, EventArgs e)
         {
-            //txtPID.Text = (txtPID.Text == "") ? "1000000" : txtPID.Text;
-            
-            //if (txtPID.Text == "" || txtPID.Text== "1000000" || (txtPID.Text.Length>3 && txtPID.Text.Length <5) )
-            //{
-            //    cmbDepartment.Visible = false;
-            //    cmbCourse.Visible = false;
-            //    cmbYear.Visible = false;
-            //    cmbDepartment.Enabled = false;
-            //    cmbCourse.Enabled = false;
-            //    cmbYear.Enabled = false;
-            //    cmbDepartment.Text = "SEAIT";
-            //    cmbYear.Text = "1st";
-            //    cmbCourse.Text = "BSIT";
-            //    gbImmu.Enabled = false;
-            //    gbImmu.Visible = false;
-            //}
-            //else if(txtPID.Text.Length>7)
-            //{
-            //    cmbDepartment.Enabled = true;
-            //    cmbCourse.Enabled = true;
-            //    cmbYear.Enabled = true;
-            //    gbImmu.Enabled = true;
-            //    gbImmu.Visible = true;
-            //    cmbDepartment.Visible = true;
-            //    cmbCourse.Visible = true;
-            //    cmbYear.Visible = true;
-            //}
-            pm.id = txtPID.Text;
 
+          pm.id = txtPID.Text;
           if (pm.verifyID() && txtPID.Text!="")
             {
                 DialogResult res= MetroMessageBox.Show(this, "ID is already on the system \n" + "Do you want to view the record?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
@@ -617,35 +589,12 @@ namespace smuCRMS.View
                 txtPID.Text = "";
                 txtPID.Focus();
             }
-          else
+            else
             {
-                
-                DialogResult res = MetroMessageBox.Show(this,"If Yes, Kindly Tap your ID Card to Card Reader","Register your SMU ID Card?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-                if (res == DialogResult.Yes)
-                {
-                    frmRFID rf = new frmRFID();
-                    for (int i = 0; i == 0; i++)
-                    {
-                        if (rf.connectCard())
-                        {
-                            pm.uid = rf.getcardUID();
-                        }
-                        else
-                        {
-                            pm.uid = "";
-                            DialogResult ress = MetroMessageBox.Show(this, "No ID Card Recognized!", "Do you want to try again?", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-                            if (res == DialogResult.Retry)
-                            {
-                    
-                                i = 0;
-                            }
-                        }
-                    }
-                    rf.Dispose();
-                }
-                MessageBox.Show(pm.uid);
+                if(txtPID.Text=="")
+                Visitor();
             }
-
+       
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -665,6 +614,7 @@ namespace smuCRMS.View
         private void txtPID_Click(object sender, EventArgs e)
         {
             txtPID.SelectAll();
+            txtPID.Enabled = true;
         }
 
         private void txtMotherNumber_KeyPress(object sender, KeyPressEventArgs e)
@@ -816,7 +766,6 @@ namespace smuCRMS.View
             if (fp.ShowDialog() == DialogResult.OK)
             {
                 this.pbPhoto.Image = Image.FromFile(fp.FileName);
-                this.pbPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
                 this.pbPhoto.Refresh();
             }
         }
@@ -863,10 +812,9 @@ namespace smuCRMS.View
             cmbDepartment.Enabled = en;
             cmbYear.Enabled = en;
         }
-        private void cmbVisitor_CheckedChanged(object sender, EventArgs e)
+        private void Visitor()
         {
-        
-            if(cbVisitor.Checked)
+            if(txtPID.Text=="")
             {
                 enableCYD(false);
                 txtPID.Enabled = false;
@@ -1085,5 +1033,6 @@ namespace smuCRMS.View
         {
 
         }
+
     }
 }
