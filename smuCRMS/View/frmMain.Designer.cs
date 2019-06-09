@@ -292,7 +292,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Location = new System.Drawing.Point(499, 26);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 17);
+            this.lblID.Size = new System.Drawing.Size(0, 13);
             this.lblID.TabIndex = 37;
             this.lblID.TextChanged += new System.EventHandler(this.lblID_TextChanged);
             // 
@@ -311,6 +311,7 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.pnlBot);
             this.Controls.Add(this.metroPanel3);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(640, 640);

@@ -411,7 +411,6 @@ namespace smuCRMS.View
                     pc.uid = cardUID;
                     id = pc.getID();
                     lblRFID.Text = id;
-                    MessageBox.Show(cardUID);
                     if (id == "" || id == null)
                     {
                         lblRFID.Text = "No Record";

@@ -400,7 +400,7 @@ namespace smuCRMS.View
             pbPhoto.Image =pb ;
            this.pbPhoto.Refresh();
             txtBoardAdd.Text = "";
-            txtBP.Text = "" ;
+            txtTemp.Text = "" ;
             txtECNumber.Text = "";
             txtEmergencyCall.Text = "";
             txtFatherName.Text = "";
@@ -430,7 +430,7 @@ namespace smuCRMS.View
             txtRelation.Text = "";
             txtRemarks.Text = "";
             txtRR.Text = "0";
-            txtTemp.Text = "0";
+            txtBP.Text = "0";
             txtWeight.Text = "";
             cmbAge.Text = "0";
        
@@ -449,7 +449,7 @@ namespace smuCRMS.View
             try
             {
                 if (txtBMI.Text == "" || txtWeight.Text == "" || txtPR.Text == "" || txtRR.Text == "" ||
-                    txtRemarks.Text == "" || txtBP.Text == "" || txtTemp.Text == "" || txtPHname.Text=="")
+                    txtRemarks.Text == "" || txtTemp.Text == "" || txtBP.Text == "" || txtPHname.Text=="")
                 {
                     MetroMessageBox.Show(this, "Input required fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
@@ -619,9 +619,7 @@ namespace smuCRMS.View
 
         private void txtMotherNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 46
-                              && e.KeyChar != 8)
-                e.Handled = true;
+
         }
 
         private void txtFatherNumber_TextChanged(object sender, EventArgs e)
@@ -673,17 +671,12 @@ namespace smuCRMS.View
             }
         }
 
-        private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            computeBMI();
-        }
-
         private void txtBP_Click(object sender, EventArgs e)
         {
-            txtBP.SelectAll();
+            txtTemp.SelectAll();
             txtRR.SelectAll();
             txtPR.SelectAll();
-            txtTemp.SelectAll();
+            txtBP.SelectAll();
         }
 
         private void txtBP_KeyPress(object sender, KeyPressEventArgs e)
@@ -700,9 +693,9 @@ namespace smuCRMS.View
 
         private void txtBP_Leave(object sender, EventArgs e)
         {
-            if (txtTemp.Text == "")
+            if (txtBP.Text == "")
             {
-                txtTemp.Text = "0";
+                txtBP.Text = "0";
             }
             if (txtPR.Text == "")
             {
@@ -712,50 +705,10 @@ namespace smuCRMS.View
             {
                 txtRR.Text = "0";
             }
-            if (txtBP.Text == "")
+            if (txtTemp.Text == "")
             {
-                txtBP.Text = "0";
+                txtTemp.Text = "0";
             }
-        }
-
-        private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            //if (pm.patientAdd(this))
-            //{
-            //    p.Invoke(new Action(() =>
-            //    {
-            //        p.Dispose();
-            //    }));
-            //    MetroMessageBox.Show(this, "Saved Successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
-            //}
-            //else
-            //{
-            //    p.Invoke(new Action(() =>
-            //    {
-            //        p.Dispose();
-            //    }));
-            //    MetroMessageBox.Show(this, "Save Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            //}
-           
-        }
-
-        private void txtCTheight_Click(object sender, EventArgs e)
-        {
-            //txtCTheight.SelectAll();
-            //txtCTWeight.SelectAll();
-        }
-
-        private void txtCTWeight_TextChanged(object sender, EventArgs e)
-        {
-            //if(txtCTheight.Text=="")
-            //{
-            //    txtCTheight.Text = "0";
-            //}
-            //if(txtCTWeight.Text=="")
-            //{
-            //    txtCTWeight.Text="0";
-            //}
         }
 
         private void btnTake_Click(object sender, EventArgs e)
@@ -912,12 +865,6 @@ namespace smuCRMS.View
                 btnSave1.Visible = true;
             }
         }
-
-        private void btnNext2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSave1_Click(object sender, EventArgs e)
         {
             frmSig fs = new frmSig();
@@ -973,11 +920,6 @@ namespace smuCRMS.View
             }
         }
 
-        private void txtPID_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void txtMotherNumber_TextChanged(object sender, EventArgs e)
         {
             ecNumRelation();
@@ -1000,25 +942,11 @@ namespace smuCRMS.View
             ecNumRelation();
         }
 
-        private void txtImmuOther_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtBMI_Click(object sender, EventArgs e)
         {
             txtBMI.SelectAll();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void cmbImmu_MouseDown(object sender, MouseEventArgs e)
         {
@@ -1029,10 +957,19 @@ namespace smuCRMS.View
             }
         }
 
-        private void metroSetToolTip1_Popup(object sender, PopupEventArgs e)
+        private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            computeBMI();
         }
 
+        private void txtWeight_Leave(object sender, EventArgs e)
+        {
+            computeBMI();
+        }
+
+        private void txtHeight_Leave(object sender, EventArgs e)
+        {
+            computeBMI();
+        }
     }
 }
