@@ -37,16 +37,16 @@ namespace smuCRMS.Controller
                 con.command.Parameters.AddWithValue("MMR", pm.MMR);
                 con.command.Parameters.AddWithValue("HEPAB", pm.HB);
                 con.command.Parameters.AddWithValue("HEPAA", pm.HA);
-                con.command.Parameters.AddWithValue("OTHERS", pm.Others);
-                con.command.Parameters.AddWithValue("OTHERSDescription", pm.othersDesc);
-                con.command.Parameters.AddWithValue("olddesc", pm.olddesc);
+                //con.command.Parameters.AddWithValue("OTHERS", pm.Others);
+                //con.command.Parameters.AddWithValue("OTHERSDescription", pm.othersDesc);
+                //con.command.Parameters.AddWithValue("olddesc", pm.olddesc);
 
-                con.command.Parameters.AddWithValue("hospi", pm.hospiDesc);
-                con.command.Parameters.AddWithValue("injury", pm.indescription);
-                con.command.Parameters.AddWithValue("psych", pm.psychodescription);
-                con.command.Parameters.AddWithValue("allergy", pm.allergyDesc);
-                con.command.Parameters.AddWithValue("physDefects", pm.phydefdescription);
-                con.command.Parameters.AddWithValue("med", pm.medcondescription);
+                //con.command.Parameters.AddWithValue("hospi", pm.hospiDesc);
+                //con.command.Parameters.AddWithValue("injury", pm.indescription);
+                //con.command.Parameters.AddWithValue("psych", pm.psychodescription);
+                //con.command.Parameters.AddWithValue("allergy", pm.allergyDesc);
+                //con.command.Parameters.AddWithValue("physDefects", pm.phydefdescription);
+                //con.command.Parameters.AddWithValue("med", pm.medcondescription);
                 con.command.Parameters.AddWithValue("currentMed", pm.currentMed);
 
                 con.command.Parameters.AddWithValue("_wkg", pm.weight.ToString());
@@ -270,13 +270,13 @@ namespace smuCRMS.Controller
                 con.command.Parameters.Clear();
 
                 addParamVal("id", pm.id.ToString());
-                addParamVal("hospi", pm.hospiDesc);
-                addParamVal("injury", pm.indescription);
-                addParamVal("psych", pm.psychodescription);
-                addParamVal("allergy", pm.allergyDesc);
-                addParamVal("physDefects", pm.phydefdescription);
-                addParamVal("med", pm.medcondescription);
-                addParamVal("currentMed", pm.currentMed);
+                //addParamVal("hospi", pm.hospiDesc);
+                //addParamVal("injury", pm.indescription);
+                //addParamVal("psych", pm.psychodescription);
+                //addParamVal("allergy", pm.allergyDesc);
+                //addParamVal("physDefects", pm.phydefdescription);
+                //addParamVal("med", pm.medcondescription);
+                //addParamVal("currentMed", pm.currentMed);
 
                 con.getParameter("UpdateHistory");
                 if (con.command.ExecuteNonQuery() == 1)
@@ -307,9 +307,9 @@ namespace smuCRMS.Controller
                 addParamVal("MMR", pm.MMR);
                 addParamVal("HEPAB", pm.HB);
                 addParamVal("HEPAA", pm.HA);
-                addParamVal("OTHERS", pm.Others);
-                addParamVal("OTHERSDescription", pm.othersDesc);
-                addParamVal("olddesc", pm.olddesc);
+                //addParamVal("OTHERS", pm.Others);
+                //addParamVal("OTHERSDescription", pm.othersDesc);
+                //addParamVal("olddesc", pm.olddesc);
 
                 con.getParameter("UpdateImmunization");
                 if (con.command.ExecuteNonQuery() == 1)
@@ -674,15 +674,13 @@ namespace smuCRMS.Controller
         {
             //process this into json
             addParamVal("history_id",pc.hid);
-            addParamVal("history",pc.hid); 
-            addParamVal("history_description",pc.hid);
+            addParamVal("history",pc.JSONHistory); 
         }
         private void getPatientCollection_Immunization(PatientController pc)
         {
             //process this into json
             addParamVal("immunization_id",pc.immuID);
-            addParamVal("immunization",pc.immuID); 
-            addParamVal("level",pc.level);
+            addParamVal("immunization",pc.JSONImmunization); 
         }
         private void getPatientCollection_Treatment(PatientController pc)
         {
@@ -700,7 +698,7 @@ namespace smuCRMS.Controller
         }
         private void getPatientCollection_Department(PatientController pc)
         {
-            addParamVal("department_id", pc.EID);
+            addParamVal("department_id", pc.department_id);
             addParamVal("department", pc.department);
         }
         private void getPatientCollection_Course(PatientController pc)

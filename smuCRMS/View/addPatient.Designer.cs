@@ -167,8 +167,6 @@
             this.txtPR = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.groupBox39 = new System.Windows.Forms.GroupBox();
             this.txtSPo2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.groupBox38 = new System.Windows.Forms.GroupBox();
-            this.materialSingleLineTextField7 = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
             this.txtRR = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
@@ -244,7 +242,6 @@
             this.groupBox10.SuspendLayout();
             this.groupBox40.SuspendLayout();
             this.groupBox39.SuspendLayout();
-            this.groupBox38.SuspendLayout();
             this.groupBox37.SuspendLayout();
             this.groupBox36.SuspendLayout();
             this.groupBox26.SuspendLayout();
@@ -2319,6 +2316,7 @@
             this.cmbImmuha.TabIndex = 3;
             this.metroToolTip1.SetToolTip(this.cmbImmuha, "Right click to remove level of immunization");
             this.cmbImmuha.UseSelectable = true;
+            this.cmbImmuha.SelectedIndexChanged += new System.EventHandler(this.cmbImmubgc_SelectedIndexChanged);
             this.cmbImmuha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // groupBox7
@@ -2372,6 +2370,7 @@
             this.cmbImmuhb.TabIndex = 3;
             this.metroToolTip1.SetToolTip(this.cmbImmuhb, "Right click to remove level of immunization");
             this.cmbImmuhb.UseSelectable = true;
+            this.cmbImmuhb.SelectedIndexChanged += new System.EventHandler(this.cmbImmubgc_SelectedIndexChanged);
             this.cmbImmuhb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // groupBox4
@@ -2425,6 +2424,7 @@
             this.cmbImmummr.TabIndex = 3;
             this.metroToolTip1.SetToolTip(this.cmbImmummr, "Right click to remove level of immunization");
             this.cmbImmummr.UseSelectable = true;
+            this.cmbImmummr.SelectedIndexChanged += new System.EventHandler(this.cmbImmubgc_SelectedIndexChanged);
             this.cmbImmummr.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // groupBox5
@@ -2478,6 +2478,7 @@
             this.cmbImmuopv.TabIndex = 3;
             this.metroToolTip1.SetToolTip(this.cmbImmuopv, "Right click to remove level of immunization");
             this.cmbImmuopv.UseSelectable = true;
+            this.cmbImmuopv.SelectedIndexChanged += new System.EventHandler(this.cmbImmubgc_SelectedIndexChanged);
             this.cmbImmuopv.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // groupBox3
@@ -2531,6 +2532,7 @@
             this.cmbImmudpt.TabIndex = 3;
             this.metroToolTip1.SetToolTip(this.cmbImmudpt, "Right click to remove level of immunization");
             this.cmbImmudpt.UseSelectable = true;
+            this.cmbImmudpt.SelectedIndexChanged += new System.EventHandler(this.cmbImmubgc_SelectedIndexChanged);
             this.cmbImmudpt.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // groupBox2
@@ -2584,6 +2586,7 @@
             this.cmbImmubgc.TabIndex = 2;
             this.metroToolTip1.SetToolTip(this.cmbImmubgc, "Right click to remove level of immunization");
             this.cmbImmubgc.UseSelectable = true;
+            this.cmbImmubgc.SelectedIndexChanged += new System.EventHandler(this.cmbImmubgc_SelectedIndexChanged);
             this.cmbImmubgc.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // tbRemark
@@ -2659,7 +2662,6 @@
             this.groupBox10.Controls.Add(this.cmbBMI);
             this.groupBox10.Controls.Add(this.groupBox40);
             this.groupBox10.Controls.Add(this.groupBox39);
-            this.groupBox10.Controls.Add(this.groupBox38);
             this.groupBox10.Controls.Add(this.groupBox37);
             this.groupBox10.Controls.Add(this.groupBox36);
             this.groupBox10.Controls.Add(this.groupBox26);
@@ -2700,7 +2702,7 @@
             this.groupBox40.BackColor = System.Drawing.Color.White;
             this.groupBox40.Controls.Add(this.txtPR);
             this.groupBox40.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox40.Location = new System.Drawing.Point(779, 97);
+            this.groupBox40.Location = new System.Drawing.Point(587, 97);
             this.groupBox40.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox40.Name = "groupBox40";
             this.groupBox40.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -2736,7 +2738,7 @@
             this.groupBox39.BackColor = System.Drawing.Color.White;
             this.groupBox39.Controls.Add(this.txtSPo2);
             this.groupBox39.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox39.Location = new System.Drawing.Point(587, 97);
+            this.groupBox39.Location = new System.Drawing.Point(395, 97);
             this.groupBox39.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -2766,42 +2768,6 @@
             this.txtSPo2.Text = "0";
             this.txtSPo2.UseSystemPasswordChar = false;
             this.txtSPo2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBP_KeyPress);
-            // 
-            // groupBox38
-            // 
-            this.groupBox38.BackColor = System.Drawing.Color.White;
-            this.groupBox38.Controls.Add(this.materialSingleLineTextField7);
-            this.groupBox38.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox38.Location = new System.Drawing.Point(395, 97);
-            this.groupBox38.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox38.Name = "groupBox38";
-            this.groupBox38.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox38.Size = new System.Drawing.Size(179, 60);
-            this.groupBox38.TabIndex = 199;
-            this.groupBox38.TabStop = false;
-            this.groupBox38.Text = "RR";
-            // 
-            // materialSingleLineTextField7
-            // 
-            this.materialSingleLineTextField7.Depth = 0;
-            this.materialSingleLineTextField7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialSingleLineTextField7.Hint = "";
-            this.materialSingleLineTextField7.Location = new System.Drawing.Point(2, 27);
-            this.materialSingleLineTextField7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.materialSingleLineTextField7.MaxLength = 255;
-            this.materialSingleLineTextField7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField7.Name = "materialSingleLineTextField7";
-            this.materialSingleLineTextField7.PasswordChar = '\0';
-            this.materialSingleLineTextField7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.materialSingleLineTextField7.SelectedText = "";
-            this.materialSingleLineTextField7.SelectionLength = 0;
-            this.materialSingleLineTextField7.SelectionStart = 0;
-            this.materialSingleLineTextField7.Size = new System.Drawing.Size(175, 23);
-            this.materialSingleLineTextField7.TabIndex = 193;
-            this.materialSingleLineTextField7.TabStop = false;
-            this.materialSingleLineTextField7.Text = "0";
-            this.materialSingleLineTextField7.UseSystemPasswordChar = false;
-            this.materialSingleLineTextField7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBP_KeyPress);
             // 
             // groupBox37
             // 
@@ -3166,7 +3132,6 @@
             this.groupBox10.ResumeLayout(false);
             this.groupBox40.ResumeLayout(false);
             this.groupBox39.ResumeLayout(false);
-            this.groupBox38.ResumeLayout(false);
             this.groupBox37.ResumeLayout(false);
             this.groupBox36.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
@@ -3317,8 +3282,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtPR;
         private System.Windows.Forms.GroupBox groupBox39;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtSPo2;
-        private System.Windows.Forms.GroupBox groupBox38;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField7;
         private System.Windows.Forms.GroupBox groupBox37;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtRR;
         private System.Windows.Forms.GroupBox groupBox36;

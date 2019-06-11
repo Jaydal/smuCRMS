@@ -34,7 +34,7 @@ namespace smuCRMS.View
             {
                 ConvertPhotoTobyte();
                 pm.dic = txtPHname.Text;
-                if(uid!=null)
+                if (uid != null)
                 {
                     pm.uid = uid;
                 }
@@ -73,24 +73,26 @@ namespace smuCRMS.View
                 pm.temp = txtTemp.Text;
                 pm.emergencyCall = txtEmergencyCall.Text;
                 pm.emergencyNumber = txtECNumber.Text;
-                pm.remarks ="("+cmbBMI.Text+") "+ txtRemarks.Text;
+                pm.remarks = "(" + cmbBMI.Text + ") " + txtRemarks.Text;
 
-                //add immunization here ------------------
-
-                string h1 = txtH1.Text;
-                string h2 = txtH2.Text;
-                string h3 = txtH3.Text;
-                string h4 = txtH4.Text;
-                string h5 = txtH5.Text;
-                string h6 = txtH6.Text;
-                pm.hospiDesc = hisDesc(rbYes1, h1);
-                pm.indescription = hisDesc(rbYes2, h2);
-                pm.psychodescription = hisDesc(rbYes3, h3);
-                pm.allergyDesc = hisDesc(rbYes4, h4);
-                pm.phydefdescription = hisDesc(rbYes5, h5);
-                pm.medcondescription = hisDesc(rbYes6, h6);
-                pm.currentMed = txtH7.Text;
+                pm.JSONImmunization = 
+                    @"{'OPV':'"+pm.OPV +
+                    "','DPT':'" + pm.DPT +
+                    "','MMR':'" + pm.MMR +
+                    "','HB':'" + pm.HB +
+                    "','HA':'" + pm.HA +
+                    "','"+txtImmuOther.Text+"':'" + cmbImmuoth1.Text +
+                    "','"+ txtImmuOther2.Text+ "':'" + cmbImmuoth2.Text +
+                    "','"+ txtImmuOther3.Text+ "':'" + cmbImmuoth3.Text + "'}";
                 
+                pm.JSONHistory=
+                    @"{'Hospitalization':'" + txtH1.Text +
+                    "','Injury':'" + txtH2.Text +
+                    "','Psychological':'" + txtH3.Text +
+                    "','Allergy':'" + txtH4.Text +
+                    "','Physical_Defects':'" + txtH5.Text +
+                    "','Medical_Condition':'" + txtH6.Text +
+                    "','Medication':'" + txtH7.Text + "'}";
 
                 //pm.tDate = dtpCTDate.Value.ToString("yyyy-MM-dd");
 
@@ -103,13 +105,6 @@ namespace smuCRMS.View
             {
                 MessageBox.Show("Field errors" + e);
             }
-
-        }
-
-        public string hisDesc(RadioButton rb, string x)
-        {
-            string desc = "";
-            return desc = (rb.Checked == true) ? x : desc;
 
         }
 
@@ -954,6 +949,7 @@ namespace smuCRMS.View
             {
                 //cmbImmu.SelectedItem = null;
                 ((MetroComboBox)sender).SelectedItem = null;
+                getImmunization((MetroComboBox)sender);
             }
         }
 
@@ -970,6 +966,21 @@ namespace smuCRMS.View
         private void txtHeight_Leave(object sender, EventArgs e)
         {
             computeBMI();
+        }
+
+        private void cmbImmubgc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MetroComboBox x = ((MetroComboBox)sender);
+            getImmunization(x);
+        }
+        private void getImmunization(MetroComboBox x)
+        {
+            pm.BGC = (x.Name.Contains("bgc")) ? x.Text : "";
+            pm.DPT = (x.Name.Contains("dpt")) ? x.Text : "";
+            pm.OPV = (x.Name.Contains("opv")) ? x.Text : "";
+            pm.MMR = (x.Name.Contains("mmr")) ? x.Text : "";
+            pm.HB = (x.Name.Contains("hb")) ? x.Text : "";
+            pm.HA = (x.Name.Contains("ha")) ? x.Text : "";
         }
     }
 }

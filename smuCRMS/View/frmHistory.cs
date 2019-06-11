@@ -71,13 +71,13 @@ namespace smuCRMS.View
         //getting data from the controller to history controls
         void loadData()
         {
-            txthospi.Text = pc.hospiDesc;
-            txtinj.Text = pc.indescription;
-            txtallergy.Text = pc.allergyDesc;
+            //txthospi.Text = pc.hospiDesc;
+            //txtinj.Text = pc.indescription;
+            //txtallergy.Text = pc.allergyDesc;
             txtcurr.Text = pc.currentMed;
-            txtmed.Text = pc.medcondescription;
-            txtphys.Text = pc.phydefdescription;
-            txtpsych.Text = pc.psychodescription;
+            //txtmed.Text = pc.medcondescription;
+            //txtphys.Text = pc.phydefdescription;
+            //txtpsych.Text = pc.psychodescription;
             hidePanelX();
         }
         void hidePanelX()
@@ -121,14 +121,15 @@ namespace smuCRMS.View
             }
             else
             {
-                pc.allergyDesc = txtallergy.Text;
-                pc.currentMed = txtcurr.Text;
-                pc.hospiDesc = txthospi.Text;
-                pc.indescription = txtinj.Text;
-                pc.medcondescription = txtmed.Text;
-                pc.phydefdescription = txtphys.Text;
-                pc.psychodescription = txtpsych.Text;
-                if(pc.updateHistory())
+                //TODO
+                //pc.allergyDesc = txtallergy.Text;
+                //pc.currentMed = txtcurr.Text;
+                //pc.hospiDesc = txthospi.Text;
+                //pc.indescription = txtinj.Text;
+                //pc.medcondescription = txtmed.Text;
+                //pc.phydefdescription = txtphys.Text;
+                //pc.psychodescription = txtpsych.Text;
+                if (pc.updateHistory())
                 {
                     btnEdit.Text = "Update";
                     //ac.getActiveUser();

@@ -61,19 +61,21 @@ namespace smuCRMS.Controller
         public string MMR { get; set; }
         public string HB { get; set; }
         public string HA { get; set; }
-        public string Others { get; set; }
-        public string othersDesc { get; set; }
-        public string olddesc { get; set; }
+        public string JSONImmunization { get; set; }
+        //public string Others { get; set; }
+        //public string othersDesc { get; set; }
+        //public string olddesc { get; set; }
 
         public string hid { get; set; }
-        public string hospiDesc { get; set; }
-        public string allergyDesc { get; set; }
-        //INJURIES MODELS 
-        public string indescription { get; set; }
-        public int EID { get; set; }
-        public string medcondescription { get; set; }
-        public string phydefdescription { get; set; }
-        public string psychodescription { get; set; }
+        public string JSONHistory { get; set; }
+        //public string hospiDesc { get; set; }
+        //public string allergyDesc { get; set; }
+        ////INJURIES MODELS 
+        //public string indescription { get; set; }
+        //public int EID { get; set; }
+        //public string medcondescription { get; set; }
+        //public string phydefdescription { get; set; }
+        //public string psychodescription { get; set; }
 
 
         public string currentMed { get; set; }
@@ -150,18 +152,18 @@ namespace smuCRMS.Controller
             MMR = "";
             HB = "";
             HA = "";
-            Others = "";
-            othersDesc = "";
-            olddesc = "";
+            //Others = "";
+            //othersDesc = "";
+            //olddesc = "";
 
-            hospiDesc = "";
-            allergyDesc = "";
-            //INJURIES MODELS 
-            indescription = "";
-            EID = 0;
-            medcondescription = "";
-            phydefdescription = "";
-            psychodescription = "";
+            //hospiDesc = "";
+            //allergyDesc = "";
+            ////INJURIES MODELS 
+            //indescription = "";
+            //EID = 0;
+            //medcondescription = "";
+            //phydefdescription = "";
+            //psychodescription = "";
 
 
             currentMed = "";
@@ -366,12 +368,12 @@ namespace smuCRMS.Controller
         {
             valid = false;
             dtable = patient.getHistory(this);
-            hospiDesc = dtable.Rows[0][0].ToString();
-            indescription = dtable.Rows[0][1].ToString();
-            psychodescription = dtable.Rows[0][2].ToString();
-            allergyDesc = dtable.Rows[0][3].ToString();
-            phydefdescription = dtable.Rows[0][4].ToString();
-            medcondescription = dtable.Rows[0][5].ToString();
+            //hospiDesc = dtable.Rows[0][0].ToString();
+            //indescription = dtable.Rows[0][1].ToString();
+            //psychodescription = dtable.Rows[0][2].ToString();
+            //allergyDesc = dtable.Rows[0][3].ToString();
+            //phydefdescription = dtable.Rows[0][4].ToString();
+            //medcondescription = dtable.Rows[0][5].ToString();
             currentMed = dtable.Rows[0][6].ToString();
             return valid = (dtable.Rows.Count > 0) ? true : false;
         }
