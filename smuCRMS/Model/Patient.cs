@@ -625,13 +625,13 @@ namespace smuCRMS.Controller
         private void getPatientCollection_Basic(PatientController pc)
         {
             addParamVal("uid", pc.uid);
-            addParamVal("id", pc.id);
             addParamVal("LastName", pc.lastName);
-            addParamVal("MiddleName", pc.middleName);
             addParamVal("FirstName", pc.firstName);
+            addParamVal("MiddleName", pc.middleName);
             addParamVal("department_id", pc.department);
             addParamVal("Course_id", pc.course_id);
-            addParamVal("_Level", pc.year);
+            addParamVal("_Level", pc.level);
+            addParamVal("yrgr", pc.year);
             addParamVal("Birthday", pc.birthday);
             addParamVal("Age", pc.age);
             addParamVal("Sex", pc.sex);
@@ -660,15 +660,15 @@ namespace smuCRMS.Controller
             addParamVal("remark_id", pc.remark_id);
             addParamVal("weight", pc.weight);
             addParamVal("height",pc.height);
-            addParamVal("BMI",pc.bmi);
-            addParamVal("BP",pc.bp);
-            addParamVal("PR",pc.pr);
-            addParamVal("RR", pc.rr);
-            addParamVal("Temperature",pc.temp);
-            addParamVal("SPO2",pc.spo2);
-            addParamVal("Remarks",pc.remarks);
-            addParamVal("DoctorInCharge",pc.dic);
-            addParamVal("DoctorSignature",pc.phsig);
+            addParamVal("bmi", pc.bmi);
+            addParamVal("bp",pc.bp);
+            addParamVal("pr",pc.pr);
+            addParamVal("rr", pc.rr);
+            addParamVal("temp",pc.temp);
+            addParamVal("spo2",pc.spo2);
+            addParamVal("remarks",pc.remarks);
+            addParamVal("doctorincharge", pc.dic);
+            addParamVal("doctorsignature", pc.phsig);
         }
         private void getPatientCollection_History(PatientController pc)
         {
@@ -712,9 +712,13 @@ namespace smuCRMS.Controller
             DataTable dtable = new DataTable();
             con.command.Parameters.Clear();
             addParamVal("activity", ACTIVITY);
+            addParamVal("id", pc.id);
             if (STORED_PROCEDURE.Contains("patient"))
             {
                 getPatientCollection_Basic(pc);
+                getPatientCollection_Immunization(pc);
+                getPatientCollection_History(pc);
+                getPatientCollection_Remarks(pc);
             }
             else if (STORED_PROCEDURE.Contains("course"))
             {
@@ -759,7 +763,7 @@ namespace smuCRMS.Controller
                     dtable.Columns.Add("NON_QUERY");
                 }
                 con.close();
-                return dtable = (con.dtable.Columns.Count > 0) ? dtable : con.dtable;
+                return dtable = (dtable.Columns.Count > 0) ? dtable : con.dtable;
             }
         }
     }

@@ -61,8 +61,8 @@ namespace smuCRMS.View
                 pc.bp = txtBP.Text;
                 pc.pr = txtPR.Text;
                 pc.rr = txtRR.Text;
-                pc.spo2 = txtSPo2.Text;
-                pc.temp = txtTemp.Text;
+                //pc.spo2 = txtSPo2.Text;
+                //pc.temp = txtTemp.Text;
                 pc.refe = txtRefe.Text;
                 if (pc.addTreatment())
                 {

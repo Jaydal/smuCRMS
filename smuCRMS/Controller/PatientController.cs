@@ -42,11 +42,11 @@ namespace smuCRMS.Controller
         public double weight { get; set; }
         public string firstMenstrualdate { get; set; }
         public string lastMenstrualdate { get; set; }
-        public string bmi { get; set; }
+        public double bmi { get; set; }
         public string bp { get; set; }
         public string pr { get; set; }
         public string rr { get; set; }
-        public string temp { get; set; }
+        public double temp { get; set; }
         public string remarks { get; set; }
         public string remark_id { get; set; }
         public string department_id { get; set; }
@@ -92,7 +92,7 @@ namespace smuCRMS.Controller
 
         public string filename { get; set; }
         public byte[] photo { get; set; }
-        public string spo2 { get; set; }
+        public double spo2 { get; set; }
         public string dic { get; set; }
         public string refe { get; set; }
         public string uid { get; set; }
@@ -134,11 +134,11 @@ namespace smuCRMS.Controller
             weight = 0.0;
             firstMenstrualdate = null;
             lastMenstrualdate = null;
-            bmi = "";
+            bmi = 0.0;
             bp = "";
             pr = "";
             rr = "";
-            temp = "";
+            temp = 0.0;
             remarks = "";
             department_id = "";
 
@@ -178,7 +178,7 @@ namespace smuCRMS.Controller
 
             filename = "";
             photo = null;
-            spo2 = "";
+            spo2 = 0.0;
             dic = "";
             refe = "";
             uid = null;
@@ -233,12 +233,12 @@ namespace smuCRMS.Controller
                 id = dtable.Rows[0][1].ToString();
                 weight = double.Parse(dtable.Rows[0][2].ToString());
                 height = double.Parse(dtable.Rows[0][3].ToString());
-                bmi = dtable.Rows[0][4].ToString();
+                //bmi = dtable.Rows[0][4].ToString();
                 bp = dtable.Rows[0][5].ToString();
                 pr = dtable.Rows[0][6].ToString();
                 rr = dtable.Rows[0][7].ToString();
-                temp = dtable.Rows[0][8].ToString();
-                spo2 = dtable.Rows[0][9].ToString();
+                temp = double.Parse(dtable.Rows[0][8].ToString());
+                //spo2 = dtable.Rows[0][9].ToString();
                 remarks = dtable.Rows[0][10].ToString();
                 //psig= dtable.Rows[0][11];
                 dic = dtable.Rows[0][12].ToString();

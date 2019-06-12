@@ -2316,7 +2316,6 @@
             this.cmbImmuha.TabIndex = 3;
             this.metroToolTip1.SetToolTip(this.cmbImmuha, "Right click to remove level of immunization");
             this.cmbImmuha.UseSelectable = true;
-            this.cmbImmuha.SelectedIndexChanged += new System.EventHandler(this.cmbImmubgc_SelectedIndexChanged);
             this.cmbImmuha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // groupBox7
@@ -2370,7 +2369,6 @@
             this.cmbImmuhb.TabIndex = 3;
             this.metroToolTip1.SetToolTip(this.cmbImmuhb, "Right click to remove level of immunization");
             this.cmbImmuhb.UseSelectable = true;
-            this.cmbImmuhb.SelectedIndexChanged += new System.EventHandler(this.cmbImmubgc_SelectedIndexChanged);
             this.cmbImmuhb.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // groupBox4
@@ -2424,7 +2422,6 @@
             this.cmbImmummr.TabIndex = 3;
             this.metroToolTip1.SetToolTip(this.cmbImmummr, "Right click to remove level of immunization");
             this.cmbImmummr.UseSelectable = true;
-            this.cmbImmummr.SelectedIndexChanged += new System.EventHandler(this.cmbImmubgc_SelectedIndexChanged);
             this.cmbImmummr.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // groupBox5
@@ -2478,7 +2475,6 @@
             this.cmbImmuopv.TabIndex = 3;
             this.metroToolTip1.SetToolTip(this.cmbImmuopv, "Right click to remove level of immunization");
             this.cmbImmuopv.UseSelectable = true;
-            this.cmbImmuopv.SelectedIndexChanged += new System.EventHandler(this.cmbImmubgc_SelectedIndexChanged);
             this.cmbImmuopv.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // groupBox3
@@ -2532,7 +2528,6 @@
             this.cmbImmudpt.TabIndex = 3;
             this.metroToolTip1.SetToolTip(this.cmbImmudpt, "Right click to remove level of immunization");
             this.cmbImmudpt.UseSelectable = true;
-            this.cmbImmudpt.SelectedIndexChanged += new System.EventHandler(this.cmbImmubgc_SelectedIndexChanged);
             this.cmbImmudpt.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // groupBox2
@@ -2586,7 +2581,6 @@
             this.cmbImmubgc.TabIndex = 2;
             this.metroToolTip1.SetToolTip(this.cmbImmubgc, "Right click to remove level of immunization");
             this.cmbImmubgc.UseSelectable = true;
-            this.cmbImmubgc.SelectedIndexChanged += new System.EventHandler(this.cmbImmubgc_SelectedIndexChanged);
             this.cmbImmubgc.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbImmu_MouseDown);
             // 
             // tbRemark
@@ -2914,6 +2908,7 @@
             this.txtBMI.UseSystemPasswordChar = false;
             this.txtBMI.Click += new System.EventHandler(this.txtBMI_Click);
             this.txtBMI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBP_KeyPress);
+            this.txtBMI.TextChanged += new System.EventHandler(this.txtBMI_TextChanged);
             // 
             // groupBox23
             // 

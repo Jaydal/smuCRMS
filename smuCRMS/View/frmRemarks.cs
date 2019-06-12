@@ -19,13 +19,13 @@ namespace smuCRMS.View
                pc.id = lblID.Text;
                 if (pc.getRemark())
                 {
-                    txtBMI.Text = pc.bmi;
+                    txtBMI.Text = pc.bmi.ToString();
                     txtBP.Text = pc.bp;
                     txtHeight.Text = pc.height.ToString();
                     txtPR.Text = pc.pr;
                     txtRemarks.Text = pc.remarks;
                     txtRR.Text = pc.rr;
-                    txtTemp.Text = pc.temp;
+                    //txtTemp.Text = pc.temp;
                     txtWeight.Text = pc.weight.ToString();
                     txtSPo2.Text = pc.spo2.ToString();
                    txtIC.Text = pc.dic;
@@ -66,15 +66,15 @@ namespace smuCRMS.View
                 btnCancel.Show();
                 pc.id = lblID.Text;
                 pc.bp = txtBP.Text;
-                pc.height = Int32.Parse(txtHeight.Text);
+                pc.height = double.Parse(txtHeight.Text);
                 pc.pr = txtPR.Text;
                 pc.remarks = txtRemarks.Text;
                 pc.rr = txtRR.Text;
                 pc.dic = txtIC.Text;
-                pc.temp = txtTemp.Text;
-                pc.weight = Int32.Parse(txtWeight.Text);
-                pc.bmi = txtBMI.Text;
-                pc.spo2 = txtSPo2.Text;
+                //pc.temp = txtTemp.Text;
+                pc.weight = double.Parse(txtWeight.Text);
+                pc.bmi = double.Parse(txtBMI.Text);
+                //pc.spo2 = txtSPo2.Text;
                 pc.dic = txtIC.Text;
                 frmSig sig = new frmSig();
                 sig.mode = "x";

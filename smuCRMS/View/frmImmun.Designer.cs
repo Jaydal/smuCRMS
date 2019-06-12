@@ -231,7 +231,7 @@
             this.txtImmuOther.MaxLength = 32767;
             this.txtImmuOther.Name = "txtImmuOther";
             this.txtImmuOther.PasswordChar = '\0';
-            this.txtImmuOther.PromptText = "Please specify";
+            this.txtImmuOther.WaterMark = "Please specify";
             this.txtImmuOther.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtImmuOther.SelectedText = "";
             this.txtImmuOther.SelectionLength = 0;

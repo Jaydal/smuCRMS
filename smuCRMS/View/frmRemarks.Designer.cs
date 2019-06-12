@@ -90,7 +90,7 @@
             this.txtIC.MaxLength = 32767;
             this.txtIC.Name = "txtIC";
             this.txtIC.PasswordChar = '\0';
-            this.txtIC.PromptText = "Physician";
+            this.txtIC.WaterMark = "Physician";
             this.txtIC.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtIC.SelectedText = "";
             this.txtIC.SelectionLength = 0;
@@ -125,7 +125,7 @@
             this.txtRemarks.Multiline = true;
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.PasswordChar = '\0';
-            this.txtRemarks.PromptText = "Remarks....";
+            this.txtRemarks.WaterMark = "Remarks....";
             this.txtRemarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtRemarks.SelectedText = "";
             this.txtRemarks.SelectionLength = 0;

@@ -39,14 +39,14 @@ namespace smuCRMS.View
                     pm.uid = uid;
                 }
                 pm.id = txtPID.Text;
-                pm.spo2 = txtSPo2.Text;
+                pm.spo2 = double.Parse(txtSPo2.Text);
                 pm.lastName = txtLName.Text;
                 pm.firstName = txtFName.Text;
                 pm.middleName = txtMName.Text;
-                pm.course_id = cmbCourse.ValueMember;
+                pm.course_id = cmbCourse.SelectedValue.ToString();
                 pm.age = Int32.Parse(cmbAge.Text);
                 pm.year = cmbYear.Text;
-                pm.department = cmbDepartment.Text;
+                pm.department = cmbDepartment.SelectedValue.ToString();
                 pm.birthday = dtBDay.Text;
                 pm.sex = sex;
                 pm.civilStatus = cmbCivilStat.Text;
@@ -66,21 +66,22 @@ namespace smuCRMS.View
                 pm.firstMenstrualdate = dtFMP.Text;
                 pm.relation = txtRelation.Text;
                 pm.lastMenstrualdate = dtLMP.Text;
-                pm.bmi = txtBMI.Text;
+
+                pm.bmi = double.Parse(txtBMI.Text);
                 pm.bp = txtBP.Text;
                 pm.rr = txtRR.Text;
                 pm.pr = txtPR.Text;
-                pm.temp = txtTemp.Text;
+                pm.temp = double.Parse(txtTemp.Text);
                 pm.emergencyCall = txtEmergencyCall.Text;
                 pm.emergencyNumber = txtECNumber.Text;
                 pm.remarks = "(" + cmbBMI.Text + ") " + txtRemarks.Text;
 
                 pm.JSONImmunization = 
-                    @"{'OPV':'"+pm.OPV +
-                    "','DPT':'" + pm.DPT +
-                    "','MMR':'" + pm.MMR +
-                    "','HB':'" + pm.HB +
-                    "','HA':'" + pm.HA +
+                    @"{'OPV':'"+cmbImmuopv.Text +
+                    "','DPT':'" + cmbImmudpt.Text +
+                    "','MMR':'" + cmbImmummr.Text +
+                    "','HB':'" + cmbImmuhb.Text +
+                    "','HA':'" + cmbImmuha.Text +
                     "','"+txtImmuOther.Text+"':'" + cmbImmuoth1.Text +
                     "','"+ txtImmuOther2.Text+ "':'" + cmbImmuoth2.Text +
                     "','"+ txtImmuOther3.Text+ "':'" + cmbImmuoth3.Text + "'}";
@@ -97,7 +98,7 @@ namespace smuCRMS.View
                 //pm.tDate = dtpCTDate.Value.ToString("yyyy-MM-dd");
 
                 //pm.tHeight = Int32.Parse(txtCTheight.Text);
-                pm.tWeight = Int32.Parse(txtWeight.Text);
+                //pm.tWeight = Int32.Parse(txtWeight.Text);
 
 
             }
@@ -184,7 +185,7 @@ namespace smuCRMS.View
             txtRelation.Text = pm.relation;
             dtFMP.Text = pm.firstMenstrualdate.ToString();
             dtLMP.Text = pm.lastMenstrualdate.ToString();
-            txtSPo2.Text = pm.spo2;
+            txtSPo2.Text = pm.spo2.ToString();
         }
 
         //en/disabling all controls in form
@@ -220,10 +221,12 @@ namespace smuCRMS.View
         //changing label Year/Grade based on department
         private void cmbDepartment_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            LoadCourses();
+            //Load level to data model
+            pm.level= LoadCourses();
         }
-        void LoadCourses()
+        string LoadCourses()
         {
+            string level;
             pm.department = cmbDepartment.SelectedValue.ToString();
             cmbCourse.ValueMember = "Course_id";
             cmbCourse.DisplayMember = "Course";
@@ -234,6 +237,7 @@ namespace smuCRMS.View
                
                 cmbYear.Items.AddRange(gs);
                 //lblYear.Text = "Grade";
+                level = "GS";
                 cmbCourse.Enabled = false;
             }
             else if(cmbDepartment.Text.ToLower().Contains("junior"))
@@ -241,12 +245,14 @@ namespace smuCRMS.View
                 cmbYear.Items.AddRange(js);
                 gbY.Text = "Grade";
                 cmbCourse.Enabled = false;
+                level = "JHS";
             }
             else if (cmbDepartment.Text.ToLower().Contains("senior"))
             {
                 cmbYear.Items.AddRange(sh);
                 gbY.Text = "Grade";
                 gbC.Text = "Track";
+                level = "SHS";
             }
             else 
             {
@@ -255,8 +261,10 @@ namespace smuCRMS.View
                 cmbCourse.Enabled = true;
                 //get level to determine-----
                 cmbYear.Items.AddRange(undergrad);
+                level = "College";
             }
             cmbYear.SelectedIndex = 0;
+            return level;
         }
         void ConvertPhotoTobyte()
         {
@@ -464,7 +472,7 @@ namespace smuCRMS.View
                             ct.id = pm.id;
                             ct.ShowDialog();
                         }
-                        }
+                    }
 
 
                     reset();
@@ -949,7 +957,6 @@ namespace smuCRMS.View
             {
                 //cmbImmu.SelectedItem = null;
                 ((MetroComboBox)sender).SelectedItem = null;
-                getImmunization((MetroComboBox)sender);
             }
         }
 
@@ -968,19 +975,5 @@ namespace smuCRMS.View
             computeBMI();
         }
 
-        private void cmbImmubgc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            MetroComboBox x = ((MetroComboBox)sender);
-            getImmunization(x);
-        }
-        private void getImmunization(MetroComboBox x)
-        {
-            pm.BGC = (x.Name.Contains("bgc")) ? x.Text : "";
-            pm.DPT = (x.Name.Contains("dpt")) ? x.Text : "";
-            pm.OPV = (x.Name.Contains("opv")) ? x.Text : "";
-            pm.MMR = (x.Name.Contains("mmr")) ? x.Text : "";
-            pm.HB = (x.Name.Contains("hb")) ? x.Text : "";
-            pm.HA = (x.Name.Contains("ha")) ? x.Text : "";
-        }
     }
 }
