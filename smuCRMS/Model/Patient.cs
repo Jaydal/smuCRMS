@@ -753,7 +753,7 @@ namespace smuCRMS.Controller
             if (Query)
             {
                 con.getDataTable(STORED_PROCEDURE);
-                return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
+                return dtable = (con.dtable.Rows.Count > 0) ? con.dtable : dtable;
             }
             else
             {

@@ -130,7 +130,7 @@ namespace smuCRMS.View
             txtPID.Text = idnumber;
             pm.id = idnumber;
             txtPID.Enabled = false;
-            if (pm.getStudByID(this))
+            if (pm.getPatientByID(this))
             {
                 loadValToControls();
                 txtPID.Text = idnumber;
@@ -230,7 +230,7 @@ namespace smuCRMS.View
             pm.department = cmbDepartment.SelectedValue.ToString();
             cmbCourse.ValueMember = "Course_id";
             cmbCourse.DisplayMember = "Course";
-            cmbCourse.DataSource = pm.getCourse();
+            cmbCourse.DataSource = pm.getCourses();
             cmbYear.Items.Clear();
             if (cmbDepartment.Text.ToLower().Contains("grade"))
             {

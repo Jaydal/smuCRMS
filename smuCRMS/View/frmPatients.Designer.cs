@@ -281,6 +281,7 @@ namespace smuCRMS.View
             this.txtSearch1.TabIndex = 32;
             this.txtSearch1.TabStop = false;
             this.txtSearch1.UseSystemPasswordChar = false;
+            this.txtSearch1.Click += new System.EventHandler(this.txtSearch1_Click);
             this.txtSearch1.TextChanged += new System.EventHandler(this.txtSearch1_TextChanged_1);
             // 
             // tbPmain

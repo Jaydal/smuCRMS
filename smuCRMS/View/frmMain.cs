@@ -413,7 +413,7 @@ namespace smuCRMS.View
                     lblRFID.Text = id;
                     if (id == "" || id == null)
                     {
-                        lblRFID.Text = "No Record";
+                        lblRFID.Text = "ID Detected | No Record";
                         addPatient ap = new addPatient();
                         ap.uid = cardUID;
                         loadfrm(ap);
@@ -427,7 +427,7 @@ namespace smuCRMS.View
                 }
                 else
                 {
-                    lblRFID.Text = "";
+                    lblRFID.Text = "ID not Detected";
                 }
             }
         }

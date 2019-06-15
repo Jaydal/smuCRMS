@@ -251,69 +251,6 @@ namespace smuCRMS.Controller
         {
             return dtable = patient.getStudByID(this);
         }
-        public bool getStudByID(addPatient ap)
-        {
-            dtable = patient.getStudByID(this);
-            if (dtable.Rows.Count > 0)
-            {
-
-                uid = dtable.Rows[0][0].ToString();
-                lastName = dtable.Rows[0][2].ToString();
-                firstName = dtable.Rows[0][3].ToString();
-                middleName = dtable.Rows[0][4].ToString();
-                department = dtable.Rows[0][5].ToString();
-                course_id = dtable.Rows[0][6].ToString();
-                year= dtable.Rows[0][7].ToString();
-                level = dtable.Rows[0][8].ToString();
-
-                birthday = dtable.Rows[0][9].ToString();
-                if (dtable.Rows[0][9].ToString() != "")
-                {
-                    age = Int32.Parse(dtable.Rows[0][9].ToString());
-                }
-                else
-                {
-                    age = 0;
-                }
-                sex = dtable.Rows[0][10].ToString();
-                civilStatus = dtable.Rows[0][11].ToString();
-                nationality = dtable.Rows[0][12].ToString();
-                homeAddress = dtable.Rows[0][13].ToString();
-                boardingAddress = dtable.Rows[0][14].ToString();
-                fatherName = dtable.Rows[0][15].ToString();
-                fatherOccupation = dtable.Rows[0][16].ToString();
-                fatherNumber = dtable.Rows[0][17].ToString();
-                motherName = dtable.Rows[0][18].ToString();
-                motherOccupation = dtable.Rows[0][19].ToString();
-                motherNumber = dtable.Rows[0][20].ToString();
-                landladyName = dtable.Rows[0][21].ToString();
-                landladyNumber = dtable.Rows[0][22].ToString();
-                emergencyCall = dtable.Rows[0][23].ToString();
-                relation = dtable.Rows[0][24].ToString();
-                emergencyNumber = dtable.Rows[0][25].ToString();
-                firstMenstrualdate = dtable.Rows[0][26].ToString();
-                lastMenstrualdate = dtable.Rows[0][27].ToString();
-
-                if (dtable.Rows[0][28] != System.DBNull.Value)
-                {
-                    byte[] img = (byte[])dtable.Rows[0][28];
-                    MemoryStream ms = new MemoryStream(img);
-                    ap.pbPhoto.Image = Image.FromStream(ms);
-                    ap.pbPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
-                    ap.pbPhoto.Refresh();
-                }
-
-                valid = true;
-            }
-            return valid;
-
-        }
-
-        public void basicSTUDinfo(DataGridView dg)
-        {
-            dtable = patient.basicStudInfo();
-            dg.DataSource = (dtable.Rows.Count > 0) ? dtable : null;
-        }
         public void basicSTUDinfoArc(DataGridView dg)
         {
             dtable = patient.basicSTUDinfoArc();
@@ -456,7 +393,7 @@ namespace smuCRMS.Controller
             return patient.callProcedure(this,
                 "VIEW_ALL", "vcrud_department", true);
         }
-        public DataTable getCourse()
+        public DataTable getCourses()
         {
             return patient.callProcedure(this,
                 "VIEW_BY_DEPARTMENT", "vcrud_course",true);
@@ -483,6 +420,58 @@ namespace smuCRMS.Controller
             DataTable dt = patient.callProcedure(this,
                 "VIEW", "vcrud_patient", true);
             return (dt.Rows.Count>0)? dt.Rows[0][1].ToString() : "";
+        }
+
+        public bool getPatientByID(addPatient ap)
+        {
+            dtable =patient.callProcedure(this,
+                "VIEW", "vcrud_patient", true);
+            if (dtable.Rows.Count > 0)
+            {
+
+                uid = dtable.Rows[0][0].ToString();
+                id = dtable.Rows[0][1].ToString();
+                lastName = dtable.Rows[0][2].ToString();
+                firstName = dtable.Rows[0][3].ToString();
+                middleName = dtable.Rows[0][4].ToString();
+                department = dtable.Rows[0][5].ToString();
+                course_id = dtable.Rows[0][6].ToString();
+                year = dtable.Rows[0][8].ToString();
+                //level = dtable.Rows[0][8].ToString();
+                birthday = dtable.Rows[0][9].ToString();
+                age = Int32.Parse(dtable.Rows[0][10].ToString());
+                sex = dtable.Rows[0][11].ToString();
+                civilStatus = dtable.Rows[0][12].ToString();
+                nationality = dtable.Rows[0][13].ToString();
+                homeAddress = dtable.Rows[0][14].ToString();
+                boardingAddress = dtable.Rows[0][15].ToString();
+                fatherName = dtable.Rows[0][16].ToString();
+                fatherOccupation = dtable.Rows[0][17].ToString();
+                fatherNumber = dtable.Rows[0][18].ToString();
+                motherName = dtable.Rows[0][19].ToString();
+                motherOccupation = dtable.Rows[0][20].ToString();
+                motherNumber = dtable.Rows[0][21].ToString();
+                landladyName = dtable.Rows[0][22].ToString();
+                landladyNumber = dtable.Rows[0][23].ToString();
+                emergencyCall = dtable.Rows[0][24].ToString();
+                relation = dtable.Rows[0][25].ToString();
+                emergencyNumber = dtable.Rows[0][26].ToString();
+                firstMenstrualdate = dtable.Rows[0][27].ToString();
+                lastMenstrualdate = dtable.Rows[0][28].ToString();
+
+                if (dtable.Rows[0][29] != System.DBNull.Value)
+                {
+                    byte[] img = (byte[])dtable.Rows[0][29];
+                    MemoryStream ms = new MemoryStream(img);
+                    ap.pbPhoto.Image = Image.FromStream(ms);
+                    ap.pbPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
+                    ap.pbPhoto.Refresh();
+                }
+
+                valid = true;
+            }
+            return valid;
+
         }
     }
 

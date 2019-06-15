@@ -24,13 +24,14 @@ namespace smuCRMS.View
 
         private void frmPatients_Load(object sender, EventArgs e)
         {
-            pc.basicSTUDinfo(dgStudents);
+            search = "";
+            dgStudents.DataSource = pc.search();
             tbPmain.SelectedIndex = 0;
             dgv = dgStudents;
       
             pc.classification = "Recs";
            
-            search = "";
+            
             if(txtSearch1.Text!="")
             {
                 pc.department = search;
@@ -418,7 +419,7 @@ namespace smuCRMS.View
             if (tbPmain.SelectedIndex == 0)
             {
                 pc.classification = "Recs";
-                pc.basicSTUDinfo(dgStudents);
+                dgStudents.DataSource=pc.search();
                 dgv = dgStudents;
        
             }
@@ -459,5 +460,9 @@ namespace smuCRMS.View
             txtSearch1.Clear();
         }
 
+        private void txtSearch1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
