@@ -77,14 +77,14 @@ namespace smuCRMS.View
                 pm.remarks = "(" + cmbBMI.Text + ") " + txtRemarks.Text;
 
                 pm.JSONImmunization = 
-                    @"{'OPV':'"+cmbImmuopv.Text +
-                    "','DPT':'" + cmbImmudpt.Text +
-                    "','MMR':'" + cmbImmummr.Text +
-                    "','HB':'" + cmbImmuhb.Text +
-                    "','HA':'" + cmbImmuha.Text +
-                    "','"+txtImmuOther.Text+"':'" + cmbImmuoth1.Text +
-                    "','"+ txtImmuOther2.Text+ "':'" + cmbImmuoth2.Text +
-                    "','"+ txtImmuOther3.Text+ "':'" + cmbImmuoth3.Text + "'}";
+                    @"{'OPV':'"+ immunizationControl1.cmbImmuopv.Text +
+                    "','DPT':'" + immunizationControl1.cmbImmudpt.Text +
+                    "','MMR':'" + immunizationControl1.cmbImmummr.Text +
+                    "','HB':'" + immunizationControl1.cmbImmuhb.Text +
+                    "','HA':'" + immunizationControl1.cmbImmuha.Text +
+                    "','"+ immunizationControl1.txtImmuOther.Text+"':'" + immunizationControl1.cmbImmuoth1.Text +
+                    "','"+ immunizationControl1.txtImmuOther2.Text+ "':'" + immunizationControl1.cmbImmuoth2.Text +
+                    "','"+ immunizationControl1.txtImmuOther3.Text+ "':'" + immunizationControl1.cmbImmuoth3.Text + "'}";
                 
                 pm.JSONHistory=
                     @"{'Hospitalization':'" + txtH1.Text +
@@ -111,6 +111,7 @@ namespace smuCRMS.View
 
         private void addPatient_Load_1(object sender, EventArgs e)
         {
+            
             cmbDepartment.ValueMember = "department_id";
             cmbDepartment.DisplayMember = "Department";
             cmbDepartment.DataSource = pm.getDepartment();
@@ -419,7 +420,7 @@ namespace smuCRMS.View
             txtH7.Text = "";
             txtHeight.Text = "";
             txtHomeAdd.Text = "";
-            txtImmuOther.Text = "";
+            immunizationControl1.txtImmuOther.Text = "";
             txtLandLady.Text = "";
             txtLLNumber.Text = "";
             txtPID.Text = "";
@@ -774,14 +775,7 @@ namespace smuCRMS.View
             {
                 enableCYD(false);
                 txtPID.Enabled = false;
-                foreach (Control c in gbImmu.Controls)
-                {
-                    c.Enabled = false;
-                    foreach (Control x in gbHist.Controls)
-                    {
-                        x.Enabled = false;
-                    }
-                }
+                immunizationControl1.Enabled = false;
                 txtPID.Text = "V" + DateTime.Now.Month + DateTime.Now.Day + (DateTime.Now.Year) % 2000 + DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second;
                 txtLName.Select();  
             }
@@ -789,14 +783,7 @@ namespace smuCRMS.View
             {
                 enableCYD(true);
                 txtPID.Enabled = true;
-                foreach (Control c in gbImmu.Controls)
-                {
-                    c.Enabled = true;
-                    foreach (Control x in gbHist.Controls)
-                    {
-                        x.Enabled = true;
-                    }
-                }
+                immunizationControl1.Enabled = true;
                 txtPID.Text = "";
                 txtPID.Select();
             }
@@ -975,5 +962,9 @@ namespace smuCRMS.View
             computeBMI();
         }
 
+        private void immunizationControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

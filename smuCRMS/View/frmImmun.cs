@@ -20,7 +20,7 @@ namespace smuCRMS.View
             panelAddImmu.Visible = false;
             panelAddImmu.Enabled = false;
             pc.id = lblID.Text;
-            pc.getStudImmun(dgImmun);
+            //pc.getStudImmun(dgImmun);
             if (dgImmun.DataSource == null)
             {
                 DialogResult res= MetroMessageBox.Show(this, "No Immunization for the Patient! Do you want to add?", "Immunization", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -175,6 +175,11 @@ namespace smuCRMS.View
             //    //pc.Others = ap.immunCode(cbOTHERS1st, cbOTHERS2nd, cbOTHERS3rd, cbOTHERSb1, cbOTHERSb2);
             //}
             //TODO
+        }
+
+        private void immunizationControl1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
