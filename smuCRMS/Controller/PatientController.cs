@@ -216,10 +216,7 @@ namespace smuCRMS.Controller
         {
             return valid = (patient.updateImmunization(this)) ? true : false;
         }
-        public bool updateHistory()
-        {
-            return valid = (patient.updateHistory(this)) ? true : false;
-        }
+        
        
 
         public bool getRemark()
@@ -396,6 +393,11 @@ namespace smuCRMS.Controller
             //this is non-query
             return valid = (patient.callProcedure(this,
                 "CREATE", "vcrud_patient", false).Columns.Count > 0) ? true : false;
+        }
+        public bool updateHistory()
+        {
+            return valid = (patient.callProcedure(this,
+                "UPDATE", "vcrud_history", false).Columns.Count > 0) ? true : false;
         }
         public bool addTreatment()
         {

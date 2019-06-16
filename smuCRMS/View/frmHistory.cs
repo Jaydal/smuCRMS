@@ -113,22 +113,18 @@ namespace smuCRMS.View
             }
             else
             {
-                //TODO
-                //pc.allergyDesc = txtallergy.Text;
-                //pc.currentMed = txtcurr.Text;
-                //pc.hospiDesc = txthospi.Text;
-                //pc.indescription = txtinj.Text;
-                //pc.medcondescription = txtmed.Text;
-                //pc.phydefdescription = txtphys.Text;
-                //pc.psychodescription = txtpsych.Text;
+                pc.JSONHistory =
+                    @"{'Hospitalization':'" + txthospi.Text +
+                    "','Injury':'" + txtinj.Text +
+                    "','Psychological':'" + txtpsych.Text +
+                    "','Allergy':'" + txtallergy.Text +
+                    "','Physical_Defects':'" + txtphys.Text +
+                    "','Medical_Condition':'" + txtmed.Text +
+                    "','Medication':'" + txtcurr.Text + "'}";
+                pc.tDate = DateTime.Now.ToString("yyyy-MM-dd");
                 if (pc.updateHistory())
                 {
                     btnEdit.Text = "Update";
-                    //ac.getActiveUser();
-                    //if (ac.accountID == "3" && btnEdit.Text == "Edit")
-                    //{
-                    //    btnEdit.Visible = false;
-                    //}
                     MetroMessageBox.Show(this,"Successfully Updated/Saved!","Message",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     enableHistory(false);
                     hidePanelX();
