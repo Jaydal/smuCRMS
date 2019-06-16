@@ -44,19 +44,19 @@ namespace smuCRMS.View
 
         }
         //this will hide the panel if there is no data retrieved
-        void hidePanel(MetroTextBox txt,Panel pnl)
-        {
-            if (txt.Text == "" || txt.Text == null)
-            {
-                pnl.Hide();
-                ctr++;
-            }
-
-        }
         //getting data from the controller to history controls
         void loadData()
         {
-            historyControl1.getHistory(pc.hospiDesc,pc.indescription,pc.allergyDesc,pc.currentMed,pc.medcondescription,pc.phydefdescription,pc.psychodescription);
+            if (pc.hospiDesc=="" && pc.indescription == "" && pc.allergyDesc == "" && pc.currentMed == "" && 
+                pc.medcondescription == "" && pc.phydefdescription == "" && pc.psychodescription == "")
+            {
+                ctr = 7;
+            }
+            else
+            {
+                historyControl1.getHistory(pc.hospiDesc, pc.indescription, pc.allergyDesc, pc.currentMed, pc.medcondescription, pc.phydefdescription, pc.psychodescription);
+
+            }
         }
 
         private void btnDone_Click(object sender, EventArgs e)
