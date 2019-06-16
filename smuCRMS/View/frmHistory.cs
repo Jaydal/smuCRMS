@@ -77,6 +77,7 @@ namespace smuCRMS.View
                 if (pc.updateHistory())
                 {
                     btnEdit.Text = "Update";
+                    btnDone.Text = "Done";
                     MetroMessageBox.Show(this,"Successfully Updated/Saved!","Message",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     historyControl1.Enabled = false;
                 }

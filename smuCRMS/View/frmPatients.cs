@@ -343,6 +343,7 @@ namespace smuCRMS.View
                 frmImmun immun = new frmImmun();
                 immun.lblID.Text = id;
                 immun.ShowDialog();
+                txtSearch1.Text = id;
             }
             this.Focus();
         }
@@ -351,10 +352,11 @@ namespace smuCRMS.View
         {
             if (dgv.RowCount > 0)
             {
+                id = dgv.CurrentRow.Cells["ID Number"].Value.ToString();
                 frmHistory his = new frmHistory();
-                his.lblID.Text = dgv.CurrentRow.Cells["ID Number"].Value.ToString();
-                his.ShowDialog();
+                his.lblID.Text = id;
                 this.Focus();
+                txtSearch1.Text = id;
             }
         }
 
@@ -362,10 +364,12 @@ namespace smuCRMS.View
         {
             if (dgv.RowCount > 0)
             {
+                id = dgv.CurrentRow.Cells["ID Number"].Value.ToString();
                 frmRemarks rem = new frmRemarks();
-                rem.lblID.Text = dgv.CurrentRow.Cells["ID Number"].Value.ToString();
+                rem.lblID.Text = id;
                 rem.ShowDialog();
                 this.Focus();
+                txtSearch1.Text = id;
             }
         }
 
@@ -373,9 +377,11 @@ namespace smuCRMS.View
         {
             if (dgv.RowCount > 0)
             {
+                id = dgv.CurrentRow.Cells["ID Number"].Value.ToString();
                 frmTreatment treat = new frmTreatment();
-                treat.lblID.Text = dgv.CurrentRow.Cells["ID Number"].Value.ToString();
+                treat.lblID.Text = id;
                 treat.ShowDialog();
+                txtSearch1.Text = id;
             }
         }
 
