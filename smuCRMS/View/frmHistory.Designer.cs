@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHistory));
             this.lblID = new System.Windows.Forms.Label();
             this.pnlH1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txthospi = new MetroFramework.Controls.MetroTextBox();
             this.pnlH2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtinj = new MetroFramework.Controls.MetroTextBox();
@@ -54,8 +52,9 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btnEdit = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnDone = new MaterialSkin.Controls.MaterialFlatButton();
+            this.txthospi = new MetroFramework.Controls.MetroTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnlH1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.pnlH2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.pnlH3.SuspendLayout();
@@ -69,6 +68,7 @@
             this.pnlH7.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.metroPanel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblID
@@ -92,55 +92,6 @@
             this.pnlH1.Name = "pnlH1";
             this.pnlH1.Size = new System.Drawing.Size(991, 84);
             this.pnlH1.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txthospi);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(991, 84);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "History of hospitalization or surgical operations";
-            // 
-            // txthospi
-            // 
-            // 
-            // 
-            // 
-            this.txthospi.CustomButton.Image = null;
-            this.txthospi.CustomButton.Location = new System.Drawing.Point(929, 2);
-            this.txthospi.CustomButton.Margin = new System.Windows.Forms.Padding(4);
-            this.txthospi.CustomButton.Name = "";
-            this.txthospi.CustomButton.Size = new System.Drawing.Size(51, 51);
-            this.txthospi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txthospi.CustomButton.TabIndex = 1;
-            this.txthospi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txthospi.CustomButton.UseSelectable = true;
-            this.txthospi.CustomButton.Visible = false;
-            this.txthospi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txthospi.Enabled = false;
-            this.txthospi.Lines = new string[0];
-            this.txthospi.Location = new System.Drawing.Point(4, 24);
-            this.txthospi.Margin = new System.Windows.Forms.Padding(4);
-            this.txthospi.MaxLength = 255;
-            this.txthospi.Multiline = true;
-            this.txthospi.Name = "txthospi";
-            this.txthospi.PasswordChar = '\0';
-            this.txthospi.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txthospi.SelectedText = "";
-            this.txthospi.SelectionLength = 0;
-            this.txthospi.SelectionStart = 0;
-            this.txthospi.ShortcutsEnabled = true;
-            this.txthospi.Size = new System.Drawing.Size(983, 56);
-            this.txthospi.TabIndex = 1;
-            this.txthospi.UseSelectable = true;
-            this.txthospi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txthospi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // pnlH2
             // 
@@ -556,6 +507,55 @@
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
+            // txthospi
+            // 
+            // 
+            // 
+            // 
+            this.txthospi.CustomButton.Image = null;
+            this.txthospi.CustomButton.Location = new System.Drawing.Point(929, 2);
+            this.txthospi.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txthospi.CustomButton.Name = "";
+            this.txthospi.CustomButton.Size = new System.Drawing.Size(51, 51);
+            this.txthospi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txthospi.CustomButton.TabIndex = 1;
+            this.txthospi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txthospi.CustomButton.UseSelectable = true;
+            this.txthospi.CustomButton.Visible = false;
+            this.txthospi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txthospi.Enabled = false;
+            this.txthospi.Lines = new string[0];
+            this.txthospi.Location = new System.Drawing.Point(4, 24);
+            this.txthospi.Margin = new System.Windows.Forms.Padding(4);
+            this.txthospi.MaxLength = 255;
+            this.txthospi.Multiline = true;
+            this.txthospi.Name = "txthospi";
+            this.txthospi.PasswordChar = '\0';
+            this.txthospi.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txthospi.SelectedText = "";
+            this.txthospi.SelectionLength = 0;
+            this.txthospi.SelectionStart = 0;
+            this.txthospi.ShortcutsEnabled = true;
+            this.txthospi.Size = new System.Drawing.Size(983, 56);
+            this.txthospi.TabIndex = 1;
+            this.txthospi.UseSelectable = true;
+            this.txthospi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txthospi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txthospi);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(991, 84);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "History of hospitalization or surgical operations";
+            // 
             // frmHistory
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -582,7 +582,6 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmHistory_Load);
             this.pnlH1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.pnlH2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.pnlH3.ResumeLayout(false);
@@ -597,6 +596,7 @@
             this.groupBox7.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -612,14 +612,12 @@
         private System.Windows.Forms.Panel pnlH5;
         private System.Windows.Forms.Panel pnlH6;
         private System.Windows.Forms.Panel pnlH7;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox7;
-        private MetroFramework.Controls.MetroTextBox txthospi;
         private MetroFramework.Controls.MetroTextBox txtinj;
         private MetroFramework.Controls.MetroTextBox txtpsych;
         private MetroFramework.Controls.MetroTextBox txtallergy;
@@ -629,5 +627,7 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MaterialSkin.Controls.MaterialFlatButton btnEdit;
         private MaterialSkin.Controls.MaterialFlatButton btnDone;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private MetroFramework.Controls.MetroTextBox txthospi;
     }
 }

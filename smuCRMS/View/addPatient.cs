@@ -76,24 +76,8 @@ namespace smuCRMS.View
                 pm.emergencyNumber = txtECNumber.Text;
                 pm.remarks = "(" + cmbBMI.Text + ") " + txtRemarks.Text;
 
-                pm.JSONImmunization = 
-                    @"{'OPV':'"+ immunizationControl1.cmbImmuopv.Text +
-                    "','DPT':'" + immunizationControl1.cmbImmudpt.Text +
-                    "','MMR':'" + immunizationControl1.cmbImmummr.Text +
-                    "','HB':'" + immunizationControl1.cmbImmuhb.Text +
-                    "','HA':'" + immunizationControl1.cmbImmuha.Text +
-                    "','"+ immunizationControl1.txtImmuOther.Text+"':'" + immunizationControl1.cmbImmuoth1.Text +
-                    "','"+ immunizationControl1.txtImmuOther2.Text+ "':'" + immunizationControl1.cmbImmuoth2.Text +
-                    "','"+ immunizationControl1.txtImmuOther3.Text+ "':'" + immunizationControl1.cmbImmuoth3.Text + "'}";
-                
-                pm.JSONHistory=
-                    @"{'Hospitalization':'" + txtH1.Text +
-                    "','Injury':'" + txtH2.Text +
-                    "','Psychological':'" + txtH3.Text +
-                    "','Allergy':'" + txtH4.Text +
-                    "','Physical_Defects':'" + txtH5.Text +
-                    "','Medical_Condition':'" + txtH6.Text +
-                    "','Medication':'" + txtH7.Text + "'}";
+                pm.JSONImmunization = immunizationControl1.getJSONImmunization();
+                pm.JSONHistory = historyControl1.getJSONHistory();
 
                 //pm.tDate = dtpCTDate.Value.ToString("yyyy-MM-dd");
 
@@ -207,17 +191,6 @@ namespace smuCRMS.View
             gbMens.Visible = x;
         }
 
-        private void rbYes1_CheckedChanged_1(object sender, EventArgs e)
-        {
-            if (rbYes1.Checked == true)
-            {
-                txtH1.Enabled = true;
-            }
-            else
-            {
-                txtH1.Enabled = false;
-            }
-        }
 
         //changing label Year/Grade based on department
         private void cmbDepartment_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -411,16 +384,8 @@ namespace smuCRMS.View
             txtFatherNumber.Text = "";
             txtFatherOcc.Text = ""; 
             txtLName.Text = "";
-            txtH1.Text = "";
-            txtH2.Text = "";
-            txtH3.Text = "";
-            txtH4.Text = "";
-            txtH5.Text = "";
-            txtH6.Text = "";
-            txtH7.Text = "";
             txtHeight.Text = "";
             txtHomeAdd.Text = "";
-            immunizationControl1.txtImmuOther.Text = "";
             txtLandLady.Text = "";
             txtLLNumber.Text = "";
             txtPID.Text = "";
@@ -439,12 +404,10 @@ namespace smuCRMS.View
             cmbAge.Text = "0";
        
             rbFem.Checked = false;
-            rbNo1.Checked = true;
-            rbNo2.Checked = true;
-            rbno3.Checked = true;
-            rbNo4.Checked = true;
-            rbNo5.Checked = true;
-            rbNo6.Checked = true;
+
+            //clear user controls here
+            immunizationControl1.Controls.Clear();
+            historyControl1.Controls.Clear();
         }
 
 
@@ -506,66 +469,7 @@ namespace smuCRMS.View
             computeBMI();
         }
 
-        private void rbYes2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbYes2.Checked == true)
-            {
-                txtH2.Enabled = true;
-            }
-            else
-            {
-                txtH2.Enabled = false;
-            }
-        }
-
-        private void rbYes3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbYes3.Checked == true)
-            {
-                txtH3.Enabled = true;
-            }
-            else
-            {
-                txtH3.Enabled = false;
-            }
-        }
-
-        private void rbYes4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbYes4.Checked == true)
-            {
-                txtH4.Enabled = true;
-            }
-            else
-            {
-                txtH4.Enabled = false;
-            }
-        }
-
-        private void rbYes5_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbYes5.Checked == true)
-            {
-                txtH5.Enabled = true;
-            }
-            else
-            {
-                txtH5.Enabled = false;
-            }
-        }
-
-        private void rbYes6_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbYes6.Checked == true)
-            {
-                txtH6.Enabled = true;
-            }
-            else
-            {
-                txtH6.Enabled = false;
-            }
-        }
-
+      
         private void txtFatherNumber_Click(object sender, EventArgs e)
         {
 
@@ -646,35 +550,6 @@ namespace smuCRMS.View
                 txtMotherNumber.Text = "0";
             }
         }
-
-        private void rbNo1_CheckedChanged(object sender, EventArgs e)
-        {
-            if(rbNo1.Checked)
-            {
-                txtH1.Text = "";
-            }
-            if (rbNo2.Checked)
-            {
-                txtH2.Text = "";
-            }
-            if (rbno3.Checked)
-            {
-                txtH3.Text = "";
-            }
-            if (rbNo4.Checked)
-            {
-                txtH4.Text = "";
-            }
-            if (rbNo5.Checked)
-            {
-                txtH5.Text = "";
-            }
-            if (rbNo6.Checked)
-            {
-                txtH6.Text = "";
-            }
-        }
-
         private void txtBP_Click(object sender, EventArgs e)
         {
             txtTemp.SelectAll();
@@ -936,17 +811,6 @@ namespace smuCRMS.View
         {
             txtBMI.SelectAll();
         }
-
-
-        private void cmbImmu_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                //cmbImmu.SelectedItem = null;
-                ((MetroComboBox)sender).SelectedItem = null;
-            }
-        }
-
         private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
             computeBMI();

@@ -98,6 +98,8 @@
             this.btnSelect = new MaterialSkin.Controls.MaterialFlatButton();
             this.pbPhoto = new System.Windows.Forms.PictureBox();
             this.tabPerHist = new System.Windows.Forms.TabPage();
+            this.historyControl1 = new smuCRMS.View.HistoryControl();
+            this.immunizationControl1 = new smuCRMS.View.ImmunizationControl();
             this.tbRemark = new System.Windows.Forms.TabPage();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
             this.txtPHname = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -123,34 +125,6 @@
             this.txtHeight = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtRemarks = new MetroFramework.Controls.MetroTextBox();
             this.metroToolTip1 = new MetroFramework.Components.MetroToolTip();
-            this.immunizationControl1 = new smuCRMS.View.ImmunizationControl();
-            this.gbHist = new System.Windows.Forms.GroupBox();
-            this.gbH7 = new System.Windows.Forms.GroupBox();
-            this.txtH7 = new MetroFramework.Controls.MetroTextBox();
-            this.gbH6 = new System.Windows.Forms.GroupBox();
-            this.txtH6 = new MetroFramework.Controls.MetroTextBox();
-            this.rbYes6 = new MetroFramework.Controls.MetroRadioButton();
-            this.rbNo6 = new MetroFramework.Controls.MetroRadioButton();
-            this.gbH5 = new System.Windows.Forms.GroupBox();
-            this.txtH5 = new MetroFramework.Controls.MetroTextBox();
-            this.rbYes5 = new MetroFramework.Controls.MetroRadioButton();
-            this.rbNo5 = new MetroFramework.Controls.MetroRadioButton();
-            this.gbH4 = new System.Windows.Forms.GroupBox();
-            this.txtH4 = new MetroFramework.Controls.MetroTextBox();
-            this.rbYes4 = new MetroFramework.Controls.MetroRadioButton();
-            this.rbNo4 = new MetroFramework.Controls.MetroRadioButton();
-            this.gbH3 = new System.Windows.Forms.GroupBox();
-            this.txtH3 = new MetroFramework.Controls.MetroTextBox();
-            this.rbYes3 = new MetroFramework.Controls.MetroRadioButton();
-            this.rbno3 = new MetroFramework.Controls.MetroRadioButton();
-            this.gbH2 = new System.Windows.Forms.GroupBox();
-            this.txtH2 = new MetroFramework.Controls.MetroTextBox();
-            this.rbYes2 = new MetroFramework.Controls.MetroRadioButton();
-            this.rbNo2 = new MetroFramework.Controls.MetroRadioButton();
-            this.gbH1 = new System.Windows.Forms.GroupBox();
-            this.txtH1 = new MetroFramework.Controls.MetroTextBox();
-            this.rbYes1 = new MetroFramework.Controls.MetroRadioButton();
-            this.rbNo1 = new MetroFramework.Controls.MetroRadioButton();
             this.metroPanel1.SuspendLayout();
             this.tbProfile.SuspendLayout();
             this.tbProf.SuspendLayout();
@@ -200,14 +174,6 @@
             this.groupBox25.SuspendLayout();
             this.groupBox23.SuspendLayout();
             this.groupBox16.SuspendLayout();
-            this.gbHist.SuspendLayout();
-            this.gbH7.SuspendLayout();
-            this.gbH6.SuspendLayout();
-            this.gbH5.SuspendLayout();
-            this.gbH4.SuspendLayout();
-            this.gbH3.SuspendLayout();
-            this.gbH2.SuspendLayout();
-            this.gbH1.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroPanel1
@@ -319,6 +285,7 @@
             this.tbProfile.Location = new System.Drawing.Point(0, 0);
             this.tbProfile.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbProfile.Name = "tbProfile";
+            this.tbProfile.Padding = new System.Drawing.Point(10, 10);
             this.tbProfile.SelectedIndex = 0;
             this.tbProfile.Size = new System.Drawing.Size(1370, 646);
             this.tbProfile.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
@@ -327,17 +294,20 @@
             // 
             // tbProf
             // 
+            this.tbProf.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.tbProf.AutoScroll = true;
             this.tbProf.BackColor = System.Drawing.Color.White;
+            this.tbProf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tbProf.Controls.Add(this.panel2);
-            this.tbProf.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbProf.Location = new System.Drawing.Point(4, 31);
+            this.tbProf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tbProf.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbProf.Location = new System.Drawing.Point(4, 45);
             this.tbProf.Margin = new System.Windows.Forms.Padding(0);
             this.tbProf.Name = "tbProf";
             this.tbProf.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tbProf.Size = new System.Drawing.Size(1375, 611);
+            this.tbProf.Size = new System.Drawing.Size(1362, 597);
             this.tbProf.TabIndex = 0;
-            this.tbProf.Text = "Profile";
+            this.tbProf.Text = "Personal Information";
             // 
             // panel2
             // 
@@ -348,7 +318,7 @@
             this.panel2.Location = new System.Drawing.Point(2, 3);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1371, 605);
+            this.panel2.Size = new System.Drawing.Size(1358, 591);
             this.panel2.TabIndex = 158;
             // 
             // panel4
@@ -358,7 +328,7 @@
             this.panel4.Location = new System.Drawing.Point(232, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1139, 605);
+            this.panel4.Size = new System.Drawing.Size(1126, 591);
             this.panel4.TabIndex = 195;
             // 
             // flowLayoutPanel2
@@ -399,7 +369,7 @@
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1139, 605);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1126, 591);
             this.flowLayoutPanel2.TabIndex = 192;
             // 
             // groupBox14
@@ -558,7 +528,7 @@
             this.rbFem.AutoSize = true;
             this.rbFem.Depth = 0;
             this.rbFem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbFem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbFem.Font = new System.Drawing.Font("Roboto", 10F);
             this.rbFem.Location = new System.Drawing.Point(61, 27);
             this.rbFem.Margin = new System.Windows.Forms.Padding(0);
             this.rbFem.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -577,7 +547,7 @@
             this.rbMale.Checked = true;
             this.rbMale.Depth = 0;
             this.rbMale.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbMale.Font = new System.Drawing.Font("Roboto", 10F);
             this.rbMale.Location = new System.Drawing.Point(2, 27);
             this.rbMale.Margin = new System.Windows.Forms.Padding(0);
             this.rbMale.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -700,14 +670,14 @@
             this.dtBDay.CalendarFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtBDay.CustomFormat = "yyyy-MM-dd";
             this.dtBDay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtBDay.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtBDay.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtBDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtBDay.Location = new System.Drawing.Point(2, 27);
             this.dtBDay.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtBDay.MaxDate = new System.DateTime(2099, 11, 26, 0, 0, 0, 0);
             this.dtBDay.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtBDay.Name = "dtBDay";
-            this.dtBDay.Size = new System.Drawing.Size(478, 26);
+            this.dtBDay.Size = new System.Drawing.Size(478, 31);
             this.dtBDay.TabIndex = 11;
             this.dtBDay.Value = new System.DateTime(2018, 5, 19, 0, 0, 0, 0);
             this.dtBDay.ValueChanged += new System.EventHandler(this.dtBDay_ValueChanged);
@@ -730,11 +700,11 @@
             // 
             this.cmbAge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbAge.Enabled = false;
-            this.cmbAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAge.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAge.Location = new System.Drawing.Point(2, 27);
             this.cmbAge.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmbAge.Name = "cmbAge";
-            this.cmbAge.Size = new System.Drawing.Size(478, 27);
+            this.cmbAge.Size = new System.Drawing.Size(478, 31);
             this.cmbAge.TabIndex = 11;
             // 
             // groupBox20
@@ -1285,7 +1255,7 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel3.MaximumSize = new System.Drawing.Size(232, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(232, 605);
+            this.panel3.Size = new System.Drawing.Size(232, 591);
             this.panel3.TabIndex = 194;
             // 
             // btnSelect
@@ -1326,15 +1296,39 @@
             // 
             this.tabPerHist.AutoScroll = true;
             this.tabPerHist.BackColor = System.Drawing.Color.White;
-            this.tabPerHist.Controls.Add(this.gbHist);
+            this.tabPerHist.Controls.Add(this.historyControl1);
             this.tabPerHist.Controls.Add(this.immunizationControl1);
-            this.tabPerHist.Location = new System.Drawing.Point(4, 31);
+            this.tabPerHist.Location = new System.Drawing.Point(4, 45);
             this.tabPerHist.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPerHist.Name = "tabPerHist";
             this.tabPerHist.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPerHist.Size = new System.Drawing.Size(1362, 611);
+            this.tabPerHist.Size = new System.Drawing.Size(1362, 597);
             this.tabPerHist.TabIndex = 1;
-            this.tabPerHist.Text = "Pertinent History";
+            this.tabPerHist.Text = "Pertinent History and Immunization";
+            // 
+            // historyControl1
+            // 
+            this.historyControl1.AutoScroll = true;
+            this.historyControl1.AutoSize = true;
+            this.historyControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.historyControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.historyControl1.Location = new System.Drawing.Point(2, 3);
+            this.historyControl1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.historyControl1.Name = "historyControl1";
+            this.historyControl1.Size = new System.Drawing.Size(610, 591);
+            this.historyControl1.TabIndex = 170;
+            // 
+            // immunizationControl1
+            // 
+            this.immunizationControl1.BackColor = System.Drawing.Color.White;
+            this.immunizationControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.immunizationControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.immunizationControl1.Location = new System.Drawing.Point(612, 3);
+            this.immunizationControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.immunizationControl1.Name = "immunizationControl1";
+            this.immunizationControl1.Padding = new System.Windows.Forms.Padding(30);
+            this.immunizationControl1.Size = new System.Drawing.Size(748, 591);
+            this.immunizationControl1.TabIndex = 169;
             // 
             // tbRemark
             // 
@@ -1342,10 +1336,10 @@
             this.tbRemark.BackColor = System.Drawing.Color.White;
             this.tbRemark.Controls.Add(this.groupBox41);
             this.tbRemark.Controls.Add(this.pnlRem);
-            this.tbRemark.Location = new System.Drawing.Point(4, 31);
+            this.tbRemark.Location = new System.Drawing.Point(4, 45);
             this.tbRemark.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbRemark.Name = "tbRemark";
-            this.tbRemark.Size = new System.Drawing.Size(1375, 611);
+            this.tbRemark.Size = new System.Drawing.Size(1362, 597);
             this.tbRemark.TabIndex = 2;
             this.tbRemark.Text = "Remarks";
             // 
@@ -1359,7 +1353,7 @@
             this.groupBox41.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox41.Name = "groupBox41";
             this.groupBox41.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox41.Size = new System.Drawing.Size(1375, 60);
+            this.groupBox41.Size = new System.Drawing.Size(1362, 60);
             this.groupBox41.TabIndex = 202;
             this.groupBox41.TabStop = false;
             this.groupBox41.Text = "Physician\'s Name ";
@@ -1377,7 +1371,7 @@
             this.txtPHname.SelectedText = "";
             this.txtPHname.SelectionLength = 0;
             this.txtPHname.SelectionStart = 0;
-            this.txtPHname.Size = new System.Drawing.Size(1371, 23);
+            this.txtPHname.Size = new System.Drawing.Size(1358, 23);
             this.txtPHname.TabIndex = 186;
             this.txtPHname.TabStop = false;
             this.txtPHname.UseSystemPasswordChar = false;
@@ -1389,7 +1383,7 @@
             this.pnlRem.Location = new System.Drawing.Point(0, 0);
             this.pnlRem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pnlRem.Name = "pnlRem";
-            this.pnlRem.Size = new System.Drawing.Size(1375, 293);
+            this.pnlRem.Size = new System.Drawing.Size(1362, 293);
             this.pnlRem.TabIndex = 187;
             // 
             // groupBox9
@@ -1400,7 +1394,7 @@
             this.groupBox9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox9.Size = new System.Drawing.Size(1375, 293);
+            this.groupBox9.Size = new System.Drawing.Size(1362, 293);
             this.groupBox9.TabIndex = 199;
             this.groupBox9.TabStop = false;
             // 
@@ -1422,7 +1416,7 @@
             this.groupBox10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox10.Size = new System.Drawing.Size(1371, 263);
+            this.groupBox10.Size = new System.Drawing.Size(1358, 263);
             this.groupBox10.TabIndex = 200;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "BMI and Vital signs";
@@ -1745,7 +1739,7 @@
             // 
             // 
             this.txtRemarks.CustomButton.Image = null;
-            this.txtRemarks.CustomButton.Location = new System.Drawing.Point(1271, 1);
+            this.txtRemarks.CustomButton.Location = new System.Drawing.Point(1258, 1);
             this.txtRemarks.CustomButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtRemarks.CustomButton.Name = "";
             this.txtRemarks.CustomButton.Size = new System.Drawing.Size(95, 95);
@@ -1763,13 +1757,12 @@
             this.txtRemarks.Multiline = true;
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.PasswordChar = '\0';
-            this.txtRemarks.PromptText = "Remarks....";
             this.txtRemarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtRemarks.SelectedText = "";
             this.txtRemarks.SelectionLength = 0;
             this.txtRemarks.SelectionStart = 0;
             this.txtRemarks.ShortcutsEnabled = true;
-            this.txtRemarks.Size = new System.Drawing.Size(1367, 97);
+            this.txtRemarks.Size = new System.Drawing.Size(1354, 97);
             this.txtRemarks.TabIndex = 8;
             this.txtRemarks.UseSelectable = true;
             this.txtRemarks.WaterMark = "Remarks....";
@@ -1781,598 +1774,6 @@
             this.metroToolTip1.Style = MetroFramework.MetroColorStyle.Teal;
             this.metroToolTip1.StyleManager = null;
             this.metroToolTip1.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // immunizationControl1
-            // 
-            this.immunizationControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.immunizationControl1.Location = new System.Drawing.Point(612, 3);
-            this.immunizationControl1.Name = "immunizationControl1";
-            this.immunizationControl1.Padding = new System.Windows.Forms.Padding(30);
-            this.immunizationControl1.Size = new System.Drawing.Size(748, 605);
-            this.immunizationControl1.TabIndex = 169;
-            // 
-            // gbHist
-            // 
-            this.gbHist.BackColor = System.Drawing.Color.White;
-            this.gbHist.Controls.Add(this.gbH7);
-            this.gbHist.Controls.Add(this.gbH6);
-            this.gbHist.Controls.Add(this.gbH5);
-            this.gbHist.Controls.Add(this.gbH4);
-            this.gbHist.Controls.Add(this.gbH3);
-            this.gbHist.Controls.Add(this.gbH2);
-            this.gbHist.Controls.Add(this.gbH1);
-            this.gbHist.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbHist.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbHist.Location = new System.Drawing.Point(2, 3);
-            this.gbHist.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbHist.Name = "gbHist";
-            this.gbHist.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbHist.Size = new System.Drawing.Size(610, 605);
-            this.gbHist.TabIndex = 170;
-            this.gbHist.TabStop = false;
-            this.gbHist.Text = "History";
-            // 
-            // gbH7
-            // 
-            this.gbH7.BackColor = System.Drawing.Color.White;
-            this.gbH7.Controls.Add(this.txtH7);
-            this.gbH7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbH7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbH7.Location = new System.Drawing.Point(2, 485);
-            this.gbH7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH7.Name = "gbH7";
-            this.gbH7.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH7.Size = new System.Drawing.Size(606, 76);
-            this.gbH7.TabIndex = 15;
-            this.gbH7.TabStop = false;
-            this.gbH7.Text = "7. Current medication";
-            // 
-            // txtH7
-            // 
-            // 
-            // 
-            // 
-            this.txtH7.CustomButton.Image = null;
-            this.txtH7.CustomButton.Location = new System.Drawing.Point(558, 2);
-            this.txtH7.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH7.CustomButton.Name = "";
-            this.txtH7.CustomButton.Size = new System.Drawing.Size(41, 41);
-            this.txtH7.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtH7.CustomButton.TabIndex = 1;
-            this.txtH7.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtH7.CustomButton.UseSelectable = true;
-            this.txtH7.CustomButton.Visible = false;
-            this.txtH7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtH7.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtH7.Lines = new string[0];
-            this.txtH7.Location = new System.Drawing.Point(2, 27);
-            this.txtH7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH7.MaxLength = 255;
-            this.txtH7.Multiline = true;
-            this.txtH7.Name = "txtH7";
-            this.txtH7.PasswordChar = '\0';
-            this.txtH7.PromptText = "Please specify";
-            this.txtH7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtH7.SelectedText = "";
-            this.txtH7.SelectionLength = 0;
-            this.txtH7.SelectionStart = 0;
-            this.txtH7.ShortcutsEnabled = true;
-            this.txtH7.Size = new System.Drawing.Size(602, 46);
-            this.txtH7.TabIndex = 54;
-            this.txtH7.UseSelectable = true;
-            this.txtH7.WaterMark = "Please specify";
-            this.txtH7.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtH7.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // gbH6
-            // 
-            this.gbH6.BackColor = System.Drawing.Color.White;
-            this.gbH6.Controls.Add(this.txtH6);
-            this.gbH6.Controls.Add(this.rbYes6);
-            this.gbH6.Controls.Add(this.rbNo6);
-            this.gbH6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbH6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbH6.Location = new System.Drawing.Point(2, 409);
-            this.gbH6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH6.Name = "gbH6";
-            this.gbH6.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH6.Size = new System.Drawing.Size(606, 76);
-            this.gbH6.TabIndex = 14;
-            this.gbH6.TabStop = false;
-            this.gbH6.Text = "6. Any medical conditions?";
-            // 
-            // txtH6
-            // 
-            // 
-            // 
-            // 
-            this.txtH6.CustomButton.Image = null;
-            this.txtH6.CustomButton.Location = new System.Drawing.Point(453, 2);
-            this.txtH6.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH6.CustomButton.Name = "";
-            this.txtH6.CustomButton.Size = new System.Drawing.Size(41, 41);
-            this.txtH6.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtH6.CustomButton.TabIndex = 1;
-            this.txtH6.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtH6.CustomButton.UseSelectable = true;
-            this.txtH6.CustomButton.Visible = false;
-            this.txtH6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtH6.Enabled = false;
-            this.txtH6.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtH6.Lines = new string[0];
-            this.txtH6.Location = new System.Drawing.Point(107, 27);
-            this.txtH6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH6.MaxLength = 255;
-            this.txtH6.Multiline = true;
-            this.txtH6.Name = "txtH6";
-            this.txtH6.PasswordChar = '\0';
-            this.txtH6.PromptText = "If Yes, Please specify";
-            this.txtH6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtH6.SelectedText = "";
-            this.txtH6.SelectionLength = 0;
-            this.txtH6.SelectionStart = 0;
-            this.txtH6.ShortcutsEnabled = true;
-            this.txtH6.Size = new System.Drawing.Size(497, 46);
-            this.txtH6.TabIndex = 53;
-            this.txtH6.UseSelectable = true;
-            this.txtH6.WaterMark = "If Yes, Please specify";
-            this.txtH6.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtH6.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // rbYes6
-            // 
-            this.rbYes6.AutoSize = true;
-            this.rbYes6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbYes6.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbYes6.Location = new System.Drawing.Point(54, 27);
-            this.rbYes6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rbYes6.Name = "rbYes6";
-            this.rbYes6.Size = new System.Drawing.Size(53, 46);
-            this.rbYes6.Style = MetroFramework.MetroColorStyle.Blue;
-            this.rbYes6.TabIndex = 52;
-            this.rbYes6.Text = "Yes";
-            this.rbYes6.UseSelectable = true;
-            // 
-            // rbNo6
-            // 
-            this.rbNo6.AutoSize = true;
-            this.rbNo6.Checked = true;
-            this.rbNo6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbNo6.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbNo6.Location = new System.Drawing.Point(2, 27);
-            this.rbNo6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rbNo6.Name = "rbNo6";
-            this.rbNo6.Size = new System.Drawing.Size(52, 46);
-            this.rbNo6.Style = MetroFramework.MetroColorStyle.Blue;
-            this.rbNo6.TabIndex = 51;
-            this.rbNo6.TabStop = true;
-            this.rbNo6.Text = "No";
-            this.rbNo6.UseSelectable = true;
-            // 
-            // gbH5
-            // 
-            this.gbH5.BackColor = System.Drawing.Color.White;
-            this.gbH5.Controls.Add(this.txtH5);
-            this.gbH5.Controls.Add(this.rbYes5);
-            this.gbH5.Controls.Add(this.rbNo5);
-            this.gbH5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbH5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbH5.Location = new System.Drawing.Point(2, 333);
-            this.gbH5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH5.Name = "gbH5";
-            this.gbH5.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH5.Size = new System.Drawing.Size(606, 76);
-            this.gbH5.TabIndex = 13;
-            this.gbH5.TabStop = false;
-            this.gbH5.Text = "5. Any physical defect/s or deformity?";
-            // 
-            // txtH5
-            // 
-            // 
-            // 
-            // 
-            this.txtH5.CustomButton.Image = null;
-            this.txtH5.CustomButton.Location = new System.Drawing.Point(453, 2);
-            this.txtH5.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH5.CustomButton.Name = "";
-            this.txtH5.CustomButton.Size = new System.Drawing.Size(41, 41);
-            this.txtH5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtH5.CustomButton.TabIndex = 1;
-            this.txtH5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtH5.CustomButton.UseSelectable = true;
-            this.txtH5.CustomButton.Visible = false;
-            this.txtH5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtH5.Enabled = false;
-            this.txtH5.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtH5.Lines = new string[0];
-            this.txtH5.Location = new System.Drawing.Point(107, 27);
-            this.txtH5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH5.MaxLength = 255;
-            this.txtH5.Multiline = true;
-            this.txtH5.Name = "txtH5";
-            this.txtH5.PasswordChar = '\0';
-            this.txtH5.PromptText = "If Yes, Please specify";
-            this.txtH5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtH5.SelectedText = "";
-            this.txtH5.SelectionLength = 0;
-            this.txtH5.SelectionStart = 0;
-            this.txtH5.ShortcutsEnabled = true;
-            this.txtH5.Size = new System.Drawing.Size(497, 46);
-            this.txtH5.TabIndex = 50;
-            this.txtH5.UseSelectable = true;
-            this.txtH5.WaterMark = "If Yes, Please specify";
-            this.txtH5.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtH5.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // rbYes5
-            // 
-            this.rbYes5.AutoSize = true;
-            this.rbYes5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbYes5.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbYes5.Location = new System.Drawing.Point(54, 27);
-            this.rbYes5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rbYes5.Name = "rbYes5";
-            this.rbYes5.Size = new System.Drawing.Size(53, 46);
-            this.rbYes5.Style = MetroFramework.MetroColorStyle.Blue;
-            this.rbYes5.TabIndex = 49;
-            this.rbYes5.Text = "Yes";
-            this.rbYes5.UseSelectable = true;
-            // 
-            // rbNo5
-            // 
-            this.rbNo5.AutoSize = true;
-            this.rbNo5.Checked = true;
-            this.rbNo5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbNo5.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbNo5.Location = new System.Drawing.Point(2, 27);
-            this.rbNo5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rbNo5.Name = "rbNo5";
-            this.rbNo5.Size = new System.Drawing.Size(52, 46);
-            this.rbNo5.Style = MetroFramework.MetroColorStyle.Blue;
-            this.rbNo5.TabIndex = 48;
-            this.rbNo5.TabStop = true;
-            this.rbNo5.Text = "No";
-            this.rbNo5.UseSelectable = true;
-            // 
-            // gbH4
-            // 
-            this.gbH4.BackColor = System.Drawing.Color.White;
-            this.gbH4.Controls.Add(this.txtH4);
-            this.gbH4.Controls.Add(this.rbYes4);
-            this.gbH4.Controls.Add(this.rbNo4);
-            this.gbH4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbH4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbH4.Location = new System.Drawing.Point(2, 257);
-            this.gbH4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH4.Name = "gbH4";
-            this.gbH4.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH4.Size = new System.Drawing.Size(606, 76);
-            this.gbH4.TabIndex = 12;
-            this.gbH4.TabStop = false;
-            this.gbH4.Text = "4. Any history of allergies?";
-            // 
-            // txtH4
-            // 
-            // 
-            // 
-            // 
-            this.txtH4.CustomButton.Image = null;
-            this.txtH4.CustomButton.Location = new System.Drawing.Point(453, 2);
-            this.txtH4.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH4.CustomButton.Name = "";
-            this.txtH4.CustomButton.Size = new System.Drawing.Size(41, 41);
-            this.txtH4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtH4.CustomButton.TabIndex = 1;
-            this.txtH4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtH4.CustomButton.UseSelectable = true;
-            this.txtH4.CustomButton.Visible = false;
-            this.txtH4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtH4.Enabled = false;
-            this.txtH4.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtH4.Lines = new string[0];
-            this.txtH4.Location = new System.Drawing.Point(107, 27);
-            this.txtH4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH4.MaxLength = 255;
-            this.txtH4.Multiline = true;
-            this.txtH4.Name = "txtH4";
-            this.txtH4.PasswordChar = '\0';
-            this.txtH4.PromptText = "If Yes, Please specify";
-            this.txtH4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtH4.SelectedText = "";
-            this.txtH4.SelectionLength = 0;
-            this.txtH4.SelectionStart = 0;
-            this.txtH4.ShortcutsEnabled = true;
-            this.txtH4.Size = new System.Drawing.Size(497, 46);
-            this.txtH4.TabIndex = 47;
-            this.txtH4.UseSelectable = true;
-            this.txtH4.WaterMark = "If Yes, Please specify";
-            this.txtH4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtH4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // rbYes4
-            // 
-            this.rbYes4.AutoSize = true;
-            this.rbYes4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbYes4.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbYes4.Location = new System.Drawing.Point(54, 27);
-            this.rbYes4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rbYes4.Name = "rbYes4";
-            this.rbYes4.Size = new System.Drawing.Size(53, 46);
-            this.rbYes4.Style = MetroFramework.MetroColorStyle.Blue;
-            this.rbYes4.TabIndex = 46;
-            this.rbYes4.Text = "Yes";
-            this.rbYes4.UseSelectable = true;
-            // 
-            // rbNo4
-            // 
-            this.rbNo4.AutoSize = true;
-            this.rbNo4.Checked = true;
-            this.rbNo4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbNo4.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbNo4.Location = new System.Drawing.Point(2, 27);
-            this.rbNo4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rbNo4.Name = "rbNo4";
-            this.rbNo4.Size = new System.Drawing.Size(52, 46);
-            this.rbNo4.Style = MetroFramework.MetroColorStyle.Blue;
-            this.rbNo4.TabIndex = 45;
-            this.rbNo4.TabStop = true;
-            this.rbNo4.Text = "No";
-            this.rbNo4.UseSelectable = true;
-            // 
-            // gbH3
-            // 
-            this.gbH3.BackColor = System.Drawing.Color.White;
-            this.gbH3.Controls.Add(this.txtH3);
-            this.gbH3.Controls.Add(this.rbYes3);
-            this.gbH3.Controls.Add(this.rbno3);
-            this.gbH3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbH3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbH3.Location = new System.Drawing.Point(2, 181);
-            this.gbH3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH3.Name = "gbH3";
-            this.gbH3.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH3.Size = new System.Drawing.Size(606, 76);
-            this.gbH3.TabIndex = 11;
-            this.gbH3.TabStop = false;
-            this.gbH3.Text = "3. Any history of mental or psychological problem?";
-            // 
-            // txtH3
-            // 
-            // 
-            // 
-            // 
-            this.txtH3.CustomButton.Image = null;
-            this.txtH3.CustomButton.Location = new System.Drawing.Point(453, 2);
-            this.txtH3.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH3.CustomButton.Name = "";
-            this.txtH3.CustomButton.Size = new System.Drawing.Size(41, 41);
-            this.txtH3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtH3.CustomButton.TabIndex = 1;
-            this.txtH3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtH3.CustomButton.UseSelectable = true;
-            this.txtH3.CustomButton.Visible = false;
-            this.txtH3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtH3.Enabled = false;
-            this.txtH3.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtH3.Lines = new string[0];
-            this.txtH3.Location = new System.Drawing.Point(107, 27);
-            this.txtH3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH3.MaxLength = 255;
-            this.txtH3.Multiline = true;
-            this.txtH3.Name = "txtH3";
-            this.txtH3.PasswordChar = '\0';
-            this.txtH3.PromptText = "If Yes, Please specify";
-            this.txtH3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtH3.SelectedText = "";
-            this.txtH3.SelectionLength = 0;
-            this.txtH3.SelectionStart = 0;
-            this.txtH3.ShortcutsEnabled = true;
-            this.txtH3.Size = new System.Drawing.Size(497, 46);
-            this.txtH3.TabIndex = 44;
-            this.txtH3.UseSelectable = true;
-            this.txtH3.WaterMark = "If Yes, Please specify";
-            this.txtH3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtH3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // rbYes3
-            // 
-            this.rbYes3.AutoSize = true;
-            this.rbYes3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbYes3.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbYes3.Location = new System.Drawing.Point(54, 27);
-            this.rbYes3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rbYes3.Name = "rbYes3";
-            this.rbYes3.Size = new System.Drawing.Size(53, 46);
-            this.rbYes3.Style = MetroFramework.MetroColorStyle.Blue;
-            this.rbYes3.TabIndex = 43;
-            this.rbYes3.Text = "Yes";
-            this.rbYes3.UseSelectable = true;
-            // 
-            // rbno3
-            // 
-            this.rbno3.AutoSize = true;
-            this.rbno3.Checked = true;
-            this.rbno3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbno3.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbno3.Location = new System.Drawing.Point(2, 27);
-            this.rbno3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rbno3.Name = "rbno3";
-            this.rbno3.Size = new System.Drawing.Size(52, 46);
-            this.rbno3.Style = MetroFramework.MetroColorStyle.Blue;
-            this.rbno3.TabIndex = 42;
-            this.rbno3.TabStop = true;
-            this.rbno3.Text = "No";
-            this.rbno3.UseSelectable = true;
-            // 
-            // gbH2
-            // 
-            this.gbH2.BackColor = System.Drawing.Color.White;
-            this.gbH2.Controls.Add(this.txtH2);
-            this.gbH2.Controls.Add(this.rbYes2);
-            this.gbH2.Controls.Add(this.rbNo2);
-            this.gbH2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbH2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbH2.Location = new System.Drawing.Point(2, 105);
-            this.gbH2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH2.Name = "gbH2";
-            this.gbH2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH2.Size = new System.Drawing.Size(606, 76);
-            this.gbH2.TabIndex = 9;
-            this.gbH2.TabStop = false;
-            this.gbH2.Text = "2. Any history of accidents/injuries?";
-            // 
-            // txtH2
-            // 
-            // 
-            // 
-            // 
-            this.txtH2.CustomButton.Image = null;
-            this.txtH2.CustomButton.Location = new System.Drawing.Point(453, 2);
-            this.txtH2.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH2.CustomButton.Name = "";
-            this.txtH2.CustomButton.Size = new System.Drawing.Size(41, 41);
-            this.txtH2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtH2.CustomButton.TabIndex = 1;
-            this.txtH2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtH2.CustomButton.UseSelectable = true;
-            this.txtH2.CustomButton.Visible = false;
-            this.txtH2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtH2.Enabled = false;
-            this.txtH2.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtH2.Lines = new string[0];
-            this.txtH2.Location = new System.Drawing.Point(107, 27);
-            this.txtH2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH2.MaxLength = 255;
-            this.txtH2.Multiline = true;
-            this.txtH2.Name = "txtH2";
-            this.txtH2.PasswordChar = '\0';
-            this.txtH2.PromptText = "If Yes, Please specify";
-            this.txtH2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtH2.SelectedText = "";
-            this.txtH2.SelectionLength = 0;
-            this.txtH2.SelectionStart = 0;
-            this.txtH2.ShortcutsEnabled = true;
-            this.txtH2.Size = new System.Drawing.Size(497, 46);
-            this.txtH2.TabIndex = 41;
-            this.txtH2.UseSelectable = true;
-            this.txtH2.WaterMark = "If Yes, Please specify";
-            this.txtH2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtH2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // rbYes2
-            // 
-            this.rbYes2.AutoSize = true;
-            this.rbYes2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbYes2.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbYes2.Location = new System.Drawing.Point(54, 27);
-            this.rbYes2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rbYes2.Name = "rbYes2";
-            this.rbYes2.Size = new System.Drawing.Size(53, 46);
-            this.rbYes2.Style = MetroFramework.MetroColorStyle.Blue;
-            this.rbYes2.TabIndex = 40;
-            this.rbYes2.Text = "Yes";
-            this.rbYes2.UseSelectable = true;
-            // 
-            // rbNo2
-            // 
-            this.rbNo2.AutoSize = true;
-            this.rbNo2.Checked = true;
-            this.rbNo2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbNo2.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbNo2.Location = new System.Drawing.Point(2, 27);
-            this.rbNo2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rbNo2.Name = "rbNo2";
-            this.rbNo2.Size = new System.Drawing.Size(52, 46);
-            this.rbNo2.Style = MetroFramework.MetroColorStyle.Blue;
-            this.rbNo2.TabIndex = 39;
-            this.rbNo2.TabStop = true;
-            this.rbNo2.Text = "No";
-            this.rbNo2.UseSelectable = true;
-            // 
-            // gbH1
-            // 
-            this.gbH1.BackColor = System.Drawing.Color.White;
-            this.gbH1.Controls.Add(this.txtH1);
-            this.gbH1.Controls.Add(this.rbYes1);
-            this.gbH1.Controls.Add(this.rbNo1);
-            this.gbH1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbH1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbH1.Location = new System.Drawing.Point(2, 29);
-            this.gbH1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH1.Name = "gbH1";
-            this.gbH1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbH1.Size = new System.Drawing.Size(606, 76);
-            this.gbH1.TabIndex = 8;
-            this.gbH1.TabStop = false;
-            this.gbH1.Text = "1. Any History of previous hospitalization or surgical operations?";
-            // 
-            // txtH1
-            // 
-            // 
-            // 
-            // 
-            this.txtH1.CustomButton.Image = null;
-            this.txtH1.CustomButton.Location = new System.Drawing.Point(453, 2);
-            this.txtH1.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH1.CustomButton.Name = "";
-            this.txtH1.CustomButton.Size = new System.Drawing.Size(41, 41);
-            this.txtH1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtH1.CustomButton.TabIndex = 1;
-            this.txtH1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtH1.CustomButton.UseSelectable = true;
-            this.txtH1.CustomButton.Visible = false;
-            this.txtH1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtH1.Enabled = false;
-            this.txtH1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtH1.Lines = new string[0];
-            this.txtH1.Location = new System.Drawing.Point(107, 27);
-            this.txtH1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtH1.MaxLength = 255;
-            this.txtH1.Multiline = true;
-            this.txtH1.Name = "txtH1";
-            this.txtH1.PasswordChar = '\0';
-            this.txtH1.PromptText = "If Yes, Please specify";
-            this.txtH1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtH1.SelectedText = "";
-            this.txtH1.SelectionLength = 0;
-            this.txtH1.SelectionStart = 0;
-            this.txtH1.ShortcutsEnabled = true;
-            this.txtH1.Size = new System.Drawing.Size(497, 46);
-            this.txtH1.TabIndex = 38;
-            this.txtH1.UseSelectable = true;
-            this.txtH1.WaterMark = "If Yes, Please specify";
-            this.txtH1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtH1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // rbYes1
-            // 
-            this.rbYes1.AutoSize = true;
-            this.rbYes1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbYes1.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbYes1.Location = new System.Drawing.Point(54, 27);
-            this.rbYes1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rbYes1.Name = "rbYes1";
-            this.rbYes1.Size = new System.Drawing.Size(53, 46);
-            this.rbYes1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.rbYes1.TabIndex = 37;
-            this.rbYes1.Text = "Yes";
-            this.rbYes1.UseSelectable = true;
-            // 
-            // rbNo1
-            // 
-            this.rbNo1.AutoSize = true;
-            this.rbNo1.Checked = true;
-            this.rbNo1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.rbNo1.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
-            this.rbNo1.Location = new System.Drawing.Point(2, 27);
-            this.rbNo1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rbNo1.Name = "rbNo1";
-            this.rbNo1.Size = new System.Drawing.Size(52, 46);
-            this.rbNo1.Style = MetroFramework.MetroColorStyle.Blue;
-            this.rbNo1.TabIndex = 36;
-            this.rbNo1.TabStop = true;
-            this.rbNo1.Text = "No";
-            this.rbNo1.UseSelectable = true;
             // 
             // addPatient
             // 
@@ -2431,6 +1832,7 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPhoto)).EndInit();
             this.tabPerHist.ResumeLayout(false);
+            this.tabPerHist.PerformLayout();
             this.tbRemark.ResumeLayout(false);
             this.groupBox41.ResumeLayout(false);
             this.pnlRem.ResumeLayout(false);
@@ -2444,20 +1846,6 @@
             this.groupBox25.ResumeLayout(false);
             this.groupBox23.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
-            this.gbHist.ResumeLayout(false);
-            this.gbH7.ResumeLayout(false);
-            this.gbH6.ResumeLayout(false);
-            this.gbH6.PerformLayout();
-            this.gbH5.ResumeLayout(false);
-            this.gbH5.PerformLayout();
-            this.gbH4.ResumeLayout(false);
-            this.gbH4.PerformLayout();
-            this.gbH3.ResumeLayout(false);
-            this.gbH3.PerformLayout();
-            this.gbH2.ResumeLayout(false);
-            this.gbH2.PerformLayout();
-            this.gbH1.ResumeLayout(false);
-            this.gbH1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2558,32 +1946,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtHeight;
         private MetroFramework.Controls.MetroTextBox txtRemarks;
         private ImmunizationControl immunizationControl1;
-        private System.Windows.Forms.GroupBox gbHist;
-        private System.Windows.Forms.GroupBox gbH7;
-        private MetroFramework.Controls.MetroTextBox txtH7;
-        private System.Windows.Forms.GroupBox gbH6;
-        private MetroFramework.Controls.MetroTextBox txtH6;
-        private MetroFramework.Controls.MetroRadioButton rbYes6;
-        private MetroFramework.Controls.MetroRadioButton rbNo6;
-        private System.Windows.Forms.GroupBox gbH5;
-        private MetroFramework.Controls.MetroTextBox txtH5;
-        private MetroFramework.Controls.MetroRadioButton rbYes5;
-        private MetroFramework.Controls.MetroRadioButton rbNo5;
-        private System.Windows.Forms.GroupBox gbH4;
-        private MetroFramework.Controls.MetroTextBox txtH4;
-        private MetroFramework.Controls.MetroRadioButton rbYes4;
-        private MetroFramework.Controls.MetroRadioButton rbNo4;
-        private System.Windows.Forms.GroupBox gbH3;
-        private MetroFramework.Controls.MetroTextBox txtH3;
-        private MetroFramework.Controls.MetroRadioButton rbYes3;
-        private MetroFramework.Controls.MetroRadioButton rbno3;
-        private System.Windows.Forms.GroupBox gbH2;
-        private MetroFramework.Controls.MetroTextBox txtH2;
-        private MetroFramework.Controls.MetroRadioButton rbYes2;
-        private MetroFramework.Controls.MetroRadioButton rbNo2;
-        private System.Windows.Forms.GroupBox gbH1;
-        private MetroFramework.Controls.MetroTextBox txtH1;
-        private MetroFramework.Controls.MetroRadioButton rbYes1;
-        private MetroFramework.Controls.MetroRadioButton rbNo1;
+        private HistoryControl historyControl1;
     }
 }
