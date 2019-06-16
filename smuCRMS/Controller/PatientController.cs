@@ -167,7 +167,7 @@ namespace smuCRMS.Controller
 
 
             currentMed = "";
-            tDate = "";
+            tDate = null;
             tHeight = 0.0;
             tWeight = 0.0;
             tCC = "";
@@ -197,10 +197,7 @@ namespace smuCRMS.Controller
         {
             return valid = (patient.archiveStud(this)) ? true : false;
         }
-        public bool addTreatment()
-        {
-            return valid = (patient.addTreatment(this)) ? true : false;
-        }
+       
 
         public bool addRemark()
         {
@@ -289,11 +286,6 @@ namespace smuCRMS.Controller
         public DataTable getImmun()
         {
             return dtable = patient.getStudImmun(this);
-        }
-        public void getTreatment(DataGridView dg)
-        {
-            dtable = patient.getTreatment(this);
-            dg.DataSource = (dtable.Rows.Count > 0) ? dtable : null;
         }
         public DataTable getVisits()
         {
@@ -398,6 +390,11 @@ namespace smuCRMS.Controller
             return patient.callProcedure(this,
                 "VIEW_BY_DEPARTMENT", "vcrud_course",true);
         }
+        public DataTable getTreatment()
+        {
+            return patient.callProcedure(this,
+                "VIEW_BY_ID", "vcrud_treatment", true);
+        }
         public DataTable search()
         {
             return patient.callProcedure(this,
@@ -414,11 +411,18 @@ namespace smuCRMS.Controller
             return valid = (patient.callProcedure(this,
                 "CREATE", "vcrud_patient", false).Columns.Count > 0) ? true : false;
         }
+        public bool addTreatment()
+        {
+            //this is non-query
+            return valid = (patient.callProcedure(this,
+                "CREATE", "vcrud_treatment", false).Columns.Count > 0) ? true : false;
+        }
         public string getID()
         {
             //get id by uid in RFID
             DataTable dt = patient.callProcedure(this,
-                "VIEW", "vcrud_patient", true);
+                "VIEW_BY_UID", "vcrud_patient", true);
+
             return (dt.Rows.Count>0)? dt.Rows[0][1].ToString() : "";
         }
 

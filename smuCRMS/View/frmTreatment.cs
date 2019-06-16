@@ -14,15 +14,9 @@ namespace smuCRMS.View
         PatientController pc = new PatientController();
         private void frmTreatment_Load(object sender, EventArgs e)
         {
-            //ac.getActiveUser();
-            //if (ac.accountID == "3")
-            //{
-            //    btnCT.Visible = false;
-            //}
-            //dgCT.Columns[4].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             pc.id = lblID.Text;
-            pc.getTreatment(dgCT);
-            if (dgCT.DataSource == null)
+            dgCT.DataSource = pc.getTreatment();
+            if (dgCT.Rows.Count==0)
             {
                 MetroMessageBox.Show(this, "No Clinical and Treatment Chart for this Patient", "Message : ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 this.Close();

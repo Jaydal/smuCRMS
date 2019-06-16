@@ -249,7 +249,6 @@
             this.tsBot.Size = new System.Drawing.Size(1299, 25);
             this.tsBot.TabIndex = 31;
             this.tsBot.Text = "toolStrip1";
-            this.tsBot.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsBot_ItemClicked);
             // 
             // lblRFID
             // 
@@ -294,7 +293,6 @@
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(0, 13);
             this.lblID.TabIndex = 37;
-            this.lblID.TextChanged += new System.EventHandler(this.lblID_TextChanged);
             // 
             // backgroundWorker1
             // 

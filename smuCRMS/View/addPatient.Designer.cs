@@ -1436,7 +1436,7 @@
             this.txtH7.Multiline = true;
             this.txtH7.Name = "txtH7";
             this.txtH7.PasswordChar = '\0';
-            this.txtH7.PromptText = "Please specify";
+            this.txtH7.WaterMark = "Please specify";
             this.txtH7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtH7.SelectedText = "";
             this.txtH7.SelectionLength = 0;
@@ -1491,7 +1491,7 @@
             this.txtH6.Multiline = true;
             this.txtH6.Name = "txtH6";
             this.txtH6.PasswordChar = '\0';
-            this.txtH6.PromptText = "If Yes, Please specify";
+            this.txtH6.WaterMark = "If Yes, Please specify";
             this.txtH6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtH6.SelectedText = "";
             this.txtH6.SelectionLength = 0;
@@ -1578,7 +1578,7 @@
             this.txtH5.Multiline = true;
             this.txtH5.Name = "txtH5";
             this.txtH5.PasswordChar = '\0';
-            this.txtH5.PromptText = "If Yes, Please specify";
+            this.txtH5.WaterMark = "If Yes, Please specify";
             this.txtH5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtH5.SelectedText = "";
             this.txtH5.SelectionLength = 0;
@@ -1665,7 +1665,7 @@
             this.txtH4.Multiline = true;
             this.txtH4.Name = "txtH4";
             this.txtH4.PasswordChar = '\0';
-            this.txtH4.PromptText = "If Yes, Please specify";
+            this.txtH4.WaterMark = "If Yes, Please specify";
             this.txtH4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtH4.SelectedText = "";
             this.txtH4.SelectionLength = 0;
@@ -1752,7 +1752,7 @@
             this.txtH3.Multiline = true;
             this.txtH3.Name = "txtH3";
             this.txtH3.PasswordChar = '\0';
-            this.txtH3.PromptText = "If Yes, Please specify";
+            this.txtH3.WaterMark = "If Yes, Please specify";
             this.txtH3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtH3.SelectedText = "";
             this.txtH3.SelectionLength = 0;
@@ -1839,7 +1839,7 @@
             this.txtH2.Multiline = true;
             this.txtH2.Name = "txtH2";
             this.txtH2.PasswordChar = '\0';
-            this.txtH2.PromptText = "If Yes, Please specify";
+            this.txtH2.WaterMark = "If Yes, Please specify";
             this.txtH2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtH2.SelectedText = "";
             this.txtH2.SelectionLength = 0;
@@ -1926,7 +1926,7 @@
             this.txtH1.Multiline = true;
             this.txtH1.Name = "txtH1";
             this.txtH1.PasswordChar = '\0';
-            this.txtH1.PromptText = "If Yes, Please specify";
+            this.txtH1.WaterMark = "If Yes, Please specify";
             this.txtH1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtH1.SelectedText = "";
             this.txtH1.SelectionLength = 0;
@@ -2049,7 +2049,7 @@
             this.txtImmuOther3.MaxLength = 255;
             this.txtImmuOther3.Name = "txtImmuOther3";
             this.txtImmuOther3.PasswordChar = '\0';
-            this.txtImmuOther3.PromptText = "Please specify";
+            this.txtImmuOther3.WaterMark = "Please specify";
             this.txtImmuOther3.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtImmuOther3.SelectedText = "";
             this.txtImmuOther3.SelectionLength = 0;
@@ -2138,7 +2138,7 @@
             this.txtImmuOther2.MaxLength = 255;
             this.txtImmuOther2.Name = "txtImmuOther2";
             this.txtImmuOther2.PasswordChar = '\0';
-            this.txtImmuOther2.PromptText = "Please specify";
+            this.txtImmuOther2.WaterMark = "Please specify";
             this.txtImmuOther2.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtImmuOther2.SelectedText = "";
             this.txtImmuOther2.SelectionLength = 0;
@@ -2227,7 +2227,7 @@
             this.txtImmuOther.MaxLength = 255;
             this.txtImmuOther.Name = "txtImmuOther";
             this.txtImmuOther.PasswordChar = '\0';
-            this.txtImmuOther.PromptText = "Please specify";
+            this.txtImmuOther.WaterMark = "Please specify";
             this.txtImmuOther.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtImmuOther.SelectedText = "";
             this.txtImmuOther.SelectionLength = 0;
@@ -3010,7 +3010,7 @@
             this.txtRemarks.Multiline = true;
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.PasswordChar = '\0';
-            this.txtRemarks.PromptText = "Remarks....";
+            this.txtRemarks.WaterMark = "Remarks....";
             this.txtRemarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtRemarks.SelectedText = "";
             this.txtRemarks.SelectionLength = 0;

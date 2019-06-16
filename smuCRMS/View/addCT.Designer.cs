@@ -123,7 +123,7 @@
             this.txtRefe.MaxLength = 25;
             this.txtRefe.Name = "txtRefe";
             this.txtRefe.PasswordChar = '\0';
-            this.txtRefe.WaterMark = "Referral";
+            this.txtRefe.PromptText = "Referral";
             this.txtRefe.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtRefe.SelectedText = "";
             this.txtRefe.SelectionLength = 0;
@@ -155,7 +155,7 @@
             this.txtIC.MaxLength = 25;
             this.txtIC.Name = "txtIC";
             this.txtIC.PasswordChar = '\0';
-            this.txtIC.WaterMark = "Physician";
+            this.txtIC.PromptText = "Physician";
             this.txtIC.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtIC.SelectedText = "";
             this.txtIC.SelectionLength = 0;
@@ -746,7 +746,7 @@
             this.txtComplaints.Multiline = true;
             this.txtComplaints.Name = "txtComplaints";
             this.txtComplaints.PasswordChar = '\0';
-            this.txtComplaints.WaterMark = "Specify complaints....";
+            this.txtComplaints.PromptText = "Specify complaints....";
             this.txtComplaints.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtComplaints.SelectedText = "";
             this.txtComplaints.SelectionLength = 0;

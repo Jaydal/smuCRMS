@@ -641,7 +641,7 @@ namespace smuCRMS.Controller
             addParamVal("BoardingAddress", pc.boardingAddress);
             addParamVal("FathersName", pc.fatherName);
             addParamVal("FathersOccupation", pc.fatherOccupation);
-            addParamVal("FathersNumber", pc.fatherOccupation);
+            addParamVal("FathersNumber", pc.fatherNumber);
             addParamVal("MothersName", pc.motherName);
             addParamVal("MothersOccupation", pc.motherOccupation);
             addParamVal("MothersNumber", pc.motherNumber);
@@ -684,7 +684,7 @@ namespace smuCRMS.Controller
         }
         private void getPatientCollection_Treatment(PatientController pc)
         {
-            addParamVal("treament_id",pc.tid);
+            addParamVal("treatment_id",pc.tid);
             addParamVal("TreatmentDate",pc.tDate);
             addParamVal("ChiefComplaints",pc.tCC);
             addParamVal("Diagnosis",pc.tDiag);

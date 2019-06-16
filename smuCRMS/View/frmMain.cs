@@ -39,7 +39,7 @@ namespace smuCRMS.View
             {
                 count++;
                 lblRFID.Text=(count==10)?"":lblRFID.Text;
-                if (lblRFID.Text == "") { count = 0; }
+                if (lblRFID.Text == "") { count = 0; tsBot.BackColor = Color.White; tsBot.Hide(); }
             }
             int hh = DateTime.Now.Hour;
             int mm = DateTime.Now.Minute;
@@ -137,6 +137,7 @@ namespace smuCRMS.View
         bool load = false;
         private void frmMain_Load(object sender, EventArgs e)
         {
+            tsBot.Hide();
             frmVisits fv = new frmVisits();
             loadfrm(fv);
             load = true;
@@ -376,12 +377,6 @@ namespace smuCRMS.View
             loadfrm(ap);
             ap.Focus();
         }
-
-       
-
-       
-
-
         private void btnTimer_Click(object sender, EventArgs e)
         {
             //Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
@@ -393,12 +388,6 @@ namespace smuCRMS.View
             Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
             btnTimer.BackColor = randomColor;
         }
-
-       
-        private void timerRFID_Tick(object sender, EventArgs e)
-        {
-         
-        }
         void getCARD()
         {
             frmRFID rf = new frmRFID();
@@ -406,20 +395,24 @@ namespace smuCRMS.View
             {
 
                 string cardUID = rf.getcardUID();
+                tsBot.Show();
                 if (cardUID != "63000000")
                 {
                     pc.uid = cardUID;
                     id = pc.getID();
                     lblRFID.Text = id;
+                    
                     if (id == "" || id == null)
                     {
                         lblRFID.Text = "ID Detected | No Record";
                         addPatient ap = new addPatient();
                         ap.uid = cardUID;
                         loadfrm(ap);
+                        tsBot.BackColor = Color.OrangeRed;
                     }
                     else
                     {
+                        tsBot.BackColor = Color.LightGreen;
                         frmPatients fp = new frmPatients();
                         fp.txtSearch1.Text = lblRFID.Text;
                         loadfrm(fp);
@@ -428,21 +421,10 @@ namespace smuCRMS.View
                 else
                 {
                     lblRFID.Text = "ID not Detected";
+                    tsBot.BackColor = Color.Red;
                 }
             }
         }
-        private void lblID_TextChanged(object sender, EventArgs e)
-        {
-            //if(lblID.Text!="")
-            //{
-            //    frmPatients fp = new frmPatients();
-            //    fp.txtSearch.Text = lblID.Text;
-            //    loadfrm(fp);
-            //    //timerRFID.Stop();
-            //}
- 
-        }
-
         private void metroTile1_Click_1(object sender, EventArgs e)
         {
             frmOpt fr = new frmOpt();
@@ -455,17 +437,6 @@ namespace smuCRMS.View
             if (btnTimer.Text.Contains("12:00:00 PM"))
                 backgroundWorker1.RunWorkerAsync();
             }
-        }
-
-        private void tsBot_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
- 
-        private void bgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-
         }
 
         private void mtPatient_Click(object sender, EventArgs e)

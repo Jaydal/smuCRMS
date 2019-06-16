@@ -61,9 +61,10 @@ namespace smuCRMS.View
                 pc.bp = txtBP.Text;
                 pc.pr = txtPR.Text;
                 pc.rr = txtRR.Text;
-                //pc.spo2 = txtSPo2.Text;
-                //pc.temp = txtTemp.Text;
+                pc.spo2 =double.Parse(txtSPo2.Text);
+                pc.temp = double.Parse(txtTemp.Text);
                 pc.refe = txtRefe.Text;
+                pc.tDate = DateTime.Now.ToString("yyyy-MM-dd");
                 if (pc.addTreatment())
                 {
 
