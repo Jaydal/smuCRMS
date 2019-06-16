@@ -470,7 +470,8 @@ namespace smuCRMS.Controller
                 "VIEW_BY_ID", "vcrud_history", true);
             if (dtable.Rows.Count > 0)
             {
-                JsonObject obj = new JsonObject(dtable.Rows[0][2].ToString());
+                JsonObject obj = new JsonObject((dtable.Rows[0][2].ToString()!=null) ? 
+                    dtable.Rows[0][2].ToString() :"{}");
                 hospiDesc = obj.GetString("Hospitalization");
                 indescription = obj.GetString("Injury");
                 psychodescription = obj.GetString("Psychological");

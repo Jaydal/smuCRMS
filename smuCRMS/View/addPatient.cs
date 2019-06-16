@@ -77,7 +77,7 @@ namespace smuCRMS.View
                 pm.remarks = "(" + cmbBMI.Text + ") " + txtRemarks.Text;
 
                 pm.JSONImmunization = immunizationControl1.getJSONImmunization();
-                pm.JSONHistory = historyControl1.getJSONHistory();
+                pm.JSONHistory = historyControl1.setJSONHistory();
 
                 //pm.tDate = dtpCTDate.Value.ToString("yyyy-MM-dd");
 
@@ -406,8 +406,6 @@ namespace smuCRMS.View
             rbFem.Checked = false;
 
             //clear user controls here
-            immunizationControl1.Controls.Clear();
-            historyControl1.Controls.Clear();
         }
 
 
@@ -811,6 +809,7 @@ namespace smuCRMS.View
         {
             txtBMI.SelectAll();
         }
+
         private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
             computeBMI();

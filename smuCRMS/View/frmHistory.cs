@@ -19,6 +19,7 @@ namespace smuCRMS.View
         int ctr = 0;
         private void frmHistory_Load(object sender, EventArgs e)
         {
+            historyControl1.Enabled = false;
             pc.id = lblID.Text;
             if(pc.getHistory())
             {
@@ -29,14 +30,7 @@ namespace smuCRMS.View
                     if (res == DialogResult.Yes)
                     {
                         btnDone.Text = "Cancel";
-                        pnlH1.Show();
-                        pnlH2.Show();
-                        pnlH4.Show();
-                        pnlH7.Show();
-                        pnlH6.Show();
-                        pnlH5.Show();
-                        pnlH3.Show();
-                        enableHistory(true);
+                        historyControl1.Enabled = true;
                         btnEdit.Visible = true;
                         btnEdit.Text = "Save";
                     }
@@ -62,72 +56,29 @@ namespace smuCRMS.View
         //getting data from the controller to history controls
         void loadData()
         {
-
-            txthospi.Text = pc.hospiDesc;
-            txtinj.Text = pc.indescription;
-            txtallergy.Text = pc.allergyDesc;
-            txtcurr.Text = pc.currentMed;
-            txtmed.Text = pc.medcondescription;
-            txtphys.Text = pc.phydefdescription;
-            txtpsych.Text = pc.psychodescription;
-            hidePanelX();
-        }
-        void hidePanelX()
-        {
-            hidePanel(txthospi, pnlH1);
-            hidePanel(txtinj, pnlH2);
-            hidePanel(txtallergy, pnlH4);
-            hidePanel(txtcurr, pnlH7);
-            hidePanel(txtmed, pnlH6);
-            hidePanel(txtphys, pnlH5);
-            hidePanel(txtpsych, pnlH3);
+            historyControl1.getHistory(pc.hospiDesc,pc.indescription,pc.allergyDesc,pc.currentMed,pc.medcondescription,pc.phydefdescription,pc.psychodescription);
         }
 
         private void btnDone_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-           void enableHistory(bool x)
-        {
-            txtallergy.Enabled = x;
-            txtcurr.Enabled = x;
-            txthospi.Enabled = x;
-            txtinj.Enabled = x;
-            txtmed.Enabled = x;
-            txtphys.Enabled = x;
-            txtpsych.Enabled = x;
-        }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            pnlH1.Show();
-            pnlH2.Show();
-            pnlH4.Show();
-            pnlH7.Show();
-            pnlH6.Show();
-            pnlH5.Show();
-            pnlH3.Show();
-            enableHistory(true);
+            historyControl1.Enabled = true;
             if (btnEdit.Text == "Update")
             {       
                 btnEdit.Text = "Save";
             }
             else
             {
-                pc.JSONHistory =
-                    @"{'Hospitalization':'" + txthospi.Text +
-                    "','Injury':'" + txtinj.Text +
-                    "','Psychological':'" + txtpsych.Text +
-                    "','Allergy':'" + txtallergy.Text +
-                    "','Physical_Defects':'" + txtphys.Text +
-                    "','Medical_Condition':'" + txtmed.Text +
-                    "','Medication':'" + txtcurr.Text + "'}";
+                pc.JSONHistory=historyControl1.setJSONHistory();
                 pc.tDate = DateTime.Now.ToString("yyyy-MM-dd");
                 if (pc.updateHistory())
                 {
                     btnEdit.Text = "Update";
                     MetroMessageBox.Show(this,"Successfully Updated/Saved!","Message",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    enableHistory(false);
-                    hidePanelX();
+                    historyControl1.Enabled = false;
                 }
                 else
                 {

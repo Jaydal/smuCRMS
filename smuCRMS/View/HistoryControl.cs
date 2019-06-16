@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CrystalDecisions.Shared.Json;
+using smuCRMS.Controller;
 
 namespace smuCRMS.View
 {
@@ -17,7 +18,7 @@ namespace smuCRMS.View
         {
             InitializeComponent();
         }
-        public string getJSONHistory()
+        public string setJSONHistory()
         {
             return @"{'Hospitalization':'" + txtHospi.Text +
             "','Injury':'" + txtInju.Text +
@@ -26,6 +27,16 @@ namespace smuCRMS.View
             "','Physical_Defects':'" + txtPhysi.Text +
             "','Medical_Condition':'" + txtMedical.Text +
             "','Medication':'" + txtCurrent.Text + "'}";
+        }
+        public void getHistory(string hospi,string inj,string aller,string curr,string med,string phy,string psy)
+        {
+            txtHospi.Text = hospi;
+            txtInju.Text = inj;
+            txtAller.Text = aller;
+            txtCurrent.Text =curr;
+            txtMedical.Text = med;
+            txtPhysi.Text = phy;
+            txtPsycho.Text =psy;
         }
     }
 }
