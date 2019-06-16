@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.IO;
 using System.Drawing;
+using CrystalDecisions.Shared.Json;
 
 namespace smuCRMS.Controller
 {
@@ -68,14 +69,14 @@ namespace smuCRMS.Controller
 
         public string hid { get; set; }
         public string JSONHistory { get; set; }
-        //public string hospiDesc { get; set; }
-        //public string allergyDesc { get; set; }
-        ////INJURIES MODELS 
-        //public string indescription { get; set; }
+        public string hospiDesc { get; set; }
+        public string allergyDesc { get; set; }
+        //INJURIES MODELS
+        public string indescription { get; set; }
         //public int EID { get; set; }
-        //public string medcondescription { get; set; }
-        //public string phydefdescription { get; set; }
-        //public string psychodescription { get; set; }
+        public string medcondescription { get; set; }
+        public string phydefdescription { get; set; }
+        public string psychodescription { get; set; }
 
 
         public string currentMed { get; set; }
@@ -291,21 +292,6 @@ namespace smuCRMS.Controller
         {
             return patient.getVisits(this);
         }
-
-
-        public bool getHistory()
-        {
-            valid = false;
-            dtable = patient.getHistory(this);
-            //hospiDesc = dtable.Rows[0][0].ToString();
-            //indescription = dtable.Rows[0][1].ToString();
-            //psychodescription = dtable.Rows[0][2].ToString();
-            //allergyDesc = dtable.Rows[0][3].ToString();
-            //phydefdescription = dtable.Rows[0][4].ToString();
-            //medcondescription = dtable.Rows[0][5].ToString();
-            currentMed = dtable.Rows[0][6].ToString();
-            return valid = (dtable.Rows.Count > 0) ? true : false;
-        }
         public DataTable getLogs()
         {
             valid = false;
@@ -475,7 +461,24 @@ namespace smuCRMS.Controller
                 valid = true;
             }
             return valid;
-
+        }
+        public bool getHistory()
+        {
+            dtable=patient.callProcedure(this,
+                "VIEW_BY_ID", "vcrud_history", true);
+            if (dtable.Rows.Count > 0)
+            {
+                JsonObject obj = new JsonObject(dtable.Rows[0][2].ToString());
+                hospiDesc = obj.GetString("Hospitalization");
+                indescription = obj.GetString("Injury");
+                psychodescription = obj.GetString("Psychological");
+                allergyDesc = obj.GetString("Allergy");
+                phydefdescription = obj.GetString("Physical_Defects");
+                medcondescription = obj.GetString("Medical_Condition");
+                currentMed = obj.GetString("Medication");
+                valid = true;
+            }
+            return valid;
         }
     }
 

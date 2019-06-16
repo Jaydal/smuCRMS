@@ -19,15 +19,6 @@ namespace smuCRMS.View
         int ctr = 0;
         private void frmHistory_Load(object sender, EventArgs e)
         {
-            //ac.getActiveUser();
-            //if (ac.accountID == "3" && btnEdit.Text=="Edit")
-            //{
-            //    btnEdit.Text = "Save";
-            //}
-            //else
-            //{
-
-            //}
             pc.id = lblID.Text;
             if(pc.getHistory())
             {
@@ -71,13 +62,14 @@ namespace smuCRMS.View
         //getting data from the controller to history controls
         void loadData()
         {
-            //txthospi.Text = pc.hospiDesc;
-            //txtinj.Text = pc.indescription;
-            //txtallergy.Text = pc.allergyDesc;
+
+            txthospi.Text = pc.hospiDesc;
+            txtinj.Text = pc.indescription;
+            txtallergy.Text = pc.allergyDesc;
             txtcurr.Text = pc.currentMed;
-            //txtmed.Text = pc.medcondescription;
-            //txtphys.Text = pc.phydefdescription;
-            //txtpsych.Text = pc.psychodescription;
+            txtmed.Text = pc.medcondescription;
+            txtphys.Text = pc.phydefdescription;
+            txtpsych.Text = pc.psychodescription;
             hidePanelX();
         }
         void hidePanelX()
