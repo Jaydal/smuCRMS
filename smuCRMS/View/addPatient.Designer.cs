@@ -1317,6 +1317,7 @@
             this.historyControl1.Name = "historyControl1";
             this.historyControl1.Size = new System.Drawing.Size(610, 591);
             this.historyControl1.TabIndex = 170;
+            this.historyControl1.Load += new System.EventHandler(this.historyControl1_Load);
             // 
             // immunizationControl1
             // 
@@ -1757,6 +1758,7 @@
             this.txtRemarks.Multiline = true;
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.PasswordChar = '\0';
+            this.txtRemarks.PromptText = "Remarks....";
             this.txtRemarks.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtRemarks.SelectedText = "";
             this.txtRemarks.SelectionLength = 0;

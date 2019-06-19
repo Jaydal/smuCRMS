@@ -829,5 +829,10 @@ namespace smuCRMS.View
         {
 
         }
+
+        private void historyControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

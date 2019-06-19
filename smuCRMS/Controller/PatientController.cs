@@ -44,7 +44,6 @@ namespace smuCRMS.Controller
         public double weight { get; set; }
         public string firstMenstrualdate { get; set; }
         public string lastMenstrualdate { get; set; }
-        
         public double bmi { get; set; }
         public string bp { get; set; }
         public string pr { get; set; }
@@ -85,7 +84,9 @@ namespace smuCRMS.Controller
         public string tDate { get; set; }
         public double tHeight { get; set; }
         public double tWeight { get; set; }
+        [MinLength(3)]
         public string tCC { get; set; }
+        [MinLength(3)]
         public string tDiag { get; set; }
         public string MyProperty { get; set; }
         public string tid { get; set; }
@@ -96,7 +97,9 @@ namespace smuCRMS.Controller
         public string filename { get; set; }
         public byte[] photo { get; set; }
         public double spo2 { get; set; }
+        [MinLength(3)]
         public string dic { get; set; }
+        [MinLength(3)]
         public string refe { get; set; }
         public string uid { get; set; }
         public byte[] psig { get; set; }

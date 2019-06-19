@@ -289,5 +289,23 @@ namespace smuCRMS.View
                 e.Handled = true;
             }
         }
+
+        private void txtComplaints_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txtComplaints_TextChanged(object sender, EventArgs e)
+        {
+            if (txtComplaints.Text == string.Empty || txtComplaints.Text.Length < 3)
+            {
+                btnAdd.Enabled = false;
+            }
+
+            else
+            {
+                btnAdd.Enabled = true;
+            }
+        }
     }
 }

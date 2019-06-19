@@ -1802,3 +1802,4 @@ C:\Users\luna\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.View.ImmunizationControl
 C:\Users\luna\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.exe.manifest
 C:\Users\luna\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.application
 C:\Users\luna\Desktop\smuCRMS\smuCRMS\obj\Debug\smuCRMS.csproj.CopyComplete
+C:\Users\luna\Desktop\smuCRMS\smuCRMS\bin\Debug\System.ComponentModel.Annotations.dll
