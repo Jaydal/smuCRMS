@@ -38,12 +38,12 @@ namespace smuCRMS.View
             cmbImmuhb.Text = hb;
             cmbImmummr.Text = mmr;
             cmbImmuopv.Text = opv;
-            cmbImmuoth1.Text = (string)(JArray.Parse(oth1))[1];
-            cmbImmuoth2.Text = (string)(JArray.Parse(oth2))[1];
-            cmbImmuoth3.Text = (string)(JArray.Parse(oth3))[1];
-            txtImmuOther.Text = (string)(JArray.Parse(oth1))[0];
-            txtImmuOther2.Text = (string)(JArray.Parse(oth2))[0];
-            txtImmuOther3.Text = (string)(JArray.Parse(oth3))[0];
+            cmbImmuoth1.Text = (string)(JArray.Parse((oth1!=null)?oth1:"[null,null]"))[1];
+            cmbImmuoth2.Text = (string)(JArray.Parse((oth2 != null) ? oth1 : "[null,null]"))[1];
+            cmbImmuoth3.Text = (string)(JArray.Parse((oth3 != null) ? oth1 : "[null,null]"))[1];
+            txtImmuOther.Text = (string)(JArray.Parse((oth1 != null) ? oth1 : "[null,null]"))[0];
+            txtImmuOther2.Text = (string)(JArray.Parse((oth2 != null) ? oth1 : "[null,null]"))[0];
+            txtImmuOther3.Text = (string)(JArray.Parse((oth3 != null) ? oth1 : "[null,null]"))[0];
         }
         private void cmbImmu_MouseDown(object sender, MouseEventArgs e)
         {

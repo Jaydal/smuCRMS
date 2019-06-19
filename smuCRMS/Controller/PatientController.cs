@@ -212,10 +212,7 @@ namespace smuCRMS.Controller
         {
             return valid = (patient.addPatientExcel(this)) ? true : false;
         }
-        public bool updateImmunization()
-        {
-            return valid = (patient.updateImmunization(this)) ? true : false;
-        }
+
         
        
 
@@ -398,6 +395,16 @@ namespace smuCRMS.Controller
         {
             return valid = (patient.callProcedure(this,
                 "UPDATE", "vcrud_history", false).Columns.Count > 0) ? true : false;
+        }
+        public bool updateImmunization()
+        {
+            return valid = (patient.callProcedure(this,
+                 "UPDATE", "vcrud_immunization", false).Columns.Count > 0) ? true : false;
+        }
+        public bool addImmunization()
+        {
+            return valid = (patient.callProcedure(this,
+                 "CREATE", "vcrud_immunization", false).Columns.Count > 0) ? true : false;
         }
         public bool addTreatment()
         {

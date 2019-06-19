@@ -13,7 +13,7 @@ namespace smuCRMS.View
         }
         PatientController pc = new PatientController();
         addPatient ap = new addPatient();
-
+        bool isNew = false;
         private void frmDiag_Load(object sender, EventArgs e)
         {
             immunizationControl1.Enabled = false;
@@ -23,8 +23,10 @@ namespace smuCRMS.View
                 DialogResult res = MetroMessageBox.Show(this, "No Immunization for the Patient! Do you want to add?", "Immunization", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (res == DialogResult.Yes)
                 {
+                    isNew = true;
                     btnEdit.Text = "Save";
                     btnDone.Text = "Cancel";
+                    immunizationControl1.Enabled = true;
                 }
                 else
                 {
@@ -57,12 +59,14 @@ namespace smuCRMS.View
             if(btnEdit.Text=="Save")
             {
                 pc.JSONImmunization=immunizationControl1.setJSONImmunization();
-                if (pc.updateImmunization())
+               
+                if (((isNew) ? pc.addImmunization(): pc.updateImmunization()))
                 {
                     immunizationControl1.Enabled = false;
                     MetroMessageBox.Show(this, "Successfully Saved!","Saved",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     btnEdit.Text = "Update";
                     btnDone.Text = "Done";
+                    isNew = false;
                 }
                 else
                 {
