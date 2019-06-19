@@ -98,8 +98,6 @@ CREATE TABLE `history` (
 /*Data for the table `history` */
 
 insert  into `history`(`history_id`,`patient_id`,`history`,`DateTimeCreated`) values 
-('H061900001','12345','asd','2019-06-12 09:11:44'),
-('H061900002','12345',NULL,NULL),
 ('H061900003','2222','{\'Hospitalization\':\'1\',\'Injury\':\'2\',\'Psychological\':\'3\',\'Allergy\':\'4\',\'Physical_Defects\':\'5\',\'Medical_Condition\':\'6\',\'Medication\':\'7\'}','2019-06-12 09:21:16'),
 ('H061900004','11221','{\'Hospitalization\':\'1\',\'Injury\':\'2\',\'Psychological\':\'3\',\'Allergy\':\'4\',\'Physical_Defects\':\'5\',\'Medical_Condition\':\'6\',\'Medication\':\'7\'}','2019-06-12 09:28:06'),
 ('H061900005','123154','{\'Hospitalization\':\'1\',\'Injury\':\'2\',\'Psychological\':\'3\',\'Allergy\':\'4\',\'Physical_Defects\':\'5\',\'Medical_Condition\':\'6\',\'Medication\':\'7\'}','2019-06-12 10:03:54'),
@@ -108,7 +106,8 @@ insert  into `history`(`history_id`,`patient_id`,`history`,`DateTimeCreated`) va
 ('H061900008','2221','{\'Hospitalization\':\'1\',\'Injury\':\'\',\'Psychological\':\'\',\'Allergy\':\'\',\'Physical_Defects\':\'\',\'Medical_Condition\':\'\',\'Medication\':\'\'}','2019-06-12 10:21:32'),
 ('H061900009','242345','{\'Hospitalization\':\'\',\'Injury\':\'\',\'Psychological\':\'\',\'Allergy\':\'\',\'Physical_Defects\':\'\',\'Medical_Condition\':\'\',\'Medication\':\'\'}','2019-06-12 10:35:43'),
 ('H061900010','22','{\'Hospitalization\':\'\',\'Injury\':\'\',\'Psychological\':\'\',\'Allergy\':\'\',\'Physical_Defects\':\'\',\'Medical_Condition\':\'\',\'Medication\':\'\'}','2019-06-12 10:38:41'),
-('H061900011','39695150','{\'Hospitalization\':\'1aaa\',\'Injury\':\'2bbbc\',\'Psychological\':\'3ccc\',\'Allergy\':\'4ddd\',\'Physical_Defects\':\'5eee\',\'Medical_Condition\':\'6fff\',\'Medication\':\'7ggg\'}','2019-06-16 08:12:09');
+('H061900011','39695150','{\'Hospitalization\':\'1aaa\',\'Injury\':\'2bbbc\',\'Psychological\':\'3ccc\',\'Allergy\':\'4ddd\',\'Physical_Defects\':\'5eee\',\'Medical_Condition\':\'6fff\',\'Medication\':\'7ggg\'}','2019-06-16 08:12:09'),
+('H061900012','12345','{\'Hospitalization\':\'asd\',\'Injury\':\'\',\'Psychological\':\'\',\'Allergy\':\'\',\'Physical_Defects\':\'\',\'Medical_Condition\':\'\',\'Medication\':\'\'}','2019-06-19 12:22:22');
 
 /*Table structure for table `immunization` */
 
