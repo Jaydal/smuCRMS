@@ -6,10 +6,11 @@ using System.Data.OleDb;
 using System.IO;
 using System.Drawing;
 using Newtonsoft.Json.Linq;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace smuCRMS.Controller
 {
-
     class PatientController
     {
         //changed course-course_id, +level
@@ -43,6 +44,7 @@ namespace smuCRMS.Controller
         public double weight { get; set; }
         public string firstMenstrualdate { get; set; }
         public string lastMenstrualdate { get; set; }
+        
         public double bmi { get; set; }
         public string bp { get; set; }
         public string pr { get; set; }
