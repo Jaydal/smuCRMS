@@ -139,7 +139,9 @@ insert  into `immunization`(`immunization_id`,`patient_id`,`immunization`,`DateT
 ('I061900010','2221','{\'OPV\':\'Booster-1\',\'DPT\':\'3rd\',\'MMR\':\'Booster-1\',\'HB\':\'Booster-2\',\'HA\':\'Booster-1\',\'asdsad\':\'3rd\',\'asdsadd\':\'\',\'assfsdf\':\'Booster-1\'}','2019-06-12 10:21:32'),
 ('I061900011','242345','{\'OPV\':\'\',\'DPT\':\'\',\'MMR\':\'\',\'HB\':\'\',\'HA\':\'\',\'\':\'\',\'\':\'\',\'\':\'\'}','2019-06-12 10:35:43'),
 ('I061900012','22','{\'OPV\':\'\',\'DPT\':\'\',\'MMR\':\'\',\'HB\':\'\',\'HA\':\'\',\'\':\'\',\'\':\'\',\'\':\'\'}','2019-06-12 10:38:41'),
-('I061900013','39695150','{\'OPV\':\'Booster-1\',\'DPT\':\'Booster-1\',\'MMR\':\'1st\',\'HB\':\'2nd\',\'HA\':\'2nd\',\'A\':\'3rd\',\'B\':\'1st\',\'C\':\'2nd\'}','2019-06-16 08:12:09');
+('I061900013','39695150','{\'OPV\':\'Booster-1\',\'BGC\':\'Booster-1\',\'DPT\':\'Booster-2\',\'MMR\':\'1st\',\'HB\':\'2nd\',\'HA\':\'2nd\',\'A\':\'3rd\',\'B\':\'1st\',\'CDEF\':\'2nd\'}','2019-06-16 08:12:09'),
+('I061900014',NULL,NULL,NULL),
+('I061900015','12345','{\'OPV\':\'\',\'BGC\':\'3rd\',\'DPT\':\'\',\'MMR\':\'\',\'HB\':\'\',\'HA\':\'\',\'\':\'\',\'\':\'\',\'\':\'\'}','2019-06-19 11:47:48');
 
 /*Table structure for table `logs` */
 
@@ -589,15 +591,17 @@ BEGIN
 		ELSEIF activity="UPDATE" THEN
 			UPDATE immunization
 				SET 
-				immunization.`patient_id`=id,
 				immunization.`immunization`=immunization
-				WHERE immunization.`immunization_id`=immunization_id;
+				WHERE immunization.`patient_id`=id;
 		ELSEIF activity="DELETE" THEN
 			DELETE FROM immunization
 				WHERE immunization.`immunization_id`=immunization_id;
 		ELSEIF activity="VIEW" THEN		
 			SELECT * FROM immunization
 				WHERE immunization.`immunization_id`=immunization_id;
+		ELSEIF activity="VIEW_BY_ID" THEN		
+			SELECT * FROM immunization
+				WHERE immunization.`patient_id`=id;
 		END IF;
 	END */$$
 DELIMITER ;
