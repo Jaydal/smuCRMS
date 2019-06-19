@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.IO;
 using System.Drawing;
-using CrystalDecisions.Shared.Json;
+using Newtonsoft.Json.Linq;
 
 namespace smuCRMS.Controller
 {
@@ -63,9 +63,9 @@ namespace smuCRMS.Controller
         public string HB { get; set; }
         public string HA { get; set; }
         public string JSONImmunization { get; set; }
-        //public string Others { get; set; }
-        //public string othersDesc { get; set; }
-        //public string olddesc { get; set; }
+        public string oth1 { get; set; }
+        public string oth2 { get; set; }
+        public string oth3 { get; set; }
 
         public string hid { get; set; }
         public string JSONHistory { get; set; }
@@ -470,15 +470,37 @@ namespace smuCRMS.Controller
                 "VIEW_BY_ID", "vcrud_history", true);
             if (dtable.Rows.Count > 0)
             {
-                JsonObject obj = new JsonObject((dtable.Rows[0][2].ToString()!=null) ? 
+                JObject obj = new JObject((dtable.Rows[0][2].ToString()!=null) ? 
                     dtable.Rows[0][2].ToString() :"{}");
-                hospiDesc = obj.GetString("Hospitalization");
-                indescription = obj.GetString("Injury");
-                psychodescription = obj.GetString("Psychological");
-                allergyDesc = obj.GetString("Allergy");
-                phydefdescription = obj.GetString("Physical_Defects");
-                medcondescription = obj.GetString("Medical_Condition");
-                currentMed = obj.GetString("Medication");
+                hospiDesc = (string)obj.GetValue("Hospitalization");
+                indescription = (string)obj.GetValue("Injury");
+                psychodescription = (string)obj.GetValue("Psychological");
+                allergyDesc = (string)obj.GetValue("Allergy");
+                phydefdescription = (string)obj.GetValue("Physical_Defects");
+                medcondescription = (string)obj.GetValue("Medical_Condition");
+                currentMed = (string)obj.GetValue("Medication");
+                valid = true;
+            }
+            return valid;
+        }
+        public bool getImmunization()
+        {
+            dtable = patient.callProcedure(this,
+                "VIEW_BY_ID", "vcrud_immunization", true);
+            if (dtable.Rows.Count > 0)
+            {
+
+                JObject obj = new JObject((dtable.Rows[0][2].ToString() != null) ?
+                    dtable.Rows[0][2].ToString() : "{}");
+                OPV = (string)obj.GetValue("OPV");
+                DPT = (string)obj.GetValue("DPT");
+                MMR = (string)obj.GetValue("MMR");
+                BGC = (string)obj.GetValue("BGC");
+                HA = (string)obj.GetValue("HA");
+                HB = (string)obj.GetValue("HB");
+                oth1 = (string)obj[6];
+                oth2 = (string)obj[7];
+                oth3 = (string)obj[8];
                 valid = true;
             }
             return valid;
