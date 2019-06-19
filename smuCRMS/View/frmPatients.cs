@@ -355,6 +355,7 @@ namespace smuCRMS.View
                 id = dgv.CurrentRow.Cells["ID Number"].Value.ToString();
                 frmHistory his = new frmHistory();
                 his.lblID.Text = id;
+                his.ShowDialog();
                 this.Focus();
                 txtSearch1.Text = id;
             }
@@ -412,10 +413,17 @@ namespace smuCRMS.View
 
         private void txtSearch1_TextChanged_1(object sender, EventArgs e)
         {
-            pc.searchString = txtSearch1.Text;
-            dgv.DataSource=pc.search();
-            pbarSearch.Value = Int32.Parse(txtSearch1.TextLength.ToString());
-            pbarSearch2.Value = Int32.Parse(txtSearch1.TextLength.ToString()) ;
+            if (txtSearch1.TextLength > 3)
+            {
+                pc.searchString = txtSearch1.Text;
+                dgv.DataSource = pc.search();
+                pbarSearch.Value = Int32.Parse(txtSearch1.TextLength.ToString());
+                pbarSearch2.Value = Int32.Parse(txtSearch1.TextLength.ToString());
+            }
+            else
+            {
+                dgv.DataSource = null;
+            }
         }
 
         private void tbPmain_SelectedIndexChanged_1(object sender, EventArgs e)

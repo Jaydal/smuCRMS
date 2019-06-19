@@ -76,7 +76,7 @@ namespace smuCRMS.View
                 pm.emergencyNumber = txtECNumber.Text;
                 pm.remarks = "(" + cmbBMI.Text + ") " + txtRemarks.Text;
 
-                pm.JSONImmunization = immunizationControl1.getJSONImmunization();
+                pm.JSONImmunization = immunizationControl1.setJSONImmunization();
                 pm.JSONHistory = historyControl1.setJSONHistory();
 
                 //pm.tDate = dtpCTDate.Value.ToString("yyyy-MM-dd");

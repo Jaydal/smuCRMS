@@ -498,12 +498,26 @@ namespace smuCRMS.Controller
                 BGC = (string)obj["BGC"];
                 HA = (string)obj["HA"];
                 HB = (string)obj["HB"];
-                oth1 = (string)obj[6];
-                oth2 = (string)obj[7];
-                oth3 = (string)obj[8];
+                int c = 0;
+                foreach(var i in obj){
+                    if (c == 6)
+                    {
+                        oth1 = "['" + i.Key + "','" + i.Value + "']" ;
+                    }
+                    else if (c == 7)
+                    {
+                        oth2 = "['" + i.Key + "','" + i.Value + "']";
+                    }
+                    else if (c == 8)
+                    {
+                        oth3="['" + i.Key + "','" + i.Value + "']";
+                    }
+                    c++;
+                }
                 valid = true;
             }
             return valid;
+            
         }
     }
 

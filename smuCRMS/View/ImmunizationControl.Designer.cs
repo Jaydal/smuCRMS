@@ -420,19 +420,19 @@
             // 
             // 
             this.txtImmuOther.CustomButton.Image = null;
-            this.txtImmuOther.CustomButton.Location = new System.Drawing.Point(286, 1);
+            this.txtImmuOther.CustomButton.Location = new System.Drawing.Point(304, 2);
             this.txtImmuOther.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtImmuOther.CustomButton.Name = "";
-            this.txtImmuOther.CustomButton.Size = new System.Drawing.Size(39, 39);
+            this.txtImmuOther.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.txtImmuOther.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtImmuOther.CustomButton.TabIndex = 1;
             this.txtImmuOther.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtImmuOther.CustomButton.UseSelectable = true;
             this.txtImmuOther.CustomButton.Visible = false;
-            this.txtImmuOther.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtImmuOther.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtImmuOther.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtImmuOther.Lines = new string[0];
-            this.txtImmuOther.Location = new System.Drawing.Point(2, 4);
+            this.txtImmuOther.Location = new System.Drawing.Point(2, 21);
             this.txtImmuOther.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtImmuOther.MaxLength = 255;
             this.txtImmuOther.Name = "txtImmuOther";
@@ -443,7 +443,7 @@
             this.txtImmuOther.SelectionLength = 0;
             this.txtImmuOther.SelectionStart = 0;
             this.txtImmuOther.ShortcutsEnabled = true;
-            this.txtImmuOther.Size = new System.Drawing.Size(326, 41);
+            this.txtImmuOther.Size = new System.Drawing.Size(326, 24);
             this.txtImmuOther.TabIndex = 34;
             this.txtImmuOther.UseSelectable = true;
             this.txtImmuOther.WaterMark = "Please specify";
@@ -495,19 +495,19 @@
             // 
             // 
             this.txtImmuOther2.CustomButton.Image = null;
-            this.txtImmuOther2.CustomButton.Location = new System.Drawing.Point(286, 1);
+            this.txtImmuOther2.CustomButton.Location = new System.Drawing.Point(304, 2);
             this.txtImmuOther2.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtImmuOther2.CustomButton.Name = "";
-            this.txtImmuOther2.CustomButton.Size = new System.Drawing.Size(39, 39);
+            this.txtImmuOther2.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.txtImmuOther2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtImmuOther2.CustomButton.TabIndex = 1;
             this.txtImmuOther2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtImmuOther2.CustomButton.UseSelectable = true;
             this.txtImmuOther2.CustomButton.Visible = false;
-            this.txtImmuOther2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtImmuOther2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtImmuOther2.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtImmuOther2.Lines = new string[0];
-            this.txtImmuOther2.Location = new System.Drawing.Point(2, 4);
+            this.txtImmuOther2.Location = new System.Drawing.Point(2, 21);
             this.txtImmuOther2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtImmuOther2.MaxLength = 255;
             this.txtImmuOther2.Name = "txtImmuOther2";
@@ -518,7 +518,7 @@
             this.txtImmuOther2.SelectionLength = 0;
             this.txtImmuOther2.SelectionStart = 0;
             this.txtImmuOther2.ShortcutsEnabled = true;
-            this.txtImmuOther2.Size = new System.Drawing.Size(326, 41);
+            this.txtImmuOther2.Size = new System.Drawing.Size(326, 24);
             this.txtImmuOther2.TabIndex = 34;
             this.txtImmuOther2.UseSelectable = true;
             this.txtImmuOther2.WaterMark = "Please specify";
@@ -570,19 +570,19 @@
             // 
             // 
             this.txtImmuOther3.CustomButton.Image = null;
-            this.txtImmuOther3.CustomButton.Location = new System.Drawing.Point(286, 1);
+            this.txtImmuOther3.CustomButton.Location = new System.Drawing.Point(304, 2);
             this.txtImmuOther3.CustomButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtImmuOther3.CustomButton.Name = "";
-            this.txtImmuOther3.CustomButton.Size = new System.Drawing.Size(39, 39);
+            this.txtImmuOther3.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.txtImmuOther3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtImmuOther3.CustomButton.TabIndex = 1;
             this.txtImmuOther3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtImmuOther3.CustomButton.UseSelectable = true;
             this.txtImmuOther3.CustomButton.Visible = false;
-            this.txtImmuOther3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtImmuOther3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtImmuOther3.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.txtImmuOther3.Lines = new string[0];
-            this.txtImmuOther3.Location = new System.Drawing.Point(2, 4);
+            this.txtImmuOther3.Location = new System.Drawing.Point(2, 21);
             this.txtImmuOther3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtImmuOther3.MaxLength = 255;
             this.txtImmuOther3.Name = "txtImmuOther3";
@@ -593,7 +593,8 @@
             this.txtImmuOther3.SelectionLength = 0;
             this.txtImmuOther3.SelectionStart = 0;
             this.txtImmuOther3.ShortcutsEnabled = true;
-            this.txtImmuOther3.Size = new System.Drawing.Size(326, 41);
+            this.txtImmuOther3.ShowClearButton = true;
+            this.txtImmuOther3.Size = new System.Drawing.Size(326, 24);
             this.txtImmuOther3.TabIndex = 34;
             this.txtImmuOther3.UseSelectable = true;
             this.txtImmuOther3.WaterMark = "Please specify";

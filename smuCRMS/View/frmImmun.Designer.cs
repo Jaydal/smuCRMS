@@ -28,21 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmImmun));
             this.lblID = new System.Windows.Forms.Label();
-            this.panelAddImmu = new MetroFramework.Controls.MetroPanel();
-            this.immunizationControl1 = new smuCRMS.View.ImmunizationControl();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.btnEdit = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnDone = new MaterialSkin.Controls.MaterialFlatButton();
-            this.panelDGV = new System.Windows.Forms.Panel();
-            this.dgImmun = new System.Windows.Forms.DataGridView();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.panelAddImmu.SuspendLayout();
+            this.immunizationControl1 = new smuCRMS.View.ImmunizationControl();
             this.metroPanel2.SuspendLayout();
-            this.panelDGV.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgImmun)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID
@@ -53,36 +45,6 @@
             this.lblID.Size = new System.Drawing.Size(0, 19);
             this.lblID.TabIndex = 0;
             // 
-            // panelAddImmu
-            // 
-            this.panelAddImmu.Controls.Add(this.immunizationControl1);
-            this.panelAddImmu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAddImmu.HorizontalScrollbarBarColor = true;
-            this.panelAddImmu.HorizontalScrollbarHighlightOnWheel = false;
-            this.panelAddImmu.HorizontalScrollbarSize = 10;
-            this.panelAddImmu.Location = new System.Drawing.Point(1, 60);
-            this.panelAddImmu.Name = "panelAddImmu";
-            this.panelAddImmu.Size = new System.Drawing.Size(1059, 414);
-            this.panelAddImmu.TabIndex = 12;
-            this.panelAddImmu.VerticalScrollbarBarColor = true;
-            this.panelAddImmu.VerticalScrollbarHighlightOnWheel = false;
-            this.panelAddImmu.VerticalScrollbarSize = 10;
-            // 
-            // immunizationControl1
-            // 
-            this.immunizationControl1.AutoScroll = true;
-            this.immunizationControl1.AutoSize = true;
-            this.immunizationControl1.BackColor = System.Drawing.Color.White;
-            this.immunizationControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.immunizationControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.immunizationControl1.Location = new System.Drawing.Point(0, 0);
-            this.immunizationControl1.Margin = new System.Windows.Forms.Padding(9);
-            this.immunizationControl1.Name = "immunizationControl1";
-            this.immunizationControl1.Padding = new System.Windows.Forms.Padding(25, 19, 15, 19);
-            this.immunizationControl1.Size = new System.Drawing.Size(1059, 414);
-            this.immunizationControl1.TabIndex = 3;
-            this.immunizationControl1.Load += new System.EventHandler(this.immunizationControl1_Load);
-            // 
             // metroPanel2
             // 
             this.metroPanel2.Controls.Add(this.btnEdit);
@@ -91,7 +53,7 @@
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(1, 732);
+            this.metroPanel2.Location = new System.Drawing.Point(1, 364);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(1059, 42);
             this.metroPanel2.TabIndex = 19;
@@ -137,62 +99,27 @@
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click_1);
             // 
-            // panelDGV
+            // immunizationControl1
             // 
-            this.panelDGV.Controls.Add(this.dgImmun);
-            this.panelDGV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDGV.Location = new System.Drawing.Point(1, 474);
-            this.panelDGV.Name = "panelDGV";
-            this.panelDGV.Size = new System.Drawing.Size(1059, 177);
-            this.panelDGV.TabIndex = 13;
-            // 
-            // dgImmun
-            // 
-            this.dgImmun.AllowUserToAddRows = false;
-            this.dgImmun.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgImmun.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgImmun.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgImmun.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.dgImmun.BackgroundColor = System.Drawing.Color.White;
-            this.dgImmun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgImmun.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgImmun.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgImmun.Location = new System.Drawing.Point(0, 0);
-            this.dgImmun.MultiSelect = false;
-            this.dgImmun.Name = "dgImmun";
-            this.dgImmun.ReadOnly = true;
-            this.dgImmun.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.dgImmun.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgImmun.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgImmun.Size = new System.Drawing.Size(1059, 177);
-            this.dgImmun.TabIndex = 3;
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(1, 651);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1059, 123);
-            this.metroPanel1.TabIndex = 14;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.immunizationControl1.AutoScroll = true;
+            this.immunizationControl1.AutoSize = true;
+            this.immunizationControl1.BackColor = System.Drawing.Color.White;
+            this.immunizationControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.immunizationControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.immunizationControl1.Location = new System.Drawing.Point(1, 60);
+            this.immunizationControl1.Margin = new System.Windows.Forms.Padding(9);
+            this.immunizationControl1.Name = "immunizationControl1";
+            this.immunizationControl1.Padding = new System.Windows.Forms.Padding(25, 19, 15, 19);
+            this.immunizationControl1.Size = new System.Drawing.Size(1059, 304);
+            this.immunizationControl1.TabIndex = 20;
             // 
             // frmImmun
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1061, 774);
+            this.ClientSize = new System.Drawing.Size(1061, 406);
+            this.Controls.Add(this.immunizationControl1);
             this.Controls.Add(this.metroPanel2);
-            this.Controls.Add(this.metroPanel1);
-            this.Controls.Add(this.panelDGV);
-            this.Controls.Add(this.panelAddImmu);
             this.Controls.Add(this.lblID);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -203,18 +130,14 @@
             this.Name = "frmImmun";
             this.Padding = new System.Windows.Forms.Padding(1, 60, 1, 0);
             this.Resizable = false;
-            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.SystemShadow;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.ShowInTaskbar = false;
             this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Text = "Immunization";
             this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.Load += new System.EventHandler(this.frmDiag_Load);
-            this.panelAddImmu.ResumeLayout(false);
-            this.panelAddImmu.PerformLayout();
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
-            this.panelDGV.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgImmun)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,13 +146,9 @@
         #endregion
 
         public System.Windows.Forms.Label lblID;
-        private MetroFramework.Controls.MetroPanel panelAddImmu;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private MaterialSkin.Controls.MaterialFlatButton btnEdit;
         private MaterialSkin.Controls.MaterialFlatButton btnDone;
         private ImmunizationControl immunizationControl1;
-        private System.Windows.Forms.Panel panelDGV;
-        private System.Windows.Forms.DataGridView dgImmun;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
     }
 }
