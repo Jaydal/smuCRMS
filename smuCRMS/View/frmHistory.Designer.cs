@@ -105,7 +105,6 @@
             // 
             this.historyControl1.AutoScroll = true;
             this.historyControl1.AutoSize = true;
-            this.historyControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.historyControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.historyControl1.Location = new System.Drawing.Point(1, 74);
             this.historyControl1.Name = "historyControl1";

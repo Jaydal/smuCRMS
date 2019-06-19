@@ -104,7 +104,6 @@
             this.immunizationControl1.AutoScroll = true;
             this.immunizationControl1.AutoSize = true;
             this.immunizationControl1.BackColor = System.Drawing.Color.White;
-            this.immunizationControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.immunizationControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.immunizationControl1.Location = new System.Drawing.Point(1, 60);
             this.immunizationControl1.Margin = new System.Windows.Forms.Padding(9);

@@ -38,7 +38,6 @@ namespace smuCRMS.View
             cmbImmuhb.Text = hb;
             cmbImmummr.Text = mmr;
             cmbImmuopv.Text = opv;
-            MessageBox.Show(oth1+" "+oth2+" "+oth3);
             cmbImmuoth1.Text = (string)(JArray.Parse(oth1))[1];
             cmbImmuoth2.Text = (string)(JArray.Parse(oth2))[1];
             cmbImmuoth3.Text = (string)(JArray.Parse(oth3))[1];

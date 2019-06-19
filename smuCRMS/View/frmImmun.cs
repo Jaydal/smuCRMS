@@ -16,6 +16,7 @@ namespace smuCRMS.View
 
         private void frmDiag_Load(object sender, EventArgs e)
         {
+            immunizationControl1.Enabled = false;
             pc.id = lblID.Text;
             if (!pc.getImmunization())
             {
@@ -55,8 +56,10 @@ namespace smuCRMS.View
         {
             if(btnEdit.Text=="Save")
             {
+                pc.JSONImmunization=immunizationControl1.setJSONImmunization();
                 if (pc.updateImmunization())
                 {
+                    immunizationControl1.Enabled = false;
                     MetroMessageBox.Show(this, "Successfully Saved!","Saved",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     btnEdit.Text = "Update";
                     btnDone.Text = "Done";
@@ -68,6 +71,7 @@ namespace smuCRMS.View
             }
             else
             {
+                immunizationControl1.Enabled = true;
                 btnEdit.Text = "Save";
                 btnDone.Text = "Cancel";
             }
