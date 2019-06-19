@@ -406,6 +406,11 @@ namespace smuCRMS.Controller
             return valid = (patient.callProcedure(this,
                  "CREATE", "vcrud_immunization", false).Columns.Count > 0) ? true : false;
         }
+        public bool addHistory()
+        {
+            return valid = (patient.callProcedure(this,
+                 "CREATE", "vcrud_history", false).Columns.Count > 0) ? true : false;
+        }
         public bool addTreatment()
         {
             //this is non-query
