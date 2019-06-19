@@ -470,15 +470,15 @@ namespace smuCRMS.Controller
                 "VIEW_BY_ID", "vcrud_history", true);
             if (dtable.Rows.Count > 0)
             {
-                JObject obj = new JObject((dtable.Rows[0][2].ToString()!=null) ? 
-                    dtable.Rows[0][2].ToString() :"{}");
-                hospiDesc = (string)obj.GetValue("Hospitalization");
-                indescription = (string)obj.GetValue("Injury");
-                psychodescription = (string)obj.GetValue("Psychological");
-                allergyDesc = (string)obj.GetValue("Allergy");
-                phydefdescription = (string)obj.GetValue("Physical_Defects");
-                medcondescription = (string)obj.GetValue("Medical_Condition");
-                currentMed = (string)obj.GetValue("Medication");
+                JObject obj = JObject.Parse((dtable.Rows[0][2].ToString() != null) ?
+                    dtable.Rows[0][2].ToString() : "{}");
+                hospiDesc = (string)obj["Hospitalization"];
+                indescription = (string)obj["Injury"];
+                psychodescription = (string)obj["Psychological"];
+                allergyDesc = (string)obj["Allergy"];
+                phydefdescription = (string)obj["Physical_Defects"];
+                medcondescription = (string)obj["Medical_Condition"];
+                currentMed = (string)obj["Medication"];
                 valid = true;
             }
             return valid;
@@ -490,14 +490,14 @@ namespace smuCRMS.Controller
             if (dtable.Rows.Count > 0)
             {
 
-                JObject obj = new JObject((dtable.Rows[0][2].ToString() != null) ?
+                JObject obj = JObject.Parse((dtable.Rows[0][2].ToString() != null) ?
                     dtable.Rows[0][2].ToString() : "{}");
-                OPV = (string)obj.GetValue("OPV");
-                DPT = (string)obj.GetValue("DPT");
-                MMR = (string)obj.GetValue("MMR");
-                BGC = (string)obj.GetValue("BGC");
-                HA = (string)obj.GetValue("HA");
-                HB = (string)obj.GetValue("HB");
+                OPV = (string)obj["OPV"];
+                DPT = (string)obj["DPT"];
+                MMR = (string)obj["MMR"];
+                BGC = (string)obj["BGC"];
+                HA = (string)obj["HA"];
+                HB = (string)obj["HB"];
                 oth1 = (string)obj[6];
                 oth2 = (string)obj[7];
                 oth3 = (string)obj[8];
