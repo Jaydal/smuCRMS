@@ -405,16 +405,16 @@ namespace smuCRMS.Controller
             if (dtable.Rows.Count > 0)
             {
 
-                weight = (double)dtable.Rows[0][2];
-                height = (double)dtable.Rows[0][2];
-                bmi = (double)dtable.Rows[0][2];
-                bp = (string)dtable.Rows[0][2];
-                pr = (string)dtable.Rows[0][2];
-                rr = (string)dtable.Rows[0][2];
-                temp = (double)dtable.Rows[0][2];
-                spo2 = (double)dtable.Rows[0][2];
-                remarks = (string)dtable.Rows[0][2];
-                dic = (string)dtable.Rows[0][2];
+                weight =Convert.ToDouble( dtable.Rows[0][2]);
+                height = Convert.ToDouble(dtable.Rows[0][3]);
+                bmi = Convert.ToDouble(dtable.Rows[0][4]);
+                bp = (string)dtable.Rows[0][5];
+                pr = (string)dtable.Rows[0][6];
+                rr = (string)dtable.Rows[0][7];
+                temp = Convert.ToDouble(dtable.Rows[0][8]);
+                spo2 = Convert.ToDouble(dtable.Rows[0][9]);
+                remarks = (string)dtable.Rows[0][10];
+                dic = (string)dtable.Rows[0][11];
                 
                 valid = true;
             }
