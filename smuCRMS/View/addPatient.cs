@@ -9,6 +9,7 @@ using MetroFramework.Controls;
 using System.Resources;
 using smuCRMS.Properties;
 using System.Data;
+using Newtonsoft.Json.Linq;
 
 namespace smuCRMS.View
 {
@@ -24,8 +25,6 @@ namespace smuCRMS.View
         public addPatient()
         {
             InitializeComponent();
-            //PENDING
-            //pm.department = cmbDepartment.Text;
         }
         string sex = "Male";
         public void GetInputs()
@@ -33,13 +32,11 @@ namespace smuCRMS.View
             try
             {
                 ConvertPhotoTobyte();
-                pm.dic = txtPHname.Text;
                 if (uid != null)
                 {
                     pm.uid = uid;
                 }
                 pm.id = txtPID.Text;
-                pm.spo2 = double.Parse(txtSPo2.Text);
                 pm.lastName = txtLName.Text;
                 pm.firstName = txtFName.Text;
                 pm.middleName = txtMName.Text;
@@ -53,8 +50,6 @@ namespace smuCRMS.View
                 pm.nationality = txtNat.Text;
                 pm.homeAddress = txtHomeAdd.Text;
                 pm.boardingAddress = txtBoardAdd.Text;
-                pm.height = double.Parse(txtHeight.Text);
-                pm.weight = double.Parse(txtWeight.Text);
                 pm.fatherName = txtFatherName.Text;
                 pm.fatherOccupation = txtFatherOcc.Text;
                 pm.fatherNumber = txtFatherNumber.Text;
@@ -66,25 +61,23 @@ namespace smuCRMS.View
                 pm.firstMenstrualdate = dtFMP.Text;
                 pm.relation = txtRelation.Text;
                 pm.lastMenstrualdate = dtLMP.Text;
-
-                pm.bmi = double.Parse(txtBMI.Text);
-                pm.bp = txtBP.Text;
-                pm.rr = txtRR.Text;
-                pm.pr = txtPR.Text;
-                pm.temp = double.Parse(txtTemp.Text);
                 pm.emergencyCall = txtEmergencyCall.Text;
                 pm.emergencyNumber = txtECNumber.Text;
-                pm.remarks = "(" + cmbBMI.Text + ") " + txtRemarks.Text;
 
-                pm.JSONImmunization = immunizationControl1.setJSONImmunization();
-                pm.JSONHistory = historyControl1.setJSONHistory();
+                pm.JSONImmunization = immunizationControl1.getJSONImmunization();
+                pm.JSONHistory = historyControl1.getJSONHistory();
 
-                //pm.tDate = dtpCTDate.Value.ToString("yyyy-MM-dd");
-
-                //pm.tHeight = Int32.Parse(txtCTheight.Text);
-                //pm.tWeight = Int32.Parse(txtWeight.Text);
-
-
+                JObject obj=JObject.Parse(remarksControl1.getJSONRemark());
+                pm.weight =(double)obj["Weight"];
+                pm.height = (double)obj["Height"];
+                pm.bmi = (double)obj["BMI"];
+                pm.bp = (string)obj["BP"];
+                pm.rr = (string)obj["RR"];
+                pm.pr = (string)obj["PR"];
+                pm.spo2 = (double)obj["SPo2"];
+                pm.refe = (string)obj["Referral"];
+                pm.dic = (string)obj["PHname"];
+                pm.remarks = (string)obj["Remarks"];
             }
             catch (Exception e)
             {
@@ -170,7 +163,6 @@ namespace smuCRMS.View
             txtRelation.Text = pm.relation;
             dtFMP.Text = pm.firstMenstrualdate.ToString();
             dtLMP.Text = pm.lastMenstrualdate.ToString();
-            txtSPo2.Text = pm.spo2.ToString();
         }
 
         //en/disabling all controls in form
@@ -237,6 +229,7 @@ namespace smuCRMS.View
                 cmbYear.Items.AddRange(undergrad);
                 level = "College";
             }
+            remarksControl1.isGradeSchool = (level=="GS") ?true:false;
             cmbYear.SelectedIndex = 0;
             return level;
         }
@@ -257,45 +250,6 @@ namespace smuCRMS.View
             return valid;
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-        //this method will compute the bmi of weight and height controls
-        void computeBMI()
-        {
-            txtHeight.Text = (txtHeight.Text == "") ? "0" : txtHeight.Text;
-            txtWeight.Text = (txtWeight.Text == "") ? "0" : txtWeight.Text;
-            float w = 0;
-            float h = 0;
-            w = float.Parse(txtWeight.Text);
-            h = (float.Parse(txtHeight.Text) / 100);
-            if (cmbDepartment.Text!="Grade School")
-            {
-                if (w > 0 && h > 0)
-                {
-                    txtBMI.Text = (w / (h * h)).ToString();
-                }
-            }
-            else
-            {
-                cmbBMI.Enabled=true;
-                txtBMI.Enabled = true;
-            }
-
-        }
-
-        private void txtHeight_TextChanged_1(object sender, EventArgs e)
-        {
-            computeBMI();
-        }
-
-
         public bool validateProfile()
         {
             string[] val = new string[] { txtLName.Text, txtFName.Text, txtMName.Text, txtHomeAdd.Text, txtFatherName.Text, txtMotherName.Text, txtEmergencyCall.Text, txtRelation.Text, txtNat.Text };
@@ -313,12 +267,6 @@ namespace smuCRMS.View
         {
             tbProfile.SelectedIndex = 2;
         }
-
-
-
-
-
-
         private void btnNext_Click(object sender, EventArgs e)
         {
             
@@ -355,19 +303,8 @@ namespace smuCRMS.View
 
             }
         }
-
-        private void txtHeight_Click_1(object sender, EventArgs e)
-        {
-            txtHeight.SelectAll();
-        }
-
-        private void txtWeight_Click(object sender, EventArgs e)
-        {
-            txtWeight.SelectAll();
-        }
         void reset()
         {
-            txtSPo2.Clear();
             dtBDay.Text = DateTime.Now.ToShortDateString();
             dtFMP.Text = DateTime.Now.ToShortDateString();
             dtLMP.Text = DateTime.Now.ToShortDateString();
@@ -377,14 +314,12 @@ namespace smuCRMS.View
             pbPhoto.Image =pb ;
            this.pbPhoto.Refresh();
             txtBoardAdd.Text = "";
-            txtTemp.Text = "" ;
             txtECNumber.Text = "";
             txtEmergencyCall.Text = "";
             txtFatherName.Text = "";
             txtFatherNumber.Text = "";
             txtFatherOcc.Text = ""; 
             txtLName.Text = "";
-            txtHeight.Text = "";
             txtHomeAdd.Text = "";
             txtLandLady.Text = "";
             txtLLNumber.Text = "";
@@ -395,12 +330,7 @@ namespace smuCRMS.View
             txtMotherOcc.Text = "";
             txtNat.Text = "Filipino";
             txtPID.Text = "";
-            txtPR.Text = "0";
             txtRelation.Text = "";
-            txtRemarks.Text = "";
-            txtRR.Text = "0";
-            txtBP.Text = "0";
-            txtWeight.Text = "";
             cmbAge.Text = "0";
        
             rbFem.Checked = false;
@@ -413,17 +343,14 @@ namespace smuCRMS.View
         {
             try
             {
-                if (txtBMI.Text == "" || txtWeight.Text == "" || txtPR.Text == "" || txtRR.Text == "" ||
-                    txtRemarks.Text == "" || txtTemp.Text == "" || txtBP.Text == "" || txtPHname.Text=="")
+                if (!remarksControl1.isComplete())
                 {
+                    MessageBox.Show(remarksControl1.isComplete().ToString());
                     MetroMessageBox.Show(this, "Input required fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
                     GetInputs();
-                    //calling save method from controller
-                    //backgroundWorker.RunWorkerAsync();
-                    //p.ShowDialog();
                     if (pm.patientAdd())
                     {
                         MetroMessageBox.Show(this, "Saved Successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -456,18 +383,6 @@ namespace smuCRMS.View
             int age = (now - dob) / 10000;
             cmbAge.Value = age;
         }
-
-        private void txtWeight_TextChanged(object sender, EventArgs e)
-        {
-            computeBMI();
-        }
-
-        private void txtHeight_TextChanged(object sender, EventArgs e)
-        {
-            computeBMI();
-        }
-
-      
         private void txtFatherNumber_Click(object sender, EventArgs e)
         {
 
@@ -502,7 +417,6 @@ namespace smuCRMS.View
             }
        
         }
-
         private void btnReset_Click(object sender, EventArgs e)
         {
             DialogResult res = MetroMessageBox.Show(this, "This will reset all fields", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -511,23 +425,11 @@ namespace smuCRMS.View
                 reset();
             }
         }
-
-        private void addPatient_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-        }
-
         private void txtPID_Click(object sender, EventArgs e)
         {
             txtPID.SelectAll();
             txtPID.Enabled = true;
         }
-
-        private void txtMotherNumber_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         private void txtFatherNumber_TextChanged(object sender, EventArgs e)
         {
            
@@ -548,14 +450,6 @@ namespace smuCRMS.View
                 txtMotherNumber.Text = "0";
             }
         }
-        private void txtBP_Click(object sender, EventArgs e)
-        {
-            txtTemp.SelectAll();
-            txtRR.SelectAll();
-            txtPR.SelectAll();
-            txtBP.SelectAll();
-        }
-
         private void txtBP_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar))
@@ -567,27 +461,6 @@ namespace smuCRMS.View
                 e.Handled = true;
             }
         }
-
-        private void txtBP_Leave(object sender, EventArgs e)
-        {
-            if (txtBP.Text == "")
-            {
-                txtBP.Text = "0";
-            }
-            if (txtPR.Text == "")
-            {
-                txtPR.Text = "0";
-            }
-            if (txtRR.Text == "")
-            {
-                txtRR.Text = "0";
-            }
-            if (txtTemp.Text == "")
-            {
-                txtTemp.Text = "0";
-            }
-        }
-
         private void btnTake_Click(object sender, EventArgs e)
         {
             OpenFileDialog fp = new OpenFileDialog();
@@ -754,35 +627,6 @@ namespace smuCRMS.View
                 txtLLNumber.Hide();
             }
         }
-       
-        private void txtBMI_TextChanged(object sender, EventArgs e)
-        {
-            if(txtBMI.Text=="")
-            {
-                txtBMI.Text = "0";
-            }
-            if (double.Parse(txtBMI.Text) <= 18.5)
-            {
-                txtBMI.BackColor = Color.LightBlue;
-                cmbBMI.Text = "Underweight";
-            }
-            else if (double.Parse(txtBMI.Text) > 18.5 && double.Parse(txtBMI.Text) < 25)
-            {
-                txtBMI.BackColor = Color.LightGreen;
-                cmbBMI.Text = "Normal";
-            }
-            else if (double.Parse(txtBMI.Text) >= 25 && double.Parse(txtBMI.Text)<30)
-            {
-                txtBMI.BackColor = Color.OrangeRed;
-                cmbBMI.Text = "Overweight";
-            }
-            else if (double.Parse(txtBMI.Text) >= 30)
-            {
-                txtBMI.BackColor = Color.Red;
-                cmbBMI.Text = "Obese";
-            }
-        }
-
         private void txtMotherNumber_TextChanged(object sender, EventArgs e)
         {
             ecNumRelation();
@@ -803,31 +647,6 @@ namespace smuCRMS.View
         private void txtRelation_TextChanged_1(object sender, EventArgs e)
         {
             ecNumRelation();
-        }
-
-        private void txtBMI_Click(object sender, EventArgs e)
-        {
-            txtBMI.SelectAll();
-        }
-
-        private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            computeBMI();
-        }
-
-        private void txtWeight_Leave(object sender, EventArgs e)
-        {
-            computeBMI();
-        }
-
-        private void txtHeight_Leave(object sender, EventArgs e)
-        {
-            computeBMI();
-        }
-
-        private void immunizationControl1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

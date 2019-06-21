@@ -142,14 +142,14 @@
             this.btnCT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCT.Depth = 0;
-            this.btnCT.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCT.Icon = null;
-            this.btnCT.Location = new System.Drawing.Point(958, 489);
+            this.btnCT.Location = new System.Drawing.Point(1, 489);
             this.btnCT.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCT.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCT.Name = "btnCT";
             this.btnCT.Primary = false;
-            this.btnCT.Size = new System.Drawing.Size(51, 45);
+            this.btnCT.Size = new System.Drawing.Size(1008, 45);
             this.btnCT.TabIndex = 6;
             this.btnCT.Text = "New";
             this.btnCT.UseVisualStyleBackColor = true;

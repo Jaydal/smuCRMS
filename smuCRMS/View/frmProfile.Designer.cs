@@ -43,9 +43,9 @@
             // 
             // 
             this.txtID.CustomButton.Image = null;
-            this.txtID.CustomButton.Location = new System.Drawing.Point(60, 1);
+            this.txtID.CustomButton.Location = new System.Drawing.Point(75, 1);
             this.txtID.CustomButton.Name = "";
-            this.txtID.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.txtID.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtID.CustomButton.TabIndex = 1;
             this.txtID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -105,14 +105,14 @@
             this.btnEdit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.Depth = 0;
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEdit.Icon = null;
-            this.btnEdit.Location = new System.Drawing.Point(902, 0);
+            this.btnEdit.Location = new System.Drawing.Point(0, 0);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnEdit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Primary = false;
-            this.btnEdit.Size = new System.Drawing.Size(73, 35);
+            this.btnEdit.Size = new System.Drawing.Size(975, 35);
             this.btnEdit.TabIndex = 8;
             this.btnEdit.Text = "Update";
             this.btnEdit.UseVisualStyleBackColor = true;

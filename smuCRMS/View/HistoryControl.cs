@@ -18,7 +18,7 @@ namespace smuCRMS.View
         {
             InitializeComponent();
         }
-        public string setJSONHistory()
+        public string getJSONHistory()
         {
             return @"{'Hospitalization':'" + txtHospi.Text +
             "','Injury':'" + txtInju.Text +
@@ -28,7 +28,7 @@ namespace smuCRMS.View
             "','Medical_Condition':'" + txtMedical.Text +
             "','Medication':'" + txtCurrent.Text + "'}";
         }
-        public void getHistory(string hospi,string inj,string aller,string curr,string med,string phy,string psy)
+        public void setHistory(string hospi,string inj,string aller,string curr,string med,string phy,string psy)
         {
             txtHospi.Text = hospi;
             txtInju.Text = inj;

@@ -18,7 +18,7 @@ namespace smuCRMS.View
         {
             InitializeComponent();
         }
-        public string setJSONImmunization()
+        public string getJSONImmunization()
         {
             return @"{'OPV':'"+ cmbImmuopv.Text +
                     "','BGC':'" + cmbImmubgc.Text +
@@ -30,7 +30,7 @@ namespace smuCRMS.View
                     "','" + txtImmuOther2.Text + "':'" + cmbImmuoth2.Text +
                     "','" + txtImmuOther3.Text + "':'" + cmbImmuoth3.Text + "'}";
         }
-        public void getImmunization(string opv,string bgc,string dpt,string mmr,string hb,string ha,string oth1,string oth2,string oth3)
+        public void setImmunization(string opv,string bgc,string dpt,string mmr,string hb,string ha,string oth1,string oth2,string oth3)
         {
             cmbImmubgc.Text = bgc;
             cmbImmudpt.Text = dpt;

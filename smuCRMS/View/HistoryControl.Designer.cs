@@ -111,6 +111,7 @@
             this.txtHospi.Multiline = true;
             this.txtHospi.Name = "txtHospi";
             this.txtHospi.PasswordChar = '\0';
+            this.txtHospi.PromptText = "Enter history....";
             this.txtHospi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtHospi.SelectedText = "";
             this.txtHospi.SelectionLength = 0;
@@ -169,6 +170,7 @@
             this.txtInju.Multiline = true;
             this.txtInju.Name = "txtInju";
             this.txtInju.PasswordChar = '\0';
+            this.txtInju.PromptText = "Enter history....";
             this.txtInju.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtInju.SelectedText = "";
             this.txtInju.SelectionLength = 0;
@@ -227,6 +229,7 @@
             this.txtPsycho.Multiline = true;
             this.txtPsycho.Name = "txtPsycho";
             this.txtPsycho.PasswordChar = '\0';
+            this.txtPsycho.PromptText = "Enter history....";
             this.txtPsycho.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtPsycho.SelectedText = "";
             this.txtPsycho.SelectionLength = 0;
@@ -285,6 +288,7 @@
             this.txtAller.Multiline = true;
             this.txtAller.Name = "txtAller";
             this.txtAller.PasswordChar = '\0';
+            this.txtAller.PromptText = "Enter history....";
             this.txtAller.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAller.SelectedText = "";
             this.txtAller.SelectionLength = 0;
@@ -343,6 +347,7 @@
             this.txtPhysi.Multiline = true;
             this.txtPhysi.Name = "txtPhysi";
             this.txtPhysi.PasswordChar = '\0';
+            this.txtPhysi.PromptText = "Enter history....";
             this.txtPhysi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtPhysi.SelectedText = "";
             this.txtPhysi.SelectionLength = 0;
@@ -401,6 +406,7 @@
             this.txtMedical.Multiline = true;
             this.txtMedical.Name = "txtMedical";
             this.txtMedical.PasswordChar = '\0';
+            this.txtMedical.PromptText = "Enter history....";
             this.txtMedical.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtMedical.SelectedText = "";
             this.txtMedical.SelectionLength = 0;
@@ -459,6 +465,7 @@
             this.txtCurrent.Multiline = true;
             this.txtCurrent.Name = "txtCurrent";
             this.txtCurrent.PasswordChar = '\0';
+            this.txtCurrent.PromptText = "Enter history....";
             this.txtCurrent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCurrent.SelectedText = "";
             this.txtCurrent.SelectionLength = 0;

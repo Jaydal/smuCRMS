@@ -69,14 +69,14 @@
             this.btnEdit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.Depth = 0;
-            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnEdit.Icon = null;
-            this.btnEdit.Location = new System.Drawing.Point(992, 0);
+            this.btnEdit.Location = new System.Drawing.Point(0, 0);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEdit.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Primary = false;
-            this.btnEdit.Size = new System.Drawing.Size(73, 42);
+            this.btnEdit.Size = new System.Drawing.Size(1065, 42);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Update";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -105,6 +105,7 @@
             // 
             this.historyControl1.AutoScroll = true;
             this.historyControl1.AutoSize = true;
+            this.historyControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.historyControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.historyControl1.Location = new System.Drawing.Point(1, 74);
             this.historyControl1.Name = "historyControl1";

@@ -56,12 +56,12 @@
             // 
             // pnlNavigation
             // 
-            this.pnlNavigation.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlNavigation.BackColor = System.Drawing.Color.White;
             this.pnlNavigation.Controls.Add(this.btnAddUser);
             this.pnlNavigation.Controls.Add(this.btnShowUsers);
             this.pnlNavigation.Controls.Add(this.btnAccount);
             this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlNavigation.ForeColor = System.Drawing.Color.White;
+            this.pnlNavigation.ForeColor = System.Drawing.Color.Teal;
             this.pnlNavigation.Location = new System.Drawing.Point(20, 60);
             this.pnlNavigation.Name = "pnlNavigation";
             this.pnlNavigation.Size = new System.Drawing.Size(600, 45);

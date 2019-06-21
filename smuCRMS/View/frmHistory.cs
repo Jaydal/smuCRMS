@@ -56,7 +56,7 @@ namespace smuCRMS.View
             }
             else
             {
-                historyControl1.getHistory(pc.hospiDesc, pc.indescription, pc.allergyDesc, pc.currentMed, pc.medcondescription, pc.phydefdescription, pc.psychodescription);
+                historyControl1.setHistory(pc.hospiDesc, pc.indescription, pc.allergyDesc, pc.currentMed, pc.medcondescription, pc.phydefdescription, pc.psychodescription);
             }
         }
 
@@ -73,7 +73,7 @@ namespace smuCRMS.View
             }
             else
             {
-                pc.JSONHistory=historyControl1.setJSONHistory();
+                pc.JSONHistory=historyControl1.getJSONHistory();
                 pc.tDate = DateTime.Now.ToString("yyyy-MM-dd");
                 if ((isNew)?pc.addHistory(): pc.updateHistory())
                 {
