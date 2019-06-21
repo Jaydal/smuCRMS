@@ -145,6 +145,10 @@
     <Reference Include="MySqlBackup, Version=2.0.12.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MySqlBackup.NET.2.0.12\lib\net461\MySqlBackup.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Documents\smuclinicproject\_ProjCRMS\THIS\__clinic\smuCRMS\smuCRMS\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
@@ -273,6 +277,18 @@
     <Compile Include="View\frmVisits.Designer.cs">
       <DependentUpon>frmVisits.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\HistoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\HistoryControl.Designer.cs">
+      <DependentUpon>HistoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ImmunizationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ImmunizationControl.Designer.cs">
+      <DependentUpon>ImmunizationControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +300,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PDoc.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\RemarksControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\RemarksControl.Designer.cs">
+      <DependentUpon>RemarksControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\treatChart.cs">
       <AutoGen>True</AutoGen>
@@ -352,12 +374,21 @@
     <EmbeddedResource Include="View\frmVisits.resx">
       <DependentUpon>frmVisits.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\HistoryControl.resx">
+      <DependentUpon>HistoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ImmunizationControl.resx">
+      <DependentUpon>ImmunizationControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PDoc.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>PDoc.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RemarksControl.resx">
+      <DependentUpon>RemarksControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\treatChart.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
