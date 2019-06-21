@@ -6,10 +6,11 @@ using System.Data.OleDb;
 using System.IO;
 using System.Drawing;
 using Newtonsoft.Json.Linq;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace smuCRMS.Controller
 {
-
     class PatientController
     {
         //changed course-course_id, +level
@@ -83,7 +84,9 @@ namespace smuCRMS.Controller
         public string tDate { get; set; }
         public double tHeight { get; set; }
         public double tWeight { get; set; }
+        [MinLength(3)]
         public string tCC { get; set; }
+        [MinLength(3)]
         public string tDiag { get; set; }
         public string MyProperty { get; set; }
         public string tid { get; set; }
@@ -94,7 +97,9 @@ namespace smuCRMS.Controller
         public string filename { get; set; }
         public byte[] photo { get; set; }
         public double spo2 { get; set; }
+        [MinLength(3)]
         public string dic { get; set; }
+        [MinLength(3)]
         public string refe { get; set; }
         public string uid { get; set; }
         public byte[] psig { get; set; }
