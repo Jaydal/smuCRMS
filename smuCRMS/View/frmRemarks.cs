@@ -19,24 +19,26 @@ namespace smuCRMS.View
                pc.id = lblID.Text;
                 if (pc.getRemark())
                 {
-                   // txtBMI.Text = pc.bmi.ToString();
-                   // txtBP.Text = pc.bp;
-                   // txtHeight.Text = pc.height.ToString();
-                   // txtPR.Text = pc.pr;
-                   // txtRemarks.Text = pc.remarks;
-                   // txtRR.Text = pc.rr;
-                   // //txtTemp.Text = pc.temp;
-                   // txtWeight.Text = pc.weight.ToString();
-                   // txtSPo2.Text = pc.spo2.ToString();
-                   //txtIC.Text = pc.dic;
-            
+
+                remarksControl1.setRemark(
+                    pc.height.ToString(),
+                    pc.weight.ToString(),
+                    pc.bmi.ToString(),
+                    pc.bp.ToString(),
+                    pc.rr.ToString(),
+                    pc.pr.ToString(),
+                    pc.spo2.ToString(),
+                    pc.temp.ToString(),
+                    pc.dic,
+                    pc.remarks);
+
             }
                 else
             {
                 DialogResult res = MetroMessageBox.Show(this, "No Remarks for this Patient! Do you want to add?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (res == DialogResult.Yes)
                 {
-                    //btnCancel.Show();
+                    //btncancel.show();
                     //txtBP.Enabled = true;
                     //txtHeight.Enabled = true;
                     //txtPR.Enabled = true;

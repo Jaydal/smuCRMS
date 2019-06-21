@@ -212,33 +212,6 @@ namespace smuCRMS.Controller
         {
             return valid = (patient.addPatientExcel(this)) ? true : false;
         }
-
-        
-       
-
-        public bool getRemark()
-        {
-            valid = false;
-            dtable = patient.getRemark(this);
-            if (dtable.Rows.Count > 0)
-            {
-                id = dtable.Rows[0][1].ToString();
-                weight = double.Parse(dtable.Rows[0][2].ToString());
-                height = double.Parse(dtable.Rows[0][3].ToString());
-                //bmi = dtable.Rows[0][4].ToString();
-                bp = dtable.Rows[0][5].ToString();
-                pr = dtable.Rows[0][6].ToString();
-                rr = dtable.Rows[0][7].ToString();
-                temp = double.Parse(dtable.Rows[0][8].ToString());
-                //spo2 = dtable.Rows[0][9].ToString();
-                remarks = dtable.Rows[0][10].ToString();
-                //psig= dtable.Rows[0][11];
-                dic = dtable.Rows[0][12].ToString();
-                valid = true;
-            }
-
-            return valid;
-        }
         public DataTable getStudByIDRep()
         {
             return dtable = patient.getStudByID(this);
@@ -425,7 +398,28 @@ namespace smuCRMS.Controller
 
             return (dt.Rows.Count>0)? dt.Rows[0][1].ToString() : "";
         }
+        public bool getRemark()
+        {
+            dtable = patient.callProcedure(this,
+                 "VIEW_BY_ID", "vcrud_remark", true);
+            if (dtable.Rows.Count > 0)
+            {
 
+                weight = (double)dtable.Rows[0][2];
+                height = (double)dtable.Rows[0][2];
+                bmi = (double)dtable.Rows[0][2];
+                bp = (string)dtable.Rows[0][2];
+                pr = (string)dtable.Rows[0][2];
+                rr = (string)dtable.Rows[0][2];
+                temp = (double)dtable.Rows[0][2];
+                spo2 = (double)dtable.Rows[0][2];
+                remarks = (string)dtable.Rows[0][2];
+                dic = (string)dtable.Rows[0][2];
+                
+                valid = true;
+            }
+            return valid;
+        }
         public bool getPatientByID(addPatient ap)
         {
             dtable =patient.callProcedure(this,

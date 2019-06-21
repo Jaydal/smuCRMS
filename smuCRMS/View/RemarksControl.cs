@@ -51,7 +51,7 @@ namespace smuCRMS.View
                    "','Remarks':'" + txtRemarks.Text + "'}";
         }
         public void setRemark(string Height, string Weight, string BMI, string BP, 
-            string RR, string PR, string SPo2, string Referral, string PHname, string Remarks)
+            string RR, string PR, string SPo2, string Temp, string PHname, string Remarks)
         {
             txtHeight.Text =Height;
             txtWeight.Text = Weight;
@@ -60,7 +60,7 @@ namespace smuCRMS.View
             txtRR.Text = RR;
             txtPR.Text = PR;
             txtSPo2.Text = SPo2;
-            txtReferral.Text = Referral;
+            txtTemp.Text = Temp;
             txtPHname.Text = PHname;
             txtRemarks.Text = Remarks;
         }
