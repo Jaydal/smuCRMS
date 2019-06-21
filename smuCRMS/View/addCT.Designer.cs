@@ -758,6 +758,7 @@
             this.txtComplaints.WaterMark = "Specify complaints....";
             this.txtComplaints.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtComplaints.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtComplaints.TextChanged += new System.EventHandler(this.txtComplaints_TextChanged);
             this.txtComplaints.Click += new System.EventHandler(this.txtComplaints_Click);
             // 
             // chkHead
