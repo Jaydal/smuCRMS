@@ -198,12 +198,6 @@ namespace smuCRMS.Controller
         {
             return valid = (patient.archiveStud(this)) ? true : false;
         }
-       
-
-        public bool addRemark()
-        {
-            return valid = (patient.addRemark(this)) ? true : false;
-        }
         public bool updateProfile()
         {
             return valid = (patient.updateProfile(this)) ? true : false;
@@ -363,6 +357,11 @@ namespace smuCRMS.Controller
             //this is non-query
             return valid = (patient.callProcedure(this,
                 "CREATE", "vcrud_patient", false).Columns.Count > 0) ? true : false;
+        }
+        public bool addRemark()
+        {
+            return valid = (patient.callProcedure(this,
+               "CREATE", "vcrud_remark", false).Columns.Count > 0) ? true : false;
         }
         public bool updateHistory()
         {
