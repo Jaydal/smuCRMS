@@ -138,7 +138,7 @@ namespace smuCRMS.View
         private void frmMain_Load(object sender, EventArgs e)
         {
             tsBot.Hide();
-            frmVisits fv = new frmVisits();
+            frmVisitsNew fv = new frmVisitsNew();
             loadfrm(fv);
             load = true;
             timer1.Start();
