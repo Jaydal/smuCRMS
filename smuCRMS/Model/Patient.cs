@@ -485,31 +485,6 @@ namespace smuCRMS.Controller
             con.getDataTable("getLogs");
             return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
-
-        public DataTable getMVisits(int yr, int month, string dept)
-        {
-            DataTable dtable = new DataTable();
-            con.command.Parameters.Clear();
-            con.command.Parameters.AddWithValue("t", month);
-            con.command.Parameters.AddWithValue("u", yr);
-            if (dept == "College")
-            {
-                con.getDataTable("countvisitmonthlytreatcollege");
-            }
-            else if (dept == "Senior HS")
-            {
-                con.getDataTable("countvisitmonthlytreatsenior");
-            }
-            else if (dept == "Junior HS")
-            {
-                con.getDataTable("countvisitmonthlytreatjunior");
-            }
-            else if (dept == "Grade School")
-            {
-                con.getDataTable("countvisitmonthlytreatelem");
-            }
-            return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
-        }
         public DataTable getYearEnd(int yr)
         {
             DataTable dtable = new DataTable();
@@ -765,6 +740,18 @@ namespace smuCRMS.Controller
                 con.close();
                 return dtable = (dtable.Columns.Count > 0) ? dtable : con.dtable;
             }
+        }
+        public DataTable getVisits(int yr, int fm, int lm)
+        {
+            DataTable dtable = new DataTable();
+            con.command.Parameters.Clear();
+            addParamVal("activity", "");
+            addParamVal("id", 0);
+            addParamVal("yr", yr);
+            addParamVal("fm", fm);
+            addParamVal("lm", lm);
+            con.getDataTable("count_visit_and_referall");
+            return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
     }
 }

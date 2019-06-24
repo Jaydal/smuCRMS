@@ -280,11 +280,6 @@ namespace smuCRMS.Controller
             }
             return dt;
         }
-        public DataTable getMVisits(int yr, int month, string dept)
-        {
-            DataTable dt;
-            return dt = patient.getMVisits(yr, month, dept);
-        }
         public DataTable getYearEnd(int yr)
         {
             DataTable dt;
