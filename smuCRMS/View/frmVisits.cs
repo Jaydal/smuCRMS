@@ -37,7 +37,7 @@ namespace smuCRMS.View
             //chartVmonth1.Titles[0].Text = c+" level Month of " +cmbMonth.Text+" "+(npYear.Value+2000)+" Visits";
             int fm = 8;
            
-           dtVISMC = p.getVisits(Int32.Parse(npYear.Value.ToString()), cmbMonth.SelectedIndex+1,fm);
+           //dtVISMC = p.getVisits(Int32.Parse(npYear.Value.ToString()), cmbMonth.SelectedIndex+1,fm);
 
             chartVmonth1.Series["Visits"].XValueMember = "Department";
             chartVmonth1.Series["Visits"].YValueMembers = "Count";
@@ -46,7 +46,7 @@ namespace smuCRMS.View
             if(cmbMonth.SelectedIndex>1)
             {
                 chartVmonth2.Titles[0].Text = c+" level Month of " + cmbMonth.Items[cmbMonth.SelectedIndex - 1].ToString() + " " + (npYear.Value + 2000) + " Visits";
-                dtVISMC = p.getVisits(Int32.Parse(npYear.Value.ToString()), cmbMonth.SelectedIndex + 1 - 1, fm);
+                //dtVISMC = p.getVisits(Int32.Parse(npYear.Value.ToString()), cmbMonth.SelectedIndex + 1 - 1, fm);
 
                 chartVmonth2.Series["Visits"].XValueMember = "Department";
                 chartVmonth2.Series["Visits"].YValueMembers = "Count";
@@ -56,7 +56,7 @@ namespace smuCRMS.View
             if (cmbMonth.SelectedIndex > 2)
             {
                 chartVmonth3.Titles[0].Text = c+" level Month of " + cmbMonth.Items[cmbMonth.SelectedIndex - 2].ToString() + " " + (npYear.Value + 2000) + " Visits";
-                dtVISMC = p.getVisits(Int32.Parse(npYear.Value.ToString()), cmbMonth.SelectedIndex + 1 - 2, fm);
+                //dtVISMC = p.getVisits(Int32.Parse(npYear.Value.ToString()), cmbMonth.SelectedIndex + 1 - 2, fm);
 
                 chartVmonth3.Series["Visits"].XValueMember = "Department";
                 chartVmonth3.Series["Visits"].YValueMembers = "Count";
@@ -66,7 +66,7 @@ namespace smuCRMS.View
             if(cmbMonth.SelectedIndex > 3)
             {
                 chartVmonth4.Titles[0].Text = c+" level Month of " + cmbMonth.Items[cmbMonth.SelectedIndex - 3].ToString() + " " + (npYear.Value + 2000) + " Visits";
-                dtVISMC = p.getVisits(Int32.Parse(npYear.Value.ToString()), cmbMonth.SelectedIndex + 1 - 3, fm);
+                //dtVISMC = p.getVisits(Int32.Parse(npYear.Value.ToString()), cmbMonth.SelectedIndex + 1 - 3, fm);
 
                 chartVmonth4.Series["Visits"].XValueMember = "Department";
                 chartVmonth4.Series["Visits"].YValueMembers = "Count";

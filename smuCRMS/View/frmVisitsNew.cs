@@ -40,7 +40,8 @@ namespace smuCRMS.View
                 label = month[(int)npfm.Value] + " " + numUp.Value;
             }
             label1.Text = label;
-            dgVisits.DataSource = p.getVisits((int)numUp.Value, (int)npfm.Value, (int)nplm.Value);
+            dgVisits.DataSource = p.getSummary((int)numUp.Value, (int)npfm.Value, (int)nplm.Value,"Count");
+            dgvReferral.DataSource = p.getSummary((int)numUp.Value, (int)npfm.Value, (int)nplm.Value, "Referral");
         }
     }
 }
