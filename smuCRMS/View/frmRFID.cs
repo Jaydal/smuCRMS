@@ -16,7 +16,7 @@ namespace smuCRMS.View
         public frmRFID()
         {
             InitializeComponent();
-            SelectDevice();
+            if(SelectDevice())
             establishContext();
 
         }
@@ -116,12 +116,21 @@ namespace smuCRMS.View
             }
         }
 
-        public void SelectDevice()
+        public bool SelectDevice()
         {
-            List<string> availableReaders = this.ListReaders();
-            this.RdrState = new Card.SCARD_READERSTATE();
-            readername = availableReaders[0].ToString();//selecting first device
-            this.RdrState.RdrName = readername;
+            try
+            {
+                List<string> availableReaders = this.ListReaders();
+                this.RdrState = new Card.SCARD_READERSTATE();
+                readername = availableReaders[0].ToString();//selecting first device
+                this.RdrState.RdrName = readername;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+         
         }
 
         public List<string> ListReaders()
