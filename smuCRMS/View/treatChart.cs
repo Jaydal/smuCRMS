@@ -90,7 +90,7 @@ namespace smuCRMS.View {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_uid {
+        public CrystalDecisions.Shared.IParameterField Parameter_id {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }

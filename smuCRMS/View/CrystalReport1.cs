@@ -16,14 +16,14 @@ namespace smuCRMS.View {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class PDoc : ReportClass {
+    public class CrystalReport1 : ReportClass {
         
-        public PDoc() {
+        public CrystalReport1() {
         }
         
         public override string ResourceName {
             get {
-                return "PDoc.rpt";
+                return "CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace smuCRMS.View {
         
         public override string FullResourceName {
             get {
-                return "smuCRMS.View.PDoc.rpt";
+                return "smuCRMS.View.CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -82,25 +82,17 @@ namespace smuCRMS.View {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section PageFooterSection3 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
             get {
                 return this.ReportDefinition.Sections[4];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_id {
-            get {
-                return this.DataDefinition.ParameterFields[0];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedPDoc : Component, ICachedReport {
+    public class CachedCrystalReport1 : Component, ICachedReport {
         
-        public CachedPDoc() {
+        public CachedCrystalReport1() {
         }
         
         [Browsable(false)]
@@ -137,7 +129,7 @@ namespace smuCRMS.View {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            PDoc rpt = new PDoc();
+            CrystalReport1 rpt = new CrystalReport1();
             rpt.Site = this.Site;
             return rpt;
         }

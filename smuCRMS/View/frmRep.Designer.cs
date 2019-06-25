@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReport));
-            this.PDoc1 = new smuCRMS.View.PDoc();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPrint = new MaterialSkin.Controls.MaterialFlatButton();
             this.rbp2 = new MaterialSkin.Controls.MaterialRadioButton();
             this.rbp1 = new MaterialSkin.Controls.MaterialRadioButton();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.PDoc1 = new smuCRMS.View.PDoc();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,16 +108,16 @@
             // 
             // crystalReportViewer1
             // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.DisplayStatusBar = false;
             this.crystalReportViewer1.DisplayToolbar = false;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.EnableToolTips = false;
+            this.crystalReportViewer1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crystalReportViewer1.Location = new System.Drawing.Point(20, 83);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.PDoc1;
             this.crystalReportViewer1.ShowCloseButton = false;
             this.crystalReportViewer1.ShowCopyButton = false;
             this.crystalReportViewer1.ShowExportButton = false;
@@ -141,6 +141,7 @@
             this.Name = "frmReport";
             this.Text = "SMU-CMRS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmReport_FormClosed);
             this.Load += new System.EventHandler(this.frmReport_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -149,7 +150,6 @@
         }
 
         #endregion
-        private PDoc PDoc1;
         private System.Windows.Forms.Panel panel1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private MaterialSkin.Controls.MaterialFlatButton btnPrint;

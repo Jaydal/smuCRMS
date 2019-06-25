@@ -10,6 +10,7 @@ using System.Resources;
 using smuCRMS.Properties;
 using System.Data;
 using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace smuCRMS.View
 {
@@ -112,7 +113,7 @@ namespace smuCRMS.View
             txtPID.Text = idnumber;
             pm.id = idnumber;
             txtPID.Enabled = false;
-            if (pm.getPatientByID(this))
+            if (pm.getPatientByID())
             {
                 loadValToControls();
                 txtPID.Text = idnumber;
@@ -167,6 +168,13 @@ namespace smuCRMS.View
             txtRelation.Text = pm.relation;
             dtFMP.Text = pm.firstMenstrualdate.ToString();
             dtLMP.Text = pm.lastMenstrualdate.ToString();
+            if (pm.photo != null)
+            {
+                MemoryStream ms = new MemoryStream(pm.photo);
+                pbPhoto.Image = Image.FromStream(ms);
+                //pbPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
+                pbPhoto.Refresh();
+            }
         }
 
         //en/disabling all controls in form
