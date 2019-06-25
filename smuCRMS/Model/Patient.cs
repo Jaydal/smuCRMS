@@ -301,7 +301,7 @@ namespace smuCRMS.Controller
                 con.command.Parameters.Clear();
 
                 addParamVal("id", pm.id.ToString());
-                addParamVal("BCG", pm.BGC);
+                addParamVal("BCG", pm.BCG);
                 addParamVal("DPT", pm.DPT);
                 addParamVal("OPV", pm.OPV);
                 addParamVal("MMR", pm.MMR);

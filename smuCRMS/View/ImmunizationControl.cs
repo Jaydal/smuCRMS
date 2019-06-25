@@ -21,7 +21,7 @@ namespace smuCRMS.View
         public string getJSONImmunization()
         {
             return @"{'OPV':'"+ cmbImmuopv.Text +
-                    "','BGC':'" + cmbImmubgc.Text +
+                    "','BCG':'" + cmbImmubgc.Text +
                     "','DPT':'" + cmbImmudpt.Text +
                     "','MMR':'" + cmbImmummr.Text +
                     "','HB':'" + cmbImmuhb.Text +

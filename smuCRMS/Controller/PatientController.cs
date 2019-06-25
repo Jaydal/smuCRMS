@@ -58,7 +58,7 @@ namespace smuCRMS.Controller
         //IMMUNIZATION MODELS
         public int immuID { get; set; }
 
-        public string BGC { get; set; }
+        public string BCG { get; set; }
         public string DPT { get; set; }
         public string OPV { get; set; }
         public string MMR { get; set; }
@@ -149,7 +149,7 @@ namespace smuCRMS.Controller
             //IMMUNIZATION MODELS
             immuID = 0;
 
-            BGC = "";
+            BCG = "";
             DPT = "";
             OPV = "";
             MMR = "";
@@ -489,7 +489,7 @@ namespace smuCRMS.Controller
                 OPV = (string)obj["OPV"];
                 DPT = (string)obj["DPT"];
                 MMR = (string)obj["MMR"];
-                BGC = (string)obj["BGC"];
+                BCG = (string)obj["BCG"];
                 HA = (string)obj["HA"];
                 HB = (string)obj["HB"];
                 int c = 0;

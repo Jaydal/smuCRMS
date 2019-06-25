@@ -36,7 +36,7 @@ namespace smuCRMS.View
             }
             else
             {
-                immunizationControl1.setImmunization(pc.OPV,pc.BGC,pc.DPT,pc.MMR,pc.HB,pc.HA,pc.oth1,pc.oth2,pc.oth3);
+                immunizationControl1.setImmunization(pc.OPV,pc.BCG,pc.DPT,pc.MMR,pc.HB,pc.HA,pc.oth1,pc.oth2,pc.oth3);
             }
 
         }
