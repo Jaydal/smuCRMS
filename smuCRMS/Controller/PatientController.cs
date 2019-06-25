@@ -204,10 +204,6 @@ namespace smuCRMS.Controller
         {
             return valid = (patient.addPatientExcel(this)) ? true : false;
         }
-        public DataTable getStudByIDRep()
-        {
-            return dtable = patient.getStudByID(this);
-        }
         public void basicSTUDinfoArc(DataGridView dg)
         {
             dtable = patient.basicSTUDinfoArc();
@@ -417,7 +413,7 @@ namespace smuCRMS.Controller
             }
             return valid;
         }
-        public bool getPatientByID(addPatient ap)
+        public bool getPatientByID()
         {
             dtable =patient.callProcedure(this,
                 "VIEW", "vcrud_patient", true);
@@ -455,15 +451,8 @@ namespace smuCRMS.Controller
                 emergencyNumber = dtable.Rows[0][26].ToString();
                 firstMenstrualdate = (DateTime)dtable.Rows[0][27];
                 lastMenstrualdate = (DateTime)dtable.Rows[0][28];
-
-                if (dtable.Rows[0][29] != System.DBNull.Value)
-                {
-                    byte[] img = (byte[])dtable.Rows[0][29];
-                    MemoryStream ms = new MemoryStream(img);
-                    ap.pbPhoto.Image = Image.FromStream(ms);
-                    ap.pbPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
-                    ap.pbPhoto.Refresh();
-                }
+                photo = (byte[])dtable.Rows[0][29];
+               
 
                 valid = true;
             }
