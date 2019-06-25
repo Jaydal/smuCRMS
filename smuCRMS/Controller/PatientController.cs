@@ -192,10 +192,7 @@ namespace smuCRMS.Controller
         //{
         //    return valid = (patient.patientAdd(this)) ? true : false;
         //}
-        public bool patientRemove()
-        {
-            return valid = (patient.patientRemove(this)) ? true : false;
-        }
+       
         public bool archiveStud()
         {
             return valid = (patient.archiveStud(this)) ? true : false;
@@ -346,6 +343,11 @@ namespace smuCRMS.Controller
             //this is non-query
             return valid = (patient.callProcedure(this,
                 "CREATE", "vcrud_patient", false).Columns.Count > 0) ? true : false;
+        }
+        public bool patientRemove()
+        {
+            return valid = (patient.callProcedure(this,
+                "DELETE", "vcrud_patient", false).Columns.Count > 0) ? true : false;
         }
         public bool updateProfile()
         {
