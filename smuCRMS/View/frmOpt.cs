@@ -27,10 +27,12 @@ namespace smuCRMS.View
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
+            tileBack.Enabled = false;
                 work = "b";
                 backgroundWorker1.RunWorkerAsync();
                 lblProg.Text = "Processing";
                 pBar.Visible = true;
+            tileBack.Enabled = true;
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -125,7 +127,7 @@ namespace smuCRMS.View
                 p.Exited += new EventHandler(p_Exited);
 
                 p.StartInfo.FileName = "cmd.exe";
-                p.StartInfo.Arguments = "/c mysql  -u smuclinic -p _smuclinic < " + path+".sql";
+                p.StartInfo.Arguments = "/c mysql  -u smuclinic -p _clinic < " + path+".sql";
                 p.EnableRaisingEvents = true;
                 p.Start();
                 timer1.Start();
