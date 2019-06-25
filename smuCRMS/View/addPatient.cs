@@ -25,6 +25,7 @@ namespace smuCRMS.View
         public addPatient()
         {
             InitializeComponent();
+            loadItems();
         }
         string sex = "Male";
         public void GetInputs()
@@ -44,7 +45,7 @@ namespace smuCRMS.View
                 pm.age = Int32.Parse(cmbAge.Text);
                 pm.year = cmbYear.Text;
                 pm.department = cmbDepartment.SelectedValue.ToString();
-                pm.birthday = dtBDay.Text;
+                pm.birthday = dtBDay.Value;
                 pm.sex = sex;
                 pm.civilStatus = cmbCivilStat.Text;
                 pm.nationality = txtNat.Text;
@@ -58,9 +59,9 @@ namespace smuCRMS.View
                 pm.motherNumber = txtMotherNumber.Text;
                 pm.landladyName = txtLandLady.Text;
                 pm.landladyNumber = txtLLNumber.Text;
-                pm.firstMenstrualdate = dtFMP.Text;
+                pm.firstMenstrualdate = dtFMP.Value;
                 pm.relation = txtRelation.Text;
-                pm.lastMenstrualdate = dtLMP.Text;
+                pm.lastMenstrualdate = dtLMP.Value;
                 pm.emergencyCall = txtEmergencyCall.Text;
                 pm.emergencyNumber = txtECNumber.Text;
 
@@ -88,20 +89,23 @@ namespace smuCRMS.View
 
         private void addPatient_Load_1(object sender, EventArgs e)
         {
+
+            btnPrev.Hide();
+            txtPID.Select();
             
+        }
+        void loadItems()
+        {
             cmbDepartment.ValueMember = "department_id";
             cmbDepartment.DisplayMember = "Department";
             cmbDepartment.DataSource = pm.getDepartment();
             cmbDepartment.SelectedIndex = 0;
             LoadCourses();
-            cmbCivilStat.SelectedIndex = 0;
-            txtNat.Text = "Filipino";
-            btnPrev.Hide();
-            txtPID.Select();
             dtBDay.MaxDate = DateTime.Now;
             enableMPeriod(false);
+            cmbCivilStat.SelectedIndex = 0;
+            txtNat.Text = "Filipino";
         }
-
         //this will be passed to frmProfile
         public void getProfilebyID(string idnumber)
         {
@@ -124,7 +128,7 @@ namespace smuCRMS.View
             txtFName.Text = pm.firstName;
             txtMName.Text = pm.middleName;
             cmbDepartment.Text = pm.department;
-            cmbCourse.Text = pm.course_id;
+            cmbCourse.Text = pm.course;
             cmbYear.Text = pm.year;
             if(txtPID.Text.Contains("V") || txtPID.Text.Length.Equals(4))
             {
@@ -135,7 +139,7 @@ namespace smuCRMS.View
                 cmbCourse.Hide();
                 cmbYear.Hide();
             }
-            dtBDay.Text = pm.birthday;
+            dtBDay.Value = pm.birthday;
             cmbAge.Value = pm.age;
             if (pm.sex == "Female")
             {
@@ -177,6 +181,7 @@ namespace smuCRMS.View
         public void EnableTab(MetroTabControl page, bool enable)
         {
             foreach (Control ctl in page.Controls) ctl.Enabled = enable;
+            
         }
         public void enableMPeriod(bool x)
         {

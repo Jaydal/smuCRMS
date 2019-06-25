@@ -229,14 +229,14 @@ namespace smuCRMS.View
                 DialogResult res = MetroMessageBox.Show(this, "Data will be unsaved, Do you want to proceed?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (res == DialogResult.Yes)
                 {
-                    frmVisits fv = new frmVisits();
+                    frmVisitsNew fv = new frmVisitsNew();
                     loadfrm(fv);
                     focus = "x";
                 }
             }
             else
             {
-                frmVisits fv = new frmVisits();
+                frmVisitsNew fv = new frmVisitsNew();
                 loadfrm(fv);
                 focus = "x";
             }

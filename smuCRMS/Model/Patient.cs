@@ -10,76 +10,76 @@ namespace smuCRMS.Controller
     {
         bool valid = false;
         Connection con = new Connection();
-        public bool patientAdd(PatientController pm)
-        {
-            String[] prm = new String[] {"uid","id", "LName","FName","MName","_course","_dept","_year", "BDay", "_age", "_sex", "CS",
-                    "nat", "HA", "BA", "FN", "FO", "FTCN", "MN", "MO", "MTCN", "LLN", "LTCN", "ECN", "Rel", "ETCN", "_fmp", "_lmp"};
-            string[] val = new string[] {pm.uid,pm.id.ToString(),pm.lastName,pm.firstName,pm.middleName,pm.course_id,pm.department,pm.year,pm.birthday,pm.age.ToString(),
-                pm.sex,pm.civilStatus,pm.nationality,pm.homeAddress,pm.boardingAddress,pm.fatherName,pm.fatherOccupation,pm.fatherNumber,pm.motherName,pm.motherOccupation,
-                pm.motherNumber,pm.landladyName,pm.landladyNumber,pm.emergencyCall,pm.relation,pm.emergencyNumber.ToString(),pm.firstMenstrualdate,pm.lastMenstrualdate};
+        //public bool patientAdd(PatientController pm)
+        //{
+        //    String[] prm = new String[] {"uid","id", "LName","FName","MName","_course","_dept","_year", "BDay", "_age", "_sex", "CS",
+        //            "nat", "HA", "BA", "FN", "FO", "FTCN", "MN", "MO", "MTCN", "LLN", "LTCN", "ECN", "Rel", "ETCN", "_fmp", "_lmp"};
+        //    string[] val = new string[] {pm.uid,pm.id.ToString(),pm.lastName,pm.firstName,pm.middleName,pm.course_id,pm.department,pm.year,pm.birthday,pm.age.ToString(),
+        //        pm.sex,pm.civilStatus,pm.nationality,pm.homeAddress,pm.boardingAddress,pm.fatherName,pm.fatherOccupation,pm.fatherNumber,pm.motherName,pm.motherOccupation,
+        //        pm.motherNumber,pm.landladyName,pm.landladyNumber,pm.emergencyCall,pm.relation,pm.emergencyNumber.ToString(),pm.firstMenstrualdate,pm.lastMenstrualdate};
 
-            valid = false;
+        //    valid = false;
 
-            try
-            {
-                //int i = 0;
-                con.command.Parameters.Clear();
-                for (int ctr = 0; ctr <= 27; ctr++)
-                {
-                    con.command.Parameters.AddWithValue(prm[ctr], val[ctr]);
-                    //i = ctr;
-                }
-                con.command.Parameters.AddWithValue("_photo", pm.photo);
-                con.command.Parameters.AddWithValue("sig", pm.psig);
-                con.command.Parameters.AddWithValue("BCG", pm.BGC);
-                con.command.Parameters.AddWithValue("DPT", pm.DPT);
-                con.command.Parameters.AddWithValue("OPV", pm.OPV);
-                con.command.Parameters.AddWithValue("MMR", pm.MMR);
-                con.command.Parameters.AddWithValue("HEPAB", pm.HB);
-                con.command.Parameters.AddWithValue("HEPAA", pm.HA);
-                //con.command.Parameters.AddWithValue("OTHERS", pm.Others);
-                //con.command.Parameters.AddWithValue("OTHERSDescription", pm.othersDesc);
-                //con.command.Parameters.AddWithValue("olddesc", pm.olddesc);
+        //    try
+        //    {
+        //        //int i = 0;
+        //        con.command.Parameters.Clear();
+        //        for (int ctr = 0; ctr <= 27; ctr++)
+        //        {
+        //            con.command.Parameters.AddWithValue(prm[ctr], val[ctr]);
+        //            //i = ctr;
+        //        }
+        //        con.command.Parameters.AddWithValue("_photo", pm.photo);
+        //        con.command.Parameters.AddWithValue("sig", pm.psig);
+        //        con.command.Parameters.AddWithValue("BCG", pm.BGC);
+        //        con.command.Parameters.AddWithValue("DPT", pm.DPT);
+        //        con.command.Parameters.AddWithValue("OPV", pm.OPV);
+        //        con.command.Parameters.AddWithValue("MMR", pm.MMR);
+        //        con.command.Parameters.AddWithValue("HEPAB", pm.HB);
+        //        con.command.Parameters.AddWithValue("HEPAA", pm.HA);
+        //        //con.command.Parameters.AddWithValue("OTHERS", pm.Others);
+        //        //con.command.Parameters.AddWithValue("OTHERSDescription", pm.othersDesc);
+        //        //con.command.Parameters.AddWithValue("olddesc", pm.olddesc);
 
-                //con.command.Parameters.AddWithValue("hospi", pm.hospiDesc);
-                //con.command.Parameters.AddWithValue("injury", pm.indescription);
-                //con.command.Parameters.AddWithValue("psych", pm.psychodescription);
-                //con.command.Parameters.AddWithValue("allergy", pm.allergyDesc);
-                //con.command.Parameters.AddWithValue("physDefects", pm.phydefdescription);
-                //con.command.Parameters.AddWithValue("med", pm.medcondescription);
-                con.command.Parameters.AddWithValue("currentMed", pm.currentMed);
+        //        //con.command.Parameters.AddWithValue("hospi", pm.hospiDesc);
+        //        //con.command.Parameters.AddWithValue("injury", pm.indescription);
+        //        //con.command.Parameters.AddWithValue("psych", pm.psychodescription);
+        //        //con.command.Parameters.AddWithValue("allergy", pm.allergyDesc);
+        //        //con.command.Parameters.AddWithValue("physDefects", pm.phydefdescription);
+        //        //con.command.Parameters.AddWithValue("med", pm.medcondescription);
+        //        con.command.Parameters.AddWithValue("currentMed", pm.currentMed);
 
-                con.command.Parameters.AddWithValue("_wkg", pm.weight.ToString());
-                con.command.Parameters.AddWithValue("_hcm", pm.height.ToString());
-                con.command.Parameters.AddWithValue("_bmi", pm.bmi.ToString());
-                con.command.Parameters.AddWithValue("_bp", pm.bp);
-                con.command.Parameters.AddWithValue("_pr", pm.pr);
-                con.command.Parameters.AddWithValue("_rr", pm.rr);
-                con.command.Parameters.AddWithValue("_temp", pm.temp);
-                con.command.Parameters.AddWithValue("_spo2", pm.spo2);
-                con.command.Parameters.AddWithValue("psig", pm.phsig);
-                con.command.Parameters.AddWithValue("remarks", pm.remarks);
+        //        con.command.Parameters.AddWithValue("_wkg", pm.weight.ToString());
+        //        con.command.Parameters.AddWithValue("_hcm", pm.height.ToString());
+        //        con.command.Parameters.AddWithValue("_bmi", pm.bmi.ToString());
+        //        con.command.Parameters.AddWithValue("_bp", pm.bp);
+        //        con.command.Parameters.AddWithValue("_pr", pm.pr);
+        //        con.command.Parameters.AddWithValue("_rr", pm.rr);
+        //        con.command.Parameters.AddWithValue("_temp", pm.temp);
+        //        con.command.Parameters.AddWithValue("_spo2", pm.spo2);
+        //        con.command.Parameters.AddWithValue("psig", pm.phsig);
+        //        con.command.Parameters.AddWithValue("remarks", pm.remarks);
 
-                con.command.Parameters.AddWithValue("cc", pm.tCC);
-                con.command.Parameters.AddWithValue("dt", pm.tDiag);
-                con.command.Parameters.AddWithValue("dic", pm.dic);
-                con.command.Parameters.AddWithValue("refe", pm.refe);
+        //        con.command.Parameters.AddWithValue("cc", pm.tCC);
+        //        con.command.Parameters.AddWithValue("dt", pm.tDiag);
+        //        con.command.Parameters.AddWithValue("dic", pm.dic);
+        //        con.command.Parameters.AddWithValue("refe", pm.refe);
 
-                con.getParameter("CreatePatient");
-                if (con.command.ExecuteNonQuery() == 1)
-                {
-                    con.close();
-                    valid = true;
-                }
+        //        con.getParameter("CreatePatient");
+        //        if (con.command.ExecuteNonQuery() == 1)
+        //        {
+        //            con.close();
+        //            valid = true;
+        //        }
 
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("" + ex);
-            }
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        MessageBox.Show("" + ex);
+        //    }
 
-            return valid;
-        }
+        //    return valid;
+        //}
 
 
         public bool addTreatment(PatientController pm)
@@ -188,46 +188,46 @@ namespace smuCRMS.Controller
             con.command.Parameters.AddWithValue(param, val);
         }
 
-        public bool updateProfile(PatientController pm)
-        {
+        //public bool updateProfile(PatientController pm)
+        //{
 
-            String[] prm = new String[] {"uid","_id", "LName","FName","MName","_course","_dept","_year", "BDay", "_age", "_sex", "CS",
-                    "nat", "HA", "BA", "FN", "FO", "FTCN", "MN", "MO", "MTCN", "LLN", "LTCN", "ECN", "Rel", "ETCN", "_fmp", "_lmp"};
-            string[] val = new string[] {pm.uid,pm.id.ToString(),pm.lastName,pm.firstName,pm.middleName,pm.course_id,pm.department,pm.year,pm.birthday,pm.age.ToString(),
-                pm.sex,pm.civilStatus,pm.nationality,pm.homeAddress,pm.boardingAddress,pm.fatherName,pm.fatherOccupation,pm.fatherNumber,pm.motherName,pm.motherOccupation,
-                pm.motherNumber,pm.landladyName,pm.landladyNumber,pm.emergencyCall,pm.relation,pm.emergencyNumber.ToString(),pm.firstMenstrualdate,pm.lastMenstrualdate};
+        //    String[] prm = new String[] {"uid","_id", "LName","FName","MName","_course","_dept","_year", "BDay", "_age", "_sex", "CS",
+        //            "nat", "HA", "BA", "FN", "FO", "FTCN", "MN", "MO", "MTCN", "LLN", "LTCN", "ECN", "Rel", "ETCN", "_fmp", "_lmp"};
+        //    string[] val = new string[] {pm.uid,pm.id.ToString(),pm.lastName,pm.firstName,pm.middleName,pm.course_id,pm.department,pm.year,pm.birthday,pm.age.ToString(),
+        //        pm.sex,pm.civilStatus,pm.nationality,pm.homeAddress,pm.boardingAddress,pm.fatherName,pm.fatherOccupation,pm.fatherNumber,pm.motherName,pm.motherOccupation,
+        //        pm.motherNumber,pm.landladyName,pm.landladyNumber,pm.emergencyCall,pm.relation,pm.emergencyNumber.ToString(),pm.firstMenstrualdate,pm.lastMenstrualdate};
 
-            try
-            {
-                //if(pm.photo!="")
-                //{
-                //processImage(pm.photo);
-                //}
+        //    try
+        //    {
+        //        //if(pm.photo!="")
+        //        //{
+        //        //processImage(pm.photo);
+        //        //}
 
-                con.command.Parameters.Clear();
-                int i = 0;
-                for (int ctr = 0; ctr <= 27; ctr++)
-                {
-                    con.command.Parameters.AddWithValue(prm[ctr], val[ctr]);
-                    i = ctr;
-                }
-                con.command.Parameters.AddWithValue("_photo", pm.photo);
-                con.command.Parameters.AddWithValue("psig", pm.psig);
-                con.getParameter("UpdatePatient");
-                if (con.command.ExecuteNonQuery() == 1)
-                {
-                    con.close();
-                    valid = true;
-                }
+        //        con.command.Parameters.Clear();
+        //        int i = 0;
+        //        for (int ctr = 0; ctr <= 27; ctr++)
+        //        {
+        //            con.command.Parameters.AddWithValue(prm[ctr], val[ctr]);
+        //            i = ctr;
+        //        }
+        //        con.command.Parameters.AddWithValue("_photo", pm.photo);
+        //        con.command.Parameters.AddWithValue("psig", pm.psig);
+        //        con.getParameter("UpdatePatient");
+        //        if (con.command.ExecuteNonQuery() == 1)
+        //        {
+        //            con.close();
+        //            valid = true;
+        //        }
 
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("" + ex);
-            }
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        MessageBox.Show("" + ex);
+        //    }
 
-            return valid;
-        }
+        //    return valid;
+        //}
 
         public bool addPatientExcel(PatientController pm)
         {
@@ -741,11 +741,11 @@ namespace smuCRMS.Controller
                 return dtable = (dtable.Columns.Count > 0) ? dtable : con.dtable;
             }
         }
-        public DataTable getVisits(int yr, int fm, int lm)
+        public DataTable getSummary(int yr, int fm, int lm,string ACTIVITY)
         {
             DataTable dtable = new DataTable();
             con.command.Parameters.Clear();
-            addParamVal("activity", "");
+            addParamVal("activity", ACTIVITY);
             addParamVal("id", 0);
             addParamVal("yr", yr);
             addParamVal("fm", fm);

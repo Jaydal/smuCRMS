@@ -18,10 +18,12 @@ namespace smuCRMS.Controller
         public string firstName { get; set; }
         public string middleName { get; set; }
         public string course_id { get; set; }
+        public string course { get; set; }
         public string year { get; set; }
         public string level { get; set; }
+
         public string department { get; set; }
-        public string birthday { get; set; }
+        public DateTime birthday { get; set; }
         public int age { get; set; }
         public string sex { get; set; }
         public string civilStatus { get; set; }
@@ -41,8 +43,8 @@ namespace smuCRMS.Controller
         public string emergencyNumber { get; set; }
         public double height { get; set; }
         public double weight { get; set; }
-        public string firstMenstrualdate { get; set; }
-        public string lastMenstrualdate { get; set; }
+        public DateTime firstMenstrualdate { get; set; }
+        public DateTime lastMenstrualdate { get; set; }
         public double bmi { get; set; }
         public string bp { get; set; }
         public string pr { get; set; }
@@ -113,7 +115,7 @@ namespace smuCRMS.Controller
             year = "";
             level = "";
             department = "";
-            birthday = null;
+            birthday = DateTime.Now;
             age = 0;
             sex = "";
             civilStatus = "";
@@ -133,8 +135,8 @@ namespace smuCRMS.Controller
             emergencyNumber = "";
             height = 0.0;
             weight = 0.0;
-            firstMenstrualdate = null;
-            lastMenstrualdate = null;
+            firstMenstrualdate = DateTime.Now;
+            lastMenstrualdate = DateTime.Now;
             bmi = 0.0;
             bp = "";
             pr = "";
@@ -197,10 +199,6 @@ namespace smuCRMS.Controller
         public bool archiveStud()
         {
             return valid = (patient.archiveStud(this)) ? true : false;
-        }
-        public bool updateProfile()
-        {
-            return valid = (patient.updateProfile(this)) ? true : false;
         }
         public bool addPatientExcel()
         {
@@ -353,6 +351,11 @@ namespace smuCRMS.Controller
             return valid = (patient.callProcedure(this,
                 "CREATE", "vcrud_patient", false).Columns.Count > 0) ? true : false;
         }
+        public bool updateProfile()
+        {
+            return valid = (patient.callProcedure(this,
+               "UPDATE", "vcrud_patient", false).Columns.Count > 0) ? true : false;
+        }
         public bool addRemark()
         {
             return valid = (patient.callProcedure(this,
@@ -426,11 +429,13 @@ namespace smuCRMS.Controller
                 lastName = dtable.Rows[0][2].ToString();
                 firstName = dtable.Rows[0][3].ToString();
                 middleName = dtable.Rows[0][4].ToString();
-                department = dtable.Rows[0][5].ToString();
+                department_id = dtable.Rows[0][5].ToString();
+                department = dtable.Rows[0][32].ToString();
                 course_id = dtable.Rows[0][6].ToString();
+                course = dtable.Rows[0][33].ToString();
                 year = dtable.Rows[0][8].ToString();
                 //level = dtable.Rows[0][8].ToString();
-                birthday = dtable.Rows[0][9].ToString();
+                birthday = (DateTime)dtable.Rows[0][9];
                 age = Int32.Parse(dtable.Rows[0][10].ToString());
                 sex = dtable.Rows[0][11].ToString();
                 civilStatus = dtable.Rows[0][12].ToString();
@@ -448,8 +453,8 @@ namespace smuCRMS.Controller
                 emergencyCall = dtable.Rows[0][24].ToString();
                 relation = dtable.Rows[0][25].ToString();
                 emergencyNumber = dtable.Rows[0][26].ToString();
-                firstMenstrualdate = dtable.Rows[0][27].ToString();
-                lastMenstrualdate = dtable.Rows[0][28].ToString();
+                firstMenstrualdate = (DateTime)dtable.Rows[0][27];
+                lastMenstrualdate = (DateTime)dtable.Rows[0][28];
 
                 if (dtable.Rows[0][29] != System.DBNull.Value)
                 {

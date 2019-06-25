@@ -11,21 +11,20 @@ namespace smuCRMS.View
             InitializeComponent();
         }
         addPatient ap = new addPatient();
-  
+
         public string classification = "";
         public int edit = 0;
         public string uid;
         private void frmProfile_Load(object sender, EventArgs e)
         {
-                tabProfile.Controls.Add(ap.tbProf);
-                ap.getProfilebyID(txtID.Text);
-                    
-                ap.EnableTab(tabProfile,false);
+            tabProfile.Controls.Add(ap.tbProf);
+            ap.getProfilebyID(txtID.Text);
+            ap.EnableTab(tabProfile, false);
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            if(btnDone.Text=="Done")
+            if (btnDone.Text == "Done")
             {
                 this.Close();
             }
@@ -35,13 +34,13 @@ namespace smuCRMS.View
                 btnDone.Text = "Done";
                 btnEdit.Text = "Update";
             }
-        
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            
-            if(btnEdit.Text=="Update")
+
+            if (btnEdit.Text == "Update")
             {
                 ap.ChangeEnabled(true);
                 ap.EnableTab(tabProfile, true);
