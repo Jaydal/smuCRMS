@@ -307,9 +307,6 @@ namespace smuCRMS.Controller
                 addParamVal("MMR", pm.MMR);
                 addParamVal("HEPAB", pm.HB);
                 addParamVal("HEPAA", pm.HA);
-                //addParamVal("OTHERS", pm.Others);
-                //addParamVal("OTHERSDescription", pm.othersDesc);
-                //addParamVal("olddesc", pm.olddesc);
 
                 con.getParameter("UpdateImmunization");
                 if (con.command.ExecuteNonQuery() == 1)

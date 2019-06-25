@@ -449,8 +449,12 @@ namespace smuCRMS.Controller
                 emergencyCall = dtable.Rows[0][24].ToString();
                 relation = dtable.Rows[0][25].ToString();
                 emergencyNumber = dtable.Rows[0][26].ToString();
-                firstMenstrualdate = (DateTime)dtable.Rows[0][27];
-                lastMenstrualdate = (DateTime)dtable.Rows[0][28];
+                if (sex == "female")
+                {
+                    firstMenstrualdate = (DateTime)dtable.Rows[0][27];
+                    lastMenstrualdate = (DateTime)dtable.Rows[0][28];
+                }
+               
                 photo = (byte[])dtable.Rows[0][29];
                
 

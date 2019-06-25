@@ -415,6 +415,14 @@ namespace smuCRMS.View {
                 return this.DataDefinition.ParameterFields[40];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_image {
+            get {
+                return this.DataDefinition.ParameterFields[41];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]

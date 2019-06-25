@@ -58,9 +58,17 @@ namespace smuCRMS.View
             PDoc1.SetParameterValue("emergency", pc.emergencyCall);
             PDoc1.SetParameterValue("relation", pc.relation);
             PDoc1.SetParameterValue("emergency_num", pc.emergencyNumber);
-
-            PDoc1.SetParameterValue("fmp", pc.firstMenstrualdate);
-            PDoc1.SetParameterValue("lmp", pc.lastMenstrualdate);
+            if (pc.sex == "Female")
+            {
+                PDoc1.SetParameterValue("fmp", pc.firstMenstrualdate + "");
+                PDoc1.SetParameterValue("lmp", pc.lastMenstrualdate + "");
+            }
+            else
+            {
+                PDoc1.SetParameterValue("fmp", "");
+                PDoc1.SetParameterValue("lmp", "");
+            }
+        
 
             PDoc1.SetParameterValue("hospi", pc.hospiDesc + "");
             PDoc1.SetParameterValue("injuries", pc.indescription + "");
@@ -92,11 +100,10 @@ namespace smuCRMS.View
             string val1 = (_oth1 != null || _oth1 != "") ? _oth1 : " ";
             string val2 = (_oth1 != null || _oth2 != "") ? _oth2 : " ";
             string val3 = (_oth1 != null || _oth3 != "") ? _oth3 : " ";
-            MessageBox.Show(val3);
+
             PDoc1.SetParameterValue("oth1t", val1+"");
             PDoc1.SetParameterValue("oth2t", val2 + "");
             PDoc1.SetParameterValue("oth3t", val3 + "");
-
         }
         private void rbp1_CheckedChanged(object sender, EventArgs e)
         {
