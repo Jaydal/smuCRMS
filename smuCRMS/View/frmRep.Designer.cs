@@ -35,6 +35,7 @@
             this.rbp1 = new MaterialSkin.Controls.MaterialRadioButton();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.PDoc1 = new smuCRMS.View.PDoc();
+            this.PDoc2 = new smuCRMS.View.PDoc();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,5 +156,6 @@
         private MaterialSkin.Controls.MaterialFlatButton btnPrint;
         private MaterialSkin.Controls.MaterialRadioButton rbp2;
         private MaterialSkin.Controls.MaterialRadioButton rbp1;
+        private PDoc PDoc2;
     }
 }

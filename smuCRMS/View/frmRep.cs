@@ -11,6 +11,7 @@ namespace smuCRMS.View
         public string pid;
         PatientController pc = new PatientController();
         treatChart tcc1 = new treatChart();
+        DataTable dt = new DataTable();
         PDoc PDoc1 = new PDoc();
         public frmReport()
         {
@@ -25,6 +26,8 @@ namespace smuCRMS.View
             {
                 pc.getHistory();
                 pc.getImmunization();
+                dt=pc.getTreatment();
+                pc.getRemark();
                 loadValueToParameters();
                 tcc1.SetParameterValue("id", pc.id);
                 
@@ -60,8 +63,11 @@ namespace smuCRMS.View
             PDoc1.SetParameterValue("emergency_num", pc.emergencyNumber);
             if (pc.sex == "Female")
             {
-                PDoc1.SetParameterValue("fmp", pc.firstMenstrualdate + "");
-                PDoc1.SetParameterValue("lmp", pc.lastMenstrualdate + "");
+                int fm = int.Parse(pc.firstMenstrualdate.ToString("yyyyMMdd"));
+                int dob = int.Parse(pc.birthday.ToString("yyyyMMdd"));
+                int age = (fm - dob) / 10000;
+                PDoc1.SetParameterValue("fmp", age);
+                PDoc1.SetParameterValue("lmp", pc.lastMenstrualdate.ToString("MMM dd, yyyy") + "");
             }
             else
             {
@@ -104,6 +110,23 @@ namespace smuCRMS.View
             PDoc1.SetParameterValue("oth1t", val1+"");
             PDoc1.SetParameterValue("oth2t", val2 + "");
             PDoc1.SetParameterValue("oth3t", val3 + "");
+            string s="";
+            foreach (DataRow row in dt.Rows)
+            {
+                s +=((DateTime)row[2]).ToString("MM/dd/yyy")+ "\tCHIEF COMPLAINTS:" + row[3]+ "\tDIAGNOSIS:" + row[4]+ ";\tBP:" + row[5] + ";\tPR:" + row[6] +
+                    ";\tRR:" + row[7] + ";\tTEMPERATURE:" + row[8] + ";\tSPO2:" + row[9] + ";\tDOCTOR IN CHARGE:" + row[10] + ";\tREFERRAL:" + row[11] + ";\n\n";
+            }
+            tcc1.SetParameterValue("treatmentchart",s);
+            tcc1.SetParameterValue("weight",pc.weight);
+            tcc1.SetParameterValue("height",pc.height);
+            tcc1.SetParameterValue("bmi",pc.bmi);
+            tcc1.SetParameterValue("rr",pc.rr);
+            tcc1.SetParameterValue("pr",pc.pr);
+            tcc1.SetParameterValue("temp",pc.temp);
+            tcc1.SetParameterValue("spo2",pc.spo2);
+            tcc1.SetParameterValue("remarks",pc.remarks);
+            tcc1.SetParameterValue("bp",pc.bp);
+            tcc1.SetParameterValue("physician",pc.dic);
         }
         private void rbp1_CheckedChanged(object sender, EventArgs e)
         {
