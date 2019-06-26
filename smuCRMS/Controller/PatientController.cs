@@ -359,6 +359,26 @@ namespace smuCRMS.Controller
             return valid = (patient.callProcedure(this,
                "CREATE", "vcrud_remark", false).Columns.Count > 0) ? true : false;
         }
+        public bool addDepartment()
+        {
+            return valid = (patient.callProcedure(this,
+               "CREATE", "vcrud_department", false).Columns.Count > 0) ? true : false;
+        }
+        public bool updateDepartment()
+        {
+            return valid = (patient.callProcedure(this,
+               "UPDATE", "vcrud_department", false).Columns.Count > 0) ? true : false;
+        }
+        public bool addCourse()
+        {
+            return valid = (patient.callProcedure(this,
+               "CREATE", "vcrud_course", false).Columns.Count > 0) ? true : false;
+        }
+        public bool updateCourse()
+        {
+            return valid = (patient.callProcedure(this,
+               "UPDATE", "vcrud_course", false).Columns.Count > 0) ? true : false;
+        }
         public bool updateHistory()
         {
             return valid = (patient.callProcedure(this,

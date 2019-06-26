@@ -42,11 +42,23 @@ namespace smuCRMS.View
                 pm.lastName = txtLName.Text;
                 pm.firstName = txtFName.Text;
                 pm.middleName = txtMName.Text;
-                pm.course_id = cmbCourse.SelectedValue.ToString();
-                pm.age = Int32.Parse(cmbAge.Text);
-                pm.year = cmbYear.Text;
-                pm.department = cmbDepartment.SelectedValue.ToString();
+                //todo
+                if (pm.id.Contains("VIS"))
+                {
+                    pm.course_id = null;
+                    pm.year = null;
+                    pm.department_id = null;
+                }
+                else
+                {
+                    pm.course_id = cmbCourse.SelectedValue.ToString();
+                    pm.year = cmbYear.Text;
+                    pm.department_id = cmbDepartment.SelectedValue.ToString();
+                }
+              
+
                 pm.birthday = dtBDay.Value;
+                pm.age = Int32.Parse(cmbAge.Text);
                 pm.sex = sex;
                 pm.civilStatus = cmbCivilStat.Text;
                 pm.nationality = txtNat.Text;
@@ -206,7 +218,7 @@ namespace smuCRMS.View
         string LoadCourses()
         {
             string level;
-            pm.department = cmbDepartment.SelectedValue.ToString();
+            pm.department_id = cmbDepartment.SelectedValue.ToString();
             cmbCourse.ValueMember = "Course_id";
             cmbCourse.DisplayMember = "Course";
             cmbCourse.DataSource = pm.getCourses();
@@ -535,7 +547,7 @@ namespace smuCRMS.View
                 enableCYD(false);
                 txtPID.Enabled = false;
                 immunizationControl1.Enabled = false;
-                txtPID.Text = "V" + DateTime.Now.Month + DateTime.Now.Day + (DateTime.Now.Year) % 2000 + DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second;
+                txtPID.Text = "VIS" + DateTime.Now.Month + DateTime.Now.Day + (DateTime.Now.Year) % 2000 + DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second;
                 txtLName.Select();  
             }
             else

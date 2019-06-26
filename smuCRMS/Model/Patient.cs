@@ -600,7 +600,7 @@ namespace smuCRMS.Controller
             addParamVal("LastName", pc.lastName);
             addParamVal("FirstName", pc.firstName);
             addParamVal("MiddleName", pc.middleName);
-            addParamVal("department_id", pc.department);
+            addParamVal("department_id", pc.department_id);
             addParamVal("Course_id", pc.course_id);
             addParamVal("_Level", pc.level);
             addParamVal("yrgr", pc.year);
@@ -676,8 +676,8 @@ namespace smuCRMS.Controller
         private void getPatientCollection_Course(PatientController pc)
         {
             addParamVal("course_id", pc.course_id);
-            addParamVal("course", pc.course_id);
-            addParamVal("department_id", pc.department);
+            addParamVal("course", pc.course);
+            addParamVal("department_id", pc.department_id);
         }
         public DataTable callProcedure(PatientController pc, string ACTIVITY, string STORED_PROCEDURE, bool Query)
         {

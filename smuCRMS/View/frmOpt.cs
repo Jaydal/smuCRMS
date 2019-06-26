@@ -189,5 +189,25 @@ namespace smuCRMS.View
         {
             del();
         }
+
+        private void tileExit_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void tileConnection_Click(object sender, EventArgs e)
+        {
+            new frmConnect().ShowDialog();
+        }
+
+        private void tileUsers_Click(object sender, EventArgs e)
+        {
+            new frmAccountManager().ShowDialog();
+        }
+
+        private void tileCourses_Click(object sender, EventArgs e)
+        {
+            new frmCourseManager().ShowDialog();
+        }
     }
 }
