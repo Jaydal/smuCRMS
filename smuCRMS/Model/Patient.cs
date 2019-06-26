@@ -476,12 +476,6 @@ namespace smuCRMS.Controller
             return valid;
         }
 
-        public DataTable getLogs(PatientController pc)
-        {
-            DataTable dtable = new DataTable();
-            con.getDataTable("getLogs");
-            return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
-        }
         public DataTable getYearEnd(int yr)
         {
             DataTable dtable = new DataTable();
@@ -748,6 +742,12 @@ namespace smuCRMS.Controller
             addParamVal("fm", fm);
             addParamVal("lm", lm);
             con.getDataTable("count_visit_and_referall");
+            return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
+        }
+        public DataTable getLogs()
+        {
+            DataTable dtable = new DataTable();
+            con.getDataTable("view_logs");
             return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
         }
     }

@@ -25,7 +25,6 @@ namespace smuCRMS.View
         private void frmPatients_Load(object sender, EventArgs e)
         {
             search = "";
-            dgStudents.DataSource = pc.search();
             tbPmain.SelectedIndex = 0;
             dgv = dgStudents;
       

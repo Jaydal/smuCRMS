@@ -13,9 +13,8 @@ namespace smuCRMS.View
 
         private void frmLogView_Load(object sender, EventArgs e)
         {
-            PatientController pc = new PatientController();
             DataTable dt = new DataTable();
-            dt = pc.getLogs();
+            dt = new Patient().getLogs();
             int i = 0;
             foreach(DataRow rw in dt.Rows)
             {

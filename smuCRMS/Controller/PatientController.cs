@@ -244,11 +244,7 @@ namespace smuCRMS.Controller
         {
             return patient.getVisits(this);
         }
-        public DataTable getLogs()
-        {
-            valid = false;
-            return dtable = patient.getLogs(this);
-        }
+
      
         public DataTable GetDataFromExcel()
         {
@@ -323,6 +319,7 @@ namespace smuCRMS.Controller
             return patient.callProcedure(this,
                 "VIEW_BY_DEPARTMENT", "vcrud_course",true);
         }
+
         public DataTable getTreatment()
         {
             return patient.callProcedure(this,
