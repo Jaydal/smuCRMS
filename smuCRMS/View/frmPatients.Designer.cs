@@ -358,6 +358,7 @@ namespace smuCRMS.View
             this.dgStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgStudents.Size = new System.Drawing.Size(1362, 549);
             this.dgStudents.TabIndex = 1;
+            this.dgStudents.DataSourceChanged += new System.EventHandler(this.dgStudents_DataSourceChanged);
             // 
             // tbArch
             // 

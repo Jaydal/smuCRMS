@@ -478,5 +478,29 @@ namespace smuCRMS.View
         {
 
         }
+
+        private void dgStudents_DataSourceChanged(object sender, EventArgs e)
+        {
+            if (dgStudents.Rows.Count > 0)
+            {
+                btnaddTreat.Enabled = true;
+                btnProf.Enabled = true;
+                btnRem.Enabled = true;
+                btnHis.Enabled = true;
+                btnImmu.Enabled = true;
+                btnTreatment.Enabled = true;
+                btnDoc.Enabled = true;
+            }
+            else
+            {
+                btnaddTreat.Enabled = false;
+                btnProf.Enabled = false;
+                btnRem.Enabled = false;
+                btnHis.Enabled = false;
+                btnImmu.Enabled = false;
+                btnTreatment.Enabled = false;
+                btnDoc.Enabled = false;
+            }
+        }
     }
 }
