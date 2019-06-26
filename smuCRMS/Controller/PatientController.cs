@@ -475,7 +475,7 @@ namespace smuCRMS.Controller
                     firstMenstrualdate = (DateTime)dtable.Rows[0][27];
                     lastMenstrualdate = (DateTime)dtable.Rows[0][28];
                 }
-               
+               if(dtable.Rows[0][29].ToString().Length>0)
                 photo = (byte[])dtable.Rows[0][29];
                
 

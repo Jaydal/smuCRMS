@@ -229,36 +229,7 @@ namespace smuCRMS.Controller
         //    return valid;
         //}
 
-        public bool addPatientExcel(PatientController pm)
-        {
-            try
-            {
-                con.command.Parameters.Clear();
 
-                con.command.Parameters.AddWithValue("id", pm.id);
-                con.command.Parameters.AddWithValue("lnm", pm.lastName);
-                con.command.Parameters.AddWithValue("fn", pm.firstName);
-                con.command.Parameters.AddWithValue("mn", pm.middleName);
-                con.command.Parameters.AddWithValue("cr", pm.course_id);
-                con.command.Parameters.AddWithValue("dt", pm.department);
-                con.command.Parameters.AddWithValue("yr", pm.year);
-                con.command.Parameters.AddWithValue("sx", pm.sex);
-
-                con.getParameter("CreateFromExcel");
-                if (con.command.ExecuteNonQuery() == 1)
-                {
-                    con.close();
-                    valid = true;
-                }
-
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("" + ex);
-            }
-
-            return valid;
-        }
 
 
 
@@ -749,6 +720,36 @@ namespace smuCRMS.Controller
             DataTable dtable = new DataTable();
             con.getDataTable("view_logs");
             return dtable = (con.dtable.Rows.Count > 0) ? dtable = con.dtable : dtable;
+        }
+        public bool addPatientExcel(PatientController pm)
+        {
+            try
+            {
+                con.command.Parameters.Clear();
+
+                addParamVal("id", pm.id);
+                addParamVal("lnm", pm.lastName);
+                addParamVal("fn", pm.firstName);
+                addParamVal("mn", pm.middleName);
+                addParamVal("cr", pm.course_id);
+                addParamVal("dt", pm.department);
+                addParamVal("yr", pm.year);
+                addParamVal("sx", pm.sex);
+
+                con.getParameter("create_from_excel");
+                if (con.command.ExecuteNonQuery() == 1)
+                {
+                    con.close();
+                    valid = true;
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+
+            return valid;
         }
     }
 }
