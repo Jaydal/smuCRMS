@@ -27,6 +27,9 @@ namespace smuCRMS.View
                 pc.getHistory();
                 pc.getImmunization();
                 dt=pc.getTreatment();
+                DataView dv = dt.DefaultView;
+                dv.Sort = "TreatmentDate asc";
+                dt= dv.ToTable();
                 pc.getRemark();
                 loadValueToParameters();
                 tcc1.SetParameterValue("id", pc.id);
