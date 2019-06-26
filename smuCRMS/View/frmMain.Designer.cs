@@ -303,7 +303,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackLocation = MetroFramework.Forms.BackLocation.TopRight;
-            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(1300, 729);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.mainPanel);
@@ -311,14 +310,13 @@
             this.Controls.Add(this.metroPanel3);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(640, 640);
-            this.Movable = false;
             this.Name = "frmMain";
             this.Padding = new System.Windows.Forms.Padding(0, 60, 0, 0);
-            this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.Magenta;
             this.Text = "SMU Medical Record Management System";
+            this.Theme = MetroFramework.MetroThemeStyle.Default;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);

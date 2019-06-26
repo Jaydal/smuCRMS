@@ -42,19 +42,10 @@ namespace smuCRMS.View
                 pm.lastName = txtLName.Text;
                 pm.firstName = txtFName.Text;
                 pm.middleName = txtMName.Text;
-                //todo
-                if (pm.id.Contains("VIS"))
-                {
-                    pm.course_id = null;
-                    pm.year = null;
-                    pm.department_id = null;
-                }
-                else
-                {
+
                     pm.course_id = cmbCourse.SelectedValue.ToString();
                     pm.year = cmbYear.Text;
                     pm.department_id = cmbDepartment.SelectedValue.ToString();
-                }
               
 
                 pm.birthday = dtBDay.Value;
@@ -222,6 +213,8 @@ namespace smuCRMS.View
             cmbCourse.ValueMember = "Course_id";
             cmbCourse.DisplayMember = "Course";
             cmbCourse.DataSource = pm.getCourses();
+            cmbCourse.Enabled = true;
+            immunizationControl1.Enabled = true;
             cmbYear.Items.Clear();
             if (cmbDepartment.Text.ToLower().Contains("grade"))
             {
@@ -229,13 +222,11 @@ namespace smuCRMS.View
                 cmbYear.Items.AddRange(gs);
                 //lblYear.Text = "Grade";
                 level = "GS";
-                cmbCourse.Enabled = false;
             }
             else if(cmbDepartment.Text.ToLower().Contains("junior"))
             {
                 cmbYear.Items.AddRange(js);
                 gbY.Text = "Grade";
-                cmbCourse.Enabled = false;
                 level = "JHS";
             }
             else if (cmbDepartment.Text.ToLower().Contains("senior"))
@@ -245,11 +236,18 @@ namespace smuCRMS.View
                 gbC.Text = "Track";
                 level = "SHS";
             }
+            else if (cmbDepartment.Text.ToLower().Contains("visitor"))
+            {
+                cmbYear.Items.Clear();
+                cmbYear.Items.Add("");
+                txtPID.Text = "VIS" + DateTime.Now.Month + DateTime.Now.Day + (DateTime.Now.Year) % 2000 + DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second;
+                immunizationControl1.Enabled = false;
+                level = "Visitor";
+            }
             else 
             {
                 gbY.Text = "Year";
                 gbC.Text = "Course";
-                cmbCourse.Enabled = true;
                 //get level to determine-----
                 cmbYear.Items.AddRange(undergrad);
                 level = "College";
@@ -435,11 +433,7 @@ namespace smuCRMS.View
                 txtPID.Text = "";
                 txtPID.Focus();
             }
-            else
-            {
-                if(txtPID.Text=="")
-                Visitor();
-            }
+            
        
         }
         private void btnReset_Click(object sender, EventArgs e)
@@ -534,32 +528,7 @@ namespace smuCRMS.View
                 txtRelation.Text = "Mother";
             }
         }
-        void enableCYD(bool en)
-        {
-            cmbCourse.Enabled = en;
-            cmbDepartment.Enabled = en;
-            cmbYear.Enabled = en;
-        }
-        private void Visitor()
-        {
-            if(txtPID.Text=="")
-            {
-                enableCYD(false);
-                txtPID.Enabled = false;
-                immunizationControl1.Enabled = false;
-                txtPID.Text = "VIS" + DateTime.Now.Month + DateTime.Now.Day + (DateTime.Now.Year) % 2000 + DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second;
-                txtLName.Select();  
-            }
-            else
-            {
-                enableCYD(true);
-                txtPID.Enabled = true;
-                immunizationControl1.Enabled = true;
-                txtPID.Text = "";
-                txtPID.Select();
-            }
-    
-        }
+
 
         private void btnNext_Click_1(object sender, EventArgs e)
         {

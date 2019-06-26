@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbCoursesDept = new System.Windows.Forms.TabControl();
             this.tbCourses = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancel = new MaterialSkin.Controls.MaterialFlatButton();
             this.btnUpdateCourse = new MaterialSkin.Controls.MaterialFlatButton();
@@ -42,10 +41,11 @@
             this.btnAdd = new MaterialSkin.Controls.MaterialFlatButton();
             this.txtDC = new MetroFramework.Controls.MetroTextBox();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tbCoursesDept.SuspendLayout();
             this.tbCourses.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbCoursesDept
@@ -62,6 +62,7 @@
             // tbCourses
             // 
             this.tbCourses.Controls.Add(this.dataGridView1);
+            this.tbCourses.Controls.Add(this.cmbDepartment);
             this.tbCourses.Controls.Add(this.panel1);
             this.tbCourses.Location = new System.Drawing.Point(4, 31);
             this.tbCourses.Name = "tbCourses";
@@ -70,48 +71,6 @@
             this.tbCourses.TabIndex = 1;
             this.tbCourses.Text = "Manage";
             this.tbCourses.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeight = 40;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(203, 3);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.RowHeadersWidth = 30;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowTemplate.Height = 50;
-            this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(466, 359);
-            this.dataGridView1.TabIndex = 7;
-            this.dataGridView1.DataSourceChanged += new System.EventHandler(this.dataGridView1_DataSourceChanged);
             // 
             // panel1
             // 
@@ -122,7 +81,6 @@
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.txtDC);
-            this.panel1.Controls.Add(this.cmbDepartment);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
@@ -137,7 +95,7 @@
             this.btnCancel.Depth = 0;
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCancel.Icon = null;
-            this.btnCancel.Location = new System.Drawing.Point(0, 299);
+            this.btnCancel.Location = new System.Drawing.Point(0, 269);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancel.Name = "btnCancel";
@@ -157,7 +115,7 @@
             this.btnUpdateCourse.Depth = 0;
             this.btnUpdateCourse.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUpdateCourse.Icon = null;
-            this.btnUpdateCourse.Location = new System.Drawing.Point(0, 263);
+            this.btnUpdateCourse.Location = new System.Drawing.Point(0, 233);
             this.btnUpdateCourse.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnUpdateCourse.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnUpdateCourse.Name = "btnUpdateCourse";
@@ -176,7 +134,7 @@
             this.btnAddCourse.Depth = 0;
             this.btnAddCourse.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAddCourse.Icon = null;
-            this.btnAddCourse.Location = new System.Drawing.Point(0, 227);
+            this.btnAddCourse.Location = new System.Drawing.Point(0, 197);
             this.btnAddCourse.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAddCourse.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAddCourse.Name = "btnAddCourse";
@@ -195,7 +153,7 @@
             this.btnUpdate.Depth = 0;
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUpdate.Icon = null;
-            this.btnUpdate.Location = new System.Drawing.Point(0, 191);
+            this.btnUpdate.Location = new System.Drawing.Point(0, 161);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnUpdate.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnUpdate.Name = "btnUpdate";
@@ -214,7 +172,7 @@
             this.btnAdd.Depth = 0;
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAdd.Icon = null;
-            this.btnAdd.Location = new System.Drawing.Point(0, 155);
+            this.btnAdd.Location = new System.Drawing.Point(0, 125);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAdd.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAdd.Name = "btnAdd";
@@ -241,7 +199,7 @@
             this.txtDC.CustomButton.Visible = false;
             this.txtDC.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtDC.Lines = new string[0];
-            this.txtDC.Location = new System.Drawing.Point(0, 30);
+            this.txtDC.Location = new System.Drawing.Point(0, 0);
             this.txtDC.MaxLength = 50;
             this.txtDC.Multiline = true;
             this.txtDC.Name = "txtDC";
@@ -266,11 +224,53 @@
             this.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(0, 0);
+            this.cmbDepartment.Location = new System.Drawing.Point(203, 3);
             this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(200, 30);
-            this.cmbDepartment.TabIndex = 0;
+            this.cmbDepartment.Size = new System.Drawing.Size(466, 30);
+            this.cmbDepartment.TabIndex = 8;
             this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeight = 40;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(203, 33);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.RowHeadersWidth = 30;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowTemplate.Height = 50;
+            this.dataGridView1.RowTemplate.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(466, 329);
+            this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.DataSourceChanged += new System.EventHandler(this.dataGridView1_DataSourceChanged);
             // 
             // frmCourseManager
             // 
@@ -287,9 +287,9 @@
             this.Load += new System.EventHandler(this.frmCourseManager_Load);
             this.tbCoursesDept.ResumeLayout(false);
             this.tbCourses.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -298,14 +298,14 @@
 
         private System.Windows.Forms.TabControl tbCoursesDept;
         private System.Windows.Forms.TabPage tbCourses;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cmbDepartment;
         private MetroFramework.Controls.MetroTextBox txtDC;
         private MaterialSkin.Controls.MaterialFlatButton btnAdd;
         private MaterialSkin.Controls.MaterialFlatButton btnUpdate;
         private MaterialSkin.Controls.MaterialFlatButton btnUpdateCourse;
         private MaterialSkin.Controls.MaterialFlatButton btnAddCourse;
         private MaterialSkin.Controls.MaterialFlatButton btnCancel;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbDepartment;
     }
 }

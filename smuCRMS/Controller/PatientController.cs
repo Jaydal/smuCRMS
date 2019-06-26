@@ -447,11 +447,13 @@ namespace smuCRMS.Controller
                 lastName = dtable.Rows[0][2].ToString();
                 firstName = dtable.Rows[0][3].ToString();
                 middleName = dtable.Rows[0][4].ToString();
+
                 department_id = dtable.Rows[0][5].ToString();
                 department = dtable.Rows[0][32].ToString();
                 course_id = dtable.Rows[0][6].ToString();
                 course = dtable.Rows[0][33].ToString();
                 year = dtable.Rows[0][8].ToString();
+
                 //level = dtable.Rows[0][8].ToString();
                 birthday = (DateTime)dtable.Rows[0][9];
                 age = Int32.Parse(dtable.Rows[0][10].ToString());

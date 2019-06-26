@@ -35,14 +35,14 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pBar = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
+            this.tileUsers = new MetroFramework.Controls.MetroTile();
+            this.tileCourses = new MetroFramework.Controls.MetroTile();
+            this.tileConnection = new MetroFramework.Controls.MetroTile();
+            this.tileExit = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.tileBack = new MetroFramework.Controls.MetroTile();
-            this.tileExit = new MetroFramework.Controls.MetroTile();
-            this.tileConnection = new MetroFramework.Controls.MetroTile();
-            this.tileCourses = new MetroFramework.Controls.MetroTile();
-            this.tileUsers = new MetroFramework.Controls.MetroTile();
+            this.metroTile3 = new MetroFramework.Controls.MetroTile();
+            this.metroTile4 = new MetroFramework.Controls.MetroTile();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,47 +102,92 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(853, 339);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
-            // metroTile4
+            // tileUsers
             // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTile4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile4.Location = new System.Drawing.Point(642, 3);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(208, 163);
-            this.metroTile4.Style = MetroFramework.MetroColorStyle.Red;
-            this.metroTile4.TabIndex = 4;
-            this.metroTile4.TabStop = false;
-            this.metroTile4.Text = "L O G S";
-            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile4.TileImage = global::smuCRMS.Properties.Resources.appbar_column_two;
-            this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile4.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile4.UseSelectable = true;
-            this.metroTile4.UseTileImage = true;
-            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
+            this.tileUsers.ActiveControl = null;
+            this.tileUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tileUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tileUsers.Location = new System.Drawing.Point(3, 172);
+            this.tileUsers.Name = "tileUsers";
+            this.tileUsers.Size = new System.Drawing.Size(207, 164);
+            this.tileUsers.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.tileUsers.TabIndex = 10;
+            this.tileUsers.TabStop = false;
+            this.tileUsers.Text = "U S E R S";
+            this.tileUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tileUsers.TileImage = global::smuCRMS.Properties.Resources.appbar_user;
+            this.tileUsers.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileUsers.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileUsers.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.tileUsers.UseSelectable = true;
+            this.tileUsers.UseTileImage = true;
+            this.tileUsers.Click += new System.EventHandler(this.tileUsers_Click);
             // 
-            // metroTile3
+            // tileCourses
             // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTile3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTile3.Location = new System.Drawing.Point(429, 3);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(207, 163);
-            this.metroTile3.Style = MetroFramework.MetroColorStyle.Green;
-            this.metroTile3.TabIndex = 3;
-            this.metroTile3.TabStop = false;
-            this.metroTile3.Text = "E X C E L";
-            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroTile3.TileImage = global::smuCRMS.Properties.Resources.appbar_cabinet_in;
-            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile3.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile3.UseSelectable = true;
-            this.metroTile3.UseTileImage = true;
-            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
+            this.tileCourses.ActiveControl = null;
+            this.tileCourses.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tileCourses.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tileCourses.Location = new System.Drawing.Point(216, 172);
+            this.tileCourses.Name = "tileCourses";
+            this.tileCourses.Size = new System.Drawing.Size(207, 164);
+            this.tileCourses.Style = MetroFramework.MetroColorStyle.Magenta;
+            this.tileCourses.TabIndex = 9;
+            this.tileCourses.TabStop = false;
+            this.tileCourses.Text = "C O U R S E S";
+            this.tileCourses.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tileCourses.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tileCourses.TileImage = ((System.Drawing.Image)(resources.GetObject("tileCourses.TileImage")));
+            this.tileCourses.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileCourses.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileCourses.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.tileCourses.UseSelectable = true;
+            this.tileCourses.UseTileImage = true;
+            this.tileCourses.Click += new System.EventHandler(this.tileCourses_Click);
+            // 
+            // tileConnection
+            // 
+            this.tileConnection.ActiveControl = null;
+            this.tileConnection.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tileConnection.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tileConnection.Location = new System.Drawing.Point(429, 172);
+            this.tileConnection.Name = "tileConnection";
+            this.tileConnection.Size = new System.Drawing.Size(207, 164);
+            this.tileConnection.Style = MetroFramework.MetroColorStyle.Lime;
+            this.tileConnection.TabIndex = 8;
+            this.tileConnection.TabStop = false;
+            this.tileConnection.Text = "C O N N E C T I O N";
+            this.tileConnection.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tileConnection.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tileConnection.TileImage = ((System.Drawing.Image)(resources.GetObject("tileConnection.TileImage")));
+            this.tileConnection.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileConnection.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileConnection.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.tileConnection.UseSelectable = true;
+            this.tileConnection.UseTileImage = true;
+            this.tileConnection.Click += new System.EventHandler(this.tileConnection_Click);
+            // 
+            // tileExit
+            // 
+            this.tileExit.ActiveControl = null;
+            this.tileExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tileExit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tileExit.Location = new System.Drawing.Point(642, 172);
+            this.tileExit.Name = "tileExit";
+            this.tileExit.Size = new System.Drawing.Size(208, 164);
+            this.tileExit.Style = MetroFramework.MetroColorStyle.Black;
+            this.tileExit.TabIndex = 5;
+            this.tileExit.TabStop = false;
+            this.tileExit.Text = "E X I T";
+            this.tileExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tileExit.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.tileExit.TileImage = global::smuCRMS.Properties.Resources.appbar_close;
+            this.tileExit.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tileExit.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileExit.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.tileExit.UseSelectable = true;
+            this.tileExit.UseTileImage = true;
+            this.tileExit.Click += new System.EventHandler(this.tileExit_Click);
             // 
             // metroTile2
             // 
@@ -186,92 +231,47 @@
             this.tileBack.UseTileImage = true;
             this.tileBack.Click += new System.EventHandler(this.metroTile1_Click);
             // 
-            // tileExit
+            // metroTile3
             // 
-            this.tileExit.ActiveControl = null;
-            this.tileExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tileExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tileExit.Location = new System.Drawing.Point(642, 172);
-            this.tileExit.Name = "tileExit";
-            this.tileExit.Size = new System.Drawing.Size(208, 164);
-            this.tileExit.Style = MetroFramework.MetroColorStyle.Black;
-            this.tileExit.TabIndex = 5;
-            this.tileExit.TabStop = false;
-            this.tileExit.Text = "E X I T";
-            this.tileExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.tileExit.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tileExit.TileImage = global::smuCRMS.Properties.Resources.appbar_close;
-            this.tileExit.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tileExit.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.tileExit.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.tileExit.UseSelectable = true;
-            this.tileExit.UseTileImage = true;
-            this.tileExit.Click += new System.EventHandler(this.tileExit_Click);
+            this.metroTile3.ActiveControl = null;
+            this.metroTile3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTile3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTile3.Location = new System.Drawing.Point(429, 3);
+            this.metroTile3.Name = "metroTile3";
+            this.metroTile3.Size = new System.Drawing.Size(207, 163);
+            this.metroTile3.Style = MetroFramework.MetroColorStyle.Green;
+            this.metroTile3.TabIndex = 3;
+            this.metroTile3.TabStop = false;
+            this.metroTile3.Text = "E X C E L";
+            this.metroTile3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile3.TileImage = global::smuCRMS.Properties.Resources.appbar_cabinet_in;
+            this.metroTile3.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile3.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile3.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile3.UseSelectable = true;
+            this.metroTile3.UseTileImage = true;
+            this.metroTile3.Click += new System.EventHandler(this.metroTile3_Click);
             // 
-            // tileConnection
+            // metroTile4
             // 
-            this.tileConnection.ActiveControl = null;
-            this.tileConnection.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tileConnection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tileConnection.Location = new System.Drawing.Point(429, 172);
-            this.tileConnection.Name = "tileConnection";
-            this.tileConnection.Size = new System.Drawing.Size(207, 164);
-            this.tileConnection.Style = MetroFramework.MetroColorStyle.Lime;
-            this.tileConnection.TabIndex = 8;
-            this.tileConnection.TabStop = false;
-            this.tileConnection.Text = "C O N N E C T I O N";
-            this.tileConnection.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.tileConnection.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tileConnection.TileImage = ((System.Drawing.Image)(resources.GetObject("tileConnection.TileImage")));
-            this.tileConnection.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tileConnection.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.tileConnection.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.tileConnection.UseSelectable = true;
-            this.tileConnection.UseTileImage = true;
-            this.tileConnection.Click += new System.EventHandler(this.tileConnection_Click);
-            // 
-            // tileCourses
-            // 
-            this.tileCourses.ActiveControl = null;
-            this.tileCourses.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tileCourses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tileCourses.Location = new System.Drawing.Point(216, 172);
-            this.tileCourses.Name = "tileCourses";
-            this.tileCourses.Size = new System.Drawing.Size(207, 164);
-            this.tileCourses.Style = MetroFramework.MetroColorStyle.Magenta;
-            this.tileCourses.TabIndex = 9;
-            this.tileCourses.TabStop = false;
-            this.tileCourses.Text = "C O U R S E S";
-            this.tileCourses.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.tileCourses.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.tileCourses.TileImage = ((System.Drawing.Image)(resources.GetObject("tileCourses.TileImage")));
-            this.tileCourses.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tileCourses.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.tileCourses.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.tileCourses.UseSelectable = true;
-            this.tileCourses.UseTileImage = true;
-            this.tileCourses.Click += new System.EventHandler(this.tileCourses_Click);
-            // 
-            // tileUsers
-            // 
-            this.tileUsers.ActiveControl = null;
-            this.tileUsers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tileUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tileUsers.Location = new System.Drawing.Point(3, 172);
-            this.tileUsers.Name = "tileUsers";
-            this.tileUsers.Size = new System.Drawing.Size(207, 164);
-            this.tileUsers.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.tileUsers.TabIndex = 10;
-            this.tileUsers.TabStop = false;
-            this.tileUsers.Text = "U S E R S";
-            this.tileUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.tileUsers.TileImage = global::smuCRMS.Properties.Resources.appbar_user;
-            this.tileUsers.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.tileUsers.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.tileUsers.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.tileUsers.UseSelectable = true;
-            this.tileUsers.UseTileImage = true;
-            this.tileUsers.Click += new System.EventHandler(this.tileUsers_Click);
+            this.metroTile4.ActiveControl = null;
+            this.metroTile4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTile4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTile4.Location = new System.Drawing.Point(642, 3);
+            this.metroTile4.Name = "metroTile4";
+            this.metroTile4.Size = new System.Drawing.Size(208, 163);
+            this.metroTile4.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroTile4.TabIndex = 4;
+            this.metroTile4.TabStop = false;
+            this.metroTile4.Text = "L O G S";
+            this.metroTile4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroTile4.TileImage = global::smuCRMS.Properties.Resources.appbar_column_two;
+            this.metroTile4.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile4.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile4.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile4.UseSelectable = true;
+            this.metroTile4.UseTileImage = true;
+            this.metroTile4.Click += new System.EventHandler(this.metroTile4_Click);
             // 
             // frmOpt
             // 
