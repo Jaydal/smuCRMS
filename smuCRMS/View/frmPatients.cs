@@ -232,31 +232,6 @@ namespace smuCRMS.View
                 ct.id = dgv.CurrentRow.Cells[0].Value.ToString();
                 ct.ShowDialog();
         }
-
-       
-
-
-
-
-
-     
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                frmReport fp = new frmReport();
-                fp.pid = dgv.CurrentRow.Cells[0].Value.ToString();
-                fp.ShowDialog();
-            }
-            catch (Exception)
-            {
-
-                MetroMessageBox.Show(this,"No Data!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-           
-        }
-
         private void btnProfile_Click(object sender, EventArgs e)
         {
             if (dgv.RowCount > 0)
@@ -400,16 +375,14 @@ namespace smuCRMS.View
                 fp.pid = dgv.CurrentRow.Cells["ID Number"].Value.ToString();
                 fp.ShowDialog();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 MetroMessageBox.Show(this, "No Data!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex+"");
             }
 
         }
-
-
-
         private void txtSearch1_TextChanged_1(object sender, EventArgs e)
         {
             if (txtSearch1.TextLength > 3)

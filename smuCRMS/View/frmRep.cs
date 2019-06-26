@@ -27,9 +27,13 @@ namespace smuCRMS.View
                 pc.getHistory();
                 pc.getImmunization();
                 dt=pc.getTreatment();
-                DataView dv = dt.DefaultView;
-                dv.Sort = "TreatmentDate asc";
-                dt= dv.ToTable();
+                if (dt.Rows.Count > 0)
+                {
+                    DataView dv = dt.DefaultView;
+                    dv.Sort = "TreatmentDate asc";
+                    dt = dv.ToTable();
+                }
+            
                 pc.getRemark();
                 loadValueToParameters();
                 tcc1.SetParameterValue("id", pc.id);
@@ -41,35 +45,37 @@ namespace smuCRMS.View
         void loadValueToParameters()
         {
             PDoc1.SetParameterValue("id", pc.id);
-            PDoc1.SetParameterValue("bday", pc.birthday);
-            PDoc1.SetParameterValue("age", pc.age);
-            PDoc1.SetParameterValue("sex", pc.sex);
-            PDoc1.SetParameterValue("civil_stat", pc.civilStatus);
-            PDoc1.SetParameterValue("nationality", pc.nationality);
+            PDoc1.SetParameterValue("bday", pc.birthday+"");
+            PDoc1.SetParameterValue("age", pc.age + "");
+            PDoc1.SetParameterValue("sex", pc.sex + "");
+            PDoc1.SetParameterValue("civil_stat", pc.civilStatus + "");
+            PDoc1.SetParameterValue("nationality", pc.nationality + "");
 
-            PDoc1.SetParameterValue("fname", pc.lastName + ","+pc.firstName+" "+ pc.middleName);
+            PDoc1.SetParameterValue("fname", pc.lastName + ","+pc.firstName+" "+ pc.middleName + "");
 
-            PDoc1.SetParameterValue("homeadd", pc.homeAddress);
-            PDoc1.SetParameterValue("boardadd", pc.boardingAddress);
+            PDoc1.SetParameterValue("homeadd", pc.homeAddress + "");
+            PDoc1.SetParameterValue("boardadd", pc.boardingAddress + "");
 
-            PDoc1.SetParameterValue("father", pc.fatherName);
-            PDoc1.SetParameterValue("father_occ", pc.fatherOccupation);
-            PDoc1.SetParameterValue("father_num", pc.fatherNumber);
-            PDoc1.SetParameterValue("mother", pc.motherName);
-            PDoc1.SetParameterValue("mother_occ", pc.motherOccupation);
-            PDoc1.SetParameterValue("mother_num", pc.motherNumber);
+            PDoc1.SetParameterValue("father", pc.fatherName + "");
+            PDoc1.SetParameterValue("father_occ", pc.fatherOccupation + "");
+            PDoc1.SetParameterValue("father_num", pc.fatherNumber + "");
+            PDoc1.SetParameterValue("mother", pc.motherName + "");
+            PDoc1.SetParameterValue("mother_occ", pc.motherOccupation + "");
+            PDoc1.SetParameterValue("mother_num", pc.motherNumber + "");
 
-            PDoc1.SetParameterValue("land", pc.landladyName);
-            PDoc1.SetParameterValue("land_num", pc.landladyNumber);
-            PDoc1.SetParameterValue("emergency", pc.emergencyCall);
-            PDoc1.SetParameterValue("relation", pc.relation);
-            PDoc1.SetParameterValue("emergency_num", pc.emergencyNumber);
+            PDoc1.SetParameterValue("land", pc.landladyName + "");
+            PDoc1.SetParameterValue("land_num", pc.landladyNumber + "");
+            PDoc1.SetParameterValue("emergency", pc.emergencyCall + "");
+            PDoc1.SetParameterValue("relation", pc.relation + "");
+            PDoc1.SetParameterValue("emergency_num", pc.emergencyNumber + "");
+
+            PDoc1.SetParameterValue("coursedept",pc.department+":"+pc.course+"-"+pc.year);
             if (pc.sex == "Female")
             {
                 int fm = int.Parse(pc.firstMenstrualdate.ToString("yyyyMMdd"));
                 int dob = int.Parse(pc.birthday.ToString("yyyyMMdd"));
                 int age = (fm - dob) / 10000;
-                PDoc1.SetParameterValue("fmp", age);
+                PDoc1.SetParameterValue("fmp", age + "");
                 PDoc1.SetParameterValue("lmp", pc.lastMenstrualdate.ToString("MMM dd, yyyy") + "");
             }
             else
@@ -119,17 +125,17 @@ namespace smuCRMS.View
                 s +=((DateTime)row[2]).ToString("MM/dd/yyy")+ "\tCHIEF COMPLAINTS:" + row[3]+ "\tDIAGNOSIS:" + row[4]+ ";\tBP:" + row[5] + ";\tPR:" + row[6] +
                     ";\tRR:" + row[7] + ";\tTEMPERATURE:" + row[8] + ";\tSPO2:" + row[9] + ";\tDOCTOR IN CHARGE:" + row[10] + ";\tREFERRAL:" + row[11] + ";\n\n";
             }
-            tcc1.SetParameterValue("treatmentchart",s);
-            tcc1.SetParameterValue("weight",pc.weight);
-            tcc1.SetParameterValue("height",pc.height);
-            tcc1.SetParameterValue("bmi",pc.bmi);
-            tcc1.SetParameterValue("rr",pc.rr);
-            tcc1.SetParameterValue("pr",pc.pr);
-            tcc1.SetParameterValue("temp",pc.temp);
-            tcc1.SetParameterValue("spo2",pc.spo2);
-            tcc1.SetParameterValue("remarks",pc.remarks);
-            tcc1.SetParameterValue("bp",pc.bp);
-            tcc1.SetParameterValue("physician",pc.dic);
+            tcc1.SetParameterValue("treatmentchart",s+"");
+            tcc1.SetParameterValue("weight",pc.weight + "");
+            tcc1.SetParameterValue("height",pc.height + "");
+            tcc1.SetParameterValue("bmi",pc.bmi + "");
+            tcc1.SetParameterValue("rr",pc.rr + "");
+            tcc1.SetParameterValue("pr",pc.pr + "");
+            tcc1.SetParameterValue("temp",pc.temp + "");
+            tcc1.SetParameterValue("spo2",pc.spo2 + "");
+            tcc1.SetParameterValue("remarks",pc.remarks + "");
+            tcc1.SetParameterValue("bp",pc.bp + "");
+            tcc1.SetParameterValue("physician",pc.dic + "");
         }
         private void rbp1_CheckedChanged(object sender, EventArgs e)
         {
